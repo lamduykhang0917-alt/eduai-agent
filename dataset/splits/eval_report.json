@@ -1,0 +1,1060 @@
+{
+  "model": "KeywordIntentClassifier",
+  "evaluation_method": "classifier trained on train+val split patterns only, evaluated on held-out test split",
+  "test_set_size": 113,
+  "accuracy": 0.7257,
+  "precision_macro": 0.8009,
+  "recall_macro": 0.7259,
+  "f1_macro": 0.7486,
+  "per_label": {
+    "course_information": {
+      "precision": 0.7778,
+      "recall": 0.7778,
+      "f1": 0.7778
+    },
+    "document_search": {
+      "precision": 0.8,
+      "recall": 0.4444,
+      "f1": 0.5714
+    },
+    "exam": {
+      "precision": 0.8,
+      "recall": 0.8,
+      "f1": 0.8
+    },
+    "explanation": {
+      "precision": 1.0,
+      "recall": 0.8889,
+      "f1": 0.9412
+    },
+    "generate_quiz": {
+      "precision": 0.875,
+      "recall": 0.7778,
+      "f1": 0.8235
+    },
+    "goodbye": {
+      "precision": 1.0,
+      "recall": 0.6667,
+      "f1": 0.8
+    },
+    "greeting": {
+      "precision": 0.5,
+      "recall": 0.6667,
+      "f1": 0.5714
+    },
+    "knowledge_question": {
+      "precision": 0.7692,
+      "recall": 1.0,
+      "f1": 0.8696
+    },
+    "learning_progress": {
+      "precision": 0.7778,
+      "recall": 0.7,
+      "f1": 0.7368
+    },
+    "learning_recommendation": {
+      "precision": 0.8333,
+      "recall": 0.5,
+      "f1": 0.625
+    },
+    "result": {
+      "precision": 0.75,
+      "recall": 0.6,
+      "f1": 0.6667
+    },
+    "summary": {
+      "precision": 0.7273,
+      "recall": 0.8889,
+      "f1": 0.8
+    }
+  },
+  "confusion_matrix": {
+    "course_information": {
+      "course_information": 7,
+      "document_search": 0,
+      "exam": 0,
+      "explanation": 0,
+      "generate_quiz": 0,
+      "goodbye": 0,
+      "greeting": 0,
+      "knowledge_question": 1,
+      "learning_progress": 1,
+      "learning_recommendation": 0,
+      "result": 0,
+      "summary": 0,
+      "unknown": 0
+    },
+    "document_search": {
+      "course_information": 0,
+      "document_search": 4,
+      "exam": 0,
+      "explanation": 0,
+      "generate_quiz": 0,
+      "goodbye": 0,
+      "greeting": 2,
+      "knowledge_question": 2,
+      "learning_progress": 1,
+      "learning_recommendation": 0,
+      "result": 0,
+      "summary": 0,
+      "unknown": 0
+    },
+    "exam": {
+      "course_information": 0,
+      "document_search": 0,
+      "exam": 8,
+      "explanation": 0,
+      "generate_quiz": 0,
+      "goodbye": 0,
+      "greeting": 0,
+      "knowledge_question": 0,
+      "learning_progress": 0,
+      "learning_recommendation": 0,
+      "result": 1,
+      "summary": 1,
+      "unknown": 0
+    },
+    "explanation": {
+      "course_information": 0,
+      "document_search": 0,
+      "exam": 0,
+      "explanation": 8,
+      "generate_quiz": 0,
+      "goodbye": 0,
+      "greeting": 0,
+      "knowledge_question": 0,
+      "learning_progress": 0,
+      "learning_recommendation": 0,
+      "result": 0,
+      "summary": 0,
+      "unknown": 1
+    },
+    "generate_quiz": {
+      "course_information": 0,
+      "document_search": 0,
+      "exam": 0,
+      "explanation": 0,
+      "generate_quiz": 7,
+      "goodbye": 0,
+      "greeting": 2,
+      "knowledge_question": 0,
+      "learning_progress": 0,
+      "learning_recommendation": 0,
+      "result": 0,
+      "summary": 0,
+      "unknown": 0
+    },
+    "goodbye": {
+      "course_information": 0,
+      "document_search": 0,
+      "exam": 0,
+      "explanation": 0,
+      "generate_quiz": 0,
+      "goodbye": 6,
+      "greeting": 0,
+      "knowledge_question": 0,
+      "learning_progress": 0,
+      "learning_recommendation": 0,
+      "result": 0,
+      "summary": 0,
+      "unknown": 3
+    },
+    "greeting": {
+      "course_information": 0,
+      "document_search": 0,
+      "exam": 0,
+      "explanation": 0,
+      "generate_quiz": 0,
+      "goodbye": 0,
+      "greeting": 6,
+      "knowledge_question": 0,
+      "learning_progress": 0,
+      "learning_recommendation": 0,
+      "result": 0,
+      "summary": 0,
+      "unknown": 3
+    },
+    "knowledge_question": {
+      "course_information": 0,
+      "document_search": 0,
+      "exam": 0,
+      "explanation": 0,
+      "generate_quiz": 0,
+      "goodbye": 0,
+      "greeting": 0,
+      "knowledge_question": 10,
+      "learning_progress": 0,
+      "learning_recommendation": 0,
+      "result": 0,
+      "summary": 0,
+      "unknown": 0
+    },
+    "learning_progress": {
+      "course_information": 1,
+      "document_search": 0,
+      "exam": 0,
+      "explanation": 0,
+      "generate_quiz": 0,
+      "goodbye": 0,
+      "greeting": 0,
+      "knowledge_question": 0,
+      "learning_progress": 7,
+      "learning_recommendation": 1,
+      "result": 1,
+      "summary": 0,
+      "unknown": 0
+    },
+    "learning_recommendation": {
+      "course_information": 1,
+      "document_search": 0,
+      "exam": 0,
+      "explanation": 0,
+      "generate_quiz": 1,
+      "goodbye": 0,
+      "greeting": 1,
+      "knowledge_question": 0,
+      "learning_progress": 0,
+      "learning_recommendation": 5,
+      "result": 0,
+      "summary": 2,
+      "unknown": 0
+    },
+    "result": {
+      "course_information": 0,
+      "document_search": 0,
+      "exam": 2,
+      "explanation": 0,
+      "generate_quiz": 0,
+      "goodbye": 0,
+      "greeting": 1,
+      "knowledge_question": 0,
+      "learning_progress": 0,
+      "learning_recommendation": 0,
+      "result": 6,
+      "summary": 0,
+      "unknown": 1
+    },
+    "summary": {
+      "course_information": 0,
+      "document_search": 1,
+      "exam": 0,
+      "explanation": 0,
+      "generate_quiz": 0,
+      "goodbye": 0,
+      "greeting": 0,
+      "knowledge_question": 0,
+      "learning_progress": 0,
+      "learning_recommendation": 0,
+      "result": 0,
+      "summary": 8,
+      "unknown": 0
+    }
+  },
+  "labels": [
+    "course_information",
+    "document_search",
+    "exam",
+    "explanation",
+    "generate_quiz",
+    "goodbye",
+    "greeting",
+    "knowledge_question",
+    "learning_progress",
+    "learning_recommendation",
+    "result",
+    "summary"
+  ],
+  "details": [
+    {
+      "text": "Thôi mình off đây",
+      "true_intent": "goodbye",
+      "predicted_intent": "goodbye",
+      "confidence": 0.667,
+      "correct": true
+    },
+    {
+      "text": "Thuật toán K-means là gì?",
+      "true_intent": "knowledge_question",
+      "predicted_intent": "knowledge_question",
+      "confidence": 1.0,
+      "correct": true
+    },
+    {
+      "text": "tạo bài tập",
+      "true_intent": "generate_quiz",
+      "predicted_intent": "generate_quiz",
+      "confidence": 0.5,
+      "correct": true
+    },
+    {
+      "text": "OOP là gì?",
+      "true_intent": "knowledge_question",
+      "predicted_intent": "knowledge_question",
+      "confidence": 1.0,
+      "correct": true
+    },
+    {
+      "text": "tìm tài liệu",
+      "true_intent": "document_search",
+      "predicted_intent": "document_search",
+      "confidence": 1.0,
+      "correct": true
+    },
+    {
+      "text": "Bắt đầu bài thi chương 1",
+      "true_intent": "exam",
+      "predicted_intent": "exam",
+      "confidence": 0.6,
+      "correct": true
+    },
+    {
+      "text": "Đề xuất bài học cho mình tối nay",
+      "true_intent": "learning_recommendation",
+      "predicted_intent": "greeting",
+      "confidence": 0.5,
+      "correct": false
+    },
+    {
+      "text": "Cho mình hỏi tính đóng gói trong OOP là gì",
+      "true_intent": "knowledge_question",
+      "predicted_intent": "knowledge_question",
+      "confidence": 1.0,
+      "correct": true
+    },
+    {
+      "text": "tôi học được bao nhiêu",
+      "true_intent": "learning_progress",
+      "predicted_intent": "course_information",
+      "confidence": 0.5,
+      "correct": false
+    },
+    {
+      "text": "Tóm tắt giúp mình file PDF vừa tải lên",
+      "true_intent": "summary",
+      "predicted_intent": "summary",
+      "confidence": 1.0,
+      "correct": true
+    },
+    {
+      "text": "Tạo câu hỏi ôn tập về Python tuple và set",
+      "true_intent": "generate_quiz",
+      "predicted_intent": "generate_quiz",
+      "confidence": 1.0,
+      "correct": true
+    },
+    {
+      "text": "Ra giúp mình 10 câu hỏi về cây nhị phân",
+      "true_intent": "generate_quiz",
+      "predicted_intent": "generate_quiz",
+      "confidence": 1.0,
+      "correct": true
+    },
+    {
+      "text": "Mình nên học môn nào trước, AI hay Học máy?",
+      "true_intent": "learning_recommendation",
+      "predicted_intent": "learning_recommendation",
+      "confidence": 0.714,
+      "correct": true
+    },
+    {
+      "text": "Giải thích tại sao list trong Python lại có thể thay đổi được",
+      "true_intent": "explanation",
+      "predicted_intent": "explanation",
+      "confidence": 1.0,
+      "correct": true
+    },
+    {
+      "text": "Hey, chào buổi sáng nha",
+      "true_intent": "greeting",
+      "predicted_intent": "greeting",
+      "confidence": 1.0,
+      "correct": true
+    },
+    {
+      "text": "Ra đề ôn tập SQL JOIN giúp mình",
+      "true_intent": "generate_quiz",
+      "predicted_intent": "greeting",
+      "confidence": 0.5,
+      "correct": false
+    },
+    {
+      "text": "Cho thi thử 30 phút môn Trí tuệ nhân tạo",
+      "true_intent": "exam",
+      "predicted_intent": "exam",
+      "confidence": 1.0,
+      "correct": true
+    },
+    {
+      "text": "chào bạn",
+      "true_intent": "greeting",
+      "predicted_intent": "greeting",
+      "confidence": 1.0,
+      "correct": true
+    },
+    {
+      "text": "Có bài giảng Machine Learning không?",
+      "true_intent": "document_search",
+      "predicted_intent": "knowledge_question",
+      "confidence": 0.5,
+      "correct": false
+    },
+    {
+      "text": "Có những môn học nào trên hệ thống?",
+      "true_intent": "course_information",
+      "predicted_intent": "course_information",
+      "confidence": 0.667,
+      "correct": true
+    },
+    {
+      "text": "Đề xuất bài học tiếp theo môn AI",
+      "true_intent": "learning_recommendation",
+      "predicted_intent": "course_information",
+      "confidence": 0.667,
+      "correct": false
+    },
+    {
+      "text": "Cho ví dụ minh họa về SQL JOIN",
+      "true_intent": "explanation",
+      "predicted_intent": "explanation",
+      "confidence": 0.5,
+      "correct": true
+    },
+    {
+      "text": "Thế nào là cây nhị phân tìm kiếm?",
+      "true_intent": "knowledge_question",
+      "predicted_intent": "knowledge_question",
+      "confidence": 0.5,
+      "correct": true
+    },
+    {
+      "text": "Mình thi được bao nhiêu điểm rồi?",
+      "true_intent": "result",
+      "predicted_intent": "result",
+      "confidence": 0.667,
+      "correct": true
+    },
+    {
+      "text": "Cho xin tài liệu về K-means",
+      "true_intent": "document_search",
+      "predicted_intent": "document_search",
+      "confidence": 1.0,
+      "correct": true
+    },
+    {
+      "text": "Tạo 15 câu hỏi dễ về mạng TCP/IP",
+      "true_intent": "generate_quiz",
+      "predicted_intent": "generate_quiz",
+      "confidence": 1.0,
+      "correct": true
+    },
+    {
+      "text": "Có giáo trình Cơ sở dữ liệu không?",
+      "true_intent": "document_search",
+      "predicted_intent": "learning_progress",
+      "confidence": 0.571,
+      "correct": false
+    },
+    {
+      "text": "Mình được mấy điểm vậy?",
+      "true_intent": "result",
+      "predicted_intent": "result",
+      "confidence": 0.667,
+      "correct": true
+    },
+    {
+      "text": "Học xong BFS thì nên học gì tiếp?",
+      "true_intent": "learning_recommendation",
+      "predicted_intent": "learning_recommendation",
+      "confidence": 0.8,
+      "correct": true
+    },
+    {
+      "text": "Alo",
+      "true_intent": "greeting",
+      "predicted_intent": "unknown",
+      "confidence": 0.0,
+      "correct": false
+    },
+    {
+      "text": "Chào đằng ấy",
+      "true_intent": "greeting",
+      "predicted_intent": "greeting",
+      "confidence": 1.0,
+      "correct": true
+    },
+    {
+      "text": "Môn Cơ sở dữ liệu cần học trước môn nào?",
+      "true_intent": "course_information",
+      "predicted_intent": "learning_progress",
+      "confidence": 0.714,
+      "correct": false
+    },
+    {
+      "text": "Môn Học máy yêu cầu kiến thức nền gì?",
+      "true_intent": "course_information",
+      "predicted_intent": "course_information",
+      "confidence": 1.0,
+      "correct": true
+    },
+    {
+      "text": "Trích các từ khóa chính của chương Cây nhị phân",
+      "true_intent": "summary",
+      "predicted_intent": "document_search",
+      "confidence": 0.625,
+      "correct": false
+    },
+    {
+      "text": "Goodbye",
+      "true_intent": "goodbye",
+      "predicted_intent": "unknown",
+      "confidence": 0.0,
+      "correct": false
+    },
+    {
+      "text": "Tóm tắt nhanh tài liệu này",
+      "true_intent": "summary",
+      "predicted_intent": "summary",
+      "confidence": 1.0,
+      "correct": true
+    },
+    {
+      "text": "tóm tắt giúp tôi",
+      "true_intent": "summary",
+      "predicted_intent": "summary",
+      "confidence": 1.0,
+      "correct": true
+    },
+    {
+      "text": "Cho xem thống kê học tập của mình",
+      "true_intent": "learning_progress",
+      "predicted_intent": "result",
+      "confidence": 0.667,
+      "correct": false
+    },
+    {
+      "text": "Mình đã học xong bao nhiêu chương môn Python?",
+      "true_intent": "learning_progress",
+      "predicted_intent": "learning_progress",
+      "confidence": 0.727,
+      "correct": true
+    },
+    {
+      "text": "Điểm bài test Python của mình là bao nhiêu?",
+      "true_intent": "result",
+      "predicted_intent": "result",
+      "confidence": 0.667,
+      "correct": true
+    },
+    {
+      "text": "bắt đầu kiểm tra",
+      "true_intent": "exam",
+      "predicted_intent": "exam",
+      "confidence": 0.8,
+      "correct": true
+    },
+    {
+      "text": "List trong Python là gì?",
+      "true_intent": "knowledge_question",
+      "predicted_intent": "knowledge_question",
+      "confidence": 1.0,
+      "correct": true
+    },
+    {
+      "text": "Bắt đầu thi môn Phân tích thiết kế hệ thống",
+      "true_intent": "exam",
+      "predicted_intent": "result",
+      "confidence": 0.8,
+      "correct": false
+    },
+    {
+      "text": "Overfitting nghĩa là gì?",
+      "true_intent": "knowledge_question",
+      "predicted_intent": "knowledge_question",
+      "confidence": 1.0,
+      "correct": true
+    },
+    {
+      "text": "Tải giúp mình giáo trình Lập trình Python",
+      "true_intent": "document_search",
+      "predicted_intent": "greeting",
+      "confidence": 0.5,
+      "correct": false
+    },
+    {
+      "text": "Tìm giúp mình bài giảng về mạng neural tích chập",
+      "true_intent": "document_search",
+      "predicted_intent": "document_search",
+      "confidence": 0.8,
+      "correct": true
+    },
+    {
+      "text": "Tien do hoc tap",
+      "true_intent": "learning_progress",
+      "predicted_intent": "learning_recommendation",
+      "confidence": 0.4,
+      "correct": false
+    },
+    {
+      "text": "bye",
+      "true_intent": "goodbye",
+      "predicted_intent": "goodbye",
+      "confidence": 1.0,
+      "correct": true
+    },
+    {
+      "text": "Hẹn sớm gặp lại",
+      "true_intent": "goodbye",
+      "predicted_intent": "goodbye",
+      "confidence": 1.0,
+      "correct": true
+    },
+    {
+      "text": "Mình làm đúng bao nhiêu câu?",
+      "true_intent": "result",
+      "predicted_intent": "greeting",
+      "confidence": 0.5,
+      "correct": false
+    },
+    {
+      "text": "Tạo câu hỏi ôn tập về hàm băm",
+      "true_intent": "generate_quiz",
+      "predicted_intent": "generate_quiz",
+      "confidence": 1.0,
+      "correct": true
+    },
+    {
+      "text": "Mình học môn nào nhiều nhất?",
+      "true_intent": "learning_progress",
+      "predicted_intent": "learning_progress",
+      "confidence": 0.833,
+      "correct": true
+    },
+    {
+      "text": "Chuẩn hóa cơ sở dữ liệu là gì?",
+      "true_intent": "knowledge_question",
+      "predicted_intent": "knowledge_question",
+      "confidence": 1.0,
+      "correct": true
+    },
+    {
+      "text": "Cho mình 5 câu trắc nghiệm môn CSDL",
+      "true_intent": "generate_quiz",
+      "predicted_intent": "greeting",
+      "confidence": 0.5,
+      "correct": false
+    },
+    {
+      "text": "Cya",
+      "true_intent": "goodbye",
+      "predicted_intent": "unknown",
+      "confidence": 0.0,
+      "correct": false
+    },
+    {
+      "text": "Điểm bài kiểm tra cây nhị phân là bao nhiêu?",
+      "true_intent": "result",
+      "predicted_intent": "exam",
+      "confidence": 0.75,
+      "correct": false
+    },
+    {
+      "text": "Xin chào, mình là sinh viên năm hai",
+      "true_intent": "greeting",
+      "predicted_intent": "greeting",
+      "confidence": 1.0,
+      "correct": true
+    },
+    {
+      "text": "Gợi ý chủ đề tiếp theo sau chuẩn hóa CSDL",
+      "true_intent": "learning_recommendation",
+      "predicted_intent": "summary",
+      "confidence": 0.5,
+      "correct": false
+    },
+    {
+      "text": "Làm quiz chuẩn hóa CSDL",
+      "true_intent": "exam",
+      "predicted_intent": "summary",
+      "confidence": 0.429,
+      "correct": false
+    },
+    {
+      "text": "Môn Đồ họa máy tính cần biết gì trước khi học?",
+      "true_intent": "course_information",
+      "predicted_intent": "course_information",
+      "confidence": 1.0,
+      "correct": true
+    },
+    {
+      "text": "Tóm tắt phần kiểu dữ liệu trong Python",
+      "true_intent": "summary",
+      "predicted_intent": "summary",
+      "confidence": 1.0,
+      "correct": true
+    },
+    {
+      "text": "cho tôi biết về môn",
+      "true_intent": "course_information",
+      "predicted_intent": "course_information",
+      "confidence": 0.4,
+      "correct": true
+    },
+    {
+      "text": "Cho xem kết quả chi tiết bài test SQL",
+      "true_intent": "result",
+      "predicted_intent": "result",
+      "confidence": 1.0,
+      "correct": true
+    },
+    {
+      "text": "Làm bài test Python",
+      "true_intent": "exam",
+      "predicted_intent": "exam",
+      "confidence": 0.6,
+      "correct": true
+    },
+    {
+      "text": "Tài liệu về Transaction trong SQL",
+      "true_intent": "document_search",
+      "predicted_intent": "document_search",
+      "confidence": 1.0,
+      "correct": true
+    },
+    {
+      "text": "Cho mình bộ câu hỏi ôn tập chương 3 môn Cấu trúc dữ liệu",
+      "true_intent": "generate_quiz",
+      "predicted_intent": "generate_quiz",
+      "confidence": 1.0,
+      "correct": true
+    },
+    {
+      "text": "Tạo câu hỏi ôn tập chương 1 môn PTTK hệ thống",
+      "true_intent": "generate_quiz",
+      "predicted_intent": "generate_quiz",
+      "confidence": 1.0,
+      "correct": true
+    },
+    {
+      "text": "Xem kết quả bài kiểm tra CSDL",
+      "true_intent": "result",
+      "predicted_intent": "result",
+      "confidence": 1.0,
+      "correct": true
+    },
+    {
+      "text": "Cho mình bản tóm tắt bài Hồi quy logistic",
+      "true_intent": "summary",
+      "predicted_intent": "summary",
+      "confidence": 1.0,
+      "correct": true
+    },
+    {
+      "text": "vì sao",
+      "true_intent": "explanation",
+      "predicted_intent": "explanation",
+      "confidence": 0.5,
+      "correct": true
+    },
+    {
+      "text": "Hế lô",
+      "true_intent": "greeting",
+      "predicted_intent": "unknown",
+      "confidence": 0.0,
+      "correct": false
+    },
+    {
+      "text": "Mình đi đây, see you",
+      "true_intent": "goodbye",
+      "predicted_intent": "goodbye",
+      "confidence": 0.75,
+      "correct": true
+    },
+    {
+      "text": "Chương 3 môn CSDL nói về nội dung gì?",
+      "true_intent": "course_information",
+      "predicted_intent": "course_information",
+      "confidence": 0.8,
+      "correct": true
+    },
+    {
+      "text": "Giải thích từng bước cách chạy thuật toán sắp xếp chọn",
+      "true_intent": "explanation",
+      "predicted_intent": "explanation",
+      "confidence": 1.0,
+      "correct": true
+    },
+    {
+      "text": "định nghĩa",
+      "true_intent": "knowledge_question",
+      "predicted_intent": "knowledge_question",
+      "confidence": 0.4,
+      "correct": true
+    },
+    {
+      "text": "Dựa vào bài sai, mình nên ôn lại nội dung nào?",
+      "true_intent": "learning_recommendation",
+      "predicted_intent": "summary",
+      "confidence": 0.667,
+      "correct": false
+    },
+    {
+      "text": "Mình đang học tới phần nào của môn AI?",
+      "true_intent": "learning_progress",
+      "predicted_intent": "learning_progress",
+      "confidence": 0.667,
+      "correct": true
+    },
+    {
+      "text": "Alo alo, nghe rõ không?",
+      "true_intent": "greeting",
+      "predicted_intent": "unknown",
+      "confidence": 0.25,
+      "correct": false
+    },
+    {
+      "text": "Mình yếu phần nào, gợi ý mình ôn đi",
+      "true_intent": "learning_recommendation",
+      "predicted_intent": "learning_recommendation",
+      "confidence": 0.75,
+      "correct": true
+    },
+    {
+      "text": "đề xuất cho tôi",
+      "true_intent": "learning_recommendation",
+      "predicted_intent": "generate_quiz",
+      "confidence": 0.5,
+      "correct": false
+    },
+    {
+      "text": "Cho mình lời khuyên nên học phần nào trước",
+      "true_intent": "learning_recommendation",
+      "predicted_intent": "learning_recommendation",
+      "confidence": 0.571,
+      "correct": true
+    },
+    {
+      "text": "Lịch sử điểm các bài kiểm tra của mình",
+      "true_intent": "result",
+      "predicted_intent": "exam",
+      "confidence": 0.75,
+      "correct": false
+    },
+    {
+      "text": "Tính đa hình nghĩa là gì?",
+      "true_intent": "knowledge_question",
+      "predicted_intent": "knowledge_question",
+      "confidence": 1.0,
+      "correct": true
+    },
+    {
+      "text": "Giải thích thuật toán K-means theo từng vòng lặp",
+      "true_intent": "explanation",
+      "predicted_intent": "explanation",
+      "confidence": 1.0,
+      "correct": true
+    },
+    {
+      "text": "Mục tiêu môn Lập trình Python là gì?",
+      "true_intent": "course_information",
+      "predicted_intent": "knowledge_question",
+      "confidence": 1.0,
+      "correct": false
+    },
+    {
+      "text": "Giải thích Dijkstra mức nâng cao",
+      "true_intent": "explanation",
+      "predicted_intent": "explanation",
+      "confidence": 1.0,
+      "correct": true
+    },
+    {
+      "text": "Hướng dẫn từng bước cách thực hiện LEFT JOIN",
+      "true_intent": "explanation",
+      "predicted_intent": "unknown",
+      "confidence": 0.273,
+      "correct": false
+    },
+    {
+      "text": "Tien do mon CSDL cua minh bao nhieu %",
+      "true_intent": "learning_progress",
+      "predicted_intent": "learning_progress",
+      "confidence": 0.571,
+      "correct": true
+    },
+    {
+      "text": "Cho mình biết mình học được bao nhiêu giờ rồi",
+      "true_intent": "learning_progress",
+      "predicted_intent": "learning_progress",
+      "confidence": 0.667,
+      "correct": true
+    },
+    {
+      "text": "Tóm tắt toàn bộ môn Cơ sở dữ liệu",
+      "true_intent": "summary",
+      "predicted_intent": "summary",
+      "confidence": 1.0,
+      "correct": true
+    },
+    {
+      "text": "Kết quả bài kiểm tra Git",
+      "true_intent": "result",
+      "predicted_intent": "result",
+      "confidence": 1.0,
+      "correct": true
+    },
+    {
+      "text": "See you",
+      "true_intent": "goodbye",
+      "predicted_intent": "unknown",
+      "confidence": 0.0,
+      "correct": false
+    },
+    {
+      "text": "điểm của tôi",
+      "true_intent": "result",
+      "predicted_intent": "unknown",
+      "confidence": 0.333,
+      "correct": false
+    },
+    {
+      "text": "Có gợi ý nào để học môn CTDL&GT hiệu quả hơn không?",
+      "true_intent": "learning_recommendation",
+      "predicted_intent": "learning_recommendation",
+      "confidence": 0.75,
+      "correct": true
+    },
+    {
+      "text": "Giải thích tại sao dùng ReLU thay vì sigmoid",
+      "true_intent": "explanation",
+      "predicted_intent": "explanation",
+      "confidence": 1.0,
+      "correct": true
+    },
+    {
+      "text": "Tôi đã học được bao nhiêu rồi",
+      "true_intent": "learning_progress",
+      "predicted_intent": "learning_progress",
+      "confidence": 0.625,
+      "correct": true
+    },
+    {
+      "text": "Cho mình làm bài kiểm tra mức dễ trước",
+      "true_intent": "exam",
+      "predicted_intent": "exam",
+      "confidence": 1.0,
+      "correct": true
+    },
+    {
+      "text": "Tìm slide SQL JOIN",
+      "true_intent": "document_search",
+      "predicted_intent": "knowledge_question",
+      "confidence": 0.5,
+      "correct": false
+    },
+    {
+      "text": "Số tiết lý thuyết và thực hành của môn Python?",
+      "true_intent": "course_information",
+      "predicted_intent": "course_information",
+      "confidence": 0.571,
+      "correct": true
+    },
+    {
+      "text": "Chào buổi sáng",
+      "true_intent": "greeting",
+      "predicted_intent": "greeting",
+      "confidence": 1.0,
+      "correct": true
+    },
+    {
+      "text": "Vào làm bài kiểm tra 15 phút",
+      "true_intent": "exam",
+      "predicted_intent": "exam",
+      "confidence": 1.0,
+      "correct": true
+    },
+    {
+      "text": "Thanks, bye",
+      "true_intent": "goodbye",
+      "predicted_intent": "goodbye",
+      "confidence": 1.0,
+      "correct": true
+    },
+    {
+      "text": "Chào tạm biệt",
+      "true_intent": "goodbye",
+      "predicted_intent": "goodbye",
+      "confidence": 1.0,
+      "correct": true
+    },
+    {
+      "text": "Chào bạn, bạn có đó không?",
+      "true_intent": "greeting",
+      "predicted_intent": "greeting",
+      "confidence": 1.0,
+      "correct": true
+    },
+    {
+      "text": "Giải thích BFS từng bước một",
+      "true_intent": "explanation",
+      "predicted_intent": "explanation",
+      "confidence": 1.0,
+      "correct": true
+    },
+    {
+      "text": "Trigger trong SQL là gì?",
+      "true_intent": "knowledge_question",
+      "predicted_intent": "knowledge_question",
+      "confidence": 1.0,
+      "correct": true
+    },
+    {
+      "text": "Cho mình ý chính của chương 3 môn Mạng máy tính",
+      "true_intent": "summary",
+      "predicted_intent": "summary",
+      "confidence": 1.0,
+      "correct": true
+    },
+    {
+      "text": "Mở slide TCP/IP giúp mình",
+      "true_intent": "document_search",
+      "predicted_intent": "greeting",
+      "confidence": 0.5,
+      "correct": false
+    },
+    {
+      "text": "Môn Lập trình hướng đối tượng có những chương nào?",
+      "true_intent": "course_information",
+      "predicted_intent": "course_information",
+      "confidence": 0.833,
+      "correct": true
+    },
+    {
+      "text": "Tiến độ học của mình tháng này",
+      "true_intent": "learning_progress",
+      "predicted_intent": "learning_progress",
+      "confidence": 1.0,
+      "correct": true
+    },
+    {
+      "text": "Bắt đầu bài thi 45 phút môn Python",
+      "true_intent": "exam",
+      "predicted_intent": "exam",
+      "confidence": 0.6,
+      "correct": true
+    },
+    {
+      "text": "Thi thử môn Mạng máy tính",
+      "true_intent": "exam",
+      "predicted_intent": "exam",
+      "confidence": 1.0,
+      "correct": true
+    },
+    {
+      "text": "Tóm tắt trang 10 đến trang 15 của tài liệu",
+      "true_intent": "summary",
+      "predicted_intent": "summary",
+      "confidence": 1.0,
+      "correct": true
+    }
+  ]
+}

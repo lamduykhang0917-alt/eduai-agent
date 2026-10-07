@@ -1,0 +1,454 @@
+[
+  {
+    "text": "Thôi mình off đây",
+    "intent": "goodbye"
+  },
+  {
+    "text": "Thuật toán K-means là gì?",
+    "intent": "knowledge_question"
+  },
+  {
+    "text": "tạo bài tập",
+    "intent": "generate_quiz"
+  },
+  {
+    "text": "OOP là gì?",
+    "intent": "knowledge_question"
+  },
+  {
+    "text": "tìm tài liệu",
+    "intent": "document_search"
+  },
+  {
+    "text": "Bắt đầu bài thi chương 1",
+    "intent": "exam"
+  },
+  {
+    "text": "Đề xuất bài học cho mình tối nay",
+    "intent": "learning_recommendation"
+  },
+  {
+    "text": "Cho mình hỏi tính đóng gói trong OOP là gì",
+    "intent": "knowledge_question"
+  },
+  {
+    "text": "tôi học được bao nhiêu",
+    "intent": "learning_progress"
+  },
+  {
+    "text": "Tóm tắt giúp mình file PDF vừa tải lên",
+    "intent": "summary"
+  },
+  {
+    "text": "Tạo câu hỏi ôn tập về Python tuple và set",
+    "intent": "generate_quiz"
+  },
+  {
+    "text": "Ra giúp mình 10 câu hỏi về cây nhị phân",
+    "intent": "generate_quiz"
+  },
+  {
+    "text": "Mình nên học môn nào trước, AI hay Học máy?",
+    "intent": "learning_recommendation"
+  },
+  {
+    "text": "Giải thích tại sao list trong Python lại có thể thay đổi được",
+    "intent": "explanation"
+  },
+  {
+    "text": "Hey, chào buổi sáng nha",
+    "intent": "greeting"
+  },
+  {
+    "text": "Ra đề ôn tập SQL JOIN giúp mình",
+    "intent": "generate_quiz"
+  },
+  {
+    "text": "Cho thi thử 30 phút môn Trí tuệ nhân tạo",
+    "intent": "exam"
+  },
+  {
+    "text": "chào bạn",
+    "intent": "greeting"
+  },
+  {
+    "text": "Có bài giảng Machine Learning không?",
+    "intent": "document_search"
+  },
+  {
+    "text": "Có những môn học nào trên hệ thống?",
+    "intent": "course_information"
+  },
+  {
+    "text": "Đề xuất bài học tiếp theo môn AI",
+    "intent": "learning_recommendation"
+  },
+  {
+    "text": "Cho ví dụ minh họa về SQL JOIN",
+    "intent": "explanation"
+  },
+  {
+    "text": "Thế nào là cây nhị phân tìm kiếm?",
+    "intent": "knowledge_question"
+  },
+  {
+    "text": "Mình thi được bao nhiêu điểm rồi?",
+    "intent": "result"
+  },
+  {
+    "text": "Cho xin tài liệu về K-means",
+    "intent": "document_search"
+  },
+  {
+    "text": "Tạo 15 câu hỏi dễ về mạng TCP/IP",
+    "intent": "generate_quiz"
+  },
+  {
+    "text": "Có giáo trình Cơ sở dữ liệu không?",
+    "intent": "document_search"
+  },
+  {
+    "text": "Mình được mấy điểm vậy?",
+    "intent": "result"
+  },
+  {
+    "text": "Học xong BFS thì nên học gì tiếp?",
+    "intent": "learning_recommendation"
+  },
+  {
+    "text": "Alo",
+    "intent": "greeting"
+  },
+  {
+    "text": "Chào đằng ấy",
+    "intent": "greeting"
+  },
+  {
+    "text": "Môn Cơ sở dữ liệu cần học trước môn nào?",
+    "intent": "course_information"
+  },
+  {
+    "text": "Môn Học máy yêu cầu kiến thức nền gì?",
+    "intent": "course_information"
+  },
+  {
+    "text": "Trích các từ khóa chính của chương Cây nhị phân",
+    "intent": "summary"
+  },
+  {
+    "text": "Goodbye",
+    "intent": "goodbye"
+  },
+  {
+    "text": "Tóm tắt nhanh tài liệu này",
+    "intent": "summary"
+  },
+  {
+    "text": "tóm tắt giúp tôi",
+    "intent": "summary"
+  },
+  {
+    "text": "Cho xem thống kê học tập của mình",
+    "intent": "learning_progress"
+  },
+  {
+    "text": "Mình đã học xong bao nhiêu chương môn Python?",
+    "intent": "learning_progress"
+  },
+  {
+    "text": "Điểm bài test Python của mình là bao nhiêu?",
+    "intent": "result"
+  },
+  {
+    "text": "bắt đầu kiểm tra",
+    "intent": "exam"
+  },
+  {
+    "text": "List trong Python là gì?",
+    "intent": "knowledge_question"
+  },
+  {
+    "text": "Bắt đầu thi môn Phân tích thiết kế hệ thống",
+    "intent": "exam"
+  },
+  {
+    "text": "Overfitting nghĩa là gì?",
+    "intent": "knowledge_question"
+  },
+  {
+    "text": "Tải giúp mình giáo trình Lập trình Python",
+    "intent": "document_search"
+  },
+  {
+    "text": "Tìm giúp mình bài giảng về mạng neural tích chập",
+    "intent": "document_search"
+  },
+  {
+    "text": "Tien do hoc tap",
+    "intent": "learning_progress"
+  },
+  {
+    "text": "bye",
+    "intent": "goodbye"
+  },
+  {
+    "text": "Hẹn sớm gặp lại",
+    "intent": "goodbye"
+  },
+  {
+    "text": "Mình làm đúng bao nhiêu câu?",
+    "intent": "result"
+  },
+  {
+    "text": "Tạo câu hỏi ôn tập về hàm băm",
+    "intent": "generate_quiz"
+  },
+  {
+    "text": "Mình học môn nào nhiều nhất?",
+    "intent": "learning_progress"
+  },
+  {
+    "text": "Chuẩn hóa cơ sở dữ liệu là gì?",
+    "intent": "knowledge_question"
+  },
+  {
+    "text": "Cho mình 5 câu trắc nghiệm môn CSDL",
+    "intent": "generate_quiz"
+  },
+  {
+    "text": "Cya",
+    "intent": "goodbye"
+  },
+  {
+    "text": "Điểm bài kiểm tra cây nhị phân là bao nhiêu?",
+    "intent": "result"
+  },
+  {
+    "text": "Xin chào, mình là sinh viên năm hai",
+    "intent": "greeting"
+  },
+  {
+    "text": "Gợi ý chủ đề tiếp theo sau chuẩn hóa CSDL",
+    "intent": "learning_recommendation"
+  },
+  {
+    "text": "Làm quiz chuẩn hóa CSDL",
+    "intent": "exam"
+  },
+  {
+    "text": "Môn Đồ họa máy tính cần biết gì trước khi học?",
+    "intent": "course_information"
+  },
+  {
+    "text": "Tóm tắt phần kiểu dữ liệu trong Python",
+    "intent": "summary"
+  },
+  {
+    "text": "cho tôi biết về môn",
+    "intent": "course_information"
+  },
+  {
+    "text": "Cho xem kết quả chi tiết bài test SQL",
+    "intent": "result"
+  },
+  {
+    "text": "Làm bài test Python",
+    "intent": "exam"
+  },
+  {
+    "text": "Tài liệu về Transaction trong SQL",
+    "intent": "document_search"
+  },
+  {
+    "text": "Cho mình bộ câu hỏi ôn tập chương 3 môn Cấu trúc dữ liệu",
+    "intent": "generate_quiz"
+  },
+  {
+    "text": "Tạo câu hỏi ôn tập chương 1 môn PTTK hệ thống",
+    "intent": "generate_quiz"
+  },
+  {
+    "text": "Xem kết quả bài kiểm tra CSDL",
+    "intent": "result"
+  },
+  {
+    "text": "Cho mình bản tóm tắt bài Hồi quy logistic",
+    "intent": "summary"
+  },
+  {
+    "text": "vì sao",
+    "intent": "explanation"
+  },
+  {
+    "text": "Hế lô",
+    "intent": "greeting"
+  },
+  {
+    "text": "Mình đi đây, see you",
+    "intent": "goodbye"
+  },
+  {
+    "text": "Chương 3 môn CSDL nói về nội dung gì?",
+    "intent": "course_information"
+  },
+  {
+    "text": "Giải thích từng bước cách chạy thuật toán sắp xếp chọn",
+    "intent": "explanation"
+  },
+  {
+    "text": "định nghĩa",
+    "intent": "knowledge_question"
+  },
+  {
+    "text": "Dựa vào bài sai, mình nên ôn lại nội dung nào?",
+    "intent": "learning_recommendation"
+  },
+  {
+    "text": "Mình đang học tới phần nào của môn AI?",
+    "intent": "learning_progress"
+  },
+  {
+    "text": "Alo alo, nghe rõ không?",
+    "intent": "greeting"
+  },
+  {
+    "text": "Mình yếu phần nào, gợi ý mình ôn đi",
+    "intent": "learning_recommendation"
+  },
+  {
+    "text": "đề xuất cho tôi",
+    "intent": "learning_recommendation"
+  },
+  {
+    "text": "Cho mình lời khuyên nên học phần nào trước",
+    "intent": "learning_recommendation"
+  },
+  {
+    "text": "Lịch sử điểm các bài kiểm tra của mình",
+    "intent": "result"
+  },
+  {
+    "text": "Tính đa hình nghĩa là gì?",
+    "intent": "knowledge_question"
+  },
+  {
+    "text": "Giải thích thuật toán K-means theo từng vòng lặp",
+    "intent": "explanation"
+  },
+  {
+    "text": "Mục tiêu môn Lập trình Python là gì?",
+    "intent": "course_information"
+  },
+  {
+    "text": "Giải thích Dijkstra mức nâng cao",
+    "intent": "explanation"
+  },
+  {
+    "text": "Hướng dẫn từng bước cách thực hiện LEFT JOIN",
+    "intent": "explanation"
+  },
+  {
+    "text": "Tien do mon CSDL cua minh bao nhieu %",
+    "intent": "learning_progress"
+  },
+  {
+    "text": "Cho mình biết mình học được bao nhiêu giờ rồi",
+    "intent": "learning_progress"
+  },
+  {
+    "text": "Tóm tắt toàn bộ môn Cơ sở dữ liệu",
+    "intent": "summary"
+  },
+  {
+    "text": "Kết quả bài kiểm tra Git",
+    "intent": "result"
+  },
+  {
+    "text": "See you",
+    "intent": "goodbye"
+  },
+  {
+    "text": "điểm của tôi",
+    "intent": "result"
+  },
+  {
+    "text": "Có gợi ý nào để học môn CTDL&GT hiệu quả hơn không?",
+    "intent": "learning_recommendation"
+  },
+  {
+    "text": "Giải thích tại sao dùng ReLU thay vì sigmoid",
+    "intent": "explanation"
+  },
+  {
+    "text": "Tôi đã học được bao nhiêu rồi",
+    "intent": "learning_progress"
+  },
+  {
+    "text": "Cho mình làm bài kiểm tra mức dễ trước",
+    "intent": "exam"
+  },
+  {
+    "text": "Tìm slide SQL JOIN",
+    "intent": "document_search"
+  },
+  {
+    "text": "Số tiết lý thuyết và thực hành của môn Python?",
+    "intent": "course_information"
+  },
+  {
+    "text": "Chào buổi sáng",
+    "intent": "greeting"
+  },
+  {
+    "text": "Vào làm bài kiểm tra 15 phút",
+    "intent": "exam"
+  },
+  {
+    "text": "Thanks, bye",
+    "intent": "goodbye"
+  },
+  {
+    "text": "Chào tạm biệt",
+    "intent": "goodbye"
+  },
+  {
+    "text": "Chào bạn, bạn có đó không?",
+    "intent": "greeting"
+  },
+  {
+    "text": "Giải thích BFS từng bước một",
+    "intent": "explanation"
+  },
+  {
+    "text": "Trigger trong SQL là gì?",
+    "intent": "knowledge_question"
+  },
+  {
+    "text": "Cho mình ý chính của chương 3 môn Mạng máy tính",
+    "intent": "summary"
+  },
+  {
+    "text": "Mở slide TCP/IP giúp mình",
+    "intent": "document_search"
+  },
+  {
+    "text": "Môn Lập trình hướng đối tượng có những chương nào?",
+    "intent": "course_information"
+  },
+  {
+    "text": "Tiến độ học của mình tháng này",
+    "intent": "learning_progress"
+  },
+  {
+    "text": "Bắt đầu bài thi 45 phút môn Python",
+    "intent": "exam"
+  },
+  {
+    "text": "Thi thử môn Mạng máy tính",
+    "intent": "exam"
+  },
+  {
+    "text": "Tóm tắt trang 10 đến trang 15 của tài liệu",
+    "intent": "summary"
+  }
+]

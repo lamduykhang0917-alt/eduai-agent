@@ -1,0 +1,1964 @@
+{
+ "questions": [
+  {
+   "course": "Lập trình hướng đối tượng",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Đóng gói (encapsulation) trong lập trình hướng đối tượng là gì?",
+   "options": {
+    "A": "Cho phép lớp con sử dụng lại thuộc tính và phương thức của lớp cha",
+    "B": "Cho phép cùng một phương thức có nhiều cách thực thi khác nhau",
+    "C": "Che giấu dữ liệu bên trong đối tượng và chỉ cho truy cập qua các phương thức công khai",
+    "D": "Tạo ra đối tượng mới bằng cách sao chép hoàn toàn một đối tượng có sẵn"
+   },
+   "correct_answer": "C",
+   "explanation": "Đóng gói gắn dữ liệu với phương thức xử lý và kiểm soát truy cập từ bên ngoài."
+  },
+  {
+   "course": "Lập trình hướng đối tượng",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Lớp (class) là gì?",
+   "options": {
+    "A": "Một vùng nhớ cụ thể chứa dữ liệu của một đối tượng đang chạy",
+    "B": "Một hàm đặc biệt dùng để khởi tạo giá trị cho biến toàn cục",
+    "C": "Một tập tin mã nguồn chứa toàn bộ chương trình ứng dụng",
+    "D": "Khuôn mẫu mô tả thuộc tính và hành vi chung của các đối tượng cùng loại"
+   },
+   "correct_answer": "D",
+   "explanation": "Lớp là bản thiết kế, từ đó tạo ra các đối tượng cụ thể."
+  },
+  {
+   "course": "Lập trình hướng đối tượng",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Đối tượng (object) là gì?",
+   "options": {
+    "A": "Một bản mô tả chung cho nhiều kiểu dữ liệu khác nhau",
+    "B": "Một thể hiện cụ thể của lớp, có trạng thái và hành vi riêng",
+    "C": "Một phương thức được gọi tự động khi chương trình kết thúc",
+    "D": "Một khối lệnh dùng để xử lý ngoại lệ trong chương trình"
+   },
+   "correct_answer": "B",
+   "explanation": "Đối tượng là instance của lớp, lưu trạng thái riêng trong bộ nhớ."
+  },
+  {
+   "course": "Lập trình hướng đối tượng",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Kế thừa (inheritance) cho phép điều gì?",
+   "options": {
+    "A": "Lớp cha truy cập trực tiếp mọi thành viên private của lớp con",
+    "B": "Lớp con tái sử dụng và mở rộng thuộc tính, phương thức của lớp cha",
+    "C": "Hai lớp không liên quan dùng chung một vùng nhớ dữ liệu",
+    "D": "Một đối tượng tự hủy khi không còn được sử dụng nữa"
+   },
+   "correct_answer": "B",
+   "explanation": "Kế thừa giúp tái sử dụng mã và biểu diễn quan hệ \"là một\" giữa các lớp."
+  },
+  {
+   "course": "Lập trình hướng đối tượng",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Đa hình (polymorphism) có nghĩa là gì?",
+   "options": {
+    "A": "Cùng một lời gọi phương thức có thể cho hành vi khác nhau tùy kiểu đối tượng thực tế",
+    "B": "Một lớp chỉ được phép có duy nhất một đối tượng trong chương trình",
+    "C": "Dữ liệu của đối tượng luôn bị ẩn hoàn toàn khỏi mọi lớp khác",
+    "D": "Mỗi lớp con bắt buộc phải có cùng số lượng thuộc tính với lớp cha"
+   },
+   "correct_answer": "A",
+   "explanation": "Đa hình cho phép xử lý các đối tượng khác kiểu qua cùng một giao diện chung."
+  },
+  {
+   "course": "Lập trình hướng đối tượng",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Constructor (hàm tạo) có vai trò chính nào?",
+   "options": {
+    "A": "Được gọi khi hủy đối tượng để giải phóng toàn bộ chương trình",
+    "B": "Được gọi khi khởi tạo đối tượng để thiết lập trạng thái ban đầu",
+    "C": "Dùng để so sánh hai đối tượng có bằng nhau hay không",
+    "D": "Dùng để chuyển đổi một đối tượng thành chuỗi ký tự"
+   },
+   "correct_answer": "B",
+   "explanation": "Constructor chạy khi tạo đối tượng và thường dùng để gán giá trị ban đầu cho thuộc tính."
+  },
+  {
+   "course": "Lập trình hướng đối tượng",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Trừu tượng hóa (abstraction) là gì?",
+   "options": {
+    "A": "Sao chép toàn bộ mã nguồn của lớp cha vào lớp con",
+    "B": "Chuyển mọi thuộc tính của lớp thành kiểu dữ liệu số nguyên",
+    "C": "Cho phép một lớp có nhiều hàm tạo với tên khác nhau",
+    "D": "Tập trung vào đặc điểm thiết yếu và ẩn đi các chi tiết cài đặt không cần thiết"
+   },
+   "correct_answer": "D",
+   "explanation": "Trừu tượng hóa giúp người dùng chỉ cần biết \"làm gì\" mà không cần biết \"làm như thế nào\"."
+  },
+  {
+   "course": "Lập trình hướng đối tượng",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Thành viên được khai báo private của một lớp có thể truy cập từ đâu?",
+   "options": {
+    "A": "Từ mọi lớp trong cùng chương trình",
+    "B": "Chỉ bên trong chính lớp đó",
+    "C": "Chỉ từ các lớp con của lớp đó",
+    "D": "Chỉ từ các lớp ở cùng gói hoặc namespace"
+   },
+   "correct_answer": "B",
+   "explanation": "private giới hạn truy cập trong phạm vi lớp khai báo, phục vụ việc đóng gói."
+  },
+  {
+   "course": "Lập trình hướng đối tượng",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Thành viên static của một lớp có đặc điểm nào?",
+   "options": {
+    "A": "Mỗi đối tượng giữ một bản sao độc lập của thành viên đó",
+    "B": "Chỉ tồn tại trong thời gian hàm tạo đang chạy",
+    "C": "Không bao giờ được phép truy cập từ bên ngoài lớp",
+    "D": "Thuộc về lớp và được chia sẻ chung cho mọi đối tượng của lớp"
+   },
+   "correct_answer": "D",
+   "explanation": "Thành viên static chỉ có một bản duy nhất gắn với lớp, không gắn với từng đối tượng."
+  },
+  {
+   "course": "Lập trình hướng đối tượng",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Interface (giao diện) trong lập trình hướng đối tượng dùng để làm gì?",
+   "options": {
+    "A": "Lưu trữ dữ liệu của đối tượng vào cơ sở dữ liệu",
+    "B": "Tạo giao diện đồ họa cho người dùng cuối của ứng dụng",
+    "C": "Quy định tập các phương thức mà lớp cài đặt nó phải cung cấp",
+    "D": "Tăng tốc độ thực thi của các vòng lặp trong chương trình"
+   },
+   "correct_answer": "C",
+   "explanation": "Interface là một hợp đồng hành vi mà các lớp cài đặt cần tuân thủ."
+  },
+  {
+   "course": "Lập trình hướng đối tượng",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Nạp chồng phương thức (overloading) là gì?",
+   "options": {
+    "A": "Lớp con định nghĩa lại phương thức của lớp cha với cùng chữ ký",
+    "B": "Một phương thức tự gọi lại chính nó cho đến khi thỏa điều kiện dừng",
+    "C": "Nhiều phương thức cùng tên nhưng khác danh sách tham số trong cùng một lớp",
+    "D": "Một phương thức được gọi tự động khi đối tượng bị hủy"
+   },
+   "correct_answer": "C",
+   "explanation": "Overloading phân biệt các phương thức cùng tên bằng số lượng hoặc kiểu tham số."
+  },
+  {
+   "course": "Lập trình hướng đối tượng",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Ghi đè phương thức (overriding) là gì?",
+   "options": {
+    "A": "Lớp con định nghĩa lại phương thức của lớp cha với cùng chữ ký",
+    "B": "Nhiều phương thức cùng tên nhưng khác danh sách tham số",
+    "C": "Một lớp có hai phương thức khác tên nhưng cùng chức năng",
+    "D": "Xóa hoàn toàn phương thức của lớp cha khỏi chương trình"
+   },
+   "correct_answer": "A",
+   "explanation": "Overriding thay đổi cách thực thi của phương thức được kế thừa trong lớp con."
+  },
+  {
+   "course": "Lập trình hướng đối tượng",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Lớp trừu tượng (abstract class) có đặc điểm nào?",
+   "options": {
+    "A": "Luôn bắt buộc mọi phương thức của nó phải có phần thân cài đặt",
+    "B": "Chỉ chứa các thành viên static và không có thuộc tính",
+    "C": "Có thể khởi tạo đối tượng bằng toán tử new như lớp thông thường",
+    "D": "Không thể khởi tạo trực tiếp và có thể chứa phương thức trừu tượng"
+   },
+   "correct_answer": "D",
+   "explanation": "Lớp trừu tượng làm nền cho các lớp con và không tạo trực tiếp đối tượng."
+  },
+  {
+   "course": "Lập trình hướng đối tượng",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Thuộc tính (field/attribute) của một lớp dùng để làm gì?",
+   "options": {
+    "A": "Mô tả hành vi mà đối tượng có thể thực hiện",
+    "B": "Khai báo mối quan hệ kế thừa giữa các lớp",
+    "C": "Xác định thứ tự các đối tượng được hủy bỏ",
+    "D": "Lưu trữ trạng thái dữ liệu của đối tượng"
+   },
+   "correct_answer": "D",
+   "explanation": "Thuộc tính là biến thuộc lớp, biểu diễn trạng thái của đối tượng."
+  },
+  {
+   "course": "Lập trình hướng đối tượng",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Đoạn mã Java sau in ra gì?\nclass A { void show() { System.out.print(\"A\"); } }\nclass B extends A { void show() { System.out.print(\"B\"); } }\nA x = new B();\nx.show();",
+   "options": {
+    "A": "B",
+    "B": "A",
+    "C": "AB",
+    "D": "Lỗi biên dịch vì kiểu khai báo khác kiểu đối tượng"
+   },
+   "correct_answer": "A",
+   "explanation": "Phương thức thể hiện được chọn theo kiểu thực tế của đối tượng (B) lúc chạy nên in B."
+  },
+  {
+   "course": "Lập trình hướng đối tượng",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Điểm khác biệt chính giữa lớp trừu tượng và interface trong Java (truyền thống) là gì?",
+   "options": {
+    "A": "Lớp trừu tượng không thể có phương thức, còn interface thì có",
+    "B": "Interface có thể khởi tạo đối tượng, lớp trừu tượng thì không",
+    "C": "Một lớp chỉ kế thừa một lớp trừu tượng nhưng có thể cài đặt nhiều interface",
+    "D": "Lớp trừu tượng không được có hàm tạo, còn interface thì được"
+   },
+   "correct_answer": "C",
+   "explanation": "Java chỉ cho đơn kế thừa lớp nhưng cho phép cài đặt nhiều interface."
+  },
+  {
+   "course": "Lập trình hướng đối tượng",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "So sánh overloading và overriding về thời điểm xác định phương thức được gọi:",
+   "options": {
+    "A": "Overloading xác định lúc chạy, overriding xác định lúc biên dịch",
+    "B": "Overloading xác định lúc biên dịch, overriding xác định lúc chạy",
+    "C": "Cả hai đều chỉ được xác định hoàn toàn lúc chạy chương trình",
+    "D": "Cả hai đều chỉ được xác định hoàn toàn lúc biên dịch"
+   },
+   "correct_answer": "B",
+   "explanation": "Overloading là đa hình tĩnh (compile-time), overriding là đa hình động (runtime)."
+  },
+  {
+   "course": "Lập trình hướng đối tượng",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Đoạn mã Java sau in ra giá trị nào?\nclass Counter { static int c = 0; Counter() { c++; } }\nnew Counter(); new Counter(); new Counter();\nSystem.out.print(Counter.c);",
+   "options": {
+    "A": "0",
+    "B": "1",
+    "C": "Lỗi biên dịch vì truy cập static qua tên lớp",
+    "D": "3"
+   },
+   "correct_answer": "D",
+   "explanation": "c là biến static dùng chung nên mỗi lần tạo đối tượng làm c tăng thêm 1, tổng 3."
+  },
+  {
+   "course": "Lập trình hướng đối tượng",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Lớp Xe có một đối tượng Dongco làm thành phần, và Dongco không tồn tại độc lập khi Xe bị hủy. Đây là quan hệ nào?",
+   "options": {
+    "A": "Hợp thành (composition) theo kiểu \"có một\"",
+    "B": "Kế thừa (inheritance) theo kiểu \"là một\"",
+    "C": "Phụ thuộc tạm thời qua tham số của một phương thức",
+    "D": "Cài đặt (realization) một interface"
+   },
+   "correct_answer": "A",
+   "explanation": "Composition biểu diễn quan hệ \"has-a\" với vòng đời phụ thuộc lớp chứa."
+  },
+  {
+   "course": "Lập trình hướng đối tượng",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Đoạn mã Java sau in ra gì?\nclass P { P() { System.out.print(\"P\"); } }\nclass C extends P { C() { System.out.print(\"C\"); } }\nnew C();",
+   "options": {
+    "A": "CP",
+    "B": "PC",
+    "C": "C",
+    "D": "P"
+   },
+   "correct_answer": "B",
+   "explanation": "Hàm tạo lớp cha được gọi ngầm trước nên in P rồi mới đến C."
+  },
+  {
+   "course": "Lập trình hướng đối tượng",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Nguyên lý Single Responsibility (SRP) trong SOLID phát biểu điều gì?",
+   "options": {
+    "A": "Mỗi lớp chỉ được phép có duy nhất một phương thức",
+    "B": "Mỗi chương trình chỉ nên chứa duy nhất một lớp chính",
+    "C": "Mỗi đối tượng chỉ được tạo ra duy nhất một lần",
+    "D": "Mỗi lớp chỉ nên có một lý do duy nhất để thay đổi"
+   },
+   "correct_answer": "D",
+   "explanation": "SRP yêu cầu mỗi lớp đảm nhận một trách nhiệm rõ ràng, giúp dễ bảo trì."
+  },
+  {
+   "course": "Lập trình hướng đối tượng",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Lớp Square kế thừa Rectangle và ghi đè setWidth để đồng thời đổi height. Mã khách giả định đổi width không ảnh hưởng height sẽ sai. Nguyên lý nào bị vi phạm?",
+   "options": {
+    "A": "Liskov Substitution: lớp con không thay thế được lớp cha mà vẫn giữ đúng hành vi",
+    "B": "Open/Closed: lớp không được mở rộng mà không sửa đổi mã nguồn",
+    "C": "Interface Segregation: interface chứa quá nhiều phương thức",
+    "D": "Dependency Inversion: lớp cấp cao phụ thuộc lớp cấp thấp"
+   },
+   "correct_answer": "A",
+   "explanation": "LSP yêu cầu đối tượng lớp con dùng thay lớp cha không làm sai hành vi mong đợi."
+  },
+  {
+   "course": "Lập trình hướng đối tượng",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Đoạn mã Java sau in ra gì?\nclass A { static void f() { System.out.print(\"A\"); } }\nclass B extends A { static void f() { System.out.print(\"B\"); } }\nA x = new B();\nx.f();",
+   "options": {
+    "A": "B",
+    "B": "AB",
+    "C": "A",
+    "D": "Lỗi biên dịch vì không thể ghi đè phương thức static"
+   },
+   "correct_answer": "C",
+   "explanation": "Phương thức static bị che giấu (hiding) chứ không ghi đè, gắn theo kiểu khai báo A."
+  },
+  {
+   "course": "Lập trình hướng đối tượng",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Vấn đề \"kim cương\" (diamond problem) trong đa kế thừa C++ và cách xử lý phù hợp là gì?",
+   "options": {
+    "A": "Lớp A kế thừa chính nó gây vòng lặp vô hạn; dùng từ khóa final",
+    "B": "Lớp D kế thừa B và C cùng kế thừa A gây hai bản A; dùng kế thừa ảo (virtual)",
+    "C": "Hai lớp cùng tên gây xung đột; đổi tên toàn bộ các lớp",
+    "D": "Lớp con thiếu hàm tạo; thêm hàm tạo mặc định cho mọi lớp"
+   },
+   "correct_answer": "B",
+   "explanation": "Kế thừa ảo đảm lớp cơ sở chung A chỉ có một bản duy nhất trong D."
+  },
+  {
+   "course": "Lập trình hướng đối tượng",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Đoạn mã Java sau in ra gì?\nclass A { String n = \"A\"; }\nclass B extends A { String n = \"B\"; }\nA x = new B();\nSystem.out.print(x.n);",
+   "options": {
+    "A": "A",
+    "B": "B",
+    "C": "AB",
+    "D": "null"
+   },
+   "correct_answer": "A",
+   "explanation": "Trường dữ liệu không có tính đa hình, truy cập theo kiểu khai báo A nên in A."
+  },
+  {
+   "course": "Lập trình hướng đối tượng",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Đoạn mã Java sau in ra gì?\nclass P { P() { init(); } void init() { } }\nclass C extends P { int v = 5; void init() { System.out.print(v); } }\nnew C();",
+   "options": {
+    "A": "5",
+    "B": "null",
+    "C": "0",
+    "D": "Lỗi biên dịch vì init được gọi trong hàm tạo"
+   },
+   "correct_answer": "C",
+   "explanation": "init của C chạy trong hàm tạo P khi v chưa được khởi tạo nên v mang giá trị mặc định 0."
+  },
+  {
+   "course": "Lập trình hướng đối tượng",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "OrderService tạo trực tiếp new MySqlRepo(), khiến việc đổi sang cơ sở dữ liệu khác và viết kiểm thử rất khó. Cách cải thiện đúng theo Dependency Inversion là gì?",
+   "options": {
+    "A": "Chuyển MySqlRepo thành lớp con của OrderService",
+    "B": "Khai báo MySqlRepo là biến static trong OrderService",
+    "C": "Cho OrderService phụ thuộc interface Repository và tiêm cài đặt qua hàm tạo",
+    "D": "Gộp MySqlRepo vào OrderService thành một lớp duy nhất"
+   },
+   "correct_answer": "C",
+   "explanation": "Phụ thuộc vào abstraction và tiêm phụ thuộc giúp thay thế cài đặt dễ dàng."
+  },
+  {
+   "course": "Lập trình hướng đối tượng",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Trong Java, lớp ghi đè equals() nhưng không ghi đè hashCode(). Hai đối tượng \"bằng nhau\" theo equals được thêm vào HashSet. Điều gì có thể xảy ra?",
+   "options": {
+    "A": "Cả hai có thể cùng tồn tại vì hashCode khác nhau nên rơi vào bucket khác",
+    "B": "Luôn chỉ giữ một phần tử vì equals trả về true",
+    "C": "Chương trình ném ngoại lệ ngay khi thêm phần tử thứ hai",
+    "D": "Cả hai bị loại bỏ vì HashSet không chấp nhận khóa trùng"
+   },
+   "correct_answer": "A",
+   "explanation": "HashSet băm bằng hashCode trước, nên vi phạm hợp đồng equals/hashCode làm mất tính duy nhất."
+  },
+  {
+   "course": "Hệ quản trị cơ sở dữ liệu",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Khóa chính (primary key) của một bảng có đặc điểm nào?",
+   "options": {
+    "A": "Xác định duy nhất mỗi bản ghi và không được nhận giá trị NULL",
+    "B": "Cho phép nhiều bản ghi trùng giá trị và chấp nhận NULL",
+    "C": "Luôn là cột có kiểu chuỗi và độ dài tối đa 255 ký tự",
+    "D": "Chỉ dùng để sắp xếp dữ liệu khi hiển thị kết quả"
+   },
+   "correct_answer": "A",
+   "explanation": "Khóa chính định danh duy nhất từng dòng và không rỗng."
+  },
+  {
+   "course": "Hệ quản trị cơ sở dữ liệu",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Khóa ngoại (foreign key) dùng để làm gì?",
+   "options": {
+    "A": "Mã hóa dữ liệu của cột để tăng tính bảo mật",
+    "B": "Tự động sắp xếp các bản ghi theo thứ tự tăng dần",
+    "C": "Giới hạn số lượng bản ghi tối đa của một bảng",
+    "D": "Tham chiếu tới khóa của bảng khác để đảm bảo toàn vẹn tham chiếu"
+   },
+   "correct_answer": "D",
+   "explanation": "Khóa ngoại liên kết bảng và ràng buộc giá trị phải tồn tại ở bảng được tham chiếu."
+  },
+  {
+   "course": "Hệ quản trị cơ sở dữ liệu",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Hệ quản trị cơ sở dữ liệu (DBMS) là gì?",
+   "options": {
+    "A": "Một ngôn ngữ lập trình chỉ dùng để thiết kế giao diện web",
+    "B": "Thiết bị phần cứng chuyên dụng để lưu trữ tập tin",
+    "C": "Phần mềm dùng để tạo, quản lý, truy xuất và bảo mật cơ sở dữ liệu",
+    "D": "Một giao thức truyền dữ liệu giữa các máy tính trong mạng"
+   },
+   "correct_answer": "C",
+   "explanation": "DBMS như MySQL, SQL Server cung cấp công cụ quản lý dữ liệu tập trung."
+  },
+  {
+   "course": "Hệ quản trị cơ sở dữ liệu",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Câu lệnh nào sau đây thuộc nhóm DDL (Data Definition Language)?",
+   "options": {
+    "A": "CREATE TABLE",
+    "B": "INSERT INTO",
+    "C": "SELECT",
+    "D": "UPDATE"
+   },
+   "correct_answer": "A",
+   "explanation": "DDL định nghĩa cấu trúc đối tượng CSDL như CREATE, ALTER, DROP."
+  },
+  {
+   "course": "Hệ quản trị cơ sở dữ liệu",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Từ khóa DISTINCT trong câu lệnh SELECT có tác dụng gì?",
+   "options": {
+    "A": "Sắp xếp kết quả theo thứ tự giảm dần",
+    "B": "Loại bỏ các dòng kết quả trùng lặp",
+    "C": "Giới hạn kết quả chỉ còn một dòng đầu tiên",
+    "D": "Đếm số cột có trong bảng kết quả"
+   },
+   "correct_answer": "B",
+   "explanation": "SELECT DISTINCT chỉ trả về các dòng có giá trị khác nhau."
+  },
+  {
+   "course": "Hệ quản trị cơ sở dữ liệu",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Chỉ mục (index) trong cơ sở dữ liệu có mục đích chính nào?",
+   "options": {
+    "A": "Tăng tốc độ truy vấn tìm kiếm dữ liệu",
+    "B": "Giảm kích thước tập tin lưu trữ của bảng",
+    "C": "Tự động sao lưu dữ liệu sang máy chủ khác",
+    "D": "Ngăn người dùng không được xóa bản ghi"
+   },
+   "correct_answer": "A",
+   "explanation": "Index giúp tìm dòng nhanh hơn nhưng tốn thêm không gian và chi phí ghi."
+  },
+  {
+   "course": "Hệ quản trị cơ sở dữ liệu",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Trong ACID, tính nguyên tử (Atomicity) của giao dịch nghĩa là gì?",
+   "options": {
+    "A": "Giao dịch hoặc được thực hiện toàn bộ hoặc không có thay đổi nào",
+    "B": "Giao dịch luôn chạy nhanh hơn các thao tác đơn lẻ",
+    "C": "Giao dịch chỉ được phép chứa duy nhất một câu lệnh",
+    "D": "Kết quả giao dịch luôn được mã hóa trước khi lưu"
+   },
+   "correct_answer": "A",
+   "explanation": "Atomicity đảm bảo kiểu \"tất cả hoặc không gì cả\"."
+  },
+  {
+   "course": "Hệ quản trị cơ sở dữ liệu",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Câu lệnh INSERT INTO dùng để làm gì?",
+   "options": {
+    "A": "Cập nhật giá trị của các bản ghi đã có",
+    "B": "Thêm bản ghi mới vào bảng",
+    "C": "Xóa các bản ghi thỏa một điều kiện",
+    "D": "Thay đổi cấu trúc cột của bảng"
+   },
+   "correct_answer": "B",
+   "explanation": "INSERT INTO thêm một hoặc nhiều dòng mới vào bảng."
+  },
+  {
+   "course": "Hệ quản trị cơ sở dữ liệu",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Mục đích chính của chuẩn hóa cơ sở dữ liệu là gì?",
+   "options": {
+    "A": "Giảm dư thừa dữ liệu và các dị thường khi thêm, sửa, xóa",
+    "B": "Tăng số lượng bảng càng nhiều càng tốt",
+    "C": "Mã hóa dữ liệu để chống truy cập trái phép",
+    "D": "Gộp mọi dữ liệu vào một bảng duy nhất để truy vấn nhanh"
+   },
+   "correct_answer": "A",
+   "explanation": "Chuẩn hóa tổ chức bảng hợp lý, tránh lặp dữ liệu và dị thường cập nhật."
+  },
+  {
+   "course": "Hệ quản trị cơ sở dữ liệu",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Câu lệnh COMMIT trong giao dịch có tác dụng gì?",
+   "options": {
+    "A": "Hủy toàn bộ thay đổi và quay về trạng thái ban đầu",
+    "B": "Khóa toàn bộ bảng cho đến khi kết thúc phiên",
+    "C": "Xác nhận và lưu vĩnh viễn các thay đổi của giao dịch",
+    "D": "Tạo bản sao lưu của toàn bộ cơ sở dữ liệu"
+   },
+   "correct_answer": "C",
+   "explanation": "COMMIT kết thúc giao dịch thành công và ghi nhận các thay đổi."
+  },
+  {
+   "course": "Hệ quản trị cơ sở dữ liệu",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "View (khung nhìn) trong cơ sở dữ liệu là gì?",
+   "options": {
+    "A": "Bản sao vật lý đầy đủ của một bảng dữ liệu",
+    "B": "Một chỉ mục dùng để tăng tốc độ sắp xếp",
+    "C": "Một tài khoản người dùng có quyền chỉ đọc",
+    "D": "Bảng ảo được định nghĩa bằng một câu truy vấn SELECT"
+   },
+   "correct_answer": "D",
+   "explanation": "View không lưu dữ liệu riêng mà hiển thị kết quả truy vấn nền."
+  },
+  {
+   "course": "Hệ quản trị cơ sở dữ liệu",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Ràng buộc UNIQUE trên một cột đảm bảo điều gì?",
+   "options": {
+    "A": "Các giá trị trong cột không bị trùng nhau",
+    "B": "Cột đó luôn phải có giá trị khác NULL",
+    "C": "Cột đó tự động tăng giá trị cho mỗi dòng mới",
+    "D": "Cột đó chỉ chứa các giá trị kiểu số nguyên"
+   },
+   "correct_answer": "A",
+   "explanation": "UNIQUE ngăn trùng lặp giá trị giữa các dòng trong cột."
+  },
+  {
+   "course": "Hệ quản trị cơ sở dữ liệu",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Hàm COUNT(*) trả về giá trị nào?",
+   "options": {
+    "A": "Tổng giá trị của tất cả các cột số",
+    "B": "Số cột có trong bảng",
+    "C": "Số dòng của tập kết quả",
+    "D": "Giá trị lớn nhất của cột khóa chính"
+   },
+   "correct_answer": "C",
+   "explanation": "COUNT(*) đếm số dòng, kể cả dòng có giá trị NULL."
+  },
+  {
+   "course": "Hệ quản trị cơ sở dữ liệu",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Thủ tục lưu trữ (stored procedure) là gì?",
+   "options": {
+    "A": "Một bản sao lưu dữ liệu được đặt lịch tự động hằng ngày",
+    "B": "Một loại chỉ mục dành riêng cho cột văn bản",
+    "C": "Một bảng tạm thời tự xóa khi kết thúc phiên",
+    "D": "Tập lệnh SQL được lưu sẵn trong CSDL và có thể gọi lại nhiều lần"
+   },
+   "correct_answer": "D",
+   "explanation": "Stored procedure đóng gói logic xử lý phía máy chủ, tái sử dụng được."
+  },
+  {
+   "course": "Hệ quản trị cơ sở dữ liệu",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Sự khác nhau giữa WHERE và HAVING trong SQL là gì?",
+   "options": {
+    "A": "WHERE chỉ dùng cho cột số, HAVING chỉ dùng cho cột chuỗi",
+    "B": "WHERE lọc dòng trước khi gom nhóm, HAVING lọc nhóm sau GROUP BY",
+    "C": "WHERE lọc nhóm sau khi gom, HAVING lọc dòng trước khi gom",
+    "D": "WHERE và HAVING hoàn toàn giống nhau trong mọi trường hợp"
+   },
+   "correct_answer": "B",
+   "explanation": "HAVING áp dụng điều kiện lên kết quả hàm tổng hợp của từng nhóm."
+  },
+  {
+   "course": "Hệ quản trị cơ sở dữ liệu",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Bảng NhanVien(id, ten, luong). Truy vấn nào trả về tên nhân viên có lương cao hơn lương trung bình?",
+   "options": {
+    "A": "SELECT ten FROM NhanVien WHERE luong > AVG(luong)",
+    "B": "SELECT ten, AVG(luong) FROM NhanVien HAVING luong > 0",
+    "C": "SELECT ten FROM NhanVien GROUP BY ten WHERE luong > AVG",
+    "D": "SELECT ten FROM NhanVien WHERE luong > (SELECT AVG(luong) FROM NhanVien)"
+   },
+   "correct_answer": "D",
+   "explanation": "Hàm tổng hợp không dùng trực tiếp trong WHERE nên cần truy vấn con tính AVG."
+  },
+  {
+   "course": "Hệ quản trị cơ sở dữ liệu",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "LEFT JOIN khác INNER JOIN ở điểm nào?",
+   "options": {
+    "A": "LEFT JOIN chỉ trả về các dòng khớp ở cả hai bảng",
+    "B": "LEFT JOIN giữ mọi dòng bảng phải và bỏ dòng bảng trái",
+    "C": "LEFT JOIN luôn trả về tích Descartes của hai bảng",
+    "D": "LEFT JOIN giữ mọi dòng bảng trái, dòng không khớp có cột bảng phải là NULL"
+   },
+   "correct_answer": "D",
+   "explanation": "LEFT JOIN không làm mất dòng của bảng bên trái dù không có dòng khớp."
+  },
+  {
+   "course": "Hệ quản trị cơ sở dữ liệu",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "A(x) có các giá trị 1,2,3; B(y) có 2,3,4. Kết quả của SELECT COUNT(B.y) FROM A LEFT JOIN B ON A.x = B.y là gì?",
+   "options": {
+    "A": "3",
+    "B": "2",
+    "C": "1",
+    "D": "4"
+   },
+   "correct_answer": "B",
+   "explanation": "LEFT JOIN cho 3 dòng nhưng dòng x=1 có B.y là NULL; COUNT(cột) bỏ qua NULL nên là 2."
+  },
+  {
+   "course": "Hệ quản trị cơ sở dữ liệu",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Một bảng đạt dạng chuẩn 3 (3NF) khi nào?",
+   "options": {
+    "A": "Mọi cột đều là khóa chính của bảng",
+    "B": "Bảng không chứa bất kỳ khóa ngoại nào",
+    "C": "Mỗi cột chỉ chứa các giá trị kiểu chuỗi",
+    "D": "Đạt 2NF và không có phụ thuộc bắc cầu của thuộc tính không khóa vào khóa"
+   },
+   "correct_answer": "D",
+   "explanation": "3NF loại bỏ phụ thuộc hàm bắc cầu giữa thuộc tính không khóa."
+  },
+  {
+   "course": "Hệ quản trị cơ sở dữ liệu",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Chỉ mục clustered (phân cụm) khác non-clustered ở điểm nào?",
+   "options": {
+    "A": "Clustered lưu thứ tự riêng ngoài bảng nên một bảng có nhiều chỉ mục",
+    "B": "Clustered chỉ dùng cho cột kiểu văn bản",
+    "C": "Clustered quyết định thứ tự lưu trữ vật lý của dòng nên mỗi bảng chỉ có một",
+    "D": "Clustered tự động bị xóa sau mỗi giao dịch"
+   },
+   "correct_answer": "C",
+   "explanation": "Dữ liệu bảng chỉ sắp theo một thứ tự vật lý nên chỉ có một chỉ mục clustered."
+  },
+  {
+   "course": "Hệ quản trị cơ sở dữ liệu",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Mức cô lập READ COMMITTED có đặc điểm nào?",
+   "options": {
+    "A": "Ngăn dirty read nhưng vẫn cho phép non-repeatable read",
+    "B": "Ngăn mọi hiện tượng bất thường kể cả phantom read",
+    "C": "Cho phép đọc dữ liệu chưa commit của giao dịch khác",
+    "D": "Khóa toàn bộ bảng cho đến khi giao dịch kết thúc"
+   },
+   "correct_answer": "A",
+   "explanation": "READ COMMITTED chỉ đọc dữ liệu đã commit nhưng lần đọc lặp có thể đổi giá trị."
+  },
+  {
+   "course": "Hệ quản trị cơ sở dữ liệu",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "T1 khóa dòng A rồi chờ dòng B; T2 khóa dòng B rồi chờ dòng A. Hệ quản trị thường xử lý thế nào?",
+   "options": {
+    "A": "Cho cả hai giao dịch chờ vô hạn cho đến khi người dùng hủy",
+    "B": "Phát hiện deadlock và chọn một giao dịch nạn nhân để rollback",
+    "C": "Tự động commit cả hai giao dịch để giải phóng khóa",
+    "D": "Xóa dòng A và dòng B để tránh xung đột"
+   },
+   "correct_answer": "B",
+   "explanation": "Deadlock được phát hiện, một giao dịch bị hủy để giao dịch kia tiếp tục."
+  },
+  {
+   "course": "Hệ quản trị cơ sở dữ liệu",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Bảng A(x) có 1, 2; bảng B(y) có 2, NULL. Truy vấn SELECT x FROM A WHERE x NOT IN (SELECT y FROM B) trả về gì?",
+   "options": {
+    "A": "Dòng x = 1",
+    "B": "Không có dòng nào",
+    "C": "Hai dòng x = 1 và x = 2",
+    "D": "Báo lỗi vì tập con chứa NULL"
+   },
+   "correct_answer": "B",
+   "explanation": "So sánh 1 <> NULL cho kết quả UNKNOWN nên NOT IN không đúng với dòng nào."
+  },
+  {
+   "course": "Hệ quản trị cơ sở dữ liệu",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Có chỉ mục tổng hợp trên (a, b, c). Điều kiện nào tận dụng chỉ mục hiệu quả nhất?",
+   "options": {
+    "A": "WHERE b = 2 AND c = 3",
+    "B": "WHERE c = 3",
+    "C": "WHERE a = 1 AND b = 2",
+    "D": "WHERE b = 2"
+   },
+   "correct_answer": "C",
+   "explanation": "Chỉ mục dùng được khi điều kiện bắt đầu từ tiền tố trái nhất (a, rồi b)."
+  },
+  {
+   "course": "Hệ quản trị cơ sở dữ liệu",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Tài khoản A=100, B=50. Giao dịch chuyển 30 từ A sang B: trừ A rồi cộng B. Hệ thống sập sau khi trừ A, trước khi cộng B và trước COMMIT. Sau khi khôi phục, trạng thái đúng là gì?",
+   "options": {
+    "A": "A = 70, B = 50",
+    "B": "A = 70, B = 80",
+    "C": "A = 100, B = 80",
+    "D": "A = 100, B = 50"
+   },
+   "correct_answer": "D",
+   "explanation": "Tính nguyên tử và bền vững: giao dịch chưa commit bị hoàn tác nên dữ liệu về như cũ."
+  },
+  {
+   "course": "Hệ quản trị cơ sở dữ liệu",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Theo chuẩn SQL-92, mức cô lập thấp nhất ngăn được phantom read là gì?",
+   "options": {
+    "A": "READ UNCOMMITTED",
+    "B": "SERIALIZABLE",
+    "C": "READ COMMITTED",
+    "D": "REPEATABLE READ"
+   },
+   "correct_answer": "B",
+   "explanation": "Theo chuẩn, chỉ SERIALIZABLE ngăn cả dirty, non-repeatable và phantom read."
+  },
+  {
+   "course": "Hệ quản trị cơ sở dữ liệu",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Truy vấn WHERE YEAR(ngay) = 2024 chạy chậm dù cột ngay đã có chỉ mục. Cách viết lại tối ưu là gì?",
+   "options": {
+    "A": "WHERE SUBSTRING(ngay, 1, 4) = '2024'",
+    "B": "WHERE CAST(ngay AS CHAR) LIKE '2024%'",
+    "C": "WHERE ngay >= '2024-01-01' AND ngay < '2025-01-01'",
+    "D": "WHERE YEAR(ngay) IN (2024)"
+   },
+   "correct_answer": "C",
+   "explanation": "Áp hàm lên cột làm mất khả năng dùng chỉ mục; so sánh khoảng giúp dùng index seek."
+  },
+  {
+   "course": "Hệ quản trị cơ sở dữ liệu",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Quan hệ R(A,B,C,D) có tập phụ thuộc hàm F = {A→B, B→C, C→D}. Khóa ứng viên của R là gì?",
+   "options": {
+    "A": "{B}",
+    "B": "{C, D}",
+    "C": "{A}",
+    "D": "{B, D}"
+   },
+   "correct_answer": "C",
+   "explanation": "Bao đóng của A là {A,B,C,D} và A không có trong vế phải nào nên A là khóa duy nhất."
+  },
+  {
+   "course": "Lập trình .NET",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": ".NET là gì?",
+   "options": {
+    "A": "Nền tảng phát triển ứng dụng của Microsoft gồm môi trường chạy và thư viện lớp",
+    "B": "Một hệ quản trị cơ sở dữ liệu quan hệ do Microsoft phát hành",
+    "C": "Một hệ điều hành dành riêng cho máy chủ web",
+    "D": "Một trình soạn thảo mã nguồn chỉ chạy trên Windows"
+   },
+   "correct_answer": "A",
+   "explanation": "Nền tảng .NET cung cấp runtime, thư viện và công cụ để xây dựng nhiều loại ứng dụng."
+  },
+  {
+   "course": "Lập trình .NET",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "C# là ngôn ngữ lập trình có đặc điểm nào?",
+   "options": {
+    "A": "Ngôn ngữ đánh dấu dùng để mô tả giao diện trang web",
+    "B": "Ngôn ngữ kịch bản chỉ chạy bên trong trình duyệt",
+    "C": "Hướng đối tượng, kiểu tĩnh, do Microsoft phát triển",
+    "D": "Ngôn ngữ truy vấn chuyên dùng cho cơ sở dữ liệu"
+   },
+   "correct_answer": "C",
+   "explanation": "C# là ngôn ngữ đa mục đích, hướng đối tượng, kiểm tra kiểu lúc biên dịch."
+  },
+  {
+   "course": "Lập trình .NET",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "CLR (Common Language Runtime) có vai trò gì?",
+   "options": {
+    "A": "Biên dịch mã nguồn C# thành mã máy gốc trước khi cài đặt",
+    "B": "Quản lý các gói thư viện bên thứ ba cho dự án",
+    "C": "Thiết kế giao diện kéo thả cho ứng dụng desktop",
+    "D": "Thực thi mã IL, quản lý bộ nhớ và an toàn kiểu cho ứng dụng .NET"
+   },
+   "correct_answer": "D",
+   "explanation": "CLR là môi trường chạy của .NET, biên dịch JIT và quản lý bộ nhớ."
+  },
+  {
+   "course": "Lập trình .NET",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Garbage Collector (GC) trong .NET làm nhiệm vụ gì?",
+   "options": {
+    "A": "Tự động thu hồi bộ nhớ của các đối tượng không còn được tham chiếu",
+    "B": "Xóa các tập tin tạm trong thư mục dự án khi biên dịch",
+    "C": "Tự động sửa các lỗi cú pháp trong mã nguồn",
+    "D": "Nén mã nguồn để giảm kích thước tập tin thực thi"
+   },
+   "correct_answer": "A",
+   "explanation": "GC giải phóng bộ nhớ heap của đối tượng không còn truy cập được."
+  },
+  {
+   "course": "Lập trình .NET",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Namespace trong C# dùng để làm gì?",
+   "options": {
+    "A": "Khai báo kiểu dữ liệu số nguyên cho biến",
+    "B": "Mã hóa dữ liệu trước khi lưu vào tập tin",
+    "C": "Tổ chức, nhóm các kiểu và tránh xung đột tên",
+    "D": "Định nghĩa vòng lặp trong chương trình"
+   },
+   "correct_answer": "C",
+   "explanation": "Namespace nhóm các lớp liên quan và giúp phân biệt tên trùng nhau."
+  },
+  {
+   "course": "Lập trình .NET",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Từ khóa var trong C# có ý nghĩa nào?",
+   "options": {
+    "A": "Biến có thể nhận giá trị thuộc bất kỳ kiểu nào lúc chạy",
+    "B": "Biến luôn là kiểu chuỗi ký tự",
+    "C": "Biến chỉ được đọc và không được gán lại",
+    "D": "Trình biên dịch tự suy luận kiểu biến từ biểu thức khởi tạo"
+   },
+   "correct_answer": "D",
+   "explanation": "var vẫn là kiểu tĩnh; kiểu được xác định lúc biên dịch."
+  },
+  {
+   "course": "Lập trình .NET",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "NuGet là gì trong hệ sinh thái .NET?",
+   "options": {
+    "A": "Trình gỡ lỗi dùng để chạy từng dòng lệnh",
+    "B": "Công cụ thiết kế sơ đồ lớp trực quan",
+    "C": "Máy chủ web tích hợp sẵn để chạy ứng dụng",
+    "D": "Trình quản lý gói để thêm và cập nhật thư viện cho dự án"
+   },
+   "correct_answer": "D",
+   "explanation": "NuGet cho phép tải, cài đặt và quản lý các gói thư viện .NET."
+  },
+  {
+   "course": "Lập trình .NET",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "ASP.NET Core được dùng chủ yếu để làm gì?",
+   "options": {
+    "A": "Thiết kế cơ sở dữ liệu quan hệ trên máy chủ",
+    "B": "Soạn thảo tài liệu văn bản cho văn phòng",
+    "C": "Quản lý máy ảo trên hạ tầng đám mây",
+    "D": "Xây dựng ứng dụng web và Web API đa nền tảng"
+   },
+   "correct_answer": "D",
+   "explanation": "ASP.NET Core là framework mã nguồn mở xây dựng web và API."
+  },
+  {
+   "course": "Lập trình .NET",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Property (thuộc tính) trong C# có mục đích gì?",
+   "options": {
+    "A": "Khai báo một hằng số dùng chung cho toàn chương trình",
+    "B": "Tạo ra một vòng lặp chạy trên nhiều luồng",
+    "C": "Cung cấp truy cập có kiểm soát tới field qua get và set",
+    "D": "Chuyển đổi kiểu dữ liệu một cách tự động"
+   },
+   "correct_answer": "C",
+   "explanation": "Property đóng gói field, cho phép thêm logic khi đọc hoặc ghi."
+  },
+  {
+   "course": "Lập trình .NET",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Quy ước đặt tên interface trong C# là gì?",
+   "options": {
+    "A": "Tên kết thúc bằng chữ Interface",
+    "B": "Tên luôn viết thường toàn bộ chữ cái",
+    "C": "Tên bắt đầu bằng chữ I, ví dụ IRepository",
+    "D": "Tên bắt đầu bằng ký tự gạch dưới"
+   },
+   "correct_answer": "C",
+   "explanation": "Quy ước phổ biến của .NET là thêm tiền tố I vào tên interface."
+  },
+  {
+   "course": "Lập trình .NET",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Trong cấu trúc try-catch-finally, khối finally có đặc điểm nào?",
+   "options": {
+    "A": "Chỉ được thực thi khi có ngoại lệ xảy ra",
+    "B": "Chỉ được thực thi khi không có ngoại lệ nào",
+    "C": "Luôn được thực thi dù có ngoại lệ xảy ra hay không",
+    "D": "Bị bỏ qua nếu khối catch đã xử lý ngoại lệ"
+   },
+   "correct_answer": "C",
+   "explanation": "finally thường dùng để giải phóng tài nguyên bất kể kết quả của try."
+  },
+  {
+   "course": "Lập trình .NET",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Kiểu dữ liệu nào sau đây là kiểu giá trị (value type) trong C#?",
+   "options": {
+    "A": "string",
+    "B": "object",
+    "C": "int",
+    "D": "List<int>"
+   },
+   "correct_answer": "C",
+   "explanation": "int, struct, enum là kiểu giá trị; string, object, List là kiểu tham chiếu."
+  },
+  {
+   "course": "Lập trình .NET",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "LINQ trong C# là gì?",
+   "options": {
+    "A": "Cú pháp truy vấn tích hợp để lọc, biến đổi dữ liệu trong tập hợp",
+    "B": "Thư viện vẽ đồ họa hai chiều cho ứng dụng desktop",
+    "C": "Giao thức truyền tập tin giữa máy khách và máy chủ",
+    "D": "Trình biên dịch chuyển C# sang JavaScript"
+   },
+   "correct_answer": "A",
+   "explanation": "LINQ cho phép viết truy vấn Where, Select, OrderBy ngay trong ngôn ngữ."
+  },
+  {
+   "course": "Lập trình .NET",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Entity Framework Core là gì?",
+   "options": {
+    "A": "ORM ánh xạ các lớp C# với bảng trong cơ sở dữ liệu",
+    "B": "Trình duyệt web được nhúng trong ứng dụng .NET",
+    "C": "Công cụ nén tập tin triển khai ứng dụng",
+    "D": "Thư viện giao diện cho ứng dụng di động"
+   },
+   "correct_answer": "A",
+   "explanation": "EF Core giúp thao tác cơ sở dữ liệu bằng đối tượng thay vì viết SQL thủ công."
+  },
+  {
+   "course": "Lập trình .NET",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Đoạn mã C# sau in ra gì?\nclass P { public int V; }\nP a = new P { V = 1 };\nP b = a;\nb.V = 9;\nConsole.WriteLine(a.V);",
+   "options": {
+    "A": "9",
+    "B": "1",
+    "C": "0",
+    "D": "Lỗi biên dịch vì không thể gán đối tượng"
+   },
+   "correct_answer": "A",
+   "explanation": "P là kiểu tham chiếu nên a và b trỏ cùng một đối tượng, sửa qua b thì a thấy 9."
+  },
+  {
+   "course": "Lập trình .NET",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Từ khóa await trong phương thức async có tác dụng chính nào?",
+   "options": {
+    "A": "Tạm dừng toàn bộ ứng dụng cho đến khi tác vụ xong",
+    "B": "Chờ tác vụ hoàn thành mà không chặn thread hiện tại",
+    "C": "Luôn tạo một tiến trình hệ điều hành mới cho tác vụ",
+    "D": "Bỏ qua kết quả và ngoại lệ của tác vụ"
+   },
+   "correct_answer": "B",
+   "explanation": "await trả quyền điều khiển cho nơi gọi, thread được dùng cho việc khác trong lúc chờ."
+  },
+  {
+   "course": "Lập trình .NET",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Đoạn mã C# sau trả về giá trị nào?\nint[] n = { 1, 2, 3, 4, 5, 6 };\nvar r = n.Where(x => x % 2 == 0).Select(x => x * x).Sum();",
+   "options": {
+    "A": "12",
+    "B": "56",
+    "C": "91",
+    "D": "20"
+   },
+   "correct_answer": "B",
+   "explanation": "Số chẵn là 2,4,6; bình phương 4,16,36; tổng 56."
+  },
+  {
+   "course": "Lập trình .NET",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Trong ASP.NET Core DI, vòng đời AddScoped có nghĩa là gì?",
+   "options": {
+    "A": "Một thể hiện duy nhất dùng chung toàn ứng dụng",
+    "B": "Một thể hiện được tạo cho mỗi yêu cầu HTTP",
+    "C": "Một thể hiện mới được tạo mỗi lần được yêu cầu",
+    "D": "Thể hiện được tạo thủ công và không bị hủy"
+   },
+   "correct_answer": "B",
+   "explanation": "Scoped tạo một instance cho mỗi phạm vi, thường là một request."
+  },
+  {
+   "course": "Lập trình .NET",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Đoạn mã C# sau in ra gì?\nstring s = \"hello\";\ns.ToUpper();\nConsole.WriteLine(s);",
+   "options": {
+    "A": "hello",
+    "B": "HELLO",
+    "C": "Hello",
+    "D": "Lỗi biên dịch vì không dùng kết quả trả về"
+   },
+   "correct_answer": "A",
+   "explanation": "string bất biến, ToUpper trả về chuỗi mới còn s giữ nguyên."
+  },
+  {
+   "course": "Lập trình .NET",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Thứ tự đăng ký middleware trong pipeline của ASP.NET Core có ý nghĩa gì?",
+   "options": {
+    "A": "Không ảnh hưởng gì vì mọi middleware chạy song song",
+    "B": "Chỉ ảnh hưởng đến dung lượng bộ nhớ của ứng dụng",
+    "C": "Chỉ quyết định thứ tự biên dịch các tập tin",
+    "D": "Quyết định thứ tự xử lý yêu cầu và phản hồi đi qua các middleware"
+   },
+   "correct_answer": "D",
+   "explanation": "Yêu cầu đi qua middleware theo thứ tự đã đăng ký, nên sai thứ tự có thể gây lỗi."
+  },
+  {
+   "course": "Lập trình .NET",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Câu lệnh using (var f = new StreamReader(path)) { ... } có lợi ích gì?",
+   "options": {
+    "A": "Tự động nhập thêm namespace cho toàn bộ dự án",
+    "B": "Tự động gọi Dispose để giải phóng tài nguyên khi thoát khối",
+    "C": "Cho phép đối tượng sống mãi sau khi thoát khối",
+    "D": "Chuyển đối tượng sang kiểu giá trị"
+   },
+   "correct_answer": "B",
+   "explanation": "using bảo đảm Dispose được gọi, kể cả khi có ngoại lệ."
+  },
+  {
+   "course": "Lập trình .NET",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Đoạn mã C# sau in ra gì?\nclass A { public virtual string F() => \"A\"; }\nclass B : A { public new string F() => \"B\"; }\nA x = new B();\nConsole.WriteLine(x.F());",
+   "options": {
+    "A": "B",
+    "B": "AB",
+    "C": "A",
+    "D": "Lỗi biên dịch vì xung đột tên phương thức"
+   },
+   "correct_answer": "C",
+   "explanation": "new chỉ che giấu chứ không ghi đè nên lời gọi qua kiểu khai báo A chạy F của A."
+  },
+  {
+   "course": "Lập trình .NET",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Đoạn mã C# sau in ra giá trị nào?\nvar list = new List<int> { 1, 2, 3 };\nvar q = list.Where(x => x > 1);\nlist.Add(4);\nConsole.WriteLine(q.Count());",
+   "options": {
+    "A": "2",
+    "B": "3",
+    "C": "4",
+    "D": "0"
+   },
+   "correct_answer": "B",
+   "explanation": "Where thực thi trễ nên đếm lúc gọi Count trên danh sách {1,2,3,4}, gồm 2,3,4."
+  },
+  {
+   "course": "Lập trình .NET",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Gọi task.Result hoặc .Wait() trong ngữ cảnh có SynchronizationContext (như UI WinForms) có thể gây ra điều gì?",
+   "options": {
+    "A": "Tác vụ chạy nhanh hơn vì không cần chuyển ngữ cảnh",
+    "B": "Deadlock vì thread chờ kết quả trong khi phần tiếp theo cần chính thread đó",
+    "C": "Ngoại lệ biên dịch báo thiếu từ khóa async",
+    "D": "Bộ thu gom rác bị vô hiệu hóa vĩnh viễn"
+   },
+   "correct_answer": "B",
+   "explanation": "Thread bị chặn khi chờ, còn phần tiếp tục cần thread đó nên hai bên chờ nhau."
+  },
+  {
+   "course": "Lập trình .NET",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Duyệt danh sách đơn hàng rồi truy cập order.Customer.Name với lazy loading trong EF Core gây vấn đề hiệu năng nào, và khắc phục thế nào?",
+   "options": {
+    "A": "Rò rỉ bộ nhớ; dùng GC.Collect sau mỗi vòng lặp",
+    "B": "Mất đồng bộ giờ; chuyển sang UTC cho mọi cột",
+    "C": "Khóa bảng vĩnh viễn; chuyển sang SQLite",
+    "D": "N+1 truy vấn; dùng Include để nạp trước dữ liệu liên quan"
+   },
+   "correct_answer": "D",
+   "explanation": "Mỗi đơn hàng sinh thêm truy vấn lấy Customer; Include gộp bằng JOIN."
+  },
+  {
+   "course": "Lập trình .NET",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Đoạn mã C# sau in ra gì?\nint i = 5;\nobject o = i;\ni = 10;\nConsole.WriteLine(o);",
+   "options": {
+    "A": "10",
+    "B": "15",
+    "C": "Lỗi InvalidCastException lúc chạy",
+    "D": "5"
+   },
+   "correct_answer": "D",
+   "explanation": "Boxing sao chép giá trị vào heap nên thay đổi i sau đó không ảnh hưởng o."
+  },
+  {
+   "course": "Lập trình .NET",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Đoạn mã C# sau in ra gì?\nvar acts = new List<Action>();\nfor (int i = 0; i < 3; i++) acts.Add(() => Console.Write(i));\nforeach (var a in acts) a();",
+   "options": {
+    "A": "012",
+    "B": "333",
+    "C": "210",
+    "D": "Lỗi biên dịch vì không thể bắt biến vòng lặp"
+   },
+   "correct_answer": "B",
+   "explanation": "Lambda bắt chính biến i dùng chung; khi gọi, i đã bằng 3 nên in 333."
+  },
+  {
+   "course": "Lập trình .NET",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Dịch vụ Singleton nhận một dịch vụ Scoped qua hàm tạo trong ASP.NET Core. Vấn đề này là gì?",
+   "options": {
+    "A": "Captive dependency: dịch vụ Scoped bị giữ sống suốt vòng đời Singleton",
+    "B": "Vòng lặp vô hạn khi biên dịch các dịch vụ",
+    "C": "Dịch vụ Scoped tự động trở thành Transient",
+    "D": "Không có vấn đề vì DI luôn tạo bản sao riêng"
+   },
+   "correct_answer": "A",
+   "explanation": "Singleton sống lâu hơn Scoped nên giữ lại một thể hiện lẽ ra phải hủy cuối request."
+  },
+  {
+   "course": "Toán rời rạc",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Mệnh đề trong logic là gì?",
+   "options": {
+    "A": "Câu hỏi yêu cầu người nghe trả lời",
+    "B": "Câu khẳng định có giá trị chân lý đúng hoặc sai",
+    "C": "Câu mệnh lệnh yêu cầu thực hiện một hành động",
+    "D": "Biểu thức có chứa ít nhất một biến số thực"
+   },
+   "correct_answer": "B",
+   "explanation": "Mệnh đề là phát biểu có thể xác định rõ đúng hoặc sai."
+  },
+  {
+   "course": "Toán rời rạc",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Mệnh đề kéo theo p → q sai trong trường hợp nào?",
+   "options": {
+    "A": "p đúng và q sai",
+    "B": "p sai và q đúng",
+    "C": "p sai và q sai",
+    "D": "p đúng và q đúng"
+   },
+   "correct_answer": "A",
+   "explanation": "Phép kéo theo chỉ sai khi giả thiết đúng mà kết luận sai."
+  },
+  {
+   "course": "Toán rời rạc",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Tập hợp A là tập con của B (A ⊆ B) khi nào?",
+   "options": {
+    "A": "Mọi phần tử của A đều thuộc B",
+    "B": "Mọi phần tử của B đều thuộc A",
+    "C": "A và B không có phần tử chung",
+    "D": "A có nhiều phần tử hơn B"
+   },
+   "correct_answer": "A",
+   "explanation": "Định nghĩa tập con yêu cầu mọi phần tử của A nằm trong B."
+  },
+  {
+   "course": "Toán rời rạc",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Tập hợp có n phần tử thì có bao nhiêu tập con?",
+   "options": {
+    "A": "n!",
+    "B": "n^2",
+    "C": "2^n",
+    "D": "2n"
+   },
+   "correct_answer": "C",
+   "explanation": "Mỗi phần tử có hai lựa chọn thuộc hoặc không thuộc tập con, nên có 2^n."
+  },
+  {
+   "course": "Toán rời rạc",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Số hoán vị của n phần tử phân biệt là bao nhiêu?",
+   "options": {
+    "A": "2^n",
+    "B": "n!",
+    "C": "n^n",
+    "D": "n(n+1)/2"
+   },
+   "correct_answer": "B",
+   "explanation": "Số cách sắp xếp n phần tử khác nhau là n giai thừa."
+  },
+  {
+   "course": "Toán rời rạc",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Đồ thị G = (V, E) gồm những thành phần nào?",
+   "options": {
+    "A": "Tập số nguyên V và tập số thực E",
+    "B": "Tập đỉnh V và tập cạnh E",
+    "C": "Tập hàm V và tập quan hệ E",
+    "D": "Một ma trận V và một vectơ E"
+   },
+   "correct_answer": "B",
+   "explanation": "Đồ thị được xác định bởi tập đỉnh và tập cạnh nối các đỉnh."
+  },
+  {
+   "course": "Toán rời rạc",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Bậc của một đỉnh trong đồ thị vô hướng là gì?",
+   "options": {
+    "A": "Số cạnh liên thuộc với đỉnh đó",
+    "B": "Số đỉnh trong toàn bộ đồ thị",
+    "C": "Độ dài đường đi ngắn nhất tới đỉnh khác",
+    "D": "Số chu trình đi qua đỉnh đó"
+   },
+   "correct_answer": "A",
+   "explanation": "Bậc đếm số cạnh nối với đỉnh (khuyên được tính hai lần)."
+  },
+  {
+   "course": "Toán rời rạc",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Cây (tree) trong lý thuyết đồ thị là gì?",
+   "options": {
+    "A": "Đồ thị có hướng không có cạnh nào",
+    "B": "Đồ thị đầy đủ có mọi cặp đỉnh đều kề nhau",
+    "C": "Đồ thị có đúng một chu trình đơn",
+    "D": "Đồ thị vô hướng liên thông và không có chu trình"
+   },
+   "correct_answer": "D",
+   "explanation": "Cây là đồ thị liên thông, không chứa chu trình."
+  },
+  {
+   "course": "Toán rời rạc",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Quan hệ tương đương phải thỏa mãn các tính chất nào?",
+   "options": {
+    "A": "Phản xạ, đối xứng, bắc cầu",
+    "B": "Phản xạ, phản đối xứng, bắc cầu",
+    "C": "Đối xứng, bắc cầu, toàn phần",
+    "D": "Phản xạ, đối xứng, phản đối xứng"
+   },
+   "correct_answer": "A",
+   "explanation": "Ba tính chất này tạo ra sự phân hoạch tập hợp thành các lớp tương đương."
+  },
+  {
+   "course": "Toán rời rạc",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Phủ định của mệnh đề \"∀x P(x)\" là gì?",
+   "options": {
+    "A": "∃x ¬P(x)",
+    "B": "∀x ¬P(x)",
+    "C": "∃x P(x)",
+    "D": "¬∃x ¬P(x)"
+   },
+   "correct_answer": "A",
+   "explanation": "Không phải mọi x đều có P tức là tồn tại ít nhất một x không có P."
+  },
+  {
+   "course": "Toán rời rạc",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Công thức tính số tổ hợp chập k của n phần tử là gì?",
+   "options": {
+    "A": "C(n,k) = n! / (n−k)!",
+    "B": "C(n,k) = n! / (k! (n−k)!)",
+    "C": "C(n,k) = n! / k!",
+    "D": "C(n,k) = n^k / k!"
+   },
+   "correct_answer": "B",
+   "explanation": "Tổ hợp không phân biệt thứ tự nên chia chỉnh hợp cho k!."
+  },
+  {
+   "course": "Toán rời rạc",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Định lý bắt tay (handshaking) trong đồ thị vô hướng phát biểu điều gì?",
+   "options": {
+    "A": "Tổng bậc của mọi đỉnh bằng số cạnh",
+    "B": "Số đỉnh bậc chẵn luôn bằng số đỉnh bậc lẻ",
+    "C": "Tổng bậc của mọi đỉnh bằng số đỉnh",
+    "D": "Tổng bậc của mọi đỉnh bằng hai lần số cạnh"
+   },
+   "correct_answer": "D",
+   "explanation": "Mỗi cạnh đóng góp 1 vào bậc của hai đầu mút, nên tổng bậc là 2|E|."
+  },
+  {
+   "course": "Toán rời rạc",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Hàm f: X → Y là đơn ánh khi nào?",
+   "options": {
+    "A": "Mọi phần tử của Y đều có ít nhất một tạo ảnh",
+    "B": "Hai phần tử khác nhau của X luôn có ảnh khác nhau",
+    "C": "Mọi phần tử của X đều có cùng một ảnh",
+    "D": "Hàm chỉ xác định trên một phần của X"
+   },
+   "correct_answer": "B",
+   "explanation": "Đơn ánh: x1 ≠ x2 thì f(x1) ≠ f(x2)."
+  },
+  {
+   "course": "Toán rời rạc",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Chu trình Euler trong đồ thị là gì?",
+   "options": {
+    "A": "Chu trình đi qua mỗi đỉnh đúng một lần",
+    "B": "Chu trình đi qua mỗi cạnh đúng một lần",
+    "C": "Đường đi ngắn nhất giữa hai đỉnh bất kỳ",
+    "D": "Chu trình có độ dài bằng số đỉnh của đồ thị"
+   },
+   "correct_answer": "B",
+   "explanation": "Euler đi qua mọi cạnh đúng một lần và quay về đỉnh xuất phát."
+  },
+  {
+   "course": "Toán rời rạc",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Giá trị của C(10,3) là bao nhiêu?",
+   "options": {
+    "A": "720",
+    "B": "30",
+    "C": "240",
+    "D": "120"
+   },
+   "correct_answer": "D",
+   "explanation": "C(10,3) = 10·9·8 / (3·2·1) = 120."
+  },
+  {
+   "course": "Toán rời rạc",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Có bao nhiêu xâu nhị phân độ dài 8 chứa đúng 3 chữ số 1?",
+   "options": {
+    "A": "56",
+    "B": "336",
+    "C": "28",
+    "D": "168"
+   },
+   "correct_answer": "A",
+   "explanation": "Chọn 3 vị trí trong 8 cho chữ số 1: C(8,3) = 56."
+  },
+  {
+   "course": "Toán rời rạc",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Đồ thị vô hướng liên thông có chu trình Euler khi và chỉ khi điều kiện nào thỏa mãn?",
+   "options": {
+    "A": "Có đúng hai đỉnh bậc lẻ",
+    "B": "Mọi đỉnh đều có bậc lẻ",
+    "C": "Mọi đỉnh đều có bậc chẵn",
+    "D": "Số cạnh bằng số đỉnh trừ một"
+   },
+   "correct_answer": "C",
+   "explanation": "Định lý Euler: liên thông và mọi đỉnh bậc chẵn."
+  },
+  {
+   "course": "Toán rời rạc",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Một cây có 10 đỉnh thì có bao nhiêu cạnh?",
+   "options": {
+    "A": "10",
+    "B": "11",
+    "C": "9",
+    "D": "8"
+   },
+   "correct_answer": "C",
+   "explanation": "Cây n đỉnh luôn có n − 1 cạnh."
+  },
+  {
+   "course": "Toán rời rạc",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Giá trị của 3^4 mod 5 là bao nhiêu?",
+   "options": {
+    "A": "1",
+    "B": "0",
+    "C": "2",
+    "D": "3"
+   },
+   "correct_answer": "A",
+   "explanation": "3^4 = 81 và 81 = 16·5 + 1 nên dư 1."
+  },
+  {
+   "course": "Toán rời rạc",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Mệnh đề nào tương đương logic với p → q?",
+   "options": {
+    "A": "p ∨ ¬q",
+    "B": "¬p ∧ q",
+    "C": "p ∧ ¬q",
+    "D": "¬p ∨ q"
+   },
+   "correct_answer": "D",
+   "explanation": "p → q chỉ sai khi p đúng q sai, trùng với bảng chân trị của ¬p ∨ q."
+  },
+  {
+   "course": "Toán rời rạc",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Quan hệ R = {(1,1),(2,2),(3,3),(1,2),(2,1),(2,3),(3,2)} trên tập {1,2,3} có tính chất nào?",
+   "options": {
+    "A": "Là quan hệ tương đương",
+    "B": "Bắc cầu và đối xứng nhưng không phản xạ",
+    "C": "Phản xạ và phản đối xứng",
+    "D": "Phản xạ và đối xứng nhưng không bắc cầu"
+   },
+   "correct_answer": "D",
+   "explanation": "Có (1,2),(2,3) nhưng thiếu (1,3) nên không bắc cầu; phản xạ và đối xứng thì đúng."
+  },
+  {
+   "course": "Toán rời rạc",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Có bao nhiêu nghiệm nguyên không âm của phương trình x1 + x2 + x3 = 10?",
+   "options": {
+    "A": "55",
+    "B": "78",
+    "C": "66",
+    "D": "120"
+   },
+   "correct_answer": "C",
+   "explanation": "Số nghiệm là C(10+3−1, 3−1) = C(12,2) = 66."
+  },
+  {
+   "course": "Toán rời rạc",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Trong nhóm 25 người, theo nguyên lý chuồng bồ câu, ít nhất bao nhiêu người chắc chắn sinh cùng một tháng?",
+   "options": {
+    "A": "2",
+    "B": "4",
+    "C": "3",
+    "D": "13"
+   },
+   "correct_answer": "C",
+   "explanation": "⌈25/12⌉ = 3."
+  },
+  {
+   "course": "Toán rời rạc",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Đồ thị phẳng đơn liên thông có 10 đỉnh thì có nhiều nhất bao nhiêu cạnh?",
+   "options": {
+    "A": "45",
+    "B": "24",
+    "C": "30",
+    "D": "27"
+   },
+   "correct_answer": "B",
+   "explanation": "Đồ thị phẳng đơn n ≥ 3 đỉnh có tối đa 3n − 6 = 24 cạnh."
+  },
+  {
+   "course": "Toán rời rạc",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Có bao nhiêu cách xếp 5 người ngồi quanh một bàn tròn (các phép quay được coi là như nhau)?",
+   "options": {
+    "A": "120",
+    "B": "60",
+    "C": "12",
+    "D": "24"
+   },
+   "correct_answer": "D",
+   "explanation": "Cố định một người, hoán vị 4 người còn lại: (5−1)! = 24."
+  },
+  {
+   "course": "Toán rời rạc",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Có bao nhiêu hoán vị khác nhau của các chữ cái trong từ BANANA?",
+   "options": {
+    "A": "120",
+    "B": "720",
+    "C": "30",
+    "D": "60"
+   },
+   "correct_answer": "D",
+   "explanation": "6! / (3!·2!) = 720 / 12 = 60 vì có 3 chữ A và 2 chữ N."
+  },
+  {
+   "course": "Toán rời rạc",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Có bao nhiêu số nguyên từ 1 đến 100 chia hết cho 2 hoặc 3?",
+   "options": {
+    "A": "83",
+    "B": "66",
+    "C": "67",
+    "D": "33"
+   },
+   "correct_answer": "C",
+   "explanation": "50 + 33 − 16 = 67 theo nguyên lý bù trừ (16 số chia hết cho 6)."
+  },
+  {
+   "course": "Toán rời rạc",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Dãy bậc nào sau đây có thể là dãy bậc của một đồ thị đơn vô hướng có 5 đỉnh?",
+   "options": {
+    "A": "(4, 4, 4, 4, 0)",
+    "B": "(3, 3, 3, 2, 2)",
+    "C": "(3, 3, 3, 3, 2)",
+    "D": "(4, 4, 3, 2, 1)"
+   },
+   "correct_answer": "C",
+   "explanation": "Dãy (3,3,3,3,2) tổng chẵn và qua kiểm tra Havel-Hakimi; các dãy còn lại vô lý hoặc có tổng lẻ."
+  },
+  {
+   "course": "Điện toán đám mây",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Điện toán đám mây (cloud computing) là gì?",
+   "options": {
+    "A": "Mô hình mà mọi dữ liệu phải lưu trên máy tính cá nhân",
+    "B": "Cung cấp tài nguyên CNTT theo nhu cầu qua Internet và tính phí theo mức sử dụng",
+    "C": "Hệ thống chỉ gồm các máy chủ đặt trong phòng của doanh nghiệp",
+    "D": "Phần mềm diệt virus chạy trên điện thoại di động"
+   },
+   "correct_answer": "B",
+   "explanation": "Đám mây cung cấp máy chủ, lưu trữ, dịch vụ linh hoạt qua mạng."
+  },
+  {
+   "course": "Điện toán đám mây",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "IaaS (Infrastructure as a Service) cung cấp điều gì cho người dùng?",
+   "options": {
+    "A": "Phần mềm ứng dụng hoàn chỉnh sẵn sàng sử dụng",
+    "B": "Môi trường chạy mã không cần quản lý bất kỳ cấu hình nào",
+    "C": "Hạ tầng ảo hóa như máy chủ, lưu trữ và mạng",
+    "D": "Dịch vụ chỉ dành cho lưu trữ email"
+   },
+   "correct_answer": "C",
+   "explanation": "IaaS cho thuê tài nguyên hạ tầng, ví dụ máy ảo EC2."
+  },
+  {
+   "course": "Điện toán đám mây",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "PaaS (Platform as a Service) dành cho đối tượng nào chủ yếu?",
+   "options": {
+    "A": "Người dùng cuối chỉ cần mở trình duyệt để dùng phần mềm",
+    "B": "Quản trị viên cần thuê trung tâm dữ liệu vật lý",
+    "C": "Lập trình viên cần nền tảng để phát triển và triển khai ứng dụng",
+    "D": "Nhà sản xuất phần cứng cần bán thiết bị mạng"
+   },
+   "correct_answer": "C",
+   "explanation": "PaaS cung cấp nền tảng runtime, công cụ để triển khai mà không quản lý hạ tầng."
+  },
+  {
+   "course": "Điện toán đám mây",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "SaaS (Software as a Service) là mô hình nào?",
+   "options": {
+    "A": "Cho thuê máy chủ vật lý đặt tại nhà khách hàng",
+    "B": "Phần mềm hoàn chỉnh được cung cấp qua Internet, ví dụ Gmail",
+    "C": "Cung cấp môi trường lập trình để tự viết ứng dụng",
+    "D": "Cung cấp thiết bị mạng đã được cấu hình sẵn"
+   },
+   "correct_answer": "B",
+   "explanation": "SaaS cho người dùng dùng phần mềm trực tiếp mà không cài đặt hay vận hành hạ tầng."
+  },
+  {
+   "course": "Điện toán đám mây",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Public cloud (đám mây công cộng) có đặc điểm nào?",
+   "options": {
+    "A": "Chỉ phục vụ riêng một tổ chức duy nhất",
+    "B": "Do nhà cung cấp bên thứ ba sở hữu và chia sẻ tài nguyên cho nhiều khách hàng",
+    "C": "Chỉ hoạt động khi không có kết nối Internet",
+    "D": "Chỉ lưu trữ dữ liệu ở thiết bị người dùng"
+   },
+   "correct_answer": "B",
+   "explanation": "AWS, Azure, Google Cloud là ví dụ của đám mây công cộng."
+  },
+  {
+   "course": "Điện toán đám mây",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Private cloud (đám mây riêng) là gì?",
+   "options": {
+    "A": "Đám mây mà mọi người trên Internet đều dùng chung",
+    "B": "Đám mây chỉ chứa dữ liệu mạng xã hội",
+    "C": "Hạ tầng đám mây dành riêng cho một tổ chức",
+    "D": "Dịch vụ lưu trữ ảnh cá nhân miễn phí"
+   },
+   "correct_answer": "C",
+   "explanation": "Private cloud được vận hành riêng, kiểm soát cao hơn về bảo mật."
+  },
+  {
+   "course": "Điện toán đám mây",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Hybrid cloud là mô hình gì?",
+   "options": {
+    "A": "Kết hợp public cloud và private cloud",
+    "B": "Chỉ sử dụng nhiều nhà cung cấp public cloud khác nhau",
+    "C": "Chạy hoàn toàn trên máy tính cá nhân",
+    "D": "Sử dụng nhiều máy chủ vật lý trong cùng phòng"
+   },
+   "correct_answer": "A",
+   "explanation": "Hybrid cloud cho phép dữ liệu và ứng dụng di chuyển giữa môi trường riêng và công cộng."
+  },
+  {
+   "course": "Điện toán đám mây",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Ảo hóa (virtualization) là gì?",
+   "options": {
+    "A": "Thay thế toàn bộ phần cứng bằng phần mềm kế toán",
+    "B": "Chuyển dữ liệu từ giấy sang dạng số",
+    "C": "Mã hóa dữ liệu để truyền qua mạng an toàn",
+    "D": "Tạo nhiều máy ảo độc lập chạy trên một máy chủ vật lý"
+   },
+   "correct_answer": "D",
+   "explanation": "Ảo hóa dùng hypervisor chia tài nguyên phần cứng cho nhiều máy ảo."
+  },
+  {
+   "course": "Điện toán đám mây",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Tính co giãn (elasticity) của đám mây có nghĩa là gì?",
+   "options": {
+    "A": "Tự động tăng hoặc giảm tài nguyên theo nhu cầu sử dụng",
+    "B": "Khả năng chạy đồng thời nhiều hệ điều hành trên một máy",
+    "C": "Khả năng sao lưu dữ liệu mỗi ngày một lần",
+    "D": "Khả năng nén dữ liệu xuống kích thước nhỏ nhất"
+   },
+   "correct_answer": "A",
+   "explanation": "Elasticity giúp thích ứng tải thay đổi và tối ưu chi phí."
+  },
+  {
+   "course": "Điện toán đám mây",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Mô hình tính phí pay-as-you-go nghĩa là gì?",
+   "options": {
+    "A": "Trả một khoản cố định cho cả năm bất kể mức dùng",
+    "B": "Trả tiền trước cho toàn bộ phần cứng của nhà cung cấp",
+    "C": "Chỉ trả tiền cho lượng tài nguyên thực tế đã sử dụng",
+    "D": "Chỉ trả tiền khi dịch vụ gặp sự cố"
+   },
+   "correct_answer": "C",
+   "explanation": "Trả theo mức dùng giúp tránh lãng phí tài nguyên."
+  },
+  {
+   "course": "Điện toán đám mây",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Trong AWS, Availability Zone (AZ) là gì?",
+   "options": {
+    "A": "Một tài khoản người dùng có quyền quản trị cao nhất",
+    "B": "Một loại ổ đĩa lưu trữ tốc độ cao",
+    "C": "Một giao thức mạng để mã hóa lưu lượng",
+    "D": "Một hoặc nhiều trung tâm dữ liệu biệt lập nằm trong một Region"
+   },
+   "correct_answer": "D",
+   "explanation": "Region chứa nhiều AZ độc lập về điện và mạng để tăng độ sẵn sàng."
+  },
+  {
+   "course": "Điện toán đám mây",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Amazon S3 là loại dịch vụ nào?",
+   "options": {
+    "A": "Cơ sở dữ liệu quan hệ được quản lý",
+    "B": "Lưu trữ đối tượng (object storage)",
+    "C": "Dịch vụ chạy máy ảo theo yêu cầu",
+    "D": "Dịch vụ phân giải tên miền"
+   },
+   "correct_answer": "B",
+   "explanation": "S3 lưu dữ liệu dưới dạng đối tượng trong bucket, truy cập qua API."
+  },
+  {
+   "course": "Điện toán đám mây",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Container (như Docker) có đặc điểm cơ bản nào?",
+   "options": {
+    "A": "Mỗi container chứa một hệ điều hành đầy đủ riêng biệt",
+    "B": "Đóng gói ứng dụng cùng thư viện phụ thuộc và dùng chung nhân hệ điều hành của máy chủ",
+    "C": "Chỉ chạy được trên phần cứng đã cài đặt hypervisor loại 1",
+    "D": "Chỉ dùng để lưu trữ cơ sở dữ liệu"
+   },
+   "correct_answer": "B",
+   "explanation": "Container nhẹ vì chia sẻ kernel của host."
+  },
+  {
+   "course": "Điện toán đám mây",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Serverless (FaaS) như AWS Lambda có nghĩa là gì?",
+   "options": {
+    "A": "Ứng dụng chạy mà hoàn toàn không cần có máy chủ nào",
+    "B": "Máy chủ luôn chạy 24/7 do người dùng tự bảo trì",
+    "C": "Chạy hàm theo sự kiện mà không phải quản lý máy chủ",
+    "D": "Chỉ hỗ trợ các ứng dụng desktop"
+   },
+   "correct_answer": "C",
+   "explanation": "Máy chủ vẫn tồn tại nhưng nhà cung cấp quản lý và tự co giãn."
+  },
+  {
+   "course": "Điện toán đám mây",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Mở rộng theo chiều ngang (horizontal scaling) là gì?",
+   "options": {
+    "A": "Nâng cấp CPU và RAM cho một máy hiện có",
+    "B": "Thêm nhiều máy hoặc instance chạy song song",
+    "C": "Giảm số lượng bản sao của dịch vụ",
+    "D": "Chuyển dữ liệu sang vị trí địa lý khác"
+   },
+   "correct_answer": "B",
+   "explanation": "Horizontal scaling tăng năng lực bằng cách thêm nút, còn vertical là nâng cấp một máy."
+  },
+  {
+   "course": "Điện toán đám mây",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "So với máy ảo (VM), container thường có ưu điểm nào?",
+   "options": {
+    "A": "Cô lập mạnh hơn vì mỗi container có nhân hệ điều hành riêng",
+    "B": "Chạy được các hệ điều hành khác nhân mà không hạn chế",
+    "C": "Không cần bất kỳ phần mềm runtime nào để chạy",
+    "D": "Khởi động nhanh và nhẹ hơn vì không cần hệ điều hành khách riêng"
+   },
+   "correct_answer": "D",
+   "explanation": "Container chia sẻ kernel nên tốn ít tài nguyên và khởi động trong vài giây."
+  },
+  {
+   "course": "Điện toán đám mây",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Bộ cân bằng tải (load balancer) có vai trò gì?",
+   "options": {
+    "A": "Mã hóa dữ liệu lưu trữ trên ổ đĩa",
+    "B": "Sao lưu cơ sở dữ liệu theo lịch cố định",
+    "C": "Chuyển đổi mã nguồn sang ngôn ngữ khác",
+    "D": "Phân phối lưu lượng tới nhiều instance để tăng khả năng chịu tải và sẵn sàng"
+   },
+   "correct_answer": "D",
+   "explanation": "Load balancer tránh quá tải một nút và bỏ qua nút lỗi."
+  },
+  {
+   "course": "Điện toán đám mây",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Trong mô hình trách nhiệm chia sẻ (shared responsibility), ai chịu trách nhiệm cấu hình quyền IAM và bảo vệ dữ liệu khách hàng?",
+   "options": {
+    "A": "Nhà cung cấp đám mây",
+    "B": "Khách hàng",
+    "C": "Cả hai bên chịu trách nhiệm như nhau",
+    "D": "Cơ quan quản lý Internet"
+   },
+   "correct_answer": "B",
+   "explanation": "Nhà cung cấp bảo mật hạ tầng đám mây, khách hàng bảo mật những gì đặt trong đám mây."
+  },
+  {
+   "course": "Điện toán đám mây",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Block storage (như Amazon EBS) khác object storage (như S3) ở điểm nào?",
+   "options": {
+    "A": "Block storage gắn như ổ đĩa cho máy ảo, object storage truy cập qua API HTTP",
+    "B": "Block storage truy cập qua URL, object storage gắn như ổ đĩa",
+    "C": "Block storage chỉ lưu ảnh, object storage chỉ lưu văn bản",
+    "D": "Hai loại này hoàn toàn giống nhau về cách truy cập"
+   },
+   "correct_answer": "A",
+   "explanation": "EBS hoạt động như ổ đĩa của VM, còn S3 lưu đối tượng với khóa và metadata."
+  },
+  {
+   "course": "Điện toán đám mây",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "CDN (Content Delivery Network) giúp ích như thế nào?",
+   "options": {
+    "A": "Lưu bản sao nội dung tại các điểm biên gần người dùng để giảm độ trễ",
+    "B": "Mã hóa toàn bộ cơ sở dữ liệu của ứng dụng",
+    "C": "Tự động viết lại mã nguồn của website",
+    "D": "Thay thế hoàn toàn máy chủ gốc của ứng dụng"
+   },
+   "correct_answer": "A",
+   "explanation": "CDN phục vụ nội dung tĩnh từ nút gần nhất nên tải nhanh hơn."
+  },
+  {
+   "course": "Điện toán đám mây",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Nguyên tắc đặc quyền tối thiểu (least privilege) trong IAM là gì?",
+   "options": {
+    "A": "Cấp quyền quản trị cho mọi người để thuận tiện làm việc",
+    "B": "Chia sẻ một tài khoản chung cho cả nhóm",
+    "C": "Không bao giờ thu hồi quyền đã cấp",
+    "D": "Chỉ cấp cho người dùng những quyền cần thiết để hoàn thành công việc"
+   },
+   "correct_answer": "D",
+   "explanation": "Giới hạn quyền làm giảm rủi ro khi tài khoản bị lộ hoặc dùng sai."
+  },
+  {
+   "course": "Điện toán đám mây",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Một dịch vụ cam kết uptime 99,9% trong tháng 30 ngày. Thời gian ngừng tối đa cho phép xấp xỉ bao nhiêu?",
+   "options": {
+    "A": "Khoảng 4,32 phút",
+    "B": "Khoảng 7,2 giờ",
+    "C": "Khoảng 43,2 phút",
+    "D": "Khoảng 1,44 giờ"
+   },
+   "correct_answer": "C",
+   "explanation": "0,1% của 30·24·60 = 43.200 phút là 43,2 phút."
+  },
+  {
+   "course": "Điện toán đám mây",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Hai instance độc lập chạy song song dự phòng cho nhau, mỗi instance có độ sẵn sàng 99%. Độ sẵn sàng tổng thể của hệ thống là bao nhiêu?",
+   "options": {
+    "A": "99,99%",
+    "B": "99%",
+    "C": "98,01%",
+    "D": "99,9%"
+   },
+   "correct_answer": "A",
+   "explanation": "Hệ thống ngừng chỉ khi cả hai cùng hỏng: 1 − 0,01 × 0,01 = 99,99%."
+  },
+  {
+   "course": "Điện toán đám mây",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Để ứng dụng web vẫn hoạt động khi một Availability Zone gặp sự cố, thiết kế nào phù hợp nhất?",
+   "options": {
+    "A": "Đặt toàn bộ instance trong cùng một AZ để giảm độ trễ",
+    "B": "Dùng một instance lớn duy nhất có nhiều RAM",
+    "C": "Chỉ sao lưu dữ liệu vào ổ đĩa của cùng instance",
+    "D": "Triển khai instance ở ít nhất hai AZ phía sau một load balancer"
+   },
+   "correct_answer": "D",
+   "explanation": "Phân tán qua nhiều AZ loại bỏ điểm lỗi đơn lẻ ở cấp trung tâm dữ liệu."
+  },
+  {
+   "course": "Điện toán đám mây",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Hiện tượng cold start trong serverless là gì?",
+   "options": {
+    "A": "Lần gọi đầu hoặc sau thời gian rảnh phải khởi tạo môi trường chạy nên độ trễ cao",
+    "B": "Hàm bị xóa tự động sau mỗi lần chạy thành công",
+    "C": "Lỗi mất dữ liệu khi nhiệt độ trung tâm dữ liệu giảm",
+    "D": "Hàm chỉ chạy được vào ban đêm khi tải thấp"
+   },
+   "correct_answer": "A",
+   "explanation": "Khi chưa có môi trường sẵn, nền tảng phải khởi tạo container và tải mã trước khi chạy."
+  },
+  {
+   "course": "Điện toán đám mây",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Theo định lý CAP, khi xảy ra phân vùng mạng (partition), hệ thống phân tán phải đánh đổi điều gì?",
+   "options": {
+    "A": "Chọn giữa tốc độ CPU và dung lượng ổ đĩa",
+    "B": "Chọn giữa bảo mật và chi phí vận hành",
+    "C": "Chọn giữa số lượng người dùng và số lượng bảng",
+    "D": "Chọn giữa tính nhất quán và tính sẵn sàng"
+   },
+   "correct_answer": "D",
+   "explanation": "Khi phân vùng không tránh được, chỉ đảm bảo được một trong hai: nhất quán hoặc sẵn sàng."
+  },
+  {
+   "course": "Điện toán đám mây",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Công việc xử lý dữ liệu theo lô, có thể bị ngắt và chạy lại, cần chi phí thấp nhất. Lựa chọn nào hợp lý nhất?",
+   "options": {
+    "A": "On-demand instances chạy liên tục",
+    "B": "Máy chủ vật lý chuyên dụng cho thuê dài hạn",
+    "C": "Spot instances",
+    "D": "Reserved instances kỳ hạn ba năm"
+   },
+   "correct_answer": "C",
+   "explanation": "Spot rẻ nhất nhưng có thể bị thu hồi, phù hợp tải chịu được gián đoạn."
+  },
+  {
+   "course": "Điện toán đám mây",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Hệ thống sao lưu dữ liệu mỗi 4 giờ. Khi sự cố xảy ra ngay trước lần sao lưu kế tiếp, RPO (Recovery Point Objective) tối đa là bao nhiêu?",
+   "options": {
+    "A": "4 giờ dữ liệu có thể bị mất",
+    "B": "4 giờ là thời gian khôi phục hệ thống",
+    "C": "Không mất dữ liệu nào",
+    "D": "24 giờ dữ liệu có thể bị mất"
+   },
+   "correct_answer": "A",
+   "explanation": "RPO là lượng dữ liệu tối đa chấp nhận mất tính theo thời gian, ở đây bằng chu kỳ sao lưu."
+  }
+ ]
+}

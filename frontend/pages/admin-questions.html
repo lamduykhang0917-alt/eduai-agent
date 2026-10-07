@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ngân hàng câu hỏi — EduAI Admin</title>
+<link rel="stylesheet" href="../css/style.css">
+<style>
+  table { width:100%; border-collapse:collapse; font-size:14px; }
+  th { text-align:left; color:var(--text-secondary); font-size:12px; text-transform:uppercase; padding:10px 12px; border-bottom:1px solid var(--border-subtle); }
+  td { padding:12px; border-bottom:1px solid var(--border-subtle); vertical-align:top; }
+  .modal-overlay { position:fixed; inset:0; background:rgba(0,0,0,.4); display:none; align-items:center; justify-content:center; z-index:50; overflow-y:auto; padding:24px 0; }
+  .modal-box { background:white; border-radius:14px; padding:24px; width:100%; max-width:560px; max-height:90vh; overflow-y:auto; }
+  .field { margin-bottom:14px; }
+  .row-actions { display:flex; gap:6px; }
+  .error-box { background:#fef2f2; border:1px solid #fecaca; color:var(--danger); border-radius:8px; padding:10px 12px; font-size:13px; margin-bottom:12px; display:none; }
+  .option-row { display:flex; align-items:center; gap:10px; margin-bottom:8px; }
+  .option-row input[type=radio] { width:auto; flex-shrink:0; }
+  .option-row input[type=text] { flex:1; }
+  .option-key-label { width:20px; font-weight:600; flex-shrink:0; }
+  .grid-2col { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .filters { display:flex; gap:10px; margin-bottom:16px; }
+  .filters input, .filters select { max-width:260px; }
+  .filters { flex-wrap:wrap; }
+</style>
+<link rel="stylesheet" href="../css/luxe.css">
+</head>
+<body>
+<div class="app-shell">
+  <nav class="topnav">
+  <div class="topnav-inner">
+    <a class="topnav-logo" href="admin-dashboard.html"><span class="mark">E</span>EduAI Admin</a>
+    <div class="topnav-links">
+    <a class="nav-item" href="admin-dashboard.html">Dashboard</a>
+    <a class="nav-item" href="admin-users.html">Tài khoản</a>
+    <a class="nav-item" href="admin-courses.html">Môn học</a>
+    <a class="nav-item active" href="admin-questions.html">Ngân hàng câu hỏi</a>
+    <a class="nav-item" href="admin-logs.html">Hoạt động hệ thống</a>
+    <a class="nav-item" href="admin-ai-config.html">Cấu hình AI</a>
+    <a class="nav-item" href="admin-agent.html">Agent</a>
+    </div>
+  <div class="topnav-actions">
+    <a class="nav-item" href="#" onclick="logout(); return false;">Đăng xuất</a>
+  </div>
+  </div>
+  <div class="topnav-mobile">
+    <a class="nav-item" href="admin-dashboard.html">Dashboard</a>
+    <a class="nav-item" href="admin-users.html">Tài khoản</a>
+    <a class="nav-item" href="admin-courses.html">Môn học</a>
+    <a class="nav-item active" href="admin-questions.html">Ngân hàng câu hỏi</a>
+    <a class="nav-item" href="admin-logs.html">Hoạt động hệ thống</a>
+    <a class="nav-item" href="admin-ai-config.html">Cấu hình AI</a>
+    <a class="nav-item" href="admin-agent.html">Agent</a>
+    <a class="nav-item" href="#" onclick="logout(); return false;">Đăng xuất</a>
+  </div>
+</nav>
+  <main class="main-content">
+    <section class="page-hero" style="background:linear-gradient(120deg,#581c87,#9333ea 65%,#db2777 125%);">
+      <div class="copy"><h2>Ngân hàng câu hỏi</h2><p>Thêm, sửa, xóa câu hỏi trắc nghiệm dùng cho chức năng ôn tập</p>
+        <div class="hero-cta"><button class="solid" onclick="openAddModal()">+ Thêm câu hỏi</button></div></div>
+      <div class="hero-art">❓</div>
+    </section>
+    <div class="card">
+      <div class="filters">
+        <input placeholder="Tìm kiếm nội dung câu hỏi..." id="searchInput" oninput="load()" autocomplete="off">
+        <select id="courseFilter" onchange="load()" autocomplete="off"><option value="">Tất cả môn học</option></select>
+        <select id="diffFilter" onchange="load()" autocomplete="off"><option value="">Mọi độ khó</option><option value="basic">Cơ bản</option><option value="medium">Trung bình</option><option value="advanced">Nâng cao</option></select>
+        <span id="qCount" style="align-self:center; color:var(--text-secondary); font-size:13px;"></span>
+      </div>
+      <table>
+        <thead><tr><th>Nội dung câu hỏi</th><th>Môn học</th><th>Độ khó</th><th>Đáp án đúng</th><th></th></tr></thead>
+        <tbody id="qRows"></tbody>
+      </table>
+      <div id="emptyMsg" style="display:none; text-align:center; padding:24px; color:var(--text-muted);">
+        Không tìm thấy câu hỏi nào phù hợp.
+      </div>
+    </div>
+  </main>
+</div>
+
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal-box">
+    <h3 style="margin-top:0;" id="modalTitle">Thêm câu hỏi</h3>
+    <div class="error-box" id="errorBox"></div>
+
+    <div class="grid-2col">
+      <div class="field">
+        <label>Môn học</label>
+        <select id="fCourse" onchange="onCourseChange()"></select>
+      </div>
+      <div class="field">
+        <label>Chương</label>
+        <select id="fChapter"></select>
+      </div>
+    </div>
+
+    <div class="field">
+      <label>Nội dung câu hỏi</label>
+      <textarea id="fContent" rows="2" placeholder="Nhập nội dung câu hỏi..."></textarea>
+    </div>
+
+    <div class="field">
+      <label>Đáp án (chọn nút tròn cho đáp án đúng)</label>
+      <div class="option-row"><input type="radio" name="correctOpt" value="A"><span class="option-key-label">A</span><input type="text" id="optA" placeholder="Đáp án A"></div>
+      <div class="option-row"><input type="radio" name="correctOpt" value="B"><span class="option-key-label">B</span><input type="text" id="optB" placeholder="Đáp án B"></div>
+      <div class="option-row"><input type="radio" name="correctOpt" value="C"><span class="option-key-label">C</span><input type="text" id="optC" placeholder="Đáp án C"></div>
+      <div class="option-row"><input type="radio" name="correctOpt" value="D"><span class="option-key-label">D</span><input type="text" id="optD" placeholder="Đáp án D"></div>
+    </div>
+
+    <div class="grid-2col">
+      <div class="field">
+        <label>Độ khó</label>
+        <select id="fDifficulty">
+          <option value="basic">Cơ bản</option>
+          <option value="medium">Trung bình</option>
+          <option value="advanced">Nâng cao</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="field">
+      <label>Giải thích đáp án</label>
+      <textarea id="fExplanation" rows="2" placeholder="Giải thích vì sao đáp án đúng..."></textarea>
+    </div>
+
+    <div style="display:flex; gap:8px; justify-content:flex-end; margin-top:16px;">
+      <button class="btn btn-secondary" onclick="closeModal()">Hủy</button>
+      <button class="btn btn-primary" onclick="saveQuestion()" id="saveBtn">Lưu</button>
+    </div>
+  </div>
+</div>
+
+<script src="../js/api.js"></script>
+<script>
+requireRole("ADMIN");
+let editingQuestionId = null;
+let allCourses = [];
+let allChapters = [];
+
+async function initFilters() {
+  allCourses = await Api.request("/api/admin/courses");
+  const courseFilter = document.getElementById("courseFilter");
+  const fCourse = document.getElementById("fCourse");
+  allCourses.forEach(c => {
+    courseFilter.appendChild(new Option(c.name, c.id));
+    fCourse.appendChild(new Option(c.name, c.id));
+  });
+  allChapters = await Api.request("/api/admin/chapters");
+}
+
+function onCourseChange() {
+  const courseId = parseInt(document.getElementById("fCourse").value);
+  const fChapter = document.getElementById("fChapter");
+  fChapter.innerHTML = "";
+  fChapter.appendChild(new Option("(Không chọn chương)", ""));
+  allChapters.filter(ch => ch.course_id === courseId).forEach(ch => {
+    fChapter.appendChild(new Option(ch.name, ch.id));
+  });
+}
+
+async function load() {
+  const search = document.getElementById("searchInput").value;
+  const courseId = document.getElementById("courseFilter").value;
+  const params = new URLSearchParams();
+  if (search) params.set("search", search);
+  if (courseId) params.set("course_id", courseId);
+  const qs = params.toString() ? `?${params.toString()}` : "";
+
+  let questions = await Api.request(`/api/admin/questions${qs}`);
+  const diff = document.getElementById("diffFilter").value;
+  if (diff) questions = questions.filter(q => q.difficulty === diff);
+  document.getElementById("qCount").textContent = `${questions.length} câu hỏi`;
+  const tbody = document.getElementById("qRows");
+  const emptyMsg = document.getElementById("emptyMsg");
+  const diffLabel = { basic: "Cơ bản", medium: "Trung bình", advanced: "Nâng cao" };
+
+  if (questions.length === 0) {
+    tbody.innerHTML = "";
+    emptyMsg.style.display = "block";
+    return;
+  }
+  emptyMsg.style.display = "none";
+  tbody.innerHTML = questions.map(q => `
+    <tr>
+      <td>${esc(q.content)}</td>
+      <td style="white-space:nowrap;">${esc(q.course_name || "—")}</td>
+      <td><span class="badge badge-blue">${diffLabel[q.difficulty] || q.difficulty}</span></td>
+      <td><span class="badge badge-green">${q.correct_option || "—"}</span></td>
+      <td>
+        <div class="row-actions">
+          <button class="btn btn-secondary" onclick='openEditModal(${JSON.stringify(q).replace(/'/g, "&apos;")})'>Sửa</button>
+          <button class="btn btn-secondary" onclick="deleteQuestion(${q.id})">Xóa</button>
+        </div>
+      </td>
+    </tr>`).join("");
+}
+
+function resetForm() {
+  document.getElementById("fContent").value = "";
+  document.getElementById("optA").value = "";
+  document.getElementById("optB").value = "";
+  document.getElementById("optC").value = "";
+  document.getElementById("optD").value = "";
+  document.getElementById("fDifficulty").value = "basic";
+  document.getElementById("fExplanation").value = "";
+  document.querySelectorAll('input[name=correctOpt]').forEach(r => r.checked = false);
+  document.getElementById("errorBox").style.display = "none";
+}
+
+function openAddModal() {
+  editingQuestionId = null;
+  document.getElementById("modalTitle").textContent = "Thêm câu hỏi";
+  resetForm();
+  if (document.getElementById("fCourse").options.length) {
+    document.getElementById("fCourse").selectedIndex = 0;
+    onCourseChange();
+  }
+  document.getElementById("modalOverlay").style.display = "flex";
+}
+
+function openEditModal(q) {
+  editingQuestionId = q.id;
+  document.getElementById("modalTitle").textContent = "Sửa câu hỏi";
+  resetForm();
+  document.getElementById("fCourse").value = q.course_id;
+  onCourseChange();
+  if (q.chapter_id) document.getElementById("fChapter").value = q.chapter_id;
+  document.getElementById("fContent").value = q.content;
+  document.getElementById("optA").value = q.options.A || "";
+  document.getElementById("optB").value = q.options.B || "";
+  document.getElementById("optC").value = q.options.C || "";
+  document.getElementById("optD").value = q.options.D || "";
+  document.getElementById("fDifficulty").value = q.difficulty;
+  document.getElementById("fExplanation").value = q.explanation || "";
+  const radio = document.querySelector(`input[name=correctOpt][value="${q.correct_option}"]`);
+  if (radio) radio.checked = true;
+  document.getElementById("modalOverlay").style.display = "flex";
+}
+
+function closeModal() { document.getElementById("modalOverlay").style.display = "none"; }
+
+async function saveQuestion() {
+  const errorBox = document.getElementById("errorBox");
+  errorBox.style.display = "none";
+
+  const course_id = parseInt(document.getElementById("fCourse").value);
+  const chapterVal = document.getElementById("fChapter").value;
+  const chapter_id = chapterVal ? parseInt(chapterVal) : null;
+  const content = document.getElementById("fContent").value.trim();
+  const options = {
+    A: document.getElementById("optA").value.trim(),
+    B: document.getElementById("optB").value.trim(),
+    C: document.getElementById("optC").value.trim(),
+    D: document.getElementById("optD").value.trim(),
+  };
+  const correctRadio = document.querySelector('input[name=correctOpt]:checked');
+  const difficulty = document.getElementById("fDifficulty").value;
+  const explanation = document.getElementById("fExplanation").value.trim();
+
+  if (!course_id || !content || !options.A || !options.B || !options.C || !options.D) {
+    errorBox.textContent = "Vui lòng nhập đầy đủ môn học, nội dung câu hỏi và cả 4 đáp án";
+    errorBox.style.display = "block";
+    return;
+  }
+  if (!correctRadio) {
+    errorBox.textContent = "Vui lòng chọn đáp án đúng";
+    errorBox.style.display = "block";
+    return;
+  }
+
+  const payload = { course_id, chapter_id, content, options, correct_option: correctRadio.value, difficulty, explanation };
+  const saveBtn = document.getElementById("saveBtn");
+  saveBtn.disabled = true;
+  try {
+    if (editingQuestionId) {
+      await Api.request(`/api/admin/questions/${editingQuestionId}`, { method: "PUT", body: payload });
+    } else {
+      await Api.request("/api/admin/questions", { method: "POST", body: payload });
+    }
+    closeModal();
+    load();
+  } catch (err) {
+    errorBox.textContent = err.message;
+    errorBox.style.display = "block";
+  } finally {
+    saveBtn.disabled = false;
+  }
+}
+
+async function deleteQuestion(id) {
+  showConfirmModal({
+    title: "Xóa câu hỏi",
+    message: "Bạn có chắc muốn xóa câu hỏi này khỏi ngân hàng câu hỏi?",
+    confirmText: "Xóa",
+    cancelText: "Hủy",
+    onConfirm: async () => {
+      await Api.request(`/api/admin/questions/${id}`, { method: "DELETE" });
+      load();
+    },
+  });
+}
+
+(async () => { await initFilters(); await load(); })();
+</script>
+</body>
+</html>

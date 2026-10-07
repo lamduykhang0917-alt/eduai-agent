@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Đăng nhập — EduAI</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/auth.css">
+<link rel="stylesheet" href="../css/luxe.css">
+</head>
+<body class="auth">
+<div class="auth-shell">
+  <aside class="auth-visual">
+    <a class="auth-logo" href="../index.html"><span class="mark">E</span>EduAI</a>
+    <div>
+      <h2>Học thông minh,<br>nhớ lâu hơn</h2>
+      <p class="lead">Trợ lý AI đồng hành cùng bạn trong học tập: hỏi đáp, tóm tắt tài liệu, ôn tập và theo dõi tiến độ.</p>
+      <div class="auth-points">
+        <div><span class="ic">💬</span><span><b>Hỏi đáp tức thì</b>AI trả lời dựa trên tài liệu của từng môn học</span></div>
+        <div><span class="ic">📚</span><span><b>Tài liệu theo môn</b>Đọc, tìm kiếm và hỏi AI ngay trên tài liệu</span></div>
+        <div><span class="ic">📝</span><span><b>Ôn tập &amp; kiểm tra</b>Tạo đề, chấm điểm và nhận gợi ý nên học tiếp</span></div>
+      </div>
+    </div>
+    <div class="auth-stats" id="authStats"></div>
+  </aside>
+  <main class="auth-form-side">
+    <div class="auth-box">
+      <a class="back" href="../index.html">← Về trang chủ</a>
+      <h1>Đăng nhập</h1>
+      <div class="sub">Tiếp tục hành trình học tập của bạn.</div>
+      <div class="a-err" id="errBox">⚠️ <span id="errText"></span></div>
+      <form id="loginForm" autocomplete="on">
+        <div class="a-field"><label for="email">Email</label>
+          <div class="a-input"><input type="email" id="email" name="email" placeholder="ten@student.edu.vn" required autocomplete="off" value=""></div></div>
+        <div class="a-field"><label for="password">Mật khẩu</label>
+          <div class="a-input"><input type="password" id="password" name="password" placeholder="Nhập mật khẩu" required autocomplete="current-password">
+            <button type="button" class="eye" onclick="togglePw('password',this)" aria-label="Hiện mật khẩu">👁️</button></div></div>
+        <div class="a-row"><label><input type="checkbox" id="rememberMe"> Ghi nhớ đăng nhập</label>
+          <a href="forgot-password.html">Quên mật khẩu?</a></div>
+        <button type="submit" class="a-btn" id="submitBtn">Đăng nhập</button>
+      </form>
+      <div class="a-switch">Chưa có tài khoản?<a class="alt" href="register.html">Đăng ký miễn phí</a></div>
+    </div>
+  </main>
+</div>
+<script src="../js/api.js"></script>
+<script>
+(async () => {
+  try {
+    const base = API_BASE;
+    const r = await fetch(base + '/api/public/stats'); const d = await r.json();
+    document.getElementById('authStats').innerHTML =
+      `<div class="s"><b>Nhiều</b><span>Môn học</span></div><div class="s"><b>999+</b><span>Tài liệu</span></div><div class="s"><b>999+</b><span>Câu hỏi ôn tập</span></div>`;
+  } catch (e) {}
+})();
+function togglePw(id, btn){ const i=document.getElementById(id); const show=i.type==='password'; i.type=show?'text':'password'; btn.textContent=show?'🙈':'👁️'; }
+</script>
+<script>
+try {
+  const saved = localStorage.getItem('eduai_remember_email');
+  if (saved) { document.getElementById('email').value = saved; document.getElementById('rememberMe').checked = true; }
+} catch (e) {}
+document.getElementById('loginForm').addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const errBox=document.getElementById('errBox'), btn=document.getElementById('submitBtn');
+  errBox.style.display='none'; btn.disabled=true; btn.textContent='Đang đăng nhập...';
+  try {
+    const email = document.getElementById('email').value.trim();
+    const remember = document.getElementById('rememberMe').checked;
+    const data = await Api.login(email, document.getElementById('password').value, remember);
+    Api.setToken(data.access_token, remember);
+    try { remember ? localStorage.setItem('eduai_remember_email', email) : localStorage.removeItem('eduai_remember_email'); } catch (e) {}
+    btn.textContent='✓ Thành công'; btn.classList.add('ok');
+    setTimeout(()=>{ window.location.href = data.role==='ADMIN' ? 'admin-dashboard.html' : 'dashboard.html'; }, 400);
+  } catch (err) {
+    document.getElementById('errText').textContent = err.message;
+    errBox.style.display='flex'; btn.disabled=false; btn.textContent='Đăng nhập';
+  }
+});
+</script>
+</body>
+</html>

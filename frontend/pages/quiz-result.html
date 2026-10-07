@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kết quả kiểm tra — EduAI</title>
+<link rel="stylesheet" href="../css/style.css">
+<style>
+  body { background: var(--bg-page); }
+  .result-wrap { max-width: 680px; margin: 40px auto; padding: 0 16px; }
+  .score-hero { text-align:center; padding: 30px 0; }
+  .score-hero .score { font-size:48px; font-weight:800; background:var(--gradient-ai); -webkit-background-clip:text; background-clip:text; color:transparent; }
+  .stat-row { display:flex; justify-content:center; gap:28px; margin-top:14px; font-size:14px; color:var(--text-secondary); }
+  .qa-item { border:1px solid var(--border-subtle); border-radius: var(--radius-sm); padding:14px; margin-bottom:10px; }
+  .qa-item .q-text { font-weight:600; font-size:14px; margin-bottom:8px; }
+  .qa-line { font-size:13px; margin-bottom:4px; }
+  .qa-item.correct { border-left: 3px solid var(--success); }
+  .qa-item.wrong { border-left: 3px solid var(--danger); }
+  .explanation { font-size:13px; color:var(--text-secondary); margin-top:8px; background:#f9fafb; padding:8px 10px; border-radius:6px; }
+</style>
+<link rel="stylesheet" href="../css/luxe.css">
+</head>
+<body>
+<div class="result-wrap">
+  <div class="card">
+    <div class="score-hero">
+      <div class="score" id="scoreDisplay">0/10</div>
+      <div style="color:var(--text-secondary); margin-top:6px;">Điểm bài kiểm tra (thang 10)</div>
+      <div class="stat-row" id="statRow"></div>
+    </div>
+    <div style="display:flex; gap:10px; justify-content:center; margin-bottom:6px;">
+      <button class="btn btn-primary" onclick="askAiAnalyze()">🤖 AI phân tích kết quả</button>
+      <a class="btn btn-secondary" href="quiz-list.html">Làm bài khác</a>
+    </div>
+  </div>
+
+  <h3 style="margin: 24px 0 12px;">Chi tiết từng câu</h3>
+  <div id="detailList"></div>
+</div>
+<script src="../js/api.js"></script>
+<script>
+requireRole("STUDENT");
+const result = JSON.parse(sessionStorage.getItem("eduai_last_result") || "null");
+if (!result) window.location.href = "quiz-list.html";
+
+document.getElementById("scoreDisplay").textContent = `${result.score}/10`;
+document.getElementById("statRow").innerHTML = `
+  <span>Tổng câu: <strong style="color:var(--text-primary);">${result.total_count}</strong></span>
+  <span>Đúng: <strong style="color:var(--success);">${result.correct_count}</strong></span>
+  <span>Sai: <strong style="color:var(--danger);">${result.total_count - result.correct_count}</strong></span>
+`;
+
+document.getElementById("detailList").innerHTML = result.details.map(d => `
+  <div class="qa-item ${d.is_correct ? 'correct' : 'wrong'}">
+    <div class="q-text">${d.content}</div>
+    <div class="qa-line">Đáp án của bạn: <strong>${d.selected_option || "(bỏ trống)"}</strong></div>
+    <div class="qa-line">Đáp án đúng: <strong>${d.correct_option}</strong></div>
+    <div class="explanation">💡 ${d.explanation}</div>
+  </div>`).join("");
+
+function askAiAnalyze() {
+  const wrongTopics = result.details.filter(d => !d.is_correct).map(d => d.content).join("; ");
+  const q = wrongTopics
+    ? `Tôi vừa làm bài kiểm tra được ${result.score}/10 điểm. Tôi làm sai các câu: ${wrongTopics}. Hãy phân tích và đề xuất tôi nên ôn lại nội dung nào.`
+    : `Tôi vừa làm bài kiểm tra đạt ${result.score}/10 điểm. Hãy nhận xét kết quả của tôi.`;
+  window.location.href = `chatbot.html?q=${encodeURIComponent(q)}`;
+}
+</script>
+</body>
+</html>

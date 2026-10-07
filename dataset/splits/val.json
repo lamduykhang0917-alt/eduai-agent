@@ -1,0 +1,454 @@
+[
+  {
+    "text": "khái niệm",
+    "intent": "knowledge_question"
+  },
+  {
+    "text": "Cho mình xem điểm",
+    "intent": "result"
+  },
+  {
+    "text": "Giải thích giúp mình cách hoạt động của TCP/IP",
+    "intent": "explanation"
+  },
+  {
+    "text": "Gợi ý cho mình thứ tự học các chương môn Cấu trúc dữ liệu",
+    "intent": "learning_recommendation"
+  },
+  {
+    "text": "Dạ xin chào",
+    "intent": "greeting"
+  },
+  {
+    "text": "Cho xin tổng quan môn Phân tích thiết kế hệ thống",
+    "intent": "course_information"
+  },
+  {
+    "text": "Hôm nay thế là ổn rồi, cảm ơn bạn, bye",
+    "intent": "goodbye"
+  },
+  {
+    "text": "Tạm biệt trợ lý học tập",
+    "intent": "goodbye"
+  },
+  {
+    "text": "Kiếm giúp mình tài liệu về mạng LAN",
+    "intent": "document_search"
+  },
+  {
+    "text": "Xem điểm bài test giữa kỳ AI",
+    "intent": "result"
+  },
+  {
+    "text": "Cho hỏi class và object là gì?",
+    "intent": "knowledge_question"
+  },
+  {
+    "text": "Giải thích chi tiết thuật toán Dijkstra giúp mình",
+    "intent": "explanation"
+  },
+  {
+    "text": "Mình đã học xong chương nào rồi?",
+    "intent": "learning_progress"
+  },
+  {
+    "text": "giải thích rõ hơn",
+    "intent": "explanation"
+  },
+  {
+    "text": "Tiến độ hoàn thành chương trình học của mình",
+    "intent": "learning_progress"
+  },
+  {
+    "text": "Cảm ơn bạn, mình đi đây",
+    "intent": "goodbye"
+  },
+  {
+    "text": "Normalization là gì?",
+    "intent": "knowledge_question"
+  },
+  {
+    "text": "Cho mình slide chương 2 môn AI",
+    "intent": "document_search"
+  },
+  {
+    "text": "Hẹn gặp bạn vào tối mai",
+    "intent": "goodbye"
+  },
+  {
+    "text": "Điểm bài thi thử xử lý ảnh",
+    "intent": "result"
+  },
+  {
+    "text": "Tìm tai lieu ve stack va queue",
+    "intent": "document_search"
+  },
+  {
+    "text": "Cho mình làm một bài kiểm tra bất kỳ",
+    "intent": "exam"
+  },
+  {
+    "text": "hi",
+    "intent": "greeting"
+  },
+  {
+    "text": "Mình đã hoàn thành bao nhiêu bài học trong môn SQL?",
+    "intent": "learning_progress"
+  },
+  {
+    "text": "tiến độ của tôi",
+    "intent": "learning_progress"
+  },
+  {
+    "text": "Tạo câu hỏi ôn tập về quy hoạch động mức cơ bản",
+    "intent": "generate_quiz"
+  },
+  {
+    "text": "Vào bài kiểm tra 1 tiết môn Mạng",
+    "intent": "exam"
+  },
+  {
+    "text": "Tìm bài tập thực hành Python",
+    "intent": "document_search"
+  },
+  {
+    "text": "Tiến độ học môn Toán rời rạc",
+    "intent": "learning_progress"
+  },
+  {
+    "text": "hẹn gặp lại",
+    "intent": "goodbye"
+  },
+  {
+    "text": "Môn Mạng máy tính có bao nhiêu chương?",
+    "intent": "course_information"
+  },
+  {
+    "text": "Tạo câu hỏi ôn về dictionary trong Python",
+    "intent": "generate_quiz"
+  },
+  {
+    "text": "tạo đề",
+    "intent": "generate_quiz"
+  },
+  {
+    "text": "Môn nào dạy về mạng neural?",
+    "intent": "course_information"
+  },
+  {
+    "text": "Tạo 10 câu hỏi môn AI, mỗi câu 4 đáp án",
+    "intent": "generate_quiz"
+  },
+  {
+    "text": "Thông tin chi tiết môn Mạng máy tính",
+    "intent": "course_information"
+  },
+  {
+    "text": "ý chính của",
+    "intent": "summary"
+  },
+  {
+    "text": "Ket qua bai thi cua minh",
+    "intent": "result"
+  },
+  {
+    "text": "Hello bạn hiền",
+    "intent": "greeting"
+  },
+  {
+    "text": "Tiến độ môn Cơ sở dữ liệu",
+    "intent": "learning_progress"
+  },
+  {
+    "text": "Môn này học bao nhiêu tín chỉ?",
+    "intent": "course_information"
+  },
+  {
+    "text": "Đọc tài liệu về Gradient Descent ở đâu?",
+    "intent": "document_search"
+  },
+  {
+    "text": "Tại sao cần dùng khóa ngoại trong CSDL?",
+    "intent": "explanation"
+  },
+  {
+    "text": "cho tôi câu hỏi",
+    "intent": "generate_quiz"
+  },
+  {
+    "text": "Giải thích dễ hiểu hơn về con trỏ trong C",
+    "intent": "explanation"
+  },
+  {
+    "text": "Mình làm bài mất bao lâu và được bao nhiêu điểm?",
+    "intent": "result"
+  },
+  {
+    "text": "Giải thích sự khác biệt giữa TCP và UDP bằng ví dụ",
+    "intent": "explanation"
+  },
+  {
+    "text": "Mình lười đọc quá, tóm tắt tài liệu này giùm",
+    "intent": "summary"
+  },
+  {
+    "text": "Biến toàn cục là gì?",
+    "intent": "knowledge_question"
+  },
+  {
+    "text": "Good night",
+    "intent": "goodbye"
+  },
+  {
+    "text": "Cho mình vài gợi ý ôn tập phần TCP/IP",
+    "intent": "learning_recommendation"
+  },
+  {
+    "text": "Hí",
+    "intent": "greeting"
+  },
+  {
+    "text": "Hãy giải thích từng bước cách chuẩn hóa từ 1NF lên 2NF",
+    "intent": "explanation"
+  },
+  {
+    "text": "Tóm tắt nhanh về stack và queue",
+    "intent": "summary"
+  },
+  {
+    "text": "tại sao",
+    "intent": "explanation"
+  },
+  {
+    "text": "Cho mình làm đề thi thử số 2 môn Mạng máy tính",
+    "intent": "exam"
+  },
+  {
+    "text": "Tóm tắt các dạng chuẩn 1NF, 2NF, 3NF",
+    "intent": "summary"
+  },
+  {
+    "text": "Tóm tắt giúp mình bài về BFS",
+    "intent": "summary"
+  },
+  {
+    "text": "Mình muốn luyện thi bằng cách làm đề có giới hạn thời gian",
+    "intent": "exam"
+  },
+  {
+    "text": "Mình cần giải thích đơn giản về hàm băm",
+    "intent": "explanation"
+  },
+  {
+    "text": "Thuật toán tham lam là gì?",
+    "intent": "knowledge_question"
+  },
+  {
+    "text": "Mình thoát nha",
+    "intent": "goodbye"
+  },
+  {
+    "text": "Tóm tắt phần ràng buộc toàn vẹn",
+    "intent": "summary"
+  },
+  {
+    "text": "Pixel là gì?",
+    "intent": "knowledge_question"
+  },
+  {
+    "text": "Gradient Descent là gì?",
+    "intent": "knowledge_question"
+  },
+  {
+    "text": "Tìm sách về cấu trúc dữ liệu cây AVL",
+    "intent": "document_search"
+  },
+  {
+    "text": "Làm lại bài kiểm tra chương BFS lần nữa",
+    "intent": "exam"
+  },
+  {
+    "text": "Làm thử đề thi môn Học máy",
+    "intent": "exam"
+  },
+  {
+    "text": "Thời gian học trung bình mỗi ngày của mình",
+    "intent": "learning_progress"
+  },
+  {
+    "text": "Chào bạn, chúc bạn một ngày vui vẻ",
+    "intent": "greeting"
+  },
+  {
+    "text": "Xin chào EduAI, bạn khỏe không?",
+    "intent": "greeting"
+  },
+  {
+    "text": "Xem lại điểm bài kiểm tra hệ điều hành",
+    "intent": "result"
+  },
+  {
+    "text": "Mở file bài giảng Python",
+    "intent": "document_search"
+  },
+  {
+    "text": "Thống kê tiến độ các môn mình đang học",
+    "intent": "learning_progress"
+  },
+  {
+    "text": "SQL JOIN là gì?",
+    "intent": "knowledge_question"
+  },
+  {
+    "text": "Tạo 10 câu hỏi ôn tập về BFS",
+    "intent": "generate_quiz"
+  },
+  {
+    "text": "Mình nên ôn lại phần nào trước kỳ thi?",
+    "intent": "learning_recommendation"
+  },
+  {
+    "text": "Tóm tắt chương Giao thức tầng giao vận",
+    "intent": "summary"
+  },
+  {
+    "text": "Môn Lập trình Web mục tiêu là gì?",
+    "intent": "course_information"
+  },
+  {
+    "text": "Theo bạn mình nên ôn lại chương nào của môn AI?",
+    "intent": "learning_recommendation"
+  },
+  {
+    "text": "Mình nên học thêm chủ đề nào về xử lý ảnh?",
+    "intent": "learning_recommendation"
+  },
+  {
+    "text": "Tìm slide Phân tích thiết kế hệ thống chương 3",
+    "intent": "document_search"
+  },
+  {
+    "text": "Gợi ý thứ tự ôn từ dễ đến khó môn Trí tuệ nhân tạo",
+    "intent": "learning_recommendation"
+  },
+  {
+    "text": "Tài liệu về OOP",
+    "intent": "document_search"
+  },
+  {
+    "text": "Tóm tắt ngắn gọn thuật toán Dijkstra",
+    "intent": "summary"
+  },
+  {
+    "text": "Môn CSDL có mấy chương?",
+    "intent": "course_information"
+  },
+  {
+    "text": "Môn Công nghệ phần mềm gồm mấy phần?",
+    "intent": "course_information"
+  },
+  {
+    "text": "Xin chào trợ lý học tập",
+    "intent": "greeting"
+  },
+  {
+    "text": "có tài liệu nào về",
+    "intent": "document_search"
+  },
+  {
+    "text": "Tóm tắt chương Mạng LAN và WAN",
+    "intent": "summary"
+  },
+  {
+    "text": "Hãy khuyên mình nên ôn gì sau bài kiểm tra vừa rồi",
+    "intent": "learning_recommendation"
+  },
+  {
+    "text": "thi thử",
+    "intent": "exam"
+  },
+  {
+    "text": "kết quả bài kiểm tra",
+    "intent": "result"
+  },
+  {
+    "text": "Hôm nay mình học xong rồi, tạm biệt bạn",
+    "intent": "goodbye"
+  },
+  {
+    "text": "Mình muốn thi thử môn Cơ sở dữ liệu",
+    "intent": "exam"
+  },
+  {
+    "text": "Tom tat bai CNN giup minh",
+    "intent": "summary"
+  },
+  {
+    "text": "Tạo câu hỏi về thuật toán sắp xếp, độ khó dễ",
+    "intent": "generate_quiz"
+  },
+  {
+    "text": "Chào bạn, mình mới dùng EduAI lần đầu",
+    "intent": "greeting"
+  },
+  {
+    "text": "Kết quả bài thi thử so với lần trước ra sao?",
+    "intent": "result"
+  },
+  {
+    "text": "Tạo giúp 12 câu hỏi về chuẩn hóa 3NF",
+    "intent": "generate_quiz"
+  },
+  {
+    "text": "Thi thử đi bạn",
+    "intent": "exam"
+  },
+  {
+    "text": "Sinh câu hỏi ôn tập chuẩn hóa CSDL",
+    "intent": "generate_quiz"
+  },
+  {
+    "text": "thông tin môn học",
+    "intent": "course_information"
+  },
+  {
+    "text": "Gợi ý mình ôn lại phần nào của OOP",
+    "intent": "learning_recommendation"
+  },
+  {
+    "text": "Bye bye EduAI",
+    "intent": "goodbye"
+  },
+  {
+    "text": "Kết quả bài làm gần nhất của mình đâu?",
+    "intent": "result"
+  },
+  {
+    "text": "Vì sao phải dùng hàng đợi trong BFS?",
+    "intent": "explanation"
+  },
+  {
+    "text": "Ra 10 câu về đệ quy, mức trung bình",
+    "intent": "generate_quiz"
+  },
+  {
+    "text": "Đề cương chi tiết môn Cơ sở dữ liệu",
+    "intent": "course_information"
+  },
+  {
+    "text": "gợi ý học tập",
+    "intent": "learning_recommendation"
+  },
+  {
+    "text": "Tổng số bài học mình đã hoàn thành",
+    "intent": "learning_progress"
+  },
+  {
+    "text": "Ảnh xám là gì?",
+    "intent": "knowledge_question"
+  },
+  {
+    "text": "Hey bạn ơi",
+    "intent": "greeting"
+  }
+]

@@ -1,0 +1,364 @@
+{
+ "questions": [
+  {
+   "id": "qx001",
+   "course": "Trí tuệ nhân tạo",
+   "chapter": "Tìm kiếm trong không gian trạng thái",
+   "difficulty": "basic",
+   "content": "Thuật toán tìm kiếm theo chiều rộng (BFS) mở rộng các nút theo thứ tự nào?",
+   "options": {
+    "A": "Nút sâu nhất trước",
+    "B": "Nút ở mức nông nhất trước, lần lượt từng mức",
+    "C": "Nút có chi phí ước lượng nhỏ nhất",
+    "D": "Nút được chọn ngẫu nhiên"
+   },
+   "correct_answer": "B",
+   "explanation": "BFS dùng hàng đợi (FIFO) nên duyệt hết các nút ở mức hiện tại rồi mới sang mức sâu hơn."
+  },
+  {
+   "id": "qx002",
+   "course": "Trí tuệ nhân tạo",
+   "chapter": "Tìm kiếm trong không gian trạng thái",
+   "difficulty": "basic",
+   "content": "Cấu trúc dữ liệu nào thường được dùng để cài đặt tìm kiếm theo chiều sâu (DFS)?",
+   "options": {
+    "A": "Hàng đợi (queue)",
+    "B": "Ngăn xếp (stack) hoặc đệ quy",
+    "C": "Bảng băm",
+    "D": "Hàng đợi ưu tiên"
+   },
+   "correct_answer": "B",
+   "explanation": "DFS đi sâu theo một nhánh trước nên dùng ngăn xếp hoặc đệ quy để quay lui."
+  },
+  {
+   "id": "qx003",
+   "course": "Trí tuệ nhân tạo",
+   "chapter": "Tìm kiếm trong không gian trạng thái",
+   "difficulty": "medium",
+   "content": "Trong thuật toán A*, hàm đánh giá f(n) được tính như thế nào?",
+   "options": {
+    "A": "f(n) = h(n)",
+    "B": "f(n) = g(n)",
+    "C": "f(n) = g(n) + h(n)",
+    "D": "f(n) = g(n) − h(n)"
+   },
+   "correct_answer": "C",
+   "explanation": "g(n) là chi phí thực từ nút gốc đến n, h(n) là chi phí ước lượng từ n đến đích; A* chọn nút có f(n) nhỏ nhất."
+  },
+  {
+   "id": "qx004",
+   "course": "Trí tuệ nhân tạo",
+   "chapter": "Học máy cơ bản",
+   "difficulty": "basic",
+   "content": "Học có giám sát (supervised learning) cần loại dữ liệu nào?",
+   "options": {
+    "A": "Dữ liệu không có nhãn",
+    "B": "Dữ liệu có nhãn (đầu vào kèm đầu ra mong muốn)",
+    "C": "Chỉ dữ liệu hình ảnh",
+    "D": "Không cần dữ liệu"
+   },
+   "correct_answer": "B",
+   "explanation": "Mô hình học từ các cặp (đầu vào, nhãn) để dự đoán nhãn cho dữ liệu mới."
+  },
+  {
+   "id": "qx005",
+   "course": "Trí tuệ nhân tạo",
+   "chapter": "Học máy cơ bản",
+   "difficulty": "medium",
+   "content": "Hiện tượng overfitting là gì?",
+   "options": {
+    "A": "Mô hình quá đơn giản nên sai trên cả tập huấn luyện",
+    "B": "Mô hình khớp rất tốt tập huấn luyện nhưng kém trên dữ liệu mới",
+    "C": "Mô hình huấn luyện quá nhanh",
+    "D": "Dữ liệu huấn luyện bị thiếu nhãn"
+   },
+   "correct_answer": "B",
+   "explanation": "Overfitting xảy ra khi mô hình ghi nhớ cả nhiễu của tập huấn luyện nên khái quát hóa kém."
+  },
+  {
+   "id": "qx006",
+   "course": "Trí tuệ nhân tạo",
+   "chapter": "Mạng nơ-ron",
+   "difficulty": "basic",
+   "content": "Trong mạng nơ-ron nhân tạo, hàm kích hoạt (activation function) dùng để làm gì?",
+   "options": {
+    "A": "Lưu trọng số của mạng",
+    "B": "Đưa tính phi tuyến vào đầu ra của nơ-ron",
+    "C": "Chia dữ liệu thành tập huấn luyện và kiểm tra",
+    "D": "Giảm số lượng nơ-ron"
+   },
+   "correct_answer": "B",
+   "explanation": "Nhờ hàm kích hoạt phi tuyến (ReLU, sigmoid...), mạng nhiều lớp mới học được quan hệ phức tạp."
+  },
+  {
+   "id": "qx007",
+   "course": "Lập trình Python",
+   "chapter": "Cú pháp cơ bản",
+   "difficulty": "basic",
+   "content": "Kiểu dữ liệu nào trong Python là bất biến (immutable)?",
+   "options": {
+    "A": "list",
+    "B": "dict",
+    "C": "tuple",
+    "D": "set"
+   },
+   "correct_answer": "C",
+   "explanation": "tuple không thể thay đổi sau khi tạo, còn list, dict, set là kiểu có thể thay đổi."
+  },
+  {
+   "id": "qx008",
+   "course": "Lập trình Python",
+   "chapter": "Cú pháp cơ bản",
+   "difficulty": "basic",
+   "content": "Kết quả của biểu thức 7 // 2 trong Python là gì?",
+   "options": {
+    "A": "3.5",
+    "B": "3",
+    "C": "4",
+    "D": "2"
+   },
+   "correct_answer": "B",
+   "explanation": "Toán tử // là phép chia lấy phần nguyên: 7 // 2 = 3."
+  },
+  {
+   "id": "qx009",
+   "course": "Lập trình Python",
+   "chapter": "Cú pháp cơ bản",
+   "difficulty": "basic",
+   "content": "Cách nào khai báo hàm đúng trong Python?",
+   "options": {
+    "A": "function tong(a, b):",
+    "B": "def tong(a, b):",
+    "C": "void tong(a, b)",
+    "D": "fun tong(a, b) {}"
+   },
+   "correct_answer": "B",
+   "explanation": "Hàm trong Python được khai báo bằng từ khóa def, kết thúc dòng bằng dấu hai chấm."
+  },
+  {
+   "id": "qx010",
+   "course": "Lập trình Python",
+   "chapter": "Cú pháp cơ bản",
+   "difficulty": "medium",
+   "content": "Đoạn code [x*x for x in range(4)] trả về kết quả nào?",
+   "options": {
+    "A": "[1, 4, 9, 16]",
+    "B": "[0, 1, 4, 9]",
+    "C": "[0, 1, 2, 3]",
+    "D": "[0, 2, 4, 6]"
+   },
+   "correct_answer": "B",
+   "explanation": "range(4) sinh 0,1,2,3 nên bình phương lần lượt là 0, 1, 4, 9."
+  },
+  {
+   "id": "qx011",
+   "course": "Lập trình Python",
+   "chapter": "Cú pháp cơ bản",
+   "difficulty": "medium",
+   "content": "Từ khóa nào dùng để bắt ngoại lệ trong Python?",
+   "options": {
+    "A": "catch",
+    "B": "except",
+    "C": "rescue",
+    "D": "error"
+   },
+   "correct_answer": "B",
+   "explanation": "Cấu trúc là try ... except; Python không dùng từ khóa catch."
+  },
+  {
+   "id": "qx012",
+   "course": "Lập trình Python",
+   "chapter": "Lập trình hướng đối tượng",
+   "difficulty": "basic",
+   "content": "Phương thức khởi tạo của một lớp trong Python có tên là gì?",
+   "options": {
+    "A": "__init__",
+    "B": "__new_object__",
+    "C": "constructor",
+    "D": "__start__"
+   },
+   "correct_answer": "A",
+   "explanation": "__init__ được gọi tự động khi tạo đối tượng mới để gán giá trị ban đầu."
+  },
+  {
+   "id": "qx013",
+   "course": "Lập trình Python",
+   "chapter": "Lập trình hướng đối tượng",
+   "difficulty": "medium",
+   "content": "Tham số self trong phương thức của lớp Python đại diện cho điều gì?",
+   "options": {
+    "A": "Lớp cha",
+    "B": "Chính đối tượng đang gọi phương thức",
+    "C": "Một biến toàn cục",
+    "D": "Module hiện tại"
+   },
+   "correct_answer": "B",
+   "explanation": "self tham chiếu đến thể hiện (instance) đang gọi phương thức, giúp truy cập thuộc tính của đối tượng."
+  },
+  {
+   "id": "qx014",
+   "course": "Lập trình Python",
+   "chapter": "Xử lý dữ liệu với Pandas",
+   "difficulty": "basic",
+   "content": "Cấu trúc dữ liệu dạng bảng chính của thư viện Pandas là gì?",
+   "options": {
+    "A": "Array",
+    "B": "DataFrame",
+    "C": "Matrix",
+    "D": "Tensor"
+   },
+   "correct_answer": "B",
+   "explanation": "DataFrame là bảng hai chiều có nhãn hàng và cột; Series là một cột đơn."
+  },
+  {
+   "id": "qx015",
+   "course": "Lập trình Python",
+   "chapter": "Xử lý dữ liệu với Pandas",
+   "difficulty": "medium",
+   "content": "Hàm nào của Pandas dùng để đọc file CSV vào DataFrame?",
+   "options": {
+    "A": "pd.open_csv()",
+    "B": "pd.read_csv()",
+    "C": "pd.load_table_csv()",
+    "D": "pd.import_csv()"
+   },
+   "correct_answer": "B",
+   "explanation": "pd.read_csv() đọc file CSV và trả về DataFrame."
+  },
+  {
+   "id": "qx016",
+   "course": "Lập trình Python",
+   "chapter": "Xử lý dữ liệu với Pandas",
+   "difficulty": "medium",
+   "content": "Phương thức df.dropna() thực hiện việc gì?",
+   "options": {
+    "A": "Xóa các cột trùng tên",
+    "B": "Loại bỏ các dòng chứa giá trị thiếu (NaN)",
+    "C": "Sắp xếp dữ liệu giảm dần",
+    "D": "Đổi tên cột"
+   },
+   "correct_answer": "B",
+   "explanation": "dropna() mặc định loại các hàng có ít nhất một giá trị NaN."
+  },
+  {
+   "id": "qx017",
+   "course": "Lập trình hướng đối tượng",
+   "chapter": "4 tính chất của OOP",
+   "difficulty": "basic",
+   "content": "Tính đóng gói (Encapsulation) trong OOP nghĩa là gì?",
+   "options": {
+    "A": "Một lớp kế thừa nhiều lớp",
+    "B": "Gói dữ liệu và phương thức vào một lớp, che giấu chi tiết bên trong",
+    "C": "Một phương thức có nhiều dạng",
+    "D": "Chỉ hiển thị các thuộc tính chung"
+   },
+   "correct_answer": "B",
+   "explanation": "Đóng gói gom thuộc tính và phương thức vào lớp, hạn chế truy cập trực tiếp bằng phạm vi truy cập (private, protected)."
+  },
+  {
+   "id": "qx018",
+   "course": "Lập trình hướng đối tượng",
+   "chapter": "4 tính chất của OOP",
+   "difficulty": "basic",
+   "content": "Tính kế thừa (Inheritance) cho phép điều gì?",
+   "options": {
+    "A": "Lớp con tái sử dụng thuộc tính và phương thức của lớp cha",
+    "B": "Ẩn dữ liệu khỏi bên ngoài",
+    "C": "Tạo đối tượng không cần lớp",
+    "D": "Chuyển kiểu dữ liệu tự động"
+   },
+   "correct_answer": "A",
+   "explanation": "Lớp con thừa hưởng các thành viên của lớp cha và có thể bổ sung hoặc ghi đè."
+  },
+  {
+   "id": "qx019",
+   "course": "Lập trình hướng đối tượng",
+   "chapter": "4 tính chất của OOP",
+   "difficulty": "medium",
+   "content": "Ghi đè phương thức (method overriding) liên quan đến tính chất nào?",
+   "options": {
+    "A": "Đóng gói",
+    "B": "Đa hình",
+    "C": "Trừu tượng hóa dữ liệu",
+    "D": "Khai báo biến"
+   },
+   "correct_answer": "B",
+   "explanation": "Lớp con định nghĩa lại phương thức của lớp cha; cùng một lời gọi cho hành vi khác nhau tùy kiểu đối tượng là đa hình."
+  },
+  {
+   "id": "qx020",
+   "course": "Lập trình hướng đối tượng",
+   "chapter": "Giới thiệu lập trình hướng đối tượng",
+   "difficulty": "basic",
+   "content": "Mối quan hệ giữa lớp (class) và đối tượng (object) là gì?",
+   "options": {
+    "A": "Đối tượng là bản thiết kế, lớp là sản phẩm",
+    "B": "Lớp là bản thiết kế, đối tượng là thể hiện cụ thể của lớp",
+    "C": "Hai khái niệm giống hệt nhau",
+    "D": "Lớp chỉ chứa dữ liệu, đối tượng chỉ chứa hàm"
+   },
+   "correct_answer": "B",
+   "explanation": "Lớp mô tả cấu trúc và hành vi chung, mỗi đối tượng là một thể hiện cụ thể được tạo từ lớp."
+  },
+  {
+   "id": "qx021",
+   "course": "Lập trình hướng đối tượng",
+   "chapter": "Phương thức",
+   "difficulty": "medium",
+   "content": "Phương thức khởi tạo (constructor) được gọi vào lúc nào?",
+   "options": {
+    "A": "Khi hủy đối tượng",
+    "B": "Khi đối tượng được tạo",
+    "C": "Khi chương trình kết thúc",
+    "D": "Khi gọi phương thức đầu tiên"
+   },
+   "correct_answer": "B",
+   "explanation": "Constructor chạy một lần khi tạo đối tượng để khởi tạo trạng thái ban đầu."
+  },
+  {
+   "id": "qx022",
+   "course": "Hệ quản trị cơ sở dữ liệu",
+   "chapter": "Transaction",
+   "difficulty": "basic",
+   "content": "Tính chất ACID của giao dịch (transaction) gồm những tính chất nào?",
+   "options": {
+    "A": "Atomicity, Consistency, Isolation, Durability",
+    "B": "Accuracy, Control, Index, Data",
+    "C": "Access, Commit, Isolation, Delete",
+    "D": "Atomicity, Cache, Integrity, Durability"
+   },
+   "correct_answer": "A",
+   "explanation": "ACID: tính nguyên tử, nhất quán, cô lập và bền vững."
+  },
+  {
+   "id": "qx023",
+   "course": "Lập trình .NET",
+   "chapter": "ADO.NET",
+   "difficulty": "basic",
+   "content": "Trong ADO.NET, đối tượng nào dùng để mở kết nối đến SQL Server?",
+   "options": {
+    "A": "SqlCommand",
+    "B": "SqlConnection",
+    "C": "DataTable",
+    "D": "SqlDataReader"
+   },
+   "correct_answer": "B",
+   "explanation": "SqlConnection thiết lập kết nối đến cơ sở dữ liệu SQL Server; SqlCommand dùng để thực thi lệnh."
+  },
+  {
+   "id": "qx024",
+   "course": "Toán rời rạc",
+   "chapter": "Đại số mệnh đề",
+   "difficulty": "basic",
+   "content": "Mệnh đề p → q (p kéo theo q) chỉ sai trong trường hợp nào?",
+   "options": {
+    "A": "p sai, q đúng",
+    "B": "p đúng, q sai",
+    "C": "p sai, q sai",
+    "D": "p đúng, q đúng"
+   },
+   "correct_answer": "B",
+   "explanation": "Phép kéo theo chỉ sai khi giả thiết p đúng nhưng kết luận q sai."
+  }
+ ]
+}

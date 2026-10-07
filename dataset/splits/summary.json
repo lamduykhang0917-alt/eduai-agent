@@ -1,0 +1,74 @@
+{
+  "greeting": {
+    "train": 42,
+    "val": 9,
+    "test": 9,
+    "total": 60
+  },
+  "course_information": {
+    "train": 45,
+    "val": 10,
+    "test": 9,
+    "total": 64
+  },
+  "document_search": {
+    "train": 45,
+    "val": 10,
+    "test": 9,
+    "total": 64
+  },
+  "knowledge_question": {
+    "train": 44,
+    "val": 9,
+    "test": 10,
+    "total": 63
+  },
+  "explanation": {
+    "train": 46,
+    "val": 10,
+    "test": 9,
+    "total": 65
+  },
+  "summary": {
+    "train": 45,
+    "val": 10,
+    "test": 9,
+    "total": 64
+  },
+  "generate_quiz": {
+    "train": 46,
+    "val": 10,
+    "test": 9,
+    "total": 65
+  },
+  "exam": {
+    "train": 44,
+    "val": 9,
+    "test": 10,
+    "total": 63
+  },
+  "result": {
+    "train": 44,
+    "val": 9,
+    "test": 10,
+    "total": 63
+  },
+  "learning_progress": {
+    "train": 44,
+    "val": 9,
+    "test": 10,
+    "total": 63
+  },
+  "learning_recommendation": {
+    "train": 44,
+    "val": 9,
+    "test": 10,
+    "total": 63
+  },
+  "goodbye": {
+    "train": 43,
+    "val": 9,
+    "test": 9,
+    "total": 61
+  }
+}

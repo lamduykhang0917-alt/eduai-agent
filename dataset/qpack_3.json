@@ -1,0 +1,1964 @@
+{
+ "questions": [
+  {
+   "course": "Đồ họa máy tính",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Pixel trong đồ họa máy tính là gì?",
+   "options": {
+    "A": "Đoạn thẳng ngắn nhất có thể vẽ được trên màn hình vector",
+    "B": "Đơn vị đo kích thước vật lý của màn hình theo inch",
+    "C": "Phần tử nhỏ nhất của ảnh raster có thể hiển thị và gán một giá trị màu",
+    "D": "Một điểm điều khiển dùng để định nghĩa đường cong Bézier"
+   },
+   "correct_answer": "C",
+   "explanation": "Ảnh raster là lưới các pixel, mỗi pixel mang một giá trị màu và là đơn vị nhỏ nhất của ảnh."
+  },
+  {
+   "course": "Đồ họa máy tính",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Mô hình màu RGB hoạt động theo nguyên lý nào?",
+   "options": {
+    "A": "Cộng màu: pha trộn ánh sáng đỏ, lục và lam để tạo ra các màu khác",
+    "B": "Trừ màu: các lớp mực hấp thụ bớt ánh sáng phản xạ lên giấy",
+    "C": "Chỉ lưu độ sáng của từng điểm ảnh mà không lưu thông tin màu",
+    "D": "Dùng bốn kênh mực in là xanh lơ, đỏ tươi, vàng và đen"
+   },
+   "correct_answer": "A",
+   "explanation": "RGB là mô hình cộng, dùng cho màn hình phát sáng; trộn đủ ba thành phần ở cường độ cực đại cho màu trắng."
+  },
+  {
+   "course": "Đồ họa máy tính",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Điểm khác biệt chính giữa ảnh vector và ảnh raster là gì?",
+   "options": {
+    "A": "Ảnh vector lưu từng pixel nên luôn có dung lượng lớn hơn ảnh raster",
+    "B": "Ảnh raster có thể phóng to vô hạn mà chất lượng không đổi",
+    "C": "Ảnh vector lưu các đối tượng hình học bằng công thức toán học nên phóng to không bị vỡ",
+    "D": "Ảnh raster chỉ gồm các đường thẳng và không biểu diễn được màu"
+   },
+   "correct_answer": "C",
+   "explanation": "Ảnh vector mô tả hình bằng toán học (điểm, đường, đường cong) nên độc lập với độ phân giải."
+  },
+  {
+   "course": "Đồ họa máy tính",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Phép tịnh tiến điểm P(x, y) theo vector (tx, ty) cho kết quả là điểm nào?",
+   "options": {
+    "A": "(x · tx, y · ty)",
+    "B": "(x − ty, y + tx)",
+    "C": "(x + tx, y + ty)",
+    "D": "(x / tx, y / ty)"
+   },
+   "correct_answer": "C",
+   "explanation": "Tịnh tiến cộng độ dời tx, ty vào các tọa độ tương ứng của điểm."
+  },
+  {
+   "course": "Đồ họa máy tính",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Framebuffer trong hệ thống đồ họa dùng để làm gì?",
+   "options": {
+    "A": "Lưu mã nguồn của chương trình đổ bóng đã biên dịch",
+    "B": "Lưu danh sách các đỉnh của mô hình 3D trước khi biến đổi",
+    "C": "Lưu các thiết lập mạng khi kết xuất đồ họa từ xa",
+    "D": "Lưu giá trị màu của từng pixel của ảnh sắp được hiển thị lên màn hình"
+   },
+   "correct_answer": "D",
+   "explanation": "Framebuffer là vùng nhớ chứa dữ liệu màu của ảnh cuối, được đọc để xuất ra màn hình."
+  },
+  {
+   "course": "Đồ họa máy tính",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Thuật toán Bresenham dùng để làm gì?",
+   "options": {
+    "A": "Vẽ đường thẳng trên lưới pixel chỉ bằng các phép toán số nguyên",
+    "B": "Tô màu bên trong đa giác bằng nội suy pháp tuyến",
+    "C": "Loại bỏ các bề mặt bị che khuất trong cảnh 3D",
+    "D": "Làm mịn biên của ảnh bằng cách lấy mẫu nhiều lần"
+   },
+   "correct_answer": "A",
+   "explanation": "Bresenham chọn pixel gần đường thẳng nhất bằng biến quyết định số nguyên nên rất nhanh."
+  },
+  {
+   "course": "Đồ họa máy tính",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Một ảnh có độ phân giải 1920 × 1080 chứa tổng cộng bao nhiêu pixel?",
+   "options": {
+    "A": "2.073.600 pixel",
+    "B": "1.036.800 pixel",
+    "C": "2.592.000 pixel",
+    "D": "3.110.400 pixel"
+   },
+   "correct_answer": "A",
+   "explanation": "1920 × 1080 = 2.073.600 pixel."
+  },
+  {
+   "course": "Đồ họa máy tính",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Mô hình màu CMYK chủ yếu được dùng trong lĩnh vực nào?",
+   "options": {
+    "A": "Màn hình LED phát sáng, vì là mô hình cộng màu",
+    "B": "In ấn, vì là mô hình trừ màu dựa trên mực in",
+    "C": "Truyền hình tương tự, vì chỉ lưu độ sáng",
+    "D": "Mã hóa video nén, vì chỉ có hai kênh màu"
+   },
+   "correct_answer": "B",
+   "explanation": "CMYK (xanh lơ, đỏ tươi, vàng, đen) là mô hình trừ, phù hợp cho in trên giấy."
+  },
+  {
+   "course": "Đồ họa máy tính",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Trong phép chiếu phối cảnh (perspective), hiện tượng nào xảy ra?",
+   "options": {
+    "A": "Mọi vật thể có kích thước hiển thị như nhau bất kể khoảng cách",
+    "B": "Vật thể càng ở xa camera thì càng được hiển thị lớn hơn",
+    "C": "Vật thể càng ở xa camera thì càng được hiển thị nhỏ hơn",
+    "D": "Các đường song song luôn giữ nguyên độ dài khi chiếu"
+   },
+   "correct_answer": "C",
+   "explanation": "Chiếu phối cảnh mô phỏng mắt người, kích thước ảnh tỉ lệ nghịch với khoảng cách tới camera."
+  },
+  {
+   "course": "Đồ họa máy tính",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Z-buffer (depth buffer) được dùng để làm gì?",
+   "options": {
+    "A": "Lưu bảng màu của ảnh có số màu giới hạn",
+    "B": "Nén ảnh kết xuất trước khi lưu vào ổ đĩa",
+    "C": "Xác định bề mặt nào gần camera nhất tại mỗi pixel để loại bỏ bề mặt bị che",
+    "D": "Tính toán hướng phản xạ của tia sáng trong ray tracing"
+   },
+   "correct_answer": "C",
+   "explanation": "Z-buffer lưu độ sâu của mỗi pixel; chỉ fragment gần hơn mới được ghi đè vào framebuffer."
+  },
+  {
+   "course": "Đồ họa máy tính",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Texture mapping là kỹ thuật gì?",
+   "options": {
+    "A": "Ánh xạ một ảnh 2D lên bề mặt của đối tượng 3D để tăng chi tiết",
+    "B": "Chuyển một mô hình 3D thành tập các đường vector 2D",
+    "C": "Tăng tốc độ kết xuất bằng cách giảm số đỉnh của mô hình",
+    "D": "Xoay camera quanh vật thể để xem ở nhiều góc nhìn"
+   },
+   "correct_answer": "A",
+   "explanation": "Texture mapping dán ảnh (texture) lên bề mặt thông qua tọa độ texture (u, v)."
+  },
+  {
+   "course": "Đồ họa máy tính",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Rendering (kết xuất) là quá trình nào?",
+   "options": {
+    "A": "Nhập dữ liệu mô hình từ tệp ảnh sang cơ sở dữ liệu",
+    "B": "Chuyển ảnh 2D thành mô hình 3D tự động hoàn toàn",
+    "C": "Nén dữ liệu đồ họa để truyền qua mạng",
+    "D": "Tạo ra ảnh 2D cuối cùng từ mô tả của cảnh 3D gồm mô hình, ánh sáng và camera"
+   },
+   "correct_answer": "D",
+   "explanation": "Rendering tính toán và sinh ra ảnh cuối từ mô tả cảnh 3D."
+  },
+  {
+   "course": "Đồ họa máy tính",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Tại sao đồ họa 2D thường dùng tọa độ đồng nhất (homogeneous coordinates)?",
+   "options": {
+    "A": "Để giảm số pixel cần lưu trong framebuffer",
+    "B": "Để biểu diễn cả phép tịnh tiến bằng phép nhân ma trận 3×3",
+    "C": "Để chuyển ảnh màu thành ảnh xám",
+    "D": "Để tránh phải dùng tới phép quay và phép co giãn"
+   },
+   "correct_answer": "B",
+   "explanation": "Thêm tọa độ thứ ba cho phép gộp tịnh tiến, quay, co giãn thành các ma trận nhân được với nhau."
+  },
+  {
+   "course": "Đồ họa máy tính",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Trong đường ống đồ họa (graphics pipeline), bước rasterization làm gì?",
+   "options": {
+    "A": "Chuyển các primitive hình học (như tam giác) thành các fragment/pixel trên màn hình",
+    "B": "Đọc tệp mô hình từ ổ đĩa vào bộ nhớ",
+    "C": "Tính toán vị trí của camera theo thời gian",
+    "D": "Mã hóa ảnh kết quả thành định dạng JPEG"
+   },
+   "correct_answer": "A",
+   "explanation": "Rasterization xác định các pixel mà primitive phủ lên để xử lý tiếp ở giai đoạn fragment."
+  },
+  {
+   "course": "Đồ họa máy tính",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Ma trận quay quanh gốc tọa độ một góc 90° (ngược chiều kim đồng hồ) biến điểm (1, 0) thành điểm nào?",
+   "options": {
+    "A": "(0, 1)",
+    "B": "(0, −1)",
+    "C": "(−1, 0)",
+    "D": "(1, 1)"
+   },
+   "correct_answer": "A",
+   "explanation": "Với θ = 90°: x' = x·cosθ − y·sinθ = 0, y' = x·sinθ + y·cosθ = 1."
+  },
+  {
+   "course": "Đồ họa máy tính",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "So sánh Gouraud shading và Phong shading, nhận định nào đúng?",
+   "options": {
+    "A": "Gouraud nội suy pháp tuyến cho từng pixel, còn Phong chỉ dùng một màu cho cả mặt",
+    "B": "Gouraud nội suy màu từ các đỉnh, còn Phong nội suy pháp tuyến rồi tính sáng cho từng pixel",
+    "C": "Cả hai đều tính ánh sáng một lần cho toàn bộ đa giác",
+    "D": "Phong shading không thể tạo vệt sáng bóng (specular highlight)"
+   },
+   "correct_answer": "B",
+   "explanation": "Phong shading tính sáng theo từng pixel nên cho highlight chính xác hơn nhưng tốn tính toán hơn Gouraud."
+  },
+  {
+   "course": "Đồ họa máy tính",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Điểm (1, 1) được co giãn theo hệ số (2, 2) rồi mới tịnh tiến (3, 0). Kết quả là gì?",
+   "options": {
+    "A": "(8, 2)",
+    "B": "(4, 1)",
+    "C": "(2, 5)",
+    "D": "(5, 2)"
+   },
+   "correct_answer": "D",
+   "explanation": "Co giãn: (2, 2); sau đó tịnh tiến: (2 + 3, 2 + 0) = (5, 2). Đổi thứ tự sẽ cho (8, 2)."
+  },
+  {
+   "course": "Đồ họa máy tính",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Ưu điểm chính của ray tracing so với rasterization thông thường là gì?",
+   "options": {
+    "A": "Luôn nhanh hơn rasterization trên mọi phần cứng",
+    "B": "Không cần mô hình ánh sáng hay camera",
+    "C": "Chỉ hoạt động với đối tượng 2D",
+    "D": "Mô phỏng chính xác hơn phản xạ, khúc xạ và bóng đổ nhưng tốn nhiều tính toán hơn"
+   },
+   "correct_answer": "D",
+   "explanation": "Ray tracing theo vết tia sáng nên cho hiệu ứng ánh sáng chân thực nhưng chi phí cao hơn."
+  },
+  {
+   "course": "Đồ họa máy tính",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Kỹ thuật supersampling trong khử răng cưa (anti-aliasing) hoạt động thế nào?",
+   "options": {
+    "A": "Giảm độ phân giải ảnh để che giấu răng cưa",
+    "B": "Tăng độ tương phản giữa vật thể và nền",
+    "C": "Loại bỏ toàn bộ các đường chéo khỏi ảnh",
+    "D": "Lấy nhiều mẫu cho mỗi pixel rồi lấy trung bình màu để làm mịn biên"
+   },
+   "correct_answer": "D",
+   "explanation": "Supersampling kết xuất ở độ phân giải cao hơn/nhiều mẫu hơn rồi lấy trung bình, giúp biên mượt."
+  },
+  {
+   "course": "Đồ họa máy tính",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Trong Cohen–Sutherland, đoạn thẳng có hai mã vùng 0001 và 1001. Kết luận nào đúng?",
+   "options": {
+    "A": "Chấp nhận hoàn toàn đoạn thẳng vì cả hai mã đều có bit 1",
+    "B": "Loại bỏ hoàn toàn đoạn thẳng vì phép AND hai mã khác 0",
+    "C": "Phải cắt đoạn thẳng với cả bốn cạnh cửa sổ",
+    "D": "Chấp nhận vì phép OR hai mã bằng 0"
+   },
+   "correct_answer": "B",
+   "explanation": "0001 AND 1001 = 0001 ≠ 0 nên hai đầu mút cùng nằm ngoài một phía của cửa sổ, đoạn bị loại bỏ."
+  },
+  {
+   "course": "Đồ họa máy tính",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Trong mô hình chiếu sáng Phong, thành phần nào tạo ra vệt sáng bóng trên bề mặt?",
+   "options": {
+    "A": "Thành phần specular (phản xạ gương)",
+    "B": "Thành phần ambient (ánh sáng môi trường)",
+    "C": "Thành phần diffuse (khuếch tán)",
+    "D": "Thành phần emissive của nền"
+   },
+   "correct_answer": "A",
+   "explanation": "Specular phụ thuộc hướng nhìn và hướng phản xạ, tạo điểm sáng trên bề mặt bóng."
+  },
+  {
+   "course": "Đồ họa máy tính",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Thuật toán Bresenham vẽ đoạn thẳng từ (0, 0) đến (5, 2). Tập pixel được chọn là gì?",
+   "options": {
+    "A": "(0,0), (1,1), (2,1), (3,1), (4,2), (5,2)",
+    "B": "(0,0), (1,0), (2,1), (3,1), (4,2), (5,2)",
+    "C": "(0,0), (1,0), (2,0), (3,1), (4,1), (5,2)",
+    "D": "(0,0), (1,0), (2,1), (3,2), (4,2), (5,2)"
+   },
+   "correct_answer": "B",
+   "explanation": "dx = 5, dy = 2, p0 = 2dy − dx = −1; các bước p: −1, 3, −3, 1, −5 cho y = 0, 0, 1, 1, 2, 2 tại x = 0..5."
+  },
+  {
+   "course": "Đồ họa máy tính",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Quay điểm (3, 1) một góc 90° ngược chiều kim đồng hồ quanh điểm (2, 1). Kết quả là gì?",
+   "options": {
+    "A": "(1, 1)",
+    "B": "(2, 0)",
+    "C": "(2, 2)",
+    "D": "(3, 2)"
+   },
+   "correct_answer": "C",
+   "explanation": "Dịch về gốc: (1, 0); quay 90° ra (0, 1); dịch lại: (2, 2)."
+  },
+  {
+   "course": "Đồ họa máy tính",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Vì sao Z-buffer xử lý không đúng đối tượng bán trong suốt nếu vẽ theo thứ tự bất kỳ?",
+   "options": {
+    "A": "Vì Z-buffer chỉ hoạt động với các đối tượng có màu đỏ",
+    "B": "Vì mỗi pixel chỉ lưu một giá trị độ sâu nên không pha trộn đúng các lớp ở phía sau",
+    "C": "Vì Z-buffer không thể lưu giá trị độ sâu âm",
+    "D": "Vì đối tượng trong suốt không có đỉnh để xác định độ sâu"
+   },
+   "correct_answer": "B",
+   "explanation": "Fragment trong suốt ghi đè độ sâu sẽ che đối tượng phía sau; cần vẽ từ xa đến gần và pha trộn alpha."
+  },
+  {
+   "course": "Đồ họa máy tính",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Theo mô hình Lambert, I = Id · max(0, N·L). Với N = (0, 1, 0), L = (0,6; 0,8; 0) (đơn vị) và Id = 100, cường độ khuếch tán là bao nhiêu?",
+   "options": {
+    "A": "60",
+    "B": "100",
+    "C": "80",
+    "D": "140"
+   },
+   "correct_answer": "C",
+   "explanation": "N·L = 0·0,6 + 1·0,8 + 0 = 0,8 nên I = 100 × 0,8 = 80."
+  },
+  {
+   "course": "Đồ họa máy tính",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Framebuffer 1920 × 1080 dùng 24 bit màu cho mỗi pixel (không có kênh phụ) cần bao nhiêu byte?",
+   "options": {
+    "A": "2.073.600 byte",
+    "B": "8.294.400 byte",
+    "C": "49.766.400 byte",
+    "D": "6.220.800 byte"
+   },
+   "correct_answer": "D",
+   "explanation": "2.073.600 pixel × 3 byte = 6.220.800 byte (khoảng 5,93 MiB)."
+  },
+  {
+   "course": "Đồ họa máy tính",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Camera ở gốc nhìn theo hướng −z, mặt phẳng chiếu là z = −2. Điểm (4, 6, −8) được chiếu phối cảnh thành tọa độ nào?",
+   "options": {
+    "A": "(2; 3)",
+    "B": "(1; 1,5)",
+    "C": "(4; 6)",
+    "D": "(0,5; 0,75)"
+   },
+   "correct_answer": "B",
+   "explanation": "x' = x·d/(−z) = 4·2/8 = 1; y' = 6·2/8 = 1,5."
+  },
+  {
+   "course": "Đồ họa máy tính",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Đường cong Bézier bậc ba có P0(0,0), P1(0,4), P2(4,4), P3(4,0). Điểm ứng với t = 0,5 là gì?",
+   "options": {
+    "A": "(2, 4)",
+    "B": "(2, 2)",
+    "C": "(3, 3)",
+    "D": "(2, 3)"
+   },
+   "correct_answer": "D",
+   "explanation": "B(0,5) = (P0 + 3P1 + 3P2 + P3)/8 = ((0+0+12+4)/8, (0+12+12+0)/8) = (2, 3)."
+  },
+  {
+   "course": "Kiến trúc máy tính",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Đơn vị điều khiển (CU) trong CPU có nhiệm vụ chính là gì?",
+   "options": {
+    "A": "Giải mã lệnh và phát tín hiệu điều khiển các thành phần khác",
+    "B": "Thực hiện các phép toán số học trên số nguyên",
+    "C": "Lưu trữ dữ liệu lâu dài khi tắt máy",
+    "D": "Kết nối mạng giữa các máy tính"
+   },
+   "correct_answer": "A",
+   "explanation": "CU giải mã lệnh và điều phối hoạt động của ALU, thanh ghi, bộ nhớ."
+  },
+  {
+   "course": "Kiến trúc máy tính",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Đặc trưng của kiến trúc Von Neumann là gì?",
+   "options": {
+    "A": "Lệnh và dữ liệu lưu ở hai bộ nhớ tách biệt hoàn toàn",
+    "B": "CPU không có thanh ghi",
+    "C": "Lệnh và dữ liệu được lưu chung trong một bộ nhớ",
+    "D": "Chương trình được cố định trong mạch phần cứng"
+   },
+   "correct_answer": "C",
+   "explanation": "Von Neumann dùng bộ nhớ chung cho chương trình và dữ liệu (stored-program)."
+  },
+  {
+   "course": "Kiến trúc máy tính",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "RAM thuộc loại bộ nhớ nào xét về tính lưu trữ khi mất điện?",
+   "options": {
+    "A": "Bộ nhớ khả biến: mất dữ liệu khi mất điện",
+    "B": "Bộ nhớ bền vững: giữ dữ liệu vĩnh viễn khi mất điện",
+    "C": "Bộ nhớ chỉ đọc, không thể ghi",
+    "D": "Bộ nhớ quang học"
+   },
+   "correct_answer": "A",
+   "explanation": "RAM là bộ nhớ khả biến nên nội dung biến mất khi cắt nguồn."
+  },
+  {
+   "course": "Kiến trúc máy tính",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Thanh ghi PC (Program Counter) chứa thông tin gì?",
+   "options": {
+    "A": "Kết quả của phép toán gần nhất",
+    "B": "Dữ liệu đang chờ ghi ra ổ đĩa",
+    "C": "Địa chỉ của lệnh kế tiếp sẽ được nạp",
+    "D": "Số lượng lệnh đã thực thi trong một giây"
+   },
+   "correct_answer": "C",
+   "explanation": "PC trỏ đến lệnh tiếp theo và thường tự tăng sau mỗi lần nạp lệnh."
+  },
+  {
+   "course": "Kiến trúc máy tính",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Chu trình thực thi lệnh cơ bản của CPU gồm các bước nào theo thứ tự?",
+   "options": {
+    "A": "Thực thi → Giải mã → Nạp lệnh",
+    "B": "Nạp lệnh (Fetch) → Giải mã (Decode) → Thực thi (Execute)",
+    "C": "Giải mã → Nạp lệnh → Ghi đĩa",
+    "D": "Nạp lệnh → Thực thi → Giải mã"
+   },
+   "correct_answer": "B",
+   "explanation": "CPU nạp lệnh từ bộ nhớ, giải mã rồi thực thi, sau đó lặp lại."
+  },
+  {
+   "course": "Kiến trúc máy tính",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Bộ nhớ cache có vai trò gì?",
+   "options": {
+    "A": "Lưu trữ vĩnh viễn hệ điều hành",
+    "B": "Mở rộng dung lượng ổ đĩa cứng",
+    "C": "Truyền dữ liệu qua mạng",
+    "D": "Lưu tạm dữ liệu hay dùng ở vùng nhớ nhanh gần CPU để giảm thời gian truy cập"
+   },
+   "correct_answer": "D",
+   "explanation": "Cache nhỏ nhưng nhanh, nằm giữa CPU và RAM, tận dụng tính cục bộ của chương trình."
+  },
+  {
+   "course": "Kiến trúc máy tính",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Bus địa chỉ rộng 16 bit có thể định địa chỉ tối đa bao nhiêu ô nhớ?",
+   "options": {
+    "A": "16.384 ô nhớ",
+    "B": "65.536 ô nhớ",
+    "C": "32.768 ô nhớ",
+    "D": "1.048.576 ô nhớ"
+   },
+   "correct_answer": "B",
+   "explanation": "2^16 = 65.536 địa chỉ khác nhau."
+  },
+  {
+   "course": "Kiến trúc máy tính",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "ALU là viết tắt của thành phần nào và chức năng chính là gì?",
+   "options": {
+    "A": "Address Load Unit: nạp địa chỉ vào bộ nhớ",
+    "B": "Arithmetic Logic Unit: thực hiện phép toán số học và logic",
+    "C": "Auxiliary Link Unit: nối các bus với nhau",
+    "D": "Analog Level Unit: chuyển tín hiệu tương tự thành số"
+   },
+   "correct_answer": "B",
+   "explanation": "ALU thực hiện cộng, trừ, AND, OR, so sánh,... trên dữ liệu."
+  },
+  {
+   "course": "Kiến trúc máy tính",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Tập lệnh (ISA – Instruction Set Architecture) là gì?",
+   "options": {
+    "A": "Danh sách các linh kiện cấu thành bo mạch chủ",
+    "B": "Bộ quy tắc đặt tên tệp của hệ điều hành",
+    "C": "Tốc độ xung nhịp tối đa của CPU",
+    "D": "Giao diện giữa phần cứng và phần mềm, định nghĩa các lệnh CPU hiểu được"
+   },
+   "correct_answer": "D",
+   "explanation": "ISA quy định lệnh, thanh ghi, kiểu dữ liệu, chế độ địa chỉ mà phần mềm có thể dùng."
+  },
+  {
+   "course": "Kiến trúc máy tính",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Đặc điểm nào sau đây thường gắn với kiến trúc RISC?",
+   "options": {
+    "A": "Tập lệnh rất phức tạp, độ dài lệnh biến thiên lớn",
+    "B": "Mỗi lệnh luôn truy cập trực tiếp bộ nhớ",
+    "C": "Không dùng thanh ghi, chỉ dùng ngăn xếp",
+    "D": "Tập lệnh đơn giản, độ dài lệnh cố định, nhiều thanh ghi"
+   },
+   "correct_answer": "D",
+   "explanation": "RISC ưu tiên lệnh đơn giản, đều đặn để dễ pipeline."
+  },
+  {
+   "course": "Kiến trúc máy tính",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Kỹ thuật pipeline trong CPU là gì?",
+   "options": {
+    "A": "Chạy cùng một lệnh nhiều lần để kiểm tra lỗi",
+    "B": "Sao chép toàn bộ RAM vào cache",
+    "C": "Chia việc thực thi lệnh thành nhiều giai đoạn để các lệnh chồng lấp thời gian",
+    "D": "Tăng điện áp để CPU chạy nhanh hơn"
+   },
+   "correct_answer": "C",
+   "explanation": "Pipeline cho phép nhiều lệnh ở các giai đoạn khác nhau cùng lúc, tăng thông lượng."
+  },
+  {
+   "course": "Kiến trúc máy tính",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Thứ tự nào sắp xếp bộ nhớ từ nhanh nhất đến chậm nhất?",
+   "options": {
+    "A": "Ổ đĩa → RAM → Cache → Thanh ghi",
+    "B": "Cache → Thanh ghi → Ổ đĩa → RAM",
+    "C": "Thanh ghi → Cache → RAM → Ổ đĩa",
+    "D": "RAM → Thanh ghi → Cache → Ổ đĩa"
+   },
+   "correct_answer": "C",
+   "explanation": "Phân cấp bộ nhớ: càng gần CPU càng nhanh nhưng dung lượng càng nhỏ và đắt."
+  },
+  {
+   "course": "Kiến trúc máy tính",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Ngắt (interrupt) là gì?",
+   "options": {
+    "A": "Lỗi phần cứng làm máy tính tắt hẳn",
+    "B": "Lệnh xóa toàn bộ nội dung bộ nhớ cache",
+    "C": "Lệnh chuyển dữ liệu giữa hai thanh ghi",
+    "D": "Tín hiệu yêu cầu CPU tạm dừng chương trình hiện tại để xử lý một sự kiện"
+   },
+   "correct_answer": "D",
+   "explanation": "Khi có ngắt, CPU lưu trạng thái, chạy trình phục vụ ngắt rồi quay lại chương trình."
+  },
+  {
+   "course": "Kiến trúc máy tính",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Một byte gồm bao nhiêu bit?",
+   "options": {
+    "A": "8 bit",
+    "B": "4 bit",
+    "C": "16 bit",
+    "D": "10 bit"
+   },
+   "correct_answer": "A",
+   "explanation": "1 byte = 8 bit, đơn vị địa chỉ hóa nhỏ nhất của hầu hết hệ thống."
+  },
+  {
+   "course": "Kiến trúc máy tính",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Chuyển số nhị phân 10110110 sang hệ thập phân được kết quả nào?",
+   "options": {
+    "A": "178",
+    "B": "182",
+    "C": "190",
+    "D": "166"
+   },
+   "correct_answer": "B",
+   "explanation": "128 + 32 + 16 + 4 + 2 = 182."
+  },
+  {
+   "course": "Kiến trúc máy tính",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "So sánh cache ánh xạ trực tiếp (direct-mapped) và ánh xạ kết hợp đầy đủ (fully associative), nhận định nào đúng?",
+   "options": {
+    "A": "Direct-mapped cho phép một khối đặt ở bất kỳ dòng cache nào",
+    "B": "Direct-mapped đơn giản, nhanh nhưng dễ xung đột; fully associative linh hoạt hơn nhưng phần cứng phức tạp",
+    "C": "Fully associative không bao giờ có miss",
+    "D": "Hai kiểu hoàn toàn giống nhau về phần cứng"
+   },
+   "correct_answer": "B",
+   "explanation": "Direct-mapped mỗi khối chỉ có một vị trí nên xung đột nhiều; fully associative phải so sánh tất cả tag."
+  },
+  {
+   "course": "Kiến trúc máy tính",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Chính sách write-back khác write-through ở điểm nào?",
+   "options": {
+    "A": "Write-back chỉ ghi dữ liệu xuống bộ nhớ khi dòng cache bị thay thế, giảm lưu lượng ghi",
+    "B": "Write-back ghi ngay mọi thay đổi xuống bộ nhớ chính",
+    "C": "Write-through chỉ ghi vào bộ nhớ khi tắt máy",
+    "D": "Write-through không cần bộ nhớ chính"
+   },
+   "correct_answer": "A",
+   "explanation": "Write-back dùng bit dirty để trì hoãn việc ghi, còn write-through ghi đồng thời cả cache và bộ nhớ."
+  },
+  {
+   "course": "Kiến trúc máy tính",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Hệ little-endian lưu số 0x12345678 (32 bit) từ địa chỉ 0x100. Byte tại địa chỉ 0x100 là gì?",
+   "options": {
+    "A": "0x12",
+    "B": "0x34",
+    "C": "0x78",
+    "D": "0x56"
+   },
+   "correct_answer": "C",
+   "explanation": "Little-endian lưu byte có trọng số thấp nhất (0x78) ở địa chỉ thấp nhất."
+  },
+  {
+   "course": "Kiến trúc máy tính",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Hazard dữ liệu kiểu RAW (read after write) trong pipeline thường được giảm bằng cách nào?",
+   "options": {
+    "A": "Chuyển tiếp dữ liệu (forwarding) hoặc chèn chu kỳ chờ (stall)",
+    "B": "Tăng dung lượng ổ cứng",
+    "C": "Tắt bộ nhớ cache",
+    "D": "Giảm số thanh ghi của CPU"
+   },
+   "correct_answer": "A",
+   "explanation": "Forwarding đưa kết quả từ giai đoạn sau về sớm; nếu không đủ thì phải stall."
+  },
+  {
+   "course": "Kiến trúc máy tính",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Khác biệt giữa SRAM và DRAM là gì?",
+   "options": {
+    "A": "SRAM cần làm tươi định kỳ còn DRAM thì không",
+    "B": "DRAM nhanh hơn và đắt hơn SRAM",
+    "C": "Cả hai đều là bộ nhớ không khả biến",
+    "D": "DRAM lưu bit bằng tụ điện và cần làm tươi định kỳ; SRAM nhanh hơn, thường dùng làm cache"
+   },
+   "correct_answer": "D",
+   "explanation": "DRAM rẻ, mật độ cao nên làm RAM chính; SRAM nhanh, đắt nên làm cache."
+  },
+  {
+   "course": "Kiến trúc máy tính",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Biểu diễn số −5 theo bù 2 trên 8 bit là gì?",
+   "options": {
+    "A": "10000101",
+    "B": "11111010",
+    "C": "11111011",
+    "D": "00000101"
+   },
+   "correct_answer": "C",
+   "explanation": "5 = 00000101; đảo bit = 11111010; cộng 1 = 11111011."
+  },
+  {
+   "course": "Kiến trúc máy tính",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Cache có thời gian hit 1 ns, tỉ lệ miss 5%, phạt miss 100 ns. Thời gian truy cập trung bình (AMAT) là bao nhiêu?",
+   "options": {
+    "A": "5 ns",
+    "B": "10 ns",
+    "C": "6 ns",
+    "D": "101 ns"
+   },
+   "correct_answer": "C",
+   "explanation": "AMAT = 1 + 0,05 × 100 = 6 ns."
+  },
+  {
+   "course": "Kiến trúc máy tính",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Pipeline 5 giai đoạn lý tưởng (không hazard) thực thi 100 lệnh. Mỗi giai đoạn 1 chu kỳ. Tốc độ tăng (speedup) so với không pipeline xấp xỉ bao nhiêu?",
+   "options": {
+    "A": "4,81",
+    "B": "5,00",
+    "C": "4,00",
+    "D": "5,05"
+   },
+   "correct_answer": "A",
+   "explanation": "Pipeline: 5 + 99 = 104 chu kỳ; không pipeline: 500 chu kỳ; 500/104 ≈ 4,81."
+  },
+  {
+   "course": "Kiến trúc máy tính",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Cache ánh xạ trực tiếp 32 KB, khối 64 byte, địa chỉ 32 bit. Trường tag có bao nhiêu bit?",
+   "options": {
+    "A": "15 bit",
+    "B": "20 bit",
+    "C": "26 bit",
+    "D": "17 bit"
+   },
+   "correct_answer": "D",
+   "explanation": "Số khối = 512 = 2^9 (index 9 bit), offset 6 bit; tag = 32 − 9 − 6 = 17 bit."
+  },
+  {
+   "course": "Kiến trúc máy tính",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Theo định luật Amdahl, tăng tốc 60% thời gian chạy của chương trình lên 3 lần thì tốc độ tổng thể tăng khoảng bao nhiêu?",
+   "options": {
+    "A": "1,67 lần",
+    "B": "3,00 lần",
+    "C": "1,80 lần",
+    "D": "2,50 lần"
+   },
+   "correct_answer": "A",
+   "explanation": "Speedup = 1 / (0,4 + 0,6/3) = 1 / 0,6 ≈ 1,67."
+  },
+  {
+   "course": "Kiến trúc máy tính",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Chương trình có 2 × 10^9 lệnh, CPI trung bình 1,5, CPU chạy 3 GHz. Thời gian thực thi là bao nhiêu?",
+   "options": {
+    "A": "0,5 giây",
+    "B": "1 giây",
+    "C": "2 giây",
+    "D": "4,5 giây"
+   },
+   "correct_answer": "B",
+   "explanation": "Thời gian = lệnh × CPI / tần số = 2×10^9 × 1,5 / 3×10^9 = 1 giây."
+  },
+  {
+   "course": "Kiến trúc máy tính",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Cộng hai số nguyên có dấu bù 2 trên 8 bit: 100 + 50. Điều gì xảy ra?",
+   "options": {
+    "A": "Không tràn, kết quả đúng là 150",
+    "B": "Tràn số, kết quả bit 10010110 được hiểu là −106",
+    "C": "Tràn số, kết quả bằng 0",
+    "D": "Không tràn, kết quả là −150"
+   },
+   "correct_answer": "B",
+   "explanation": "150 vượt khoảng [−128, 127]; mẫu bit 10010110 trong bù 2 là 150 − 256 = −106."
+  },
+  {
+   "course": "Kiến trúc máy tính",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Địa chỉ ảo 32 bit, trang 4 KB, bảng trang một cấp. Bảng trang có bao nhiêu mục?",
+   "options": {
+    "A": "4.096 mục",
+    "B": "65.536 mục",
+    "C": "4.194.304 mục",
+    "D": "1.048.576 mục"
+   },
+   "correct_answer": "D",
+   "explanation": "Offset 12 bit nên số bit số trang là 20; 2^20 = 1.048.576 mục."
+  },
+  {
+   "course": "Kỹ thuật lập trình",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Biến trong lập trình là gì?",
+   "options": {
+    "A": "Một câu lệnh dùng để kết thúc chương trình",
+    "B": "Một thư viện chứa các hàm toán học",
+    "C": "Vùng nhớ được đặt tên dùng để lưu trữ một giá trị có thể thay đổi",
+    "D": "Một lỗi xảy ra khi biên dịch"
+   },
+   "correct_answer": "C",
+   "explanation": "Biến gắn tên với vùng nhớ chứa giá trị, giá trị có thể thay đổi khi chạy."
+  },
+  {
+   "course": "Kỹ thuật lập trình",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Vòng lặp for thường được dùng trong trường hợp nào?",
+   "options": {
+    "A": "Khi cần khai báo một hàm mới",
+    "B": "Khi biết trước số lần lặp hoặc lặp theo một dãy giá trị",
+    "C": "Khi muốn chương trình dừng ngay lập tức",
+    "D": "Khi cần định nghĩa kiểu dữ liệu mới"
+   },
+   "correct_answer": "B",
+   "explanation": "for phù hợp với việc lặp có số lần xác định hoặc duyệt qua một tập phần tử."
+  },
+  {
+   "course": "Kỹ thuật lập trình",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Hàm (function) có lợi ích chính nào?",
+   "options": {
+    "A": "Làm chương trình chạy nhanh hơn trong mọi trường hợp",
+    "B": "Thay thế hoàn toàn các biến",
+    "C": "Gom một khối mã có tên để tái sử dụng và làm chương trình dễ đọc",
+    "D": "Chỉ dùng để in dữ liệu ra màn hình"
+   },
+   "correct_answer": "C",
+   "explanation": "Hàm giúp chia nhỏ bài toán, tránh lặp mã và dễ bảo trì."
+  },
+  {
+   "course": "Kỹ thuật lập trình",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Đệ quy là gì?",
+   "options": {
+    "A": "Kỹ thuật lặp bằng vòng lặp while",
+    "B": "Kỹ thuật sao chép mảng sang mảng khác",
+    "C": "Kỹ thuật đặt tên biến theo quy ước",
+    "D": "Kỹ thuật trong đó một hàm tự gọi lại chính nó"
+   },
+   "correct_answer": "D",
+   "explanation": "Hàm đệ quy gọi chính nó với bài toán nhỏ hơn cho đến khi gặp điều kiện dừng."
+  },
+  {
+   "course": "Kỹ thuật lập trình",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Mảng (array) là cấu trúc dữ liệu như thế nào?",
+   "options": {
+    "A": "Tập hợp các phần tử khác kiểu, truy cập theo khóa chuỗi",
+    "B": "Tập hợp các phần tử cùng kiểu, truy cập thông qua chỉ số",
+    "C": "Một hàm trả về nhiều giá trị",
+    "D": "Một lệnh rẽ nhánh nhiều trường hợp"
+   },
+   "correct_answer": "B",
+   "explanation": "Mảng lưu các phần tử cùng kiểu liên tiếp và truy cập theo chỉ số."
+  },
+  {
+   "course": "Kỹ thuật lập trình",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Con trỏ (pointer) trong C lưu trữ điều gì?",
+   "options": {
+    "A": "Giá trị số nguyên lớn nhất của chương trình",
+    "B": "Tên của hàm main",
+    "C": "Địa chỉ bộ nhớ của một biến hoặc đối tượng khác",
+    "D": "Mã lỗi của lần biên dịch gần nhất"
+   },
+   "correct_answer": "C",
+   "explanation": "Con trỏ chứa địa chỉ, cho phép truy cập gián tiếp giá trị tại địa chỉ đó."
+  },
+  {
+   "course": "Kỹ thuật lập trình",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Điểm khác biệt cơ bản giữa trình biên dịch (compiler) và trình thông dịch (interpreter) là gì?",
+   "options": {
+    "A": "Compiler dịch toàn bộ mã nguồn sang mã máy trước khi chạy; interpreter dịch và chạy từng phần",
+    "B": "Compiler chỉ chạy trên hệ điều hành Windows",
+    "C": "Interpreter luôn tạo ra tệp thực thi độc lập",
+    "D": "Hai loại này hoàn toàn giống nhau"
+   },
+   "correct_answer": "A",
+   "explanation": "Compiler tạo mã đích trước; interpreter thực thi mã nguồn dần dần khi chạy."
+  },
+  {
+   "course": "Kỹ thuật lập trình",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Lỗi cú pháp (syntax error) là gì?",
+   "options": {
+    "A": "Lỗi do vi phạm quy tắc ngữ pháp của ngôn ngữ lập trình",
+    "B": "Lỗi do thuật toán cho kết quả sai nhưng vẫn chạy",
+    "C": "Lỗi do hết bộ nhớ khi đang chạy",
+    "D": "Lỗi do người dùng nhập sai dữ liệu"
+   },
+   "correct_answer": "A",
+   "explanation": "Lỗi cú pháp (thiếu dấu ngoặc, sai từ khóa…) bị phát hiện khi biên dịch hoặc phân tích mã."
+  },
+  {
+   "course": "Kỹ thuật lập trình",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Tính đóng gói (encapsulation) trong lập trình hướng đối tượng là gì?",
+   "options": {
+    "A": "Cho phép một lớp kế thừa từ nhiều lớp cha",
+    "B": "Gom dữ liệu và phương thức vào một lớp, che giấu chi tiết bên trong",
+    "C": "Cho phép một phương thức có nhiều hình thức khác nhau",
+    "D": "Chuyển chương trình thành mã máy"
+   },
+   "correct_answer": "B",
+   "explanation": "Đóng gói che giấu trạng thái nội bộ và chỉ lộ giao diện cần thiết."
+  },
+  {
+   "course": "Kỹ thuật lập trình",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Ngăn xếp (stack) hoạt động theo nguyên tắc nào?",
+   "options": {
+    "A": "FIFO: phần tử vào trước ra trước",
+    "B": "LIFO: phần tử vào sau ra trước",
+    "C": "Ngẫu nhiên: lấy phần tử bất kỳ",
+    "D": "Theo thứ tự tăng dần của giá trị"
+   },
+   "correct_answer": "B",
+   "explanation": "Stack thêm và lấy phần tử ở cùng một đầu nên vào sau ra trước."
+  },
+  {
+   "course": "Kỹ thuật lập trình",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Hàng đợi (queue) hoạt động theo nguyên tắc nào?",
+   "options": {
+    "A": "LIFO: phần tử vào sau ra trước",
+    "B": "Ưu tiên phần tử có giá trị lớn nhất luôn ra trước",
+    "C": "Truy cập trực tiếp theo chỉ số",
+    "D": "FIFO: phần tử vào trước ra trước"
+   },
+   "correct_answer": "D",
+   "explanation": "Queue thêm ở cuối và lấy ở đầu nên vào trước ra trước."
+  },
+  {
+   "course": "Kỹ thuật lập trình",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Gỡ lỗi (debugging) là gì?",
+   "options": {
+    "A": "Quá trình viết tài liệu hướng dẫn sử dụng",
+    "B": "Quá trình nén mã nguồn để giảm dung lượng",
+    "C": "Quá trình cài đặt hệ điều hành",
+    "D": "Quá trình tìm và sửa lỗi trong chương trình"
+   },
+   "correct_answer": "D",
+   "explanation": "Debugging gồm tái hiện, xác định nguyên nhân và sửa lỗi."
+  },
+  {
+   "course": "Kỹ thuật lập trình",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Ký hiệu Big-O dùng để làm gì?",
+   "options": {
+    "A": "Mô tả tốc độ tăng của thời gian hoặc bộ nhớ theo kích thước đầu vào",
+    "B": "Đo chính xác số giây chương trình chạy trên một máy",
+    "C": "Đếm số dòng mã của chương trình",
+    "D": "Xác định kiểu dữ liệu của biến"
+   },
+   "correct_answer": "A",
+   "explanation": "Big-O biểu diễn cận trên của độ phức tạp khi kích thước đầu vào lớn dần."
+  },
+  {
+   "course": "Kỹ thuật lập trình",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Biến cục bộ (local variable) có phạm vi như thế nào?",
+   "options": {
+    "A": "Dùng được ở mọi tệp trong dự án",
+    "B": "Tồn tại suốt thời gian chạy chương trình",
+    "C": "Chỉ dùng được bên trong hàm hoặc khối lệnh khai báo nó",
+    "D": "Luôn tự động có giá trị bằng 0"
+   },
+   "correct_answer": "C",
+   "explanation": "Biến cục bộ chỉ hiển thị trong phạm vi khai báo và bị hủy khi ra khỏi phạm vi."
+  },
+  {
+   "course": "Kỹ thuật lập trình",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Trong C, hàm swap(int a, int b) hoán đổi a và b theo kiểu truyền tham trị. Sau khi gọi swap(x, y), điều gì xảy ra với x và y ở nơi gọi?",
+   "options": {
+    "A": "Hai giá trị được hoán đổi",
+    "B": "Không đổi, vì hàm chỉ làm việc trên bản sao",
+    "C": "Cả hai bị gán bằng 0",
+    "D": "Chương trình báo lỗi biên dịch"
+   },
+   "correct_answer": "B",
+   "explanation": "Truyền tham trị sao chép giá trị nên thay đổi trong hàm không ảnh hưởng biến gốc; cần dùng con trỏ."
+  },
+  {
+   "course": "Kỹ thuật lập trình",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Điểm khác biệt giữa list và tuple trong Python là gì?",
+   "options": {
+    "A": "Tuple có thể thay đổi còn list thì không",
+    "B": "Cả hai đều không chứa được phần tử khác kiểu",
+    "C": "List có thể thay đổi (mutable) còn tuple không thể thay đổi (immutable)",
+    "D": "List chỉ chứa số nguyên"
+   },
+   "correct_answer": "C",
+   "explanation": "Tuple bất biến sau khi tạo, còn list cho phép thêm, xóa, sửa phần tử."
+  },
+  {
+   "course": "Kỹ thuật lập trình",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Điều kiện bắt buộc để áp dụng tìm kiếm nhị phân trên mảng là gì?",
+   "options": {
+    "A": "Mảng phải chỉ chứa số nguyên dương",
+    "B": "Mảng phải được sắp xếp",
+    "C": "Mảng phải có số phần tử chẵn",
+    "D": "Mảng phải có các phần tử khác nhau"
+   },
+   "correct_answer": "B",
+   "explanation": "Tìm kiếm nhị phân chia đôi dựa vào thứ tự, độ phức tạp O(log n)."
+  },
+  {
+   "course": "Kỹ thuật lập trình",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Ghi đè phương thức (method overriding) trong OOP là gì?",
+   "options": {
+    "A": "Định nghĩa nhiều phương thức cùng tên trong một lớp với tham số khác nhau",
+    "B": "Xóa phương thức của lớp cha",
+    "C": "Ẩn toàn bộ thuộc tính của lớp",
+    "D": "Lớp con định nghĩa lại phương thức của lớp cha với cùng chữ ký"
+   },
+   "correct_answer": "D",
+   "explanation": "Overriding giúp đa hình lúc chạy: cùng lời gọi nhưng hành vi tùy lớp thực tế."
+  },
+  {
+   "course": "Kỹ thuật lập trình",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Hàm đệ quy thiếu điều kiện dừng thường dẫn đến hậu quả nào?",
+   "options": {
+    "A": "Chương trình chạy nhanh hơn",
+    "B": "Biến tự động được giải phóng",
+    "C": "Mảng bị sắp xếp lại",
+    "D": "Tràn ngăn xếp (stack overflow)"
+   },
+   "correct_answer": "D",
+   "explanation": "Mỗi lần gọi chiếm một khung ngăn xếp; gọi vô hạn sẽ làm cạn bộ nhớ ngăn xếp."
+  },
+  {
+   "course": "Kỹ thuật lập trình",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Bảng băm (hash table) thường được chọn thay cho mảng khi nào?",
+   "options": {
+    "A": "Khi cần dữ liệu luôn được sắp xếp tăng dần",
+    "B": "Khi cần duyệt phần tử theo thứ tự chèn mà không dùng thêm cấu trúc nào",
+    "C": "Khi dữ liệu có kích thước cố định nhỏ hơn 10",
+    "D": "Khi cần tìm kiếm theo khóa với thời gian trung bình gần O(1)"
+   },
+   "correct_answer": "D",
+   "explanation": "Bảng băm ánh xạ khóa thành chỉ số nên tra cứu trung bình O(1), nhưng không giữ thứ tự sắp xếp."
+  },
+  {
+   "course": "Kỹ thuật lập trình",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Kiểm thử đơn vị (unit test) nhằm mục đích gì?",
+   "options": {
+    "A": "Kiểm tra giao diện người dùng trên mọi thiết bị",
+    "B": "Đo tốc độ mạng giữa máy chủ và máy khách",
+    "C": "Kiểm tra toàn bộ hệ thống sau khi triển khai",
+    "D": "Kiểm tra tính đúng đắn của từng đơn vị nhỏ như hàm hoặc phương thức một cách độc lập"
+   },
+   "correct_answer": "D",
+   "explanation": "Unit test cô lập từng hàm/lớp để phát hiện lỗi sớm và hỗ trợ tái cấu trúc."
+  },
+  {
+   "course": "Kỹ thuật lập trình",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Đoạn C: int a[] = {2, 4, 6, 8}; int *p = a + 1; printf(\"%d\", *(p + 2)); In ra giá trị nào?",
+   "options": {
+    "A": "6",
+    "B": "8",
+    "C": "4",
+    "D": "2"
+   },
+   "correct_answer": "B",
+   "explanation": "p trỏ a[1]; p + 2 trỏ a[3] có giá trị 8."
+  },
+  {
+   "course": "Kỹ thuật lập trình",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Độ phức tạp thời gian của đoạn mã: for (int i = 1; i < n; i *= 2) { /* O(1) */ } là gì?",
+   "options": {
+    "A": "O(n)",
+    "B": "O(n log n)",
+    "C": "O(log n)",
+    "D": "O(2^n)"
+   },
+   "correct_answer": "C",
+   "explanation": "i nhân đôi sau mỗi vòng nên số vòng lặp xấp xỉ log2(n)."
+  },
+  {
+   "course": "Kỹ thuật lập trình",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Hàm Fibonacci đệ quy fib(n) = fib(n−1) + fib(n−2) chạy rất chậm vì tính lặp lại các bài toán con. Dùng ghi nhớ (memoization) đưa độ phức tạp thời gian về mức nào?",
+   "options": {
+    "A": "O(log n)",
+    "B": "O(1)",
+    "C": "O(n)",
+    "D": "O(n^2)"
+   },
+   "correct_answer": "C",
+   "explanation": "Mỗi giá trị fib(k) chỉ được tính một lần và tra từ bộ nhớ, tổng cộng O(n) phép tính."
+  },
+  {
+   "course": "Kỹ thuật lập trình",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Python: def f(x, lst=[]): lst.append(x); return lst. In ra gì khi chạy print(f(1)); print(f(2))?",
+   "options": {
+    "A": "[1] rồi [1, 2]",
+    "B": "[1] rồi [2]",
+    "C": "[1, 2] rồi [1, 2]",
+    "D": "[2] rồi [1, 2]"
+   },
+   "correct_answer": "A",
+   "explanation": "Giá trị mặc định lst=[] được tạo một lần khi định nghĩa hàm và dùng chung giữa các lần gọi."
+  },
+  {
+   "course": "Kỹ thuật lập trình",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Trong C, sau khi chạy int x = 7 / 2 * 2.0; thì x có giá trị bao nhiêu?",
+   "options": {
+    "A": "6",
+    "B": "7",
+    "C": "3",
+    "D": "8"
+   },
+   "correct_answer": "A",
+   "explanation": "7 / 2 là chia số nguyên bằng 3; 3 × 2.0 = 6.0; gán cho int x thành 6."
+  },
+  {
+   "course": "Kỹ thuật lập trình",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Đoạn C: int i = 0, s = 0; while (i < 5) { i++; if (i % 2 == 0) continue; s += i; } Giá trị cuối của s là gì?",
+   "options": {
+    "A": "9",
+    "B": "15",
+    "C": "6",
+    "D": "4"
+   },
+   "correct_answer": "A",
+   "explanation": "Chỉ cộng các i lẻ: 1 + 3 + 5 = 9; continue bỏ qua các i chẵn."
+  },
+  {
+   "course": "Kỹ thuật lập trình",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Python: a = [[0]] * 2; a[0].append(1); print(a). Kết quả in ra là gì?",
+   "options": {
+    "A": "[[0, 1], [0, 1]]",
+    "B": "[[0, 1], [0]]",
+    "C": "[[0], [0, 1]]",
+    "D": "[[0], [0]]"
+   },
+   "correct_answer": "A",
+   "explanation": "Phép nhân list tạo hai tham chiếu đến cùng một list con nên thay đổi một phần tử ảnh hưởng cả hai."
+  },
+  {
+   "course": "Mạng máy tính",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Mô hình OSI gồm bao nhiêu tầng?",
+   "options": {
+    "A": "7 tầng",
+    "B": "4 tầng",
+    "C": "5 tầng",
+    "D": "9 tầng"
+   },
+   "correct_answer": "A",
+   "explanation": "OSI có 7 tầng: vật lý, liên kết dữ liệu, mạng, giao vận, phiên, trình diễn, ứng dụng."
+  },
+  {
+   "course": "Mạng máy tính",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Địa chỉ IPv4 có độ dài bao nhiêu bit?",
+   "options": {
+    "A": "16 bit",
+    "B": "64 bit",
+    "C": "32 bit",
+    "D": "128 bit"
+   },
+   "correct_answer": "C",
+   "explanation": "IPv4 dài 32 bit, thường viết dạng bốn số thập phân cách bằng dấu chấm."
+  },
+  {
+   "course": "Mạng máy tính",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Cổng mặc định của giao thức HTTPS là bao nhiêu?",
+   "options": {
+    "A": "80",
+    "B": "443",
+    "C": "21",
+    "D": "25"
+   },
+   "correct_answer": "B",
+   "explanation": "HTTPS dùng cổng TCP 443; HTTP dùng 80."
+  },
+  {
+   "course": "Mạng máy tính",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "DNS có chức năng chính nào?",
+   "options": {
+    "A": "Cấp phát địa chỉ IP tự động cho máy trạm",
+    "B": "Mã hóa dữ liệu truyền giữa trình duyệt và máy chủ",
+    "C": "Gửi thư điện tử giữa các máy chủ",
+    "D": "Phân giải tên miền thành địa chỉ IP"
+   },
+   "correct_answer": "D",
+   "explanation": "DNS ánh xạ tên miền dễ nhớ sang địa chỉ IP."
+  },
+  {
+   "course": "Mạng máy tính",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Switch thông thường hoạt động chủ yếu ở tầng nào và dựa vào gì để chuyển khung?",
+   "options": {
+    "A": "Tầng liên kết dữ liệu, dựa vào địa chỉ MAC",
+    "B": "Tầng mạng, dựa vào địa chỉ IP",
+    "C": "Tầng ứng dụng, dựa vào tên miền",
+    "D": "Tầng vật lý, dựa vào cường độ tín hiệu"
+   },
+   "correct_answer": "A",
+   "explanation": "Switch học bảng địa chỉ MAC để chuyển khung Ethernet đến đúng cổng."
+  },
+  {
+   "course": "Mạng máy tính",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Router có vai trò chính nào?",
+   "options": {
+    "A": "Chuyển đổi tên miền thành địa chỉ IP",
+    "B": "Chuyển tiếp gói tin giữa các mạng khác nhau dựa trên địa chỉ IP",
+    "C": "Khuếch đại tín hiệu điện ở tầng vật lý",
+    "D": "Lưu trữ trang web cho người dùng"
+   },
+   "correct_answer": "B",
+   "explanation": "Router hoạt động ở tầng mạng và chọn đường đi cho gói tin giữa các mạng."
+  },
+  {
+   "course": "Mạng máy tính",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Điểm khác biệt chính giữa TCP và UDP là gì?",
+   "options": {
+    "A": "TCP không kết nối còn UDP hướng kết nối",
+    "B": "TCP hướng kết nối và đảm bảo tin cậy; UDP không kết nối và không đảm bảo",
+    "C": "UDP luôn đảm bảo thứ tự gói tin",
+    "D": "TCP chỉ chạy trên mạng không dây"
+   },
+   "correct_answer": "B",
+   "explanation": "TCP thiết lập kết nối, đánh số thứ tự, truyền lại khi mất; UDP gửi nhanh, không đảm bảo."
+  },
+  {
+   "course": "Mạng máy tính",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Địa chỉ MAC dài bao nhiêu bit?",
+   "options": {
+    "A": "32 bit",
+    "B": "64 bit",
+    "C": "128 bit",
+    "D": "48 bit"
+   },
+   "correct_answer": "D",
+   "explanation": "MAC gồm 48 bit, thường viết là 6 cặp số hex."
+  },
+  {
+   "course": "Mạng máy tính",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Giao thức DHCP có chức năng gì?",
+   "options": {
+    "A": "Tự động cấp phát địa chỉ IP và cấu hình mạng cho máy trạm",
+    "B": "Phân giải địa chỉ IP thành địa chỉ MAC",
+    "C": "Truyền tệp giữa máy khách và máy chủ",
+    "D": "Mã hóa gói tin ở tầng mạng"
+   },
+   "correct_answer": "A",
+   "explanation": "DHCP cấp IP, mặt nạ mạng, gateway, DNS cho thiết bị khi kết nối."
+  },
+  {
+   "course": "Mạng máy tính",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Giao thức nào chủ yếu dùng để gửi thư điện tử giữa máy khách và máy chủ?",
+   "options": {
+    "A": "FTP",
+    "B": "SMTP",
+    "C": "SNMP",
+    "D": "RIP"
+   },
+   "correct_answer": "B",
+   "explanation": "SMTP (cổng 25/587) dùng để gửi thư; POP3/IMAP dùng để nhận."
+  },
+  {
+   "course": "Mạng máy tính",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Mạng LAN là gì?",
+   "options": {
+    "A": "Mạng cục bộ có phạm vi nhỏ như một tòa nhà hoặc văn phòng",
+    "B": "Mạng toàn cầu kết nối các quốc gia",
+    "C": "Mạng chỉ dùng cho điện thoại di động",
+    "D": "Mạng chỉ gồm một máy tính duy nhất"
+   },
+   "correct_answer": "A",
+   "explanation": "LAN (Local Area Network) phủ khu vực địa lý hẹp với tốc độ cao."
+  },
+  {
+   "course": "Mạng máy tính",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Địa chỉ 127.0.0.1 thường được dùng với mục đích gì?",
+   "options": {
+    "A": "Địa chỉ quảng bá của mạng nội bộ",
+    "B": "Địa chỉ loopback để máy tự kết nối đến chính nó",
+    "C": "Địa chỉ của máy chủ DNS công cộng",
+    "D": "Địa chỉ mặc định của router nhà cung cấp dịch vụ"
+   },
+   "correct_answer": "B",
+   "explanation": "127.0.0.1 là địa chỉ loopback dùng để kiểm tra giao thức mạng trên chính máy."
+  },
+  {
+   "course": "Mạng máy tính",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Tường lửa (firewall) có chức năng chính nào?",
+   "options": {
+    "A": "Lọc lưu lượng mạng vào/ra theo các quy tắc bảo mật",
+    "B": "Tăng tốc độ đường truyền Internet",
+    "C": "Cấp phát địa chỉ IP cho thiết bị",
+    "D": "Chuyển đổi tín hiệu số sang tín hiệu tương tự"
+   },
+   "correct_answer": "A",
+   "explanation": "Firewall cho phép hoặc chặn gói tin dựa trên địa chỉ, cổng, giao thức."
+  },
+  {
+   "course": "Mạng máy tính",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Lệnh ping dựa trên giao thức nào để kiểm tra kết nối?",
+   "options": {
+    "A": "HTTP",
+    "B": "SMTP",
+    "C": "DHCP",
+    "D": "ICMP"
+   },
+   "correct_answer": "D",
+   "explanation": "Ping gửi gói ICMP Echo Request và nhận Echo Reply."
+  },
+  {
+   "course": "Mạng máy tính",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Quá trình bắt tay ba bước (three-way handshake) của TCP gồm các gói nào theo thứ tự?",
+   "options": {
+    "A": "ACK → SYN → FIN",
+    "B": "SYN → ACK → FIN",
+    "C": "FIN → ACK → SYN",
+    "D": "SYN → SYN-ACK → ACK"
+   },
+   "correct_answer": "D",
+   "explanation": "Máy khách gửi SYN, máy chủ trả SYN-ACK, máy khách xác nhận ACK."
+  },
+  {
+   "course": "Mạng máy tính",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Mặt nạ mạng /24 tương ứng với dạng thập phân nào?",
+   "options": {
+    "A": "255.255.0.0",
+    "B": "255.255.255.128",
+    "C": "255.255.255.240",
+    "D": "255.255.255.0"
+   },
+   "correct_answer": "D",
+   "explanation": "/24 có 24 bit 1 liên tiếp, tức 255.255.255.0."
+  },
+  {
+   "course": "Mạng máy tính",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Địa chỉ nào sau đây thuộc dải địa chỉ riêng (private) theo RFC 1918?",
+   "options": {
+    "A": "172.20.5.1",
+    "B": "172.32.0.1",
+    "C": "192.169.1.1",
+    "D": "11.0.0.1"
+   },
+   "correct_answer": "A",
+   "explanation": "Dải riêng gồm 10.0.0.0/8, 172.16.0.0–172.31.255.255 và 192.168.0.0/16."
+  },
+  {
+   "course": "Mạng máy tính",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Mạng con /26 có bao nhiêu địa chỉ host khả dụng?",
+   "options": {
+    "A": "64",
+    "B": "30",
+    "C": "62",
+    "D": "126"
+   },
+   "correct_answer": "C",
+   "explanation": "Còn 6 bit host: 2^6 − 2 = 62 (trừ địa chỉ mạng và broadcast)."
+  },
+  {
+   "course": "Mạng máy tính",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Điểm khác biệt chính giữa HTTP và HTTPS là gì?",
+   "options": {
+    "A": "HTTPS chạy trên UDP còn HTTP chạy trên TCP",
+    "B": "HTTP an toàn hơn vì dùng cổng nhỏ hơn",
+    "C": "Hai giao thức chỉ khác nhau về màu biểu tượng trình duyệt",
+    "D": "HTTPS mã hóa dữ liệu bằng TLS còn HTTP truyền ở dạng văn bản thuần"
+   },
+   "correct_answer": "D",
+   "explanation": "HTTPS = HTTP trên TLS, bảo vệ tính bí mật và toàn vẹn của dữ liệu."
+  },
+  {
+   "course": "Mạng máy tính",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Giao thức ARP có nhiệm vụ gì?",
+   "options": {
+    "A": "Ánh xạ tên miền sang địa chỉ IP",
+    "B": "Cấp phát địa chỉ IP động",
+    "C": "Ánh xạ địa chỉ IP sang địa chỉ MAC trong cùng mạng",
+    "D": "Định tuyến gói tin giữa các hệ tự trị"
+   },
+   "correct_answer": "C",
+   "explanation": "ARP hỏi “ai có địa chỉ IP này?” để lấy địa chỉ MAC tương ứng."
+  },
+  {
+   "course": "Mạng máy tính",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "NAT (Network Address Translation) thường được dùng để làm gì?",
+   "options": {
+    "A": "Mã hóa toàn bộ lưu lượng của mạng nội bộ",
+    "B": "Tăng băng thông của đường truyền",
+    "C": "Cho nhiều thiết bị dùng địa chỉ riêng chia sẻ một địa chỉ công cộng khi ra Internet",
+    "D": "Phân giải tên miền cho mạng nội bộ"
+   },
+   "correct_answer": "C",
+   "explanation": "NAT dịch địa chỉ và cổng nguồn, giúp tiết kiệm địa chỉ IPv4 công cộng."
+  },
+  {
+   "course": "Mạng máy tính",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Máy có địa chỉ 192.168.1.130/26. Địa chỉ broadcast của mạng con chứa máy này là gì?",
+   "options": {
+    "A": "192.168.1.255",
+    "B": "192.168.1.129",
+    "C": "192.168.1.191",
+    "D": "192.168.1.192"
+   },
+   "correct_answer": "C",
+   "explanation": "/26 có khối 64; 130 nằm trong 128–191 nên mạng 192.168.1.128 và broadcast 192.168.1.191."
+  },
+  {
+   "course": "Mạng máy tính",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Chia mạng 192.168.10.0/24 thành 4 mạng con có kích thước bằng nhau. Mạng con thứ ba bắt đầu ở địa chỉ nào?",
+   "options": {
+    "A": "192.168.10.64/26",
+    "B": "192.168.10.192/26",
+    "C": "192.168.10.128/26",
+    "D": "192.168.10.128/25"
+   },
+   "correct_answer": "C",
+   "explanation": "Cần 2 bit mượn nên prefix /26, mỗi mạng 64 địa chỉ: 0, 64, 128, 192; mạng thứ ba là .128."
+  },
+  {
+   "course": "Mạng máy tính",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Mỗi mạng con cần ít nhất 50 host. Prefix dài nhất (mặt nạ nhỏ nhất) vẫn đáp ứng là gì?",
+   "options": {
+    "A": "/26",
+    "B": "/27",
+    "C": "/25",
+    "D": "/28"
+   },
+   "correct_answer": "A",
+   "explanation": "/26 có 62 host khả dụng đủ 50; /27 chỉ có 30 host."
+  },
+  {
+   "course": "Mạng máy tính",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Hai máy 10.1.1.200/25 và 10.1.1.20/25 có nằm cùng mạng con không?",
+   "options": {
+    "A": "Có; cùng thuộc 10.1.1.0/25",
+    "B": "Có; cùng thuộc 10.1.1.128/25",
+    "C": "Không; thuộc 10.1.1.128/25 và 10.1.1.0/25 nên cần router để liên lạc",
+    "D": "Không xác định được vì thiếu địa chỉ gateway"
+   },
+   "correct_answer": "C",
+   "explanation": "/25 chia /24 thành .0–.127 và .128–.255; .20 và .200 nằm hai nửa khác nhau."
+  },
+  {
+   "course": "Mạng máy tính",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Truyền tệp 10 MB (1 MB = 10^6 byte) qua liên kết 100 Mbps, bỏ qua tiêu đề và độ trễ lan truyền. Thời gian truyền là bao nhiêu?",
+   "options": {
+    "A": "0,1 giây",
+    "B": "0,8 giây",
+    "C": "8 giây",
+    "D": "1,25 giây"
+   },
+   "correct_answer": "B",
+   "explanation": "10 MB = 80 Mbit; 80 / 100 = 0,8 giây."
+  },
+  {
+   "course": "Mạng máy tính",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Máy gửi một đoạn TCP có số thứ tự (seq) = 1000 mang 500 byte dữ liệu. Nếu nhận đúng, số ACK máy nhận trả về là bao nhiêu?",
+   "options": {
+    "A": "1000",
+    "B": "1500",
+    "C": "1501",
+    "D": "500"
+   },
+   "correct_answer": "B",
+   "explanation": "ACK là số thứ tự của byte kế tiếp mong đợi: 1000 + 500 = 1500."
+  },
+  {
+   "course": "Mạng máy tính",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Bảng định tuyến có 10.0.0.0/8, 10.1.0.0/16 và 10.1.2.0/24. Gói tin đến 10.1.3.5 sẽ khớp theo tuyến nào theo quy tắc longest prefix match?",
+   "options": {
+    "A": "10.0.0.0/8",
+    "B": "10.1.2.0/24",
+    "C": "Không khớp tuyến nào",
+    "D": "10.1.0.0/16"
+   },
+   "correct_answer": "D",
+   "explanation": "10.1.3.5 không thuộc 10.1.2.0/24 nhưng thuộc 10.1.0.0/16 và 10.0.0.0/8; chọn prefix dài nhất là /16."
+  },
+  {
+   "course": "Máy học",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Học có giám sát (supervised learning) là gì?",
+   "options": {
+    "A": "Học từ dữ liệu không có nhãn để tìm cấu trúc ẩn",
+    "B": "Học từ dữ liệu huấn luyện đã có nhãn đầu ra tương ứng",
+    "C": "Học thông qua phần thưởng từ môi trường",
+    "D": "Học bằng cách sao chép toàn bộ dữ liệu vào bộ nhớ"
+   },
+   "correct_answer": "B",
+   "explanation": "Mô hình học ánh xạ từ đầu vào đến nhãn dựa trên các cặp (x, y) đã biết."
+  },
+  {
+   "course": "Máy học",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Bài toán nào sau đây là học không giám sát?",
+   "options": {
+    "A": "Phân cụm khách hàng theo hành vi mua sắm",
+    "B": "Dự đoán thư rác dựa trên thư đã gắn nhãn",
+    "C": "Dự đoán giá nhà từ diện tích",
+    "D": "Nhận dạng chữ số viết tay có nhãn"
+   },
+   "correct_answer": "A",
+   "explanation": "Phân cụm không dùng nhãn, chỉ nhóm các mẫu tương tự nhau."
+  },
+  {
+   "course": "Máy học",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Overfitting (quá khớp) là hiện tượng gì?",
+   "options": {
+    "A": "Mô hình kém trên cả dữ liệu huấn luyện và dữ liệu mới",
+    "B": "Mô hình huấn luyện quá nhanh",
+    "C": "Mô hình có quá ít tham số nên không học được gì",
+    "D": "Mô hình rất tốt trên dữ liệu huấn luyện nhưng kém trên dữ liệu mới"
+   },
+   "correct_answer": "D",
+   "explanation": "Mô hình ghi nhớ nhiễu của tập huấn luyện nên khả năng tổng quát hóa kém."
+  },
+  {
+   "course": "Máy học",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Hồi quy tuyến tính (linear regression) thường được dùng để làm gì?",
+   "options": {
+    "A": "Phân loại ảnh thành các lớp rời rạc",
+    "B": "Nhóm dữ liệu thành các cụm",
+    "C": "Dự đoán một giá trị liên tục",
+    "D": "Sinh văn bản tự động"
+   },
+   "correct_answer": "C",
+   "explanation": "Hồi quy dự đoán đại lượng liên tục như giá, nhiệt độ."
+  },
+  {
+   "course": "Máy học",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Bài toán dự đoán giá nhà dựa trên diện tích và vị trí thuộc dạng nào?",
+   "options": {
+    "A": "Hồi quy",
+    "B": "Phân loại nhị phân",
+    "C": "Phân cụm",
+    "D": "Giảm chiều dữ liệu"
+   },
+   "correct_answer": "A",
+   "explanation": "Đầu ra là giá trị số liên tục nên đây là bài toán hồi quy."
+  },
+  {
+   "course": "Máy học",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Đặc trưng (feature) trong máy học là gì?",
+   "options": {
+    "A": "Nhãn mà mô hình cần dự đoán",
+    "B": "Thuật toán tối ưu của mô hình",
+    "C": "Số lần lặp huấn luyện",
+    "D": "Thuộc tính đầu vào dùng để mô tả mỗi mẫu dữ liệu"
+   },
+   "correct_answer": "D",
+   "explanation": "Mỗi mẫu được biểu diễn bởi vector các đặc trưng đưa vào mô hình."
+  },
+  {
+   "course": "Máy học",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Tập kiểm tra (test set) dùng để làm gì?",
+   "options": {
+    "A": "Huấn luyện các trọng số của mô hình",
+    "B": "Lựa chọn siêu tham số trong quá trình huấn luyện",
+    "C": "Đánh giá khách quan hiệu năng mô hình trên dữ liệu chưa từng thấy",
+    "D": "Tăng kích thước tập huấn luyện"
+   },
+   "correct_answer": "C",
+   "explanation": "Test set giữ riêng để ước lượng khả năng tổng quát hóa sau khi hoàn tất huấn luyện."
+  },
+  {
+   "course": "Máy học",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Thuật toán K-means làm gì?",
+   "options": {
+    "A": "Dự đoán giá trị liên tục bằng đường thẳng",
+    "B": "Chia dữ liệu thành K cụm dựa trên khoảng cách đến tâm cụm",
+    "C": "Xây dựng cây quyết định từ dữ liệu có nhãn",
+    "D": "Giảm số chiều bằng phép chiếu tuyến tính"
+   },
+   "correct_answer": "B",
+   "explanation": "K-means lặp lại gán điểm vào tâm gần nhất và cập nhật tâm cụm."
+  },
+  {
+   "course": "Máy học",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Hàm mất mát (loss function) dùng để làm gì?",
+   "options": {
+    "A": "Chia dữ liệu thành tập huấn luyện và tập kiểm tra",
+    "B": "Chuẩn hóa dữ liệu về thang đo chung",
+    "C": "Đo mức sai lệch giữa dự đoán của mô hình và giá trị thực",
+    "D": "Chọn số lượng cụm tối ưu"
+   },
+   "correct_answer": "C",
+   "explanation": "Huấn luyện nhằm tối thiểu hóa giá trị loss trên dữ liệu."
+  },
+  {
+   "course": "Máy học",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Gradient descent cập nhật tham số theo hướng nào?",
+   "options": {
+    "A": "Cùng hướng gradient của hàm mất mát",
+    "B": "Theo hướng ngẫu nhiên không phụ thuộc gradient",
+    "C": "Vuông góc với mọi trục tham số",
+    "D": "Ngược hướng gradient của hàm mất mát"
+   },
+   "correct_answer": "D",
+   "explanation": "Đi ngược gradient sẽ làm giảm giá trị hàm mất mát."
+  },
+  {
+   "course": "Máy học",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Độ chính xác (accuracy) của mô hình phân loại được tính như thế nào?",
+   "options": {
+    "A": "Số mẫu dự đoán đúng chia cho tổng số mẫu",
+    "B": "Số mẫu dự đoán sai chia cho số mẫu dương",
+    "C": "Số mẫu dương thật chia cho số mẫu dự đoán dương",
+    "D": "Tổng loss chia cho số đặc trưng"
+   },
+   "correct_answer": "A",
+   "explanation": "Accuracy = (TP + TN) / tổng số mẫu."
+  },
+  {
+   "course": "Máy học",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Cây quyết định (decision tree) phân loại mẫu bằng cách nào?",
+   "options": {
+    "A": "Tính khoảng cách tới tất cả mẫu trong tập huấn luyện",
+    "B": "Chia dữ liệu liên tiếp theo các điều kiện trên thuộc tính cho đến khi đến nút lá",
+    "C": "Nhân ma trận trọng số qua nhiều lớp ẩn",
+    "D": "Gom các mẫu theo tâm cụm"
+   },
+   "correct_answer": "B",
+   "explanation": "Mỗi nút trong kiểm tra một thuộc tính, nút lá cho nhãn dự đoán."
+  },
+  {
+   "course": "Máy học",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Học tăng cường (reinforcement learning) có đặc điểm gì?",
+   "options": {
+    "A": "Tác tử học qua tương tác với môi trường để tối đa hóa phần thưởng",
+    "B": "Mô hình học từ tập dữ liệu có nhãn cố định",
+    "C": "Mô hình chỉ nhóm dữ liệu không nhãn",
+    "D": "Mô hình học bằng cách sắp xếp dữ liệu"
+   },
+   "correct_answer": "A",
+   "explanation": "Tác tử chọn hành động, nhận phần thưởng và cải thiện chính sách."
+  },
+  {
+   "course": "Máy học",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Tốc độ học (learning rate) trong gradient descent là gì?",
+   "options": {
+    "A": "Số lượng mẫu trong mỗi lô dữ liệu",
+    "B": "Số lớp ẩn của mạng nơ-ron",
+    "C": "Hệ số quyết định độ lớn bước cập nhật tham số ở mỗi lần lặp",
+    "D": "Tỉ lệ chia tập kiểm tra"
+   },
+   "correct_answer": "C",
+   "explanation": "Learning rate nhân với gradient để xác định bước đi; quá lớn có thể gây dao động hoặc phân kỳ."
+  },
+  {
+   "course": "Máy học",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Công thức tính Recall của mô hình phân loại nhị phân là gì?",
+   "options": {
+    "A": "TP / (TP + FP)",
+    "B": "TP / (TP + FN)",
+    "C": "(TP + TN) / tổng số mẫu",
+    "D": "TN / (TN + FP)"
+   },
+   "correct_answer": "B",
+   "explanation": "Recall là tỉ lệ mẫu dương thật được tìm ra: TP / (TP + FN)."
+  },
+  {
+   "course": "Máy học",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "So sánh chuẩn hóa L1 (Lasso) và L2 (Ridge), nhận định nào đúng?",
+   "options": {
+    "A": "L2 thường đưa nhiều hệ số về đúng 0 hơn L1",
+    "B": "Cả hai đều làm tăng độ phức tạp của mô hình",
+    "C": "L1 và L2 chỉ dùng cho phân cụm",
+    "D": "L1 có xu hướng đưa nhiều hệ số về đúng 0 (mô hình thưa), L2 chỉ làm hệ số nhỏ đi"
+   },
+   "correct_answer": "D",
+   "explanation": "Phạt L1 tạo lựa chọn đặc trưng tự nhiên, L2 co nhỏ đều các hệ số."
+  },
+  {
+   "course": "Máy học",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Mô hình quá đơn giản không nắm bắt được quy luật của dữ liệu thường có đặc điểm nào?",
+   "options": {
+    "A": "Variance cao, lỗi huấn luyện bằng 0",
+    "B": "Bias thấp, variance cao",
+    "C": "Lỗi huấn luyện thấp, lỗi kiểm tra rất cao",
+    "D": "Bias cao (underfitting), lỗi cao ở cả tập huấn luyện và kiểm tra"
+   },
+   "correct_answer": "D",
+   "explanation": "Underfitting ứng với bias cao: mô hình không đủ năng lực biểu diễn."
+  },
+  {
+   "course": "Máy học",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Kiểm định chéo k-fold (k-fold cross-validation) hoạt động thế nào?",
+   "options": {
+    "A": "Chia dữ liệu thành k phần, lần lượt dùng mỗi phần làm tập kiểm tra và k−1 phần còn lại để huấn luyện",
+    "B": "Chia dữ liệu thành hai phần cố định và chỉ huấn luyện một lần",
+    "C": "Nhân bản dữ liệu k lần rồi huấn luyện",
+    "D": "Chọn k đặc trưng tốt nhất để huấn luyện"
+   },
+   "correct_answer": "A",
+   "explanation": "Huấn luyện k lần và lấy trung bình điểm số cho ước lượng ổn định hơn."
+  },
+  {
+   "course": "Máy học",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Vì sao cần chuẩn hóa thang đo đặc trưng khi dùng KNN?",
+   "options": {
+    "A": "Vì KNN không chấp nhận số âm",
+    "B": "Vì KNN chỉ chạy được với dữ liệu nhị phân",
+    "C": "Vì chuẩn hóa làm giảm số mẫu cần lưu",
+    "D": "Vì KNN dựa trên khoảng cách nên đặc trưng có thang đo lớn sẽ lấn át các đặc trưng khác"
+   },
+   "correct_answer": "D",
+   "explanation": "Khoảng cách Euclid nhạy với thang đo, nên cần đưa các đặc trưng về cùng thang."
+  },
+  {
+   "course": "Máy học",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Trong máy học, đại lượng nào sau đây là siêu tham số (hyperparameter)?",
+   "options": {
+    "A": "Trọng số của mô hình hồi quy",
+    "B": "Hệ số chặn (bias) học được",
+    "C": "Tốc độ học (learning rate)",
+    "D": "Nhãn của mẫu huấn luyện"
+   },
+   "correct_answer": "C",
+   "explanation": "Siêu tham số được người dùng đặt trước, còn trọng số được học từ dữ liệu."
+  },
+  {
+   "course": "Máy học",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Random Forest cải thiện so với một cây quyết định đơn lẻ nhờ điều gì?",
+   "options": {
+    "A": "Kết hợp nhiều cây huấn luyện trên mẫu bootstrap để giảm phương sai",
+    "B": "Dùng một cây rất sâu để ghi nhớ toàn bộ dữ liệu",
+    "C": "Loại bỏ hoàn toàn bước chọn đặc trưng",
+    "D": "Chỉ dùng cho bài toán phân cụm"
+   },
+   "correct_answer": "A",
+   "explanation": "Bagging và chọn ngẫu nhiên đặc trưng làm các cây ít tương quan, trung bình hóa giúp giảm variance."
+  },
+  {
+   "course": "Máy học",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Ma trận nhầm lẫn có TP = 40, FP = 10, FN = 20, TN = 130. Precision, Recall và F1 lần lượt xấp xỉ bao nhiêu?",
+   "options": {
+    "A": "0,80; 0,67; 0,73",
+    "B": "0,67; 0,80; 0,73",
+    "C": "0,80; 0,80; 0,80",
+    "D": "0,87; 0,67; 0,76"
+   },
+   "correct_answer": "A",
+   "explanation": "Precision = 40/50 = 0,8; Recall = 40/60 ≈ 0,67; F1 = 2·40/(2·40+10+20) = 80/110 ≈ 0,73."
+  },
+  {
+   "course": "Máy học",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Tập dữ liệu có 99% mẫu âm tính. Mô hình luôn dự đoán âm tính. Nhận định nào đúng?",
+   "options": {
+    "A": "Accuracy 50% và Recall bằng 1",
+    "B": "Accuracy 99% và Recall bằng 1",
+    "C": "Accuracy 1% và Precision bằng 1",
+    "D": "Accuracy 99% nhưng Recall của lớp dương bằng 0, nên accuracy gây hiểu lầm"
+   },
+   "correct_answer": "D",
+   "explanation": "Với dữ liệu mất cân bằng, accuracy cao có thể che giấu việc không phát hiện được lớp quan trọng."
+  },
+  {
+   "course": "Máy học",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Hàm mất mát L(w) = (w − 3)^2, khởi tạo w = 0, tốc độ học 0,1. Sau một bước gradient descent, w bằng bao nhiêu?",
+   "options": {
+    "A": "−0,6",
+    "B": "0,6",
+    "C": "0,3",
+    "D": "3,0"
+   },
+   "correct_answer": "B",
+   "explanation": "Gradient = 2(w − 3) = −6; w mới = 0 − 0,1 × (−6) = 0,6."
+  },
+  {
+   "course": "Máy học",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Tập cha có 4 mẫu dương và 4 mẫu âm. Một thuộc tính chia thành nhánh (3 dương, 1 âm) và nhánh (1 dương, 3 âm). Information Gain xấp xỉ bao nhiêu?",
+   "options": {
+    "A": "0,81",
+    "B": "0,50",
+    "C": "0,19",
+    "D": "1,00"
+   },
+   "correct_answer": "C",
+   "explanation": "Entropy cha = 1; entropy mỗi nhánh (3,1) ≈ 0,811; IG = 1 − 0,811 ≈ 0,19."
+  },
+  {
+   "course": "Máy học",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "K-means 1 chiều với dữ liệu {1, 2, 9, 10}, tâm khởi tạo c1 = 1 và c2 = 2. Sau một vòng lặp (gán rồi cập nhật), các tâm là gì?",
+   "options": {
+    "A": "c1 = 1,5; c2 = 9,5",
+    "B": "c1 = 1; c2 = 2",
+    "C": "c1 = 1; c2 = 7",
+    "D": "c1 = 2; c2 = 9"
+   },
+   "correct_answer": "C",
+   "explanation": "Gán: 1 → c1; 2, 9, 10 → c2 (gần hơn). Cập nhật: c1 = 1; c2 = (2 + 9 + 10)/3 = 7."
+  },
+  {
+   "course": "Máy học",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Chuẩn hóa (tính trung bình, độ lệch chuẩn) trên toàn bộ dữ liệu rồi mới chia train/test gây ra vấn đề gì?",
+   "options": {
+    "A": "Làm mô hình bị underfitting",
+    "B": "Rò rỉ dữ liệu (data leakage): thông tin của tập test lọt vào quá trình huấn luyện",
+    "C": "Làm tăng chắc chắn độ chính xác trên dữ liệu thực tế",
+    "D": "Không ảnh hưởng gì đến đánh giá"
+   },
+   "correct_answer": "B",
+   "explanation": "Thống kê tính từ test làm kết quả đánh giá lạc quan; cần fit scaler chỉ trên tập train."
+  },
+  {
+   "course": "Máy học",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Hồi quy logistic có w = 2, b = −1, đầu vào x = 1. Xác suất dự đoán lớp dương σ(wx + b) xấp xỉ bao nhiêu?",
+   "options": {
+    "A": "0,50",
+    "B": "0,73",
+    "C": "0,88",
+    "D": "0,27"
+   },
+   "correct_answer": "B",
+   "explanation": "z = 2·1 − 1 = 1; σ(1) = 1/(1 + e^−1) ≈ 0,731."
+  }
+ ]
+}

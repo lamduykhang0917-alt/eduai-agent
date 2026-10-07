@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tài liệu — EduAI</title>
+<link rel="stylesheet" href="../css/style.css">
+<style>
+  /* Filter bar */
+  .filters {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+  .filters input {
+    max-width: 260px;
+    font-size: 13px;
+  }
+  .filters select {
+    max-width: 200px;
+    font-size: 13px;
+  }
+
+  /* Table */
+  .table-wrap { overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  thead tr {
+    background: linear-gradient(135deg, #fafaff, #f5f3ff);
+  }
+  th {
+    text-align: left;
+    color: var(--text-secondary);
+    font-weight: 700;
+    padding: 11px 14px;
+    border-bottom: 1px solid var(--border-subtle);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    white-space: nowrap;
+  }
+  td {
+    padding: 13px 14px;
+    border-bottom: 1px solid var(--border-subtle);
+    color: var(--text-primary);
+    vertical-align: middle;
+  }
+  tr:last-child td { border-bottom: none; }
+  tr:hover td { background: linear-gradient(135deg, #fafaff, #f8fafc); }
+
+  /* Doc name cell */
+  .doc-name {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .doc-icon {
+    width: 34px; height: 34px;
+    border-radius: 9px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 16px;
+    flex-shrink: 0;
+  }
+  .doc-icon.pdf  { background: #fff1f2; }
+  .doc-icon.docx { background: #eff6ff; }
+  .doc-icon.pptx { background: #fffbeb; }
+  .doc-icon.default { background: var(--indigo-50); }
+  .doc-title { font-weight: 600; font-size: 14px; }
+
+  /* Empty state */
+  .empty-state {
+    text-align: center;
+    padding: 50px 20px;
+    color: var(--text-muted);
+  }
+  .empty-state .empty-icon { font-size: 44px; margin-bottom: 12px; }
+
+  /* Action button in table */
+  .btn-ask {
+    font-size: 12px;
+    padding: 7px 14px;
+    border-radius: var(--radius-sm);
+    background: var(--gradient-ai-soft);
+    color: var(--indigo-600);
+    border: 1px solid var(--indigo-100);
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    transition: all 0.15s;
+    white-space: nowrap;
+  }
+  .btn-ask:hover {
+    background: var(--gradient-ai);
+    color: white;
+    border-color: transparent;
+    box-shadow: 0 3px 10px rgba(37,99,235,0.25);
+    transform: translateY(-1px);
+  }
+</style>
+<link rel="stylesheet" href="../css/luxe.css">
+</head>
+<body>
+<div class="app-shell">
+  <nav class="topnav">
+  <div class="topnav-inner">
+    <a class="topnav-logo" href="dashboard.html"><span class="mark">E</span>EduAI</a>
+    <div class="topnav-links">
+    <a class="nav-item" href="dashboard.html">Dashboard</a>
+    <a class="nav-item" href="courses.html">Môn học</a>
+    <a class="nav-item active" href="documents.html">Tài liệu</a>
+    <a class="nav-item" href="chatbot.html">Hỏi AI</a>
+    <a class="nav-item" href="quiz-list.html">Ôn tập &amp; Kiểm tra</a>
+    <a class="nav-item" href="progress.html">Tiến độ học tập</a>
+    <a class="nav-item" href="study.html">Kế hoạch & Ghi chú</a>
+    </div>
+  <div class="topnav-actions">
+    <a class="nav-item" href="#" onclick="logout(); return false;">Đăng xuất</a>
+  </div>
+  </div>
+  <div class="topnav-mobile">
+    <a class="nav-item" href="dashboard.html">Dashboard</a>
+    <a class="nav-item" href="courses.html">Môn học</a>
+    <a class="nav-item active" href="documents.html">Tài liệu</a>
+    <a class="nav-item" href="chatbot.html">Hỏi AI</a>
+    <a class="nav-item" href="quiz-list.html">Ôn tập &amp; Kiểm tra</a>
+    <a class="nav-item" href="progress.html">Tiến độ học tập</a>
+    <a class="nav-item" href="study.html">Kế hoạch & Ghi chú</a>
+    <a class="nav-item" href="#" onclick="logout(); return false;">Đăng xuất</a>
+  </div>
+</nav>
+
+  <main class="main-content">
+    <section class="page-hero" style="background:linear-gradient(120deg,#7c2d12 0%,#ea580c 60%,#f59e0b 120%);">
+      <div class="copy"><h2>Thư viện tài liệu</h2><p>Đọc nội dung từng trang ngay trên web, tìm kiếm trong tài liệu hoặc hỏi AI về phần bạn chưa hiểu.</p></div>
+      <div class="hero-art">📄</div>
+    </section>
+
+    <div class="card animate-fade-in-up">
+      <div class="filters">
+        <input placeholder="🔍 Tìm kiếm tài liệu..." id="searchInput" oninput="load()" style="flex:1; max-width:300px;">
+        <select id="courseFilter" onchange="load()">
+          <option value="">Tất cả môn học</option>
+        </select>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Tên tài liệu</th>
+              <th>Môn học</th>
+              <th>Loại</th>
+              <th>Ngày cập nhật</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="docTableBody"></tbody>
+        </table>
+      </div>
+      <div id="emptyMsg" style="display:none;">
+        <div class="empty-state">
+          <div class="empty-icon">📭</div>
+          <p>Chưa tìm thấy tài liệu nào phù hợp.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+
+<script src="../js/api.js"></script>
+<script>
+requireRole("STUDENT");
+let courses = [];
+
+function getDocIcon(type) {
+  const t = (type || '').toLowerCase();
+  if (t === 'pdf') return { icon: '📕', cls: 'pdf' };
+  if (t === 'docx' || t === 'doc') return { icon: '📘', cls: 'docx' };
+  if (t === 'pptx' || t === 'ppt') return { icon: '📙', cls: 'pptx' };
+  return { icon: '📄', cls: 'default' };
+}
+
+async function initCourses() {
+  courses = await Api.courses();
+  const sel = document.getElementById("courseFilter");
+  courses.forEach(c => {
+    const opt = document.createElement("option");
+    opt.value = c.id; opt.textContent = c.name;
+    sel.appendChild(opt);
+  });
+}
+
+async function load() {
+  const search = document.getElementById("searchInput").value;
+  const courseId = document.getElementById("courseFilter").value;
+  const params = {};
+  if (search) params.search = search;
+  if (courseId) params.course_id = courseId;
+
+  const docs = await Api.documents(params);
+  const tbody = document.getElementById("docTableBody");
+  const emptyMsg = document.getElementById("emptyMsg");
+
+  if (docs.length === 0) {
+    tbody.innerHTML = "";
+    emptyMsg.style.display = "block";
+    return;
+  }
+  emptyMsg.style.display = "none";
+  tbody.innerHTML = docs.map((d, i) => {
+    const course = courses.find(c => c.id === d.course_id);
+    const docType = getDocIcon(d.file_type);
+    return `<tr style="animation: slideIn 0.3s ease ${i * 0.04}s both;">
+      <td>
+        <div class="doc-name">
+          <div class="doc-icon ${docType.cls}">${docType.icon}</div>
+          <a class="doc-title" href="document-view.html?id=${d.id}" style="color:inherit; text-decoration:none;">${d.title}</a>
+        </div>
+      </td>
+      <td><span class="badge badge-purple">${course ? course.name : '—'}</span></td>
+      <td><span class="badge badge-blue">${(d.file_type || '').toUpperCase() || '—'}</span></td>
+      <td style="color:var(--text-muted); font-size:13px;">${d.updated_at ? d.updated_at.split(' ')[0] : '—'}</td>
+      <td>
+        <a class="btn-ask" href="document-view.html?id=${d.id}" style="text-decoration:none; margin-right:6px;">👁 Xem</a>
+        <button class="btn-ask" onclick='askAboutDoc(${JSON.stringify(d.title)})'>
+          💬 Hỏi AI
+        </button>
+      </td>
+    </tr>`;
+  }).join('');
+}
+
+function askAboutDoc(title) {
+  window.location.href = `chatbot.html?q=${encodeURIComponent("Tóm tắt tài liệu: " + title)}`;
+}
+
+(async () => { await initCourses(); await load(); })();
+</script>
+</body>
+</html>

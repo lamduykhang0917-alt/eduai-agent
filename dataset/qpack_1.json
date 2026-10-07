@@ -1,0 +1,1964 @@
+{
+ "questions": [
+  {
+   "course": "Trí tuệ nhân tạo",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Trí tuệ nhân tạo (AI) là lĩnh vực nghiên cứu nhằm mục tiêu nào?",
+   "options": {
+    "A": "Chế tạo phần cứng máy tính có tốc độ xử lý nhanh hơn bộ não con người",
+    "B": "Thiết kế giao diện giúp người dùng thao tác với máy tính dễ dàng hơn",
+    "C": "Xây dựng hệ thống máy tính thực hiện được các tác vụ đòi hỏi trí thông minh của con người",
+    "D": "Lưu trữ và truy xuất lượng dữ liệu lớn bằng các hệ quản trị chuyên dụng"
+   },
+   "correct_answer": "C",
+   "explanation": "AI nghiên cứu cách làm cho máy tính có hành vi thông minh như học, suy luận, nhận dạng và ra quyết định."
+  },
+  {
+   "course": "Trí tuệ nhân tạo",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Học máy (Machine Learning) là gì?",
+   "options": {
+    "A": "Phương pháp lập trình trong đó mọi quy tắc xử lý đều do lập trình viên viết cố định",
+    "B": "Kỹ thuật nén dữ liệu nhằm tiết kiệm dung lượng lưu trữ trên máy tính",
+    "C": "Quy trình kiểm thử phần mềm tự động bằng các kịch bản được định nghĩa trước",
+    "D": "Phương pháp cho phép máy tính học quy luật từ dữ liệu thay vì được lập trình sẵn từng quy tắc"
+   },
+   "correct_answer": "D",
+   "explanation": "Học máy là nhánh của AI, trong đó mô hình tự rút ra quy luật từ dữ liệu huấn luyện."
+  },
+  {
+   "course": "Trí tuệ nhân tạo",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Học có giám sát (supervised learning) sử dụng loại dữ liệu huấn luyện nào?",
+   "options": {
+    "A": "Dữ liệu hoàn toàn không có nhãn để mô hình tự tìm cấu trúc ẩn trong đó",
+    "B": "Dữ liệu đã được gán nhãn đầu ra tương ứng với từng mẫu đầu vào",
+    "C": "Dữ liệu sinh ra từ việc thử và sai với môi trường cùng tín hiệu phần thưởng",
+    "D": "Dữ liệu chỉ gồm các luật logic do chuyên gia viết thủ công cho hệ thống"
+   },
+   "correct_answer": "B",
+   "explanation": "Học có giám sát cần cặp (đầu vào, nhãn) để mô hình học ánh xạ từ đầu vào sang nhãn."
+  },
+  {
+   "course": "Trí tuệ nhân tạo",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Bài toán nào sau đây thuộc nhóm học không giám sát?",
+   "options": {
+    "A": "Dự đoán giá nhà dựa trên diện tích và vị trí từ dữ liệu đã có giá thực tế",
+    "B": "Phân cụm khách hàng thành các nhóm có hành vi tương tự khi chưa có nhãn nhóm",
+    "C": "Phân loại email là thư rác hay không dựa trên các email đã được gán nhãn",
+    "D": "Nhận dạng chữ số viết tay từ tập ảnh đã gán nhãn các chữ số từ 0 đến 9"
+   },
+   "correct_answer": "B",
+   "explanation": "Phân cụm không dùng nhãn nên là học không giám sát, ba bài toán còn lại đều cần dữ liệu có nhãn."
+  },
+  {
+   "course": "Trí tuệ nhân tạo",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Hiện tượng quá khớp (overfitting) là gì?",
+   "options": {
+    "A": "Mô hình đạt kết quả rất tốt trên dữ liệu huấn luyện nhưng kém trên dữ liệu mới",
+    "B": "Mô hình cho kết quả kém trên cả dữ liệu huấn luyện lẫn dữ liệu chưa thấy",
+    "C": "Mô hình có thời gian huấn luyện quá ngắn so với kích thước tập dữ liệu",
+    "D": "Mô hình dự đoán đúng hoàn toàn mọi mẫu của tập kiểm tra độc lập"
+   },
+   "correct_answer": "A",
+   "explanation": "Quá khớp xảy ra khi mô hình ghi nhớ cả nhiễu của tập huấn luyện nên khả năng khái quát hóa kém."
+  },
+  {
+   "course": "Trí tuệ nhân tạo",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Trong mạng nơ-ron nhân tạo, hàm kích hoạt (activation function) có vai trò chính nào?",
+   "options": {
+    "A": "Chuẩn hóa nhãn thành các số nguyên liên tiếp trước khi bắt đầu huấn luyện",
+    "B": "Đưa tính phi tuyến vào đầu ra của nơ-ron để mạng học được quan hệ phức tạp",
+    "C": "Giảm số lượng mẫu trong tập dữ liệu đầu vào để tăng tốc độ tính toán",
+    "D": "Lưu trữ trọng số của mạng xuống bộ nhớ ngoài sau mỗi epoch huấn luyện"
+   },
+   "correct_answer": "B",
+   "explanation": "Nếu không có hàm kích hoạt phi tuyến, nhiều lớp xếp chồng vẫn chỉ tương đương một phép biến đổi tuyến tính."
+  },
+  {
+   "course": "Trí tuệ nhân tạo",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Phép thử Turing (Turing test) nhằm đánh giá điều gì?",
+   "options": {
+    "A": "Tốc độ tính toán của máy tính so với con người trên cùng một bài toán",
+    "B": "Độ chính xác của mô hình phân loại trên tập dữ liệu kiểm tra độc lập",
+    "C": "Dung lượng bộ nhớ tối đa mà một hệ thống thông minh có thể lưu trữ",
+    "D": "Khả năng máy tính giao tiếp mà người đối thoại không phân biệt được với con người"
+   },
+   "correct_answer": "D",
+   "explanation": "Alan Turing đề xuất phép thử này để đánh giá liệu máy có thể biểu hiện hành vi thông minh như người."
+  },
+  {
+   "course": "Trí tuệ nhân tạo",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Hàm heuristic h(n) trong các thuật toán tìm kiếm có thông tin dùng để làm gì?",
+   "options": {
+    "A": "Tính chính xác chi phí đã đi từ trạng thái ban đầu đến trạng thái n",
+    "B": "Ước lượng chi phí từ trạng thái n đến trạng thái đích nhằm định hướng tìm kiếm",
+    "C": "Đếm số trạng thái đã được duyệt trước khi thuật toán đến trạng thái n",
+    "D": "Xác định số lượng tác tử đang cùng tìm kiếm trong không gian trạng thái"
+   },
+   "correct_answer": "B",
+   "explanation": "h(n) là ước lượng chi phí còn lại tới đích, còn chi phí đã đi được ký hiệu là g(n)."
+  },
+  {
+   "course": "Trí tuệ nhân tạo",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Xử lý ngôn ngữ tự nhiên (NLP) là lĩnh vực nghiên cứu về điều gì?",
+   "options": {
+    "A": "Thiết kế ngôn ngữ lập trình bậc cao mới dành cho các máy tính hiện đại",
+    "B": "Dịch mã nguồn chương trình sang mã máy để máy tính có thể thực thi",
+    "C": "Truyền dữ liệu văn bản giữa các máy tính thông qua mạng internet",
+    "D": "Giúp máy tính hiểu, phân tích và sinh ra ngôn ngữ của con người như tiếng Việt"
+   },
+   "correct_answer": "D",
+   "explanation": "NLP gồm các tác vụ như phân loại văn bản, dịch máy, hỏi đáp và sinh văn bản."
+  },
+  {
+   "course": "Trí tuệ nhân tạo",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Thị giác máy tính (Computer Vision) tập trung giải quyết vấn đề nào?",
+   "options": {
+    "A": "Giúp máy tính phát ra giọng nói tự nhiên từ văn bản đầu vào",
+    "B": "Giúp máy tính điều khiển cánh tay robot theo lệnh gõ từ bàn phím",
+    "C": "Giúp máy tính trích xuất thông tin có ý nghĩa từ ảnh và video",
+    "D": "Giúp máy tính truyền ảnh qua mạng với độ trễ thấp nhất có thể"
+   },
+   "correct_answer": "C",
+   "explanation": "Thị giác máy tính gồm nhận dạng đối tượng, phân đoạn ảnh, phát hiện khuôn mặt và các tác vụ tương tự."
+  },
+  {
+   "course": "Trí tuệ nhân tạo",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Mục đích chính của tập kiểm tra (test set) là gì?",
+   "options": {
+    "A": "Cung cấp dữ liệu để cập nhật trọng số của mô hình trong quá trình huấn luyện",
+    "B": "Tăng số lượng mẫu huấn luyện nhằm giảm hiện tượng quá khớp của mô hình",
+    "C": "Đánh giá khách quan hiệu năng của mô hình trên dữ liệu chưa từng thấy khi huấn luyện",
+    "D": "Lưu lại các siêu tham số tốt nhất của mô hình sau khi huấn luyện xong"
+   },
+   "correct_answer": "C",
+   "explanation": "Tập kiểm tra chỉ dùng để đo chất lượng cuối cùng, không tham gia huấn luyện hay chọn mô hình."
+  },
+  {
+   "course": "Trí tuệ nhân tạo",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Trong học tăng cường (reinforcement learning), tác tử học dựa trên tín hiệu nào?",
+   "options": {
+    "A": "Phần thưởng hoặc hình phạt nhận được từ môi trường sau mỗi hành động",
+    "B": "Nhãn đúng do giáo viên cung cấp cho từng mẫu dữ liệu đầu vào",
+    "C": "Khoảng cách giữa các mẫu dữ liệu trong không gian đặc trưng",
+    "D": "Số lượng đặc trưng có trong tập dữ liệu huấn luyện ban đầu"
+   },
+   "correct_answer": "A",
+   "explanation": "Tác tử tương tác với môi trường và điều chỉnh chính sách để tối đa hóa tổng phần thưởng."
+  },
+  {
+   "course": "Trí tuệ nhân tạo",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Bài toán hồi quy (regression) khác bài toán phân loại ở điểm nào?",
+   "options": {
+    "A": "Hồi quy chỉ dùng dữ liệu không nhãn, còn phân loại dùng dữ liệu có nhãn",
+    "B": "Hồi quy luôn chỉ có đầu ra là hai giá trị đúng hoặc sai cho mọi mẫu",
+    "C": "Hồi quy không cần tập huấn luyện, còn phân loại thì bắt buộc phải có",
+    "D": "Đầu ra của hồi quy là giá trị số liên tục, còn phân loại cho ra nhãn rời rạc"
+   },
+   "correct_answer": "D",
+   "explanation": "Ví dụ dự đoán giá nhà là hồi quy, còn dự đoán thư rác hay không là phân loại."
+  },
+  {
+   "course": "Trí tuệ nhân tạo",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Trong AI, tác tử (agent) thông minh được hiểu là thực thể như thế nào?",
+   "options": {
+    "A": "Chương trình chỉ lưu trữ dữ liệu mà không tương tác gì với môi trường",
+    "B": "Con người điều khiển hệ thống từ xa thông qua một giao diện đồ họa",
+    "C": "Phần cứng chuyên dụng chỉ dùng để tính toán ma trận trong mạng nơ-ron",
+    "D": "Thực thể cảm nhận môi trường qua cảm biến và tác động lên môi trường qua cơ cấu chấp hành"
+   },
+   "correct_answer": "D",
+   "explanation": "Định nghĩa kinh điển: agent nhận thức môi trường qua cảm biến và hành động qua cơ cấu chấp hành."
+  },
+  {
+   "course": "Trí tuệ nhân tạo",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Mô hình phát hiện thư rác cho kết quả TP = 40, FP = 10, FN = 20. Độ chính xác dương (precision) bằng bao nhiêu?",
+   "options": {
+    "A": "0,80",
+    "B": "0,67",
+    "C": "0,57",
+    "D": "0,40"
+   },
+   "correct_answer": "A",
+   "explanation": "Precision = TP/(TP+FP) = 40/50 = 0,80."
+  },
+  {
+   "course": "Trí tuệ nhân tạo",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Thuật toán A* chọn nút để mở rộng tiếp theo dựa trên tiêu chí nào?",
+   "options": {
+    "A": "Nút có f(n) = g(n) − h(n) nhỏ nhất trong tập biên",
+    "B": "Nút có giá trị h(n) lớn nhất trong tập biên",
+    "C": "Nút có f(n) = g(n) + h(n) nhỏ nhất trong tập biên",
+    "D": "Nút có giá trị g(n) lớn nhất trong tập biên"
+   },
+   "correct_answer": "C",
+   "explanation": "A* kết hợp chi phí đã đi g(n) và ước lượng còn lại h(n), luôn chọn nút có tổng nhỏ nhất."
+  },
+  {
+   "course": "Trí tuệ nhân tạo",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Khi dùng gradient descent, nếu tốc độ học (learning rate) đặt quá lớn thì điều gì dễ xảy ra?",
+   "options": {
+    "A": "Mô hình hội tụ rất chậm nhưng luôn đạt cực tiểu toàn cục của hàm mất mát",
+    "B": "Hàm mất mát dao động hoặc phân kỳ, không hội tụ về điểm cực tiểu",
+    "C": "Số lượng tham số của mô hình tự động giảm đi sau mỗi lần cập nhật",
+    "D": "Mô hình chắc chắn đạt độ chính xác tuyệt đối trên tập kiểm tra"
+   },
+   "correct_answer": "B",
+   "explanation": "Bước cập nhật quá lớn khiến tham số nhảy qua điểm cực tiểu, làm mất mát dao động hoặc tăng dần."
+  },
+  {
+   "course": "Trí tuệ nhân tạo",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "So sánh k-NN với k = 1 và k lớn, nhận định nào đúng?",
+   "options": {
+    "A": "k = 1 luôn cho ranh giới quyết định mượt hơn so với k lớn",
+    "B": "k lớn luôn cho độ chính xác cao hơn trên mọi tập dữ liệu",
+    "C": "k không có ảnh hưởng gì đến hình dạng ranh giới quyết định",
+    "D": "k = 1 nhạy với nhiễu và dễ quá khớp hơn so với k lớn"
+   },
+   "correct_answer": "D",
+   "explanation": "Với k = 1, một điểm nhiễu gần nhất cũng quyết định nhãn nên ranh giới răng cưa, dễ quá khớp."
+  },
+  {
+   "course": "Trí tuệ nhân tạo",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Cây quyết định thường chọn thuộc tính để tách nút dựa trên tiêu chí nào?",
+   "options": {
+    "A": "Thuộc tính mang lại độ lợi thông tin (information gain) lớn nhất",
+    "B": "Thuộc tính có nhiều giá trị khác nhau nhất trong toàn bộ tập dữ liệu",
+    "C": "Thuộc tính đứng đầu tiên theo thứ tự các cột trong bảng dữ liệu",
+    "D": "Thuộc tính có giá trị trung bình nhỏ nhất trong tập dữ liệu"
+   },
+   "correct_answer": "A",
+   "explanation": "Độ lợi thông tin đo mức giảm entropy sau khi tách, thuộc tính giảm nhiều nhất được ưu tiên."
+  },
+  {
+   "course": "Trí tuệ nhân tạo",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Cắt tỉa alpha-beta trong thuật toán Minimax có tác dụng chính nào?",
+   "options": {
+    "A": "Làm thay đổi giá trị Minimax để nhanh chóng tìm được nước đi tốt hơn",
+    "B": "Bỏ qua các nhánh không thể ảnh hưởng kết quả cuối mà vẫn giữ nguyên giá trị Minimax",
+    "C": "Tăng độ sâu tìm kiếm bằng cách lấy mẫu ngẫu nhiên các nhánh của cây",
+    "D": "Chuyển bài toán hai người chơi thành bài toán chỉ có một người chơi"
+   },
+   "correct_answer": "B",
+   "explanation": "Alpha-beta không đổi kết quả của Minimax, chỉ loại bớt những nhánh chắc chắn không được chọn."
+  },
+  {
+   "course": "Trí tuệ nhân tạo",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Mô hình có sai số cao ở cả tập huấn luyện lẫn tập kiểm tra thường gặp vấn đề gì?",
+   "options": {
+    "A": "Quá khớp (overfitting) do mô hình ghi nhớ cả nhiễu của dữ liệu huấn luyện",
+    "B": "Rò rỉ dữ liệu do thông tin tập kiểm tra lọt vào quá trình huấn luyện",
+    "C": "Mất cân bằng lớp ở tập kiểm tra làm kết quả đánh giá quá lạc quan",
+    "D": "Chưa khớp (underfitting) do mô hình quá đơn giản hoặc huấn luyện chưa đủ"
+   },
+   "correct_answer": "D",
+   "explanation": "Sai số cao ở cả hai tập cho thấy mô hình chưa đủ năng lực học quy luật, tức là underfitting."
+  },
+  {
+   "course": "Trí tuệ nhân tạo",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Tập dữ liệu có 99% mẫu âm tính và 1% dương tính. Mô hình luôn dự đoán âm tính. Nhận xét nào đúng?",
+   "options": {
+    "A": "Accuracy đạt 99% nhưng recall của lớp dương tính bằng 0, nên accuracy gây hiểu lầm",
+    "B": "Accuracy đạt 99% và recall lớp dương tính cũng cao nên mô hình rất tốt",
+    "C": "Accuracy chỉ đạt 50% vì mô hình bỏ qua hoàn toàn một trong hai lớp",
+    "D": "F1-score của lớp dương tính xấp xỉ 0,99 vì accuracy của mô hình rất cao"
+   },
+   "correct_answer": "A",
+   "explanation": "Mô hình không phát hiện được mẫu dương nào (recall = 0), nên với dữ liệu mất cân bằng cần dùng recall, F1 thay vì accuracy."
+  },
+  {
+   "course": "Trí tuệ nhân tạo",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Để A* (dạng tìm kiếm trên cây) đảm bảo tìm được lời giải tối ưu, heuristic cần thỏa điều kiện nào?",
+   "options": {
+    "A": "Luôn đánh giá lớn hơn chi phí thực tế để mở rộng được ít nút hơn",
+    "B": "Luôn tăng dần theo độ sâu của nút trong cây tìm kiếm",
+    "C": "Chấp nhận được: không bao giờ đánh giá vượt quá chi phí thực tế đến đích",
+    "D": "Được tính ngẫu nhiên để tránh rơi vào các cực tiểu địa phương"
+   },
+   "correct_answer": "C",
+   "explanation": "Heuristic chấp nhận được (h(n) ≤ h*(n)) là điều kiện đảm bảo tính tối ưu của A* trên cây."
+  },
+  {
+   "course": "Trí tuệ nhân tạo",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Với mạng sâu dùng hàm sigmoid, hiện tượng triệt tiêu gradient (vanishing gradient) xảy ra vì lý do nào?",
+   "options": {
+    "A": "Đạo hàm sigmoid luôn lớn hơn 1 nên gradient phình to dần qua các lớp",
+    "B": "Đạo hàm sigmoid tối đa chỉ 0,25 nên tích nhiều đạo hàm qua các lớp co dần về gần 0",
+    "C": "Sigmoid cho đầu ra âm nên trọng số bị xóa về 0 sau mỗi epoch huấn luyện",
+    "D": "Sigmoid không khả vi nên không thể tính gradient tại các lớp ẩn của mạng"
+   },
+   "correct_answer": "B",
+   "explanation": "Khi lan truyền ngược, gradient là tích của nhiều đạo hàm nhỏ hơn hoặc bằng 0,25 nên giảm theo hàm mũ."
+  },
+  {
+   "course": "Trí tuệ nhân tạo",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Cây trò chơi có hệ số nhánh b và độ sâu d. Trong trường hợp sắp xếp nút tốt nhất, alpha-beta duyệt khoảng bao nhiêu nút lá?",
+   "options": {
+    "A": "O(b^(d/2))",
+    "B": "O(b^d)",
+    "C": "O(b·d)",
+    "D": "O(b^(2d))"
+   },
+   "correct_answer": "A",
+   "explanation": "Với thứ tự nước đi lý tưởng, alpha-beta chỉ cần duyệt khoảng căn bậc hai số nút của Minimax, nghĩa là có thể đi sâu gấp đôi."
+  },
+  {
+   "course": "Trí tuệ nhân tạo",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Một mô hình có Precision = 0,8 và Recall = 0,5. F1-score xấp xỉ bao nhiêu?",
+   "options": {
+    "A": "0,65",
+    "B": "0,40",
+    "C": "0,62",
+    "D": "0,80"
+   },
+   "correct_answer": "C",
+   "explanation": "F1 = 2·P·R/(P+R) = 2·0,8·0,5/1,3 ≈ 0,62 (khác trung bình cộng 0,65)."
+  },
+  {
+   "course": "Trí tuệ nhân tạo",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Tính trung bình và độ lệch chuẩn trên toàn bộ dữ liệu rồi mới chia train/test để chuẩn hóa. Việc này gây vấn đề gì?",
+   "options": {
+    "A": "Làm mô hình bị chưa khớp vì dữ liệu mất hết phương sai sau khi chuẩn hóa",
+    "B": "Không gây vấn đề vì phép chuẩn hóa không dùng nhãn nên luôn an toàn",
+    "C": "Rò rỉ dữ liệu: thông tin của tập kiểm tra ảnh hưởng huấn luyện, làm kết quả đánh giá lạc quan",
+    "D": "Làm tăng số lượng tham số cần học của mô hình trong quá trình huấn luyện"
+   },
+   "correct_answer": "C",
+   "explanation": "Thống kê chuẩn hóa chỉ được tính trên tập huấn luyện rồi áp dụng sang tập kiểm tra để tránh data leakage."
+  },
+  {
+   "course": "Trí tuệ nhân tạo",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Thuật toán leo đồi (hill climbing) thường bị kẹt vì nguyên nhân nào và cách khắc phục nào phù hợp?",
+   "options": {
+    "A": "Kẹt ở cực đại địa phương hoặc cao nguyên; khởi động lại ngẫu nhiên giúp cải thiện",
+    "B": "Kẹt vì duyệt trùng nút; cần lưu danh sách đóng chứa mọi trạng thái đã thăm",
+    "C": "Kẹt vì bộ nhớ tăng theo hàm mũ; cần giảm hệ số nhánh của không gian tìm",
+    "D": "Kẹt vì chi phí đường đi âm; cần chuyển hẳn sang thuật toán Dijkstra"
+   },
+   "correct_answer": "A",
+   "explanation": "Leo đồi chỉ nhìn lân cận nên dễ dừng ở cực trị địa phương; random restart hoặc simulated annealing giúp thoát."
+  },
+  {
+   "course": "Cơ sở dữ liệu",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Hệ quản trị cơ sở dữ liệu (DBMS) là gì?",
+   "options": {
+    "A": "Phần mềm cho phép tạo, lưu trữ, truy vấn và quản lý cơ sở dữ liệu",
+    "B": "Phần cứng chuyên dụng dùng để lưu trữ các tệp dữ liệu có dung lượng lớn",
+    "C": "Ngôn ngữ lập trình dùng để xây dựng giao diện cho các ứng dụng web",
+    "D": "Bảng tính điện tử dùng để nhập liệu và tính toán các số liệu thống kê"
+   },
+   "correct_answer": "A",
+   "explanation": "DBMS (như MySQL, PostgreSQL) là phần mềm trung gian giữa người dùng/ứng dụng và dữ liệu."
+  },
+  {
+   "course": "Cơ sở dữ liệu",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Khóa chính (primary key) của một bảng có đặc điểm nào?",
+   "options": {
+    "A": "Cho phép trùng lặp giá trị và có thể nhận giá trị NULL ở một số dòng",
+    "B": "Luôn là cột có kiểu dữ liệu chuỗi dài nhất trong các cột của bảng",
+    "C": "Chỉ dùng để liên kết với bảng khác và không bắt buộc phải duy nhất",
+    "D": "Xác định duy nhất mỗi bản ghi và không được nhận giá trị NULL"
+   },
+   "correct_answer": "D",
+   "explanation": "Khóa chính phải duy nhất và khác NULL để định danh từng bản ghi."
+  },
+  {
+   "course": "Cơ sở dữ liệu",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Khóa ngoại (foreign key) được dùng để làm gì?",
+   "options": {
+    "A": "Mã hóa dữ liệu trong cột để tăng tính bảo mật cho toàn bộ bảng",
+    "B": "Sắp xếp các bản ghi theo thứ tự tăng dần khi lưu trữ trong bảng",
+    "C": "Tham chiếu đến khóa chính của bảng khác nhằm đảm bảo toàn vẹn tham chiếu",
+    "D": "Tự động sao lưu nội dung của bảng sang một máy chủ khác"
+   },
+   "correct_answer": "C",
+   "explanation": "Khóa ngoại liên kết hai bảng và ngăn việc tham chiếu đến bản ghi không tồn tại."
+  },
+  {
+   "course": "Cơ sở dữ liệu",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Câu lệnh SQL nào dùng để truy xuất dữ liệu từ bảng?",
+   "options": {
+    "A": "SELECT cột FROM bảng",
+    "B": "INSERT INTO bảng VALUES",
+    "C": "UPDATE bảng SET cột",
+    "D": "ALTER TABLE bảng ADD cột"
+   },
+   "correct_answer": "A",
+   "explanation": "SELECT dùng để đọc dữ liệu; INSERT thêm, UPDATE sửa và ALTER đổi cấu trúc bảng."
+  },
+  {
+   "course": "Cơ sở dữ liệu",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Nhóm lệnh nào sau đây thuộc DDL (Data Definition Language)?",
+   "options": {
+    "A": "INSERT, UPDATE, DELETE",
+    "B": "CREATE TABLE, ALTER TABLE, DROP TABLE",
+    "C": "SELECT, WHERE, ORDER BY",
+    "D": "COMMIT, ROLLBACK, SAVEPOINT"
+   },
+   "correct_answer": "B",
+   "explanation": "DDL định nghĩa cấu trúc đối tượng CSDL; INSERT/UPDATE/DELETE thuộc DML, COMMIT/ROLLBACK thuộc TCL."
+  },
+  {
+   "course": "Cơ sở dữ liệu",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Mệnh đề HAVING khác mệnh đề WHERE ở điểm nào?",
+   "options": {
+    "A": "HAVING lọc các nhóm sau khi GROUP BY, còn WHERE lọc bản ghi trước khi nhóm",
+    "B": "HAVING lọc bản ghi trước khi nhóm, còn WHERE lọc các nhóm sau khi nhóm",
+    "C": "HAVING chỉ dùng được với lệnh INSERT, còn WHERE chỉ dùng với lệnh SELECT",
+    "D": "HAVING và WHERE hoàn toàn giống nhau trong mọi câu truy vấn SQL"
+   },
+   "correct_answer": "A",
+   "explanation": "WHERE chạy trước GROUP BY nên không dùng được hàm tổng hợp; HAVING chạy sau và lọc theo kết quả tổng hợp."
+  },
+  {
+   "course": "Cơ sở dữ liệu",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Tính nguyên tử (Atomicity) trong thuộc tính ACID của giao dịch có nghĩa là gì?",
+   "options": {
+    "A": "Giao dịch hoặc được thực hiện trọn vẹn, hoặc không có thay đổi nào được ghi nhận",
+    "B": "Các giao dịch luôn chạy tuần tự, không bao giờ được chạy đồng thời",
+    "C": "Dữ liệu sau khi commit vẫn tồn tại dù hệ thống gặp sự cố đột ngột",
+    "D": "Mọi giao dịch đều phải hoàn thành trong thời gian dưới một giây"
+   },
+   "correct_answer": "A",
+   "explanation": "Atomicity là nguyên tắc 'tất cả hoặc không có gì' của giao dịch."
+  },
+  {
+   "course": "Cơ sở dữ liệu",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "INNER JOIN giữa hai bảng trả về kết quả nào?",
+   "options": {
+    "A": "Tất cả bản ghi của bảng bên trái, kể cả khi không có bản ghi khớp",
+    "B": "Chỉ các bản ghi có giá trị khớp điều kiện kết nối ở cả hai bảng",
+    "C": "Tất cả bản ghi của cả hai bảng, kể cả khi không có bản ghi khớp",
+    "D": "Tích Descartes của mọi bản ghi giữa hai bảng không cần điều kiện"
+   },
+   "correct_answer": "B",
+   "explanation": "INNER JOIN chỉ giữ các cặp bản ghi thỏa điều kiện kết nối."
+  },
+  {
+   "course": "Cơ sở dữ liệu",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Mục đích chính của chuẩn hóa cơ sở dữ liệu là gì?",
+   "options": {
+    "A": "Giảm dư thừa dữ liệu và tránh các dị thường khi thêm, sửa, xóa",
+    "B": "Tăng tối đa tốc độ đọc bằng cách lặp lại dữ liệu ở nhiều bảng khác nhau",
+    "C": "Mã hóa dữ liệu nhằm ngăn người dùng trái phép truy cập vào hệ thống",
+    "D": "Gộp tất cả dữ liệu vào một bảng duy nhất để việc quản lý dễ dàng hơn"
+   },
+   "correct_answer": "A",
+   "explanation": "Chuẩn hóa tách bảng hợp lý để mỗi thông tin chỉ lưu một nơi, hạn chế dị thường dữ liệu."
+  },
+  {
+   "course": "Cơ sở dữ liệu",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Một bảng đạt dạng chuẩn 1 (1NF) khi nào?",
+   "options": {
+    "A": "Mọi thuộc tính không khóa đều phụ thuộc đầy đủ vào toàn bộ khóa chính",
+    "B": "Không có thuộc tính không khóa nào phụ thuộc bắc cầu vào khóa chính",
+    "C": "Mọi thuộc tính chỉ chứa giá trị nguyên tử, không có nhóm lặp hay thuộc tính đa trị",
+    "D": "Mọi định thức của các phụ thuộc hàm đều là một siêu khóa của bảng"
+   },
+   "correct_answer": "C",
+   "explanation": "1NF yêu cầu giá trị nguyên tử; hai lựa chọn còn lại lần lượt là điều kiện của 2NF/3NF và BCNF."
+  },
+  {
+   "course": "Cơ sở dữ liệu",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Chỉ mục (index) trong cơ sở dữ liệu có tác dụng chính là gì?",
+   "options": {
+    "A": "Đảm bảo mọi cột trong bảng luôn có giá trị khác NULL",
+    "B": "Tự động sao lưu dữ liệu của bảng theo định kỳ hằng ngày",
+    "C": "Giảm dung lượng lưu trữ mà bảng dữ liệu đang chiếm dụng",
+    "D": "Tăng tốc độ truy vấn tìm kiếm trên các cột được đánh chỉ mục"
+   },
+   "correct_answer": "D",
+   "explanation": "Chỉ mục giúp tìm bản ghi nhanh hơn nhưng tốn thêm bộ nhớ và làm chậm thao tác ghi."
+  },
+  {
+   "course": "Cơ sở dữ liệu",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Trong mô hình thực thể – quan hệ (ER), thực thể (entity) là gì?",
+   "options": {
+    "A": "Đối tượng hoặc khái niệm của thế giới thực cần lưu trữ thông tin, ví dụ Sinh viên",
+    "B": "Một câu lệnh SQL dùng để tạo ra bảng dữ liệu mới trong hệ thống",
+    "C": "Giá trị cụ thể của một thuộc tính trong một bản ghi của bảng",
+    "D": "Một ràng buộc khóa ngoại giữa hai bảng khác nhau trong cơ sở dữ liệu"
+   },
+   "correct_answer": "A",
+   "explanation": "Thực thể là đối tượng cần quản lý, thường được chuyển thành một bảng khi thiết kế."
+  },
+  {
+   "course": "Cơ sở dữ liệu",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Sự khác nhau giữa lệnh DELETE và DROP TABLE là gì?",
+   "options": {
+    "A": "DELETE xóa cấu trúc bảng, còn DROP TABLE chỉ xóa các bản ghi trong bảng",
+    "B": "Hai lệnh giống nhau, chỉ khác tên gọi giữa các hệ quản trị cơ sở dữ liệu",
+    "C": "DELETE xóa các bản ghi (có thể kèm WHERE), còn DROP TABLE xóa cả cấu trúc bảng",
+    "D": "DELETE chỉ xóa được duy nhất một bản ghi mỗi lần thực hiện lệnh"
+   },
+   "correct_answer": "C",
+   "explanation": "DELETE là lệnh DML tác động lên dữ liệu; DROP TABLE là DDL loại bỏ hẳn bảng."
+  },
+  {
+   "course": "Cơ sở dữ liệu",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Giá trị NULL trong SQL biểu thị điều gì?",
+   "options": {
+    "A": "Số nguyên có giá trị bằng 0 của các kiểu dữ liệu số",
+    "B": "Chuỗi ký tự rỗng có độ dài bằng 0 trong các cột kiểu chuỗi",
+    "C": "Giá trị mặc định nhỏ nhất của mỗi kiểu dữ liệu trong bảng",
+    "D": "Giá trị chưa xác định hoặc bị thiếu, khác với số 0 hay chuỗi rỗng"
+   },
+   "correct_answer": "D",
+   "explanation": "NULL nghĩa là 'không có giá trị/không biết', phải so sánh bằng IS NULL."
+  },
+  {
+   "course": "Cơ sở dữ liệu",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Bảng SinhVien có 10 dòng, cột Email có 3 giá trị NULL. COUNT(*) và COUNT(Email) lần lượt trả về bao nhiêu?",
+   "options": {
+    "A": "10 và 10",
+    "B": "10 và 7",
+    "C": "7 và 7",
+    "D": "7 và 10"
+   },
+   "correct_answer": "B",
+   "explanation": "COUNT(*) đếm mọi dòng, còn COUNT(cột) bỏ qua giá trị NULL."
+  },
+  {
+   "course": "Cơ sở dữ liệu",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Truy vấn sau trả về kết quả gì?\nSELECT Khoa, COUNT(*) AS SoSV FROM SinhVien GROUP BY Khoa HAVING COUNT(*) > 50;",
+   "options": {
+    "A": "Toàn bộ sinh viên thuộc các khoa có hơn 50 sinh viên trong bảng",
+    "B": "Số sinh viên của khoa đầu tiên có hơn 50 sinh viên trong bảng",
+    "C": "Danh sách các khoa có đúng 50 sinh viên kèm số sinh viên của khoa",
+    "D": "Danh sách các khoa có hơn 50 sinh viên kèm số sinh viên của từng khoa"
+   },
+   "correct_answer": "D",
+   "explanation": "GROUP BY gom theo khoa, HAVING giữ lại những nhóm có COUNT(*) > 50."
+  },
+  {
+   "course": "Cơ sở dữ liệu",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Bảng A có 5 dòng, bảng B có 3 dòng. Thực hiện A LEFT JOIN B trên khóa, mỗi dòng của A khớp tối đa một dòng của B. Kết quả có bao nhiêu dòng?",
+   "options": {
+    "A": "3 dòng",
+    "B": "8 dòng",
+    "C": "15 dòng",
+    "D": "5 dòng"
+   },
+   "correct_answer": "D",
+   "explanation": "LEFT JOIN giữ lại mọi dòng của A; vì mỗi dòng khớp tối đa một dòng B nên không phát sinh thêm dòng."
+  },
+  {
+   "course": "Cơ sở dữ liệu",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Bảng DangKy(MaSV, MaMon, TenMon, Diem) có khóa chính (MaSV, MaMon). Bảng vi phạm dạng chuẩn nào và vì sao?",
+   "options": {
+    "A": "1NF, vì cột Diem chứa nhiều giá trị trong cùng một ô dữ liệu",
+    "B": "2NF, vì TenMon chỉ phụ thuộc một phần vào khóa là MaMon",
+    "C": "3NF, vì cột Diem phụ thuộc bắc cầu vào khóa thông qua TenMon",
+    "D": "BCNF, vì MaSV không phải là một siêu khóa của quan hệ này"
+   },
+   "correct_answer": "B",
+   "explanation": "MaMon → TenMon là phụ thuộc hàm riêng phần vào một phần của khóa nên vi phạm 2NF."
+  },
+  {
+   "course": "Cơ sở dữ liệu",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Cách viết nào đúng để lấy các sinh viên có điểm cao hơn điểm trung bình của tất cả sinh viên?",
+   "options": {
+    "A": "SELECT * FROM SV WHERE Diem > AVG(Diem)",
+    "B": "SELECT * FROM SV HAVING Diem > AVG(Diem)",
+    "C": "SELECT AVG(Diem) FROM SV WHERE Diem > Diem",
+    "D": "SELECT * FROM SV WHERE Diem > (SELECT AVG(Diem) FROM SV)"
+   },
+   "correct_answer": "D",
+   "explanation": "Không dùng hàm tổng hợp trực tiếp trong WHERE; cần truy vấn con tính AVG riêng."
+  },
+  {
+   "course": "Cơ sở dữ liệu",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Giao dịch chuyển tiền gồm trừ tài khoản A rồi cộng tài khoản B, nhưng lỗi xảy ra ngay sau bước trừ. Cơ chế nào đảm bảo không mất tiền?",
+   "options": {
+    "A": "COMMIT ngay sau bước trừ để lưu lại thay đổi vừa thực hiện",
+    "B": "TRUNCATE bảng tài khoản để thiết lập lại toàn bộ số dư ban đầu",
+    "C": "ROLLBACK để hủy các thay đổi đã thực hiện, đảm bảo tính nguyên tử",
+    "D": "CREATE INDEX trên cột số dư để tăng tốc độ truy vấn tài khoản"
+   },
+   "correct_answer": "C",
+   "explanation": "ROLLBACK hoàn tác giao dịch dở dang, giữ cho dữ liệu nhất quán."
+  },
+  {
+   "course": "Cơ sở dữ liệu",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Khác biệt giữa UNION và UNION ALL trong SQL là gì?",
+   "options": {
+    "A": "UNION loại bỏ các dòng trùng nhau trong kết quả, còn UNION ALL giữ lại tất cả",
+    "B": "UNION giữ lại mọi dòng trùng nhau, còn UNION ALL sẽ loại bỏ dòng trùng",
+    "C": "UNION chỉ dùng được cho một bảng, còn UNION ALL dùng cho nhiều bảng",
+    "D": "UNION sắp xếp kết quả giảm dần, còn UNION ALL sắp xếp tăng dần"
+   },
+   "correct_answer": "A",
+   "explanation": "UNION phải khử trùng nên tốn thêm chi phí; UNION ALL chỉ nối kết quả."
+  },
+  {
+   "course": "Cơ sở dữ liệu",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Cho R(A, B, C, D) và tập phụ thuộc hàm F = {A → B, B → C, C → D}. Bao đóng của {A} là gì?",
+   "options": {
+    "A": "{A, B}",
+    "B": "{A, B, C, D}",
+    "C": "{A, B, C}",
+    "D": "{A, D}"
+   },
+   "correct_answer": "B",
+   "explanation": "A → B, B → C, C → D nên theo tính bắc cầu A xác định cả B, C, D; do đó A là khóa của R."
+  },
+  {
+   "course": "Cơ sở dữ liệu",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Chỉ mục B+-tree bậc m trên n bản ghi có chi phí tìm kiếm khoảng bao nhiêu lần truy cập khối đĩa?",
+   "options": {
+    "A": "O(n), vì phải duyệt tuần tự qua toàn bộ các bản ghi của bảng",
+    "B": "O(log_m n), thường chỉ vài lần truy cập do chiều cao cây rất thấp",
+    "C": "O(1), vì vị trí bản ghi được tính trực tiếp từ giá trị của khóa",
+    "D": "O(n log n), vì mỗi lần tìm đều phải sắp xếp lại các khóa"
+   },
+   "correct_answer": "B",
+   "explanation": "B+-tree có hệ số phân nhánh lớn nên chiều cao chỉ cỡ log_m n."
+  },
+  {
+   "course": "Cơ sở dữ liệu",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Giao dịch T1 đọc cùng một dòng hai lần và thấy hai giá trị khác nhau vì T2 vừa commit việc sửa dòng đó giữa hai lần đọc. Đây là hiện tượng gì?",
+   "options": {
+    "A": "Đọc dữ liệu bẩn (dirty read)",
+    "B": "Đọc bóng ma (phantom read)",
+    "C": "Đọc không lặp lại (non-repeatable read)",
+    "D": "Mất cập nhật (lost update)"
+   },
+   "correct_answer": "C",
+   "explanation": "Non-repeatable read là cùng một dòng cho giá trị khác nhau; dirty read đọc dữ liệu chưa commit, phantom read là xuất hiện dòng mới."
+  },
+  {
+   "course": "Cơ sở dữ liệu",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Cho R(A, B, C) với F = {AB → C, C → B}. Khóa ứng viên và dạng chuẩn cao nhất của R là gì?",
+   "options": {
+    "A": "Khóa duy nhất là AB; R đạt BCNF vì AB → C",
+    "B": "Khóa là AB và AC; R đạt BCNF vì vế phải đều là thuộc tính khóa",
+    "C": "Khóa duy nhất là C; R chỉ đạt 1NF vì C → B là phụ thuộc riêng phần",
+    "D": "Khóa là AB và AC; R đạt 3NF nhưng không đạt BCNF"
+   },
+   "correct_answer": "D",
+   "explanation": "AB và AC đều có bao đóng là {A,B,C}. C → B có C không phải siêu khóa nên vi phạm BCNF, nhưng B là thuộc tính khóa nên vẫn đạt 3NF."
+  },
+  {
+   "course": "Cơ sở dữ liệu",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Có chỉ mục kết hợp trên (Khoa, NamSinh). Truy vấn nào KHÔNG tận dụng hiệu quả chỉ mục này?",
+   "options": {
+    "A": "WHERE Khoa = 'CNTT' (chỉ có điều kiện trên cột Khoa)",
+    "B": "WHERE NamSinh = 2003 (không có điều kiện trên cột Khoa)",
+    "C": "WHERE Khoa = 'CNTT' AND NamSinh = 2003 (đủ hai cột)",
+    "D": "WHERE Khoa = 'CNTT' ORDER BY NamSinh (lọc rồi sắp xếp)"
+   },
+   "correct_answer": "B",
+   "explanation": "Chỉ mục kết hợp dùng theo quy tắc tiền tố trái nhất; thiếu cột đầu tiên thì thường phải quét toàn bộ."
+  },
+  {
+   "course": "Cơ sở dữ liệu",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "T1 khóa dòng X rồi chờ dòng Y, T2 khóa dòng Y rồi chờ dòng X. Tình huống này là gì và DBMS xử lý thế nào?",
+   "options": {
+    "A": "Starvation; DBMS tăng độ ưu tiên của T1 để T1 chạy xong trước T2",
+    "B": "Phantom read; DBMS tự động nâng mức cô lập xuống READ UNCOMMITTED",
+    "C": "Deadlock (bế tắc); DBMS phát hiện và hủy một giao dịch để giải phóng khóa",
+    "D": "Dirty write; DBMS cho phép cả hai ghi đồng thời để tránh phải chờ"
+   },
+   "correct_answer": "C",
+   "explanation": "Hai giao dịch chờ vòng tròn nên không bên nào tiến triển; DBMS chọn nạn nhân và rollback."
+  },
+  {
+   "course": "Cơ sở dữ liệu",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Câu lệnh SELECT * FROM A WHERE id NOT IN (SELECT id FROM B) được chạy khi cột B.id có chứa một giá trị NULL. Kết quả là gì?",
+   "options": {
+    "A": "Trả về mọi dòng của A, vì giá trị NULL bị bỏ qua khi so sánh",
+    "B": "Báo lỗi cú pháp, vì truy vấn con không được phép chứa giá trị NULL",
+    "C": "Trả về tập rỗng, vì so sánh với NULL cho kết quả UNKNOWN nên điều kiện không bao giờ TRUE",
+    "D": "Chỉ trả về các dòng của A có giá trị id bằng NULL"
+   },
+   "correct_answer": "C",
+   "explanation": "x NOT IN (..., NULL) tương đương x <> NULL, cho UNKNOWN; nên dùng NOT EXISTS hoặc lọc NULL trong truy vấn con."
+  },
+  {
+   "course": "Cấu trúc dữ liệu và giải thuật",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Ngăn xếp (stack) hoạt động theo nguyên tắc nào?",
+   "options": {
+    "A": "Vào sau ra trước (LIFO): phần tử thêm sau cùng được lấy ra đầu tiên",
+    "B": "Vào trước ra trước (FIFO): phần tử thêm đầu tiên được lấy ra đầu tiên",
+    "C": "Vào ngẫu nhiên và ra ngẫu nhiên theo vị trí do người dùng chọn",
+    "D": "Ra theo thứ tự khóa tăng dần bất kể thứ tự đã thêm vào"
+   },
+   "correct_answer": "A",
+   "explanation": "Stack chỉ thao tác ở một đầu (đỉnh) nên phần tử vào sau ra trước."
+  },
+  {
+   "course": "Cấu trúc dữ liệu và giải thuật",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Hàng đợi (queue) cho phép thêm và lấy phần tử ở đâu?",
+   "options": {
+    "A": "Thêm và lấy cùng ở một đầu duy nhất của cấu trúc dữ liệu",
+    "B": "Thêm ở đầu hàng (front) và lấy ở cuối hàng (rear)",
+    "C": "Thêm ở cuối hàng (rear) và lấy ở đầu hàng (front)",
+    "D": "Thêm và lấy tại vị trí ở giữa của cấu trúc dữ liệu"
+   },
+   "correct_answer": "C",
+   "explanation": "Queue theo FIFO: enqueue ở cuối, dequeue ở đầu."
+  },
+  {
+   "course": "Cấu trúc dữ liệu và giải thuật",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Ưu điểm của mảng so với danh sách liên kết đơn là gì?",
+   "options": {
+    "A": "Chèn một phần tử vào đầu danh sách luôn mất O(1) mà không dịch chuyển",
+    "B": "Kích thước tự động mở rộng mà không cần sao chép dữ liệu",
+    "C": "Xóa phần tử ở giữa chỉ cần thay đổi đúng một con trỏ",
+    "D": "Truy cập phần tử theo chỉ số trong thời gian hằng số O(1)"
+   },
+   "correct_answer": "D",
+   "explanation": "Mảng nằm liên tiếp trong bộ nhớ nên truy cập ngẫu nhiên theo chỉ số là O(1)."
+  },
+  {
+   "course": "Cấu trúc dữ liệu và giải thuật",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Tính chất của cây nhị phân tìm kiếm (BST) là gì?",
+   "options": {
+    "A": "Khóa ở cây con trái nhỏ hơn khóa của nút gốc, khóa ở cây con phải lớn hơn",
+    "B": "Mọi nút trong cây đều có đúng hai nút con là trái và phải",
+    "C": "Khóa của nút cha luôn nhỏ hơn khóa của mọi nút con của nó",
+    "D": "Các nút ở cùng một mức luôn có khóa bằng nhau trong toàn cây"
+   },
+   "correct_answer": "A",
+   "explanation": "Tính chất này áp dụng đệ quy cho mọi nút, giúp tìm kiếm theo kiểu nhị phân."
+  },
+  {
+   "course": "Cấu trúc dữ liệu và giải thuật",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Ký hiệu O(n) trong phân tích thuật toán mô tả điều gì?",
+   "options": {
+    "A": "Thời gian chạy luôn không đổi với mọi kích thước đầu vào khác nhau",
+    "B": "Thời gian chạy tăng theo bình phương của kích thước đầu vào n",
+    "C": "Cận trên của thời gian chạy, tăng tối đa tuyến tính theo kích thước đầu vào n",
+    "D": "Dung lượng bộ nhớ tối thiểu cần để lưu trữ một biến đơn lẻ"
+   },
+   "correct_answer": "C",
+   "explanation": "Big-O biểu diễn tốc độ tăng tiệm cận (cận trên) của chi phí theo n."
+  },
+  {
+   "course": "Cấu trúc dữ liệu và giải thuật",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Điều kiện cần để áp dụng tìm kiếm nhị phân trên một mảng là gì?",
+   "options": {
+    "A": "Mảng chỉ chứa các số nguyên dương không có giá trị âm",
+    "B": "Số phần tử của mảng phải là một lũy thừa của 2",
+    "C": "Mảng tuyệt đối không được chứa các phần tử trùng lặp",
+    "D": "Mảng đã được sắp xếp theo một thứ tự nhất định"
+   },
+   "correct_answer": "D",
+   "explanation": "Tìm kiếm nhị phân loại một nửa vùng tìm dựa trên so sánh nên cần dữ liệu có thứ tự."
+  },
+  {
+   "course": "Cấu trúc dữ liệu và giải thuật",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Bảng băm (hash table) dùng hàm băm để làm gì?",
+   "options": {
+    "A": "Sắp xếp các khóa theo thứ tự tăng dần trước khi lưu trữ",
+    "B": "Nén dữ liệu để giảm dung lượng lưu trữ của từng phần tử",
+    "C": "Mã hóa khóa sao cho không thể nào khôi phục lại giá trị gốc",
+    "D": "Ánh xạ khóa thành chỉ số trong mảng để truy cập phần tử nhanh"
+   },
+   "correct_answer": "D",
+   "explanation": "Hàm băm tính vị trí lưu từ khóa nên thao tác trung bình là O(1)."
+  },
+  {
+   "course": "Cấu trúc dữ liệu và giải thuật",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Va chạm (collision) trong bảng băm là gì?",
+   "options": {
+    "A": "Bảng băm đã đầy nên không thể thêm được phần tử nào nữa",
+    "B": "Hàm băm trả về giá trị âm cho một số khóa đầu vào",
+    "C": "Một khóa cũ bị xóa nhầm khi thêm một khóa mới vào bảng",
+    "D": "Hai khóa khác nhau cho cùng một giá trị băm, tức cùng một vị trí"
+   },
+   "correct_answer": "D",
+   "explanation": "Va chạm được xử lý bằng xích (chaining) hoặc địa chỉ mở (open addressing)."
+  },
+  {
+   "course": "Cấu trúc dữ liệu và giải thuật",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Chiều cao của một cây được định nghĩa là gì?",
+   "options": {
+    "A": "Tổng số nút có trong cây tính cả nút gốc và các nút lá",
+    "B": "Số lượng nút con trực tiếp của nút gốc trong cây",
+    "C": "Số cạnh trên đường đi dài nhất từ nút gốc đến một nút lá",
+    "D": "Số lượng nút lá có trong cây tại mọi mức khác nhau"
+   },
+   "correct_answer": "C",
+   "explanation": "Chiều cao đo độ sâu lớn nhất của cây, ảnh hưởng trực tiếp đến chi phí tìm kiếm."
+  },
+  {
+   "course": "Cấu trúc dữ liệu và giải thuật",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Duyệt cây nhị phân theo thứ tự giữa (inorder) thăm các nút theo trình tự nào?",
+   "options": {
+    "A": "Nút gốc trước, sau đó đến cây con trái, rồi đến cây con phải",
+    "B": "Cây con trái, sau đó đến cây con phải, rồi đến nút gốc",
+    "C": "Cây con trái, sau đó đến nút gốc, rồi đến cây con phải",
+    "D": "Từng mức từ trên xuống dưới và trong mỗi mức đi từ trái sang phải"
+   },
+   "correct_answer": "C",
+   "explanation": "Inorder: Left – Root – Right; trên BST cho dãy khóa tăng dần."
+  },
+  {
+   "course": "Cấu trúc dữ liệu và giải thuật",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Sắp xếp nổi bọt (bubble sort) hoạt động theo cách nào?",
+   "options": {
+    "A": "Chia mảng làm đôi, sắp xếp từng nửa rồi trộn hai nửa lại với nhau",
+    "B": "Chọn phần tử nhỏ nhất rồi đặt vào đầu phần chưa được sắp xếp",
+    "C": "Lặp lại việc so sánh và hoán đổi các cặp phần tử kề nhau nếu sai thứ tự",
+    "D": "Chọn một phần tử chốt rồi phân hoạch mảng quanh phần tử đó"
+   },
+   "correct_answer": "C",
+   "explanation": "Các phần tử lớn dần 'nổi' về cuối mảng sau mỗi lượt duyệt."
+  },
+  {
+   "course": "Cấu trúc dữ liệu và giải thuật",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Đồ thị có hướng khác đồ thị vô hướng ở điểm nào?",
+   "options": {
+    "A": "Mọi cạnh của đồ thị đều bắt buộc phải có trọng số âm",
+    "B": "Đồ thị tuyệt đối không được chứa bất kỳ chu trình nào",
+    "C": "Các cạnh có hướng, cạnh (u, v) khác với cạnh (v, u)",
+    "D": "Mọi đỉnh trong đồ thị đều phải có cùng một giá trị bậc"
+   },
+   "correct_answer": "C",
+   "explanation": "Trong đồ thị có hướng, cạnh chỉ đi được theo một chiều xác định."
+  },
+  {
+   "course": "Cấu trúc dữ liệu và giải thuật",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Một hàm đệ quy cần có thành phần nào để không bị lặp vô hạn?",
+   "options": {
+    "A": "Trường hợp cơ sở (điều kiện dừng) và các lời gọi tiến dần về trường hợp đó",
+    "B": "Một vòng lặp for nằm bên trong thân hàm để thay thế lời gọi",
+    "C": "Một biến toàn cục đếm số lần hàm đã được gọi trước đó",
+    "D": "Một con trỏ luôn trỏ vào đầu của ngăn xếp gọi hàm"
+   },
+   "correct_answer": "A",
+   "explanation": "Thiếu điều kiện dừng sẽ gây tràn ngăn xếp (stack overflow)."
+  },
+  {
+   "course": "Cấu trúc dữ liệu và giải thuật",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Mỗi nút của danh sách liên kết đơn chứa những thành phần nào?",
+   "options": {
+    "A": "Dữ liệu của nút và con trỏ tới nút kế tiếp",
+    "B": "Dữ liệu của nút và con trỏ tới cả nút trước lẫn nút sau",
+    "C": "Chỉ số nguyên chỉ vị trí của nút trong một mảng cố định",
+    "D": "Chỉ dữ liệu, các nút nằm liên tiếp nhau trong bộ nhớ"
+   },
+   "correct_answer": "A",
+   "explanation": "Danh sách liên kết đôi mới có thêm con trỏ tới nút trước."
+  },
+  {
+   "course": "Cấu trúc dữ liệu và giải thuật",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Merge sort có độ phức tạp thời gian và bộ nhớ phụ lần lượt là bao nhiêu?",
+   "options": {
+    "A": "O(n log n) và O(n)",
+    "B": "O(n log n) và O(1)",
+    "C": "O(n²) và O(n)",
+    "D": "O(n) và O(log n)"
+   },
+   "correct_answer": "A",
+   "explanation": "Merge sort luôn chia log n mức, mỗi mức trộn O(n), và cần mảng phụ kích thước O(n)."
+  },
+  {
+   "course": "Cấu trúc dữ liệu và giải thuật",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Đoạn mã sau có độ phức tạp thời gian là bao nhiêu?\ni = 1\nwhile i < n:\n    i *= 2",
+   "options": {
+    "A": "O(n)",
+    "B": "O(log n)",
+    "C": "O(n log n)",
+    "D": "O(√n)"
+   },
+   "correct_answer": "B",
+   "explanation": "i nhân đôi sau mỗi vòng nên số vòng lặp xấp xỉ log₂ n."
+  },
+  {
+   "course": "Cấu trúc dữ liệu và giải thuật",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Để tìm đường đi ngắn nhất tính theo số cạnh trong đồ thị không trọng số, nên chọn cách nào?",
+   "options": {
+    "A": "DFS, vì luôn đi sâu nhất trước nên tự nhiên cho đường ngắn nhất",
+    "B": "BFS, vì duyệt theo từng lớp có khoảng cách tăng dần từ đỉnh nguồn",
+    "C": "Dijkstra, nhưng chỉ khi đồ thị có chứa cạnh trọng số âm",
+    "D": "Kruskal, vì cây khung nhỏ nhất cũng là đường đi ngắn nhất"
+   },
+   "correct_answer": "B",
+   "explanation": "BFS khám phá các đỉnh theo thứ tự khoảng cách nên lần đầu gặp đỉnh nào cũng là đường ngắn nhất."
+  },
+  {
+   "course": "Cấu trúc dữ liệu và giải thuật",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Kiểm tra chuỗi ngoặc \"([)]\" bằng ngăn xếp cho kết quả nào?",
+   "options": {
+    "A": "Hợp lệ, vì số lượng ngoặc mở bằng số lượng ngoặc đóng",
+    "B": "Không hợp lệ, vì khi gặp ')' thì đỉnh ngăn xếp là '[' nên không khớp",
+    "C": "Hợp lệ, vì mỗi loại ngoặc mở đều có một ngoặc đóng tương ứng",
+    "D": "Không hợp lệ, vì ngăn xếp bị rỗng khi gặp ngoặc đóng đầu tiên"
+   },
+   "correct_answer": "B",
+   "explanation": "Sau '(' và '[' đỉnh là '[', nhưng ')' cần khớp '(' nên chuỗi sai."
+  },
+  {
+   "course": "Cấu trúc dữ liệu và giải thuật",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Quick sort chọn phần tử đầu làm chốt, chạy trên mảng đã sắp xếp tăng dần. Độ phức tạp thời gian là bao nhiêu?",
+   "options": {
+    "A": "O(n²), vì phân hoạch luôn lệch hoàn toàn về một phía",
+    "B": "O(n log n), vì mảng đã sắp xếp nên phân hoạch luôn cân bằng",
+    "C": "O(n), vì không cần hoán đổi phần tử nào trong mọi lần phân hoạch",
+    "D": "O(log n), vì chỉ cần duyệt qua một nhánh duy nhất của đệ quy"
+   },
+   "correct_answer": "A",
+   "explanation": "Chốt là phần tử nhỏ nhất nên mỗi lần chỉ loại được 1 phần tử, tổng n + (n−1) + ... = O(n²)."
+  },
+  {
+   "course": "Cấu trúc dữ liệu và giải thuật",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Bảng băm dùng xích (chaining) với hệ số tải α = n/m và băm đều. Thời gian tìm kiếm trung bình là bao nhiêu?",
+   "options": {
+    "A": "O(α²)",
+    "B": "O(log n)",
+    "C": "O(n) trong mọi trường hợp",
+    "D": "O(1 + α)"
+   },
+   "correct_answer": "D",
+   "explanation": "Chi phí gồm tính băm O(1) và duyệt trung bình α phần tử trong xích."
+  },
+  {
+   "course": "Cấu trúc dữ liệu và giải thuật",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Chèn một phần tử vào max-heap có n phần tử được thực hiện thế nào và tốn bao nhiêu thời gian?",
+   "options": {
+    "A": "Thêm vào gốc rồi đẩy xuống (sift-down), thời gian O(log n)",
+    "B": "Thêm vào cuối mảng rồi đẩy lên (sift-up), thời gian O(log n)",
+    "C": "Thêm vào cuối mảng rồi sắp xếp lại toàn bộ, thời gian O(n log n)",
+    "D": "Thêm đúng vị trí nhờ tìm kiếm nhị phân, thời gian O(1)"
+   },
+   "correct_answer": "B",
+   "explanation": "Phần tử mới ở cuối được hoán đổi với cha cho đến khi thỏa tính chất heap, tối đa bằng chiều cao cây."
+  },
+  {
+   "course": "Cấu trúc dữ liệu và giải thuật",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Vì sao thuật toán Dijkstra có thể cho kết quả sai khi đồ thị có cạnh trọng số âm?",
+   "options": {
+    "A": "Vì thuật toán không thể duyệt hết các đỉnh khi có cạnh trọng số âm",
+    "B": "Vì hàng đợi ưu tiên không thể lưu giá trị âm của khoảng cách",
+    "C": "Vì đỉnh đã được chốt vẫn có thể được cải thiện qua cạnh âm, trái với giả định của thuật toán",
+    "D": "Vì cạnh trọng số âm luôn tạo ra chu trình âm trong đồ thị"
+   },
+   "correct_answer": "C",
+   "explanation": "Dijkstra giả định khi một đỉnh được lấy ra thì khoảng cách đã tối ưu, điều này sai nếu có cạnh âm; khi đó nên dùng Bellman-Ford."
+  },
+  {
+   "course": "Cấu trúc dữ liệu và giải thuật",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Chèn lần lượt 10, 20, 30 vào cây AVL rỗng. Sau khi cân bằng, nút gốc là gì và nhờ phép xoay nào?",
+   "options": {
+    "A": "Nút 10, vì đây là phần tử được chèn đầu tiên vào cây",
+    "B": "Nút 20, nhờ phép xoay trái tại nút 10",
+    "C": "Nút 30, vì đây là phần tử có khóa lớn nhất trong cây",
+    "D": "Nút 20, nhờ phép xoay phải tại nút 30 để cân bằng cây"
+   },
+   "correct_answer": "B",
+   "explanation": "Chèn 30 gây lệch phải–phải tại 10 (hệ số cân bằng 2), xoay trái đưa 20 lên làm gốc."
+  },
+  {
+   "course": "Cấu trúc dữ liệu và giải thuật",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Giải hệ thức truy hồi T(n) = 4T(n/2) + n bằng định lý Master, kết quả là gì?",
+   "options": {
+    "A": "Θ(n log n)",
+    "B": "Θ(n²)",
+    "C": "Θ(n² log n)",
+    "D": "Θ(n)"
+   },
+   "correct_answer": "B",
+   "explanation": "Có a = 4, b = 2 nên n^(log₂4) = n²; vì f(n) = n tăng chậm hơn n² nên T(n) = Θ(n²)."
+  },
+  {
+   "course": "Cấu trúc dữ liệu và giải thuật",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Cây nhị phân có chiều cao h (nút gốc có độ cao 0) có tối đa bao nhiêu nút?",
+   "options": {
+    "A": "2^h − 1",
+    "B": "2^h",
+    "C": "2^(h+1)",
+    "D": "2^(h+1) − 1"
+   },
+   "correct_answer": "D",
+   "explanation": "Mức i có tối đa 2^i nút, tổng từ mức 0 đến h là 2^(h+1) − 1."
+  },
+  {
+   "course": "Cấu trúc dữ liệu và giải thuật",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Mảng động tăng gấp đôi dung lượng khi đầy. Chi phí khấu hao của thao tác thêm một phần tử vào cuối là bao nhiêu?",
+   "options": {
+    "A": "O(n) mỗi lần thêm, vì lần nào cũng phải sao chép toàn bộ mảng",
+    "B": "O(log n) khấu hao, vì số lần nhân đôi dung lượng là log n",
+    "C": "O(n²) cho mỗi lần thêm, vì phải sắp xếp lại các phần tử",
+    "D": "O(1) khấu hao, dù thỉnh thoảng có lần thêm tốn O(n) do sao chép"
+   },
+   "correct_answer": "D",
+   "explanation": "n lần thêm tốn tổng cộng khoảng 3n thao tác (1 + 2 + 4 + ... ≤ 2n cho sao chép), tức trung bình O(1) mỗi lần."
+  },
+  {
+   "course": "Cấu trúc dữ liệu và giải thuật",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Cách nào hiệu quả nhất để đếm số cặp nghịch thế (i < j và a[i] > a[j]) của mảng n phần tử?",
+   "options": {
+    "A": "Dùng hai vòng lặp lồng nhau, độ phức tạp O(n²) và đây là cách tối ưu nhất",
+    "B": "Sửa merge sort để đếm cặp nghịch thế khi trộn, độ phức tạp O(n log n)",
+    "C": "Dùng bubble sort cải tiến, độ phức tạp O(n log n) trong mọi trường hợp",
+    "D": "Dùng tìm kiếm nhị phân trên mảng chưa sắp xếp, độ phức tạp O(log n)"
+   },
+   "correct_answer": "B",
+   "explanation": "Khi trộn hai nửa đã sắp xếp, mỗi lần lấy phần tử bên phải trước ta cộng số phần tử còn lại bên trái."
+  },
+  {
+   "course": "Cấu trúc dữ liệu và giải thuật",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Phát hiện chu trình trong đồ thị có hướng bằng DFS cần theo dõi thông tin nào?",
+   "options": {
+    "A": "Trạng thái đỉnh (chưa thăm, đang thăm, đã xong); gặp lại đỉnh đang thăm là có chu trình",
+    "B": "Chỉ cần đánh dấu đã thăm; gặp lại một đỉnh đã thăm là có chu trình",
+    "C": "Bậc vào của mọi đỉnh; có chu trình khi tổng các bậc là số chẵn",
+    "D": "Chiều cao ngăn xếp đệ quy; có chu trình khi chiều cao vượt quá n/2"
+   },
+   "correct_answer": "A",
+   "explanation": "Gặp đỉnh đã xong không phải chu trình (cạnh chéo/cạnh tiến); chỉ gặp đỉnh đang trong ngăn xếp (cạnh ngược) mới là chu trình."
+  },
+  {
+   "course": "Lập trình Python",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Kiểu dữ liệu nào sau đây là bất biến (immutable) trong Python?",
+   "options": {
+    "A": "list (danh sách)",
+    "B": "tuple (bộ)",
+    "C": "dict (từ điển)",
+    "D": "set (tập hợp)"
+   },
+   "correct_answer": "B",
+   "explanation": "Tuple không thể thay đổi phần tử sau khi tạo, còn list, dict và set đều có thể thay đổi."
+  },
+  {
+   "course": "Lập trình Python",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Hàm dựng sẵn nào trả về số phần tử của một list ds?",
+   "options": {
+    "A": "len(ds)",
+    "B": "ds.size()",
+    "C": "ds.length()",
+    "D": "count(ds)"
+   },
+   "correct_answer": "A",
+   "explanation": "Python dùng hàm len() cho các đối tượng có độ dài như list, str, dict."
+  },
+  {
+   "course": "Lập trình Python",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Kết quả của biểu thức 7 // 2 trong Python 3 là gì?",
+   "options": {
+    "A": "3",
+    "B": "3.5",
+    "C": "4",
+    "D": "1"
+   },
+   "correct_answer": "A",
+   "explanation": "Toán tử // là phép chia lấy phần nguyên (làm tròn xuống), 7 // 2 = 3."
+  },
+  {
+   "course": "Lập trình Python",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Python xác định các khối lệnh bằng cách nào?",
+   "options": {
+    "A": "Bằng cặp dấu ngoặc nhọn { } bao quanh khối lệnh",
+    "B": "Bằng cặp từ khóa begin và end ở đầu và cuối khối",
+    "C": "Bằng việc thụt lề (indentation) các dòng lệnh",
+    "D": "Bằng dấu chấm phẩy đặt ở cuối mỗi dòng lệnh"
+   },
+   "correct_answer": "C",
+   "explanation": "Thụt lề là cú pháp bắt buộc của Python để biểu diễn khối lệnh."
+  },
+  {
+   "course": "Lập trình Python",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Cú pháp nào tạo một dictionary rỗng trong Python?",
+   "options": {
+    "A": "d = []",
+    "B": "d = {}",
+    "C": "d = ()",
+    "D": "d = <>"
+   },
+   "correct_answer": "B",
+   "explanation": "Cặp ngoặc nhọn rỗng tạo dict rỗng; [] là list rỗng, () là tuple rỗng."
+  },
+  {
+   "course": "Lập trình Python",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Từ khóa nào dùng để định nghĩa một hàm trong Python?",
+   "options": {
+    "A": "function",
+    "B": "def",
+    "C": "fun",
+    "D": "define"
+   },
+   "correct_answer": "B",
+   "explanation": "Hàm được khai báo bằng từ khóa def, ví dụ def tinh_tong(a, b):."
+  },
+  {
+   "course": "Lập trình Python",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Ký hiệu nào dùng để bắt đầu chú thích một dòng trong Python?",
+   "options": {
+    "A": "# (dấu thăng)",
+    "B": "// (hai dấu gạch chéo)",
+    "C": "-- (hai dấu gạch ngang)",
+    "D": "/* (gạch chéo và dấu sao)"
+   },
+   "correct_answer": "A",
+   "explanation": "Mọi nội dung sau dấu # trên cùng dòng bị trình thông dịch bỏ qua."
+  },
+  {
+   "course": "Lập trình Python",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "f-string trong Python dùng để làm gì?",
+   "options": {
+    "A": "Định nghĩa hàm có số lượng tham số bất kỳ khi gọi hàm",
+    "B": "Chuyển đổi một chuỗi ký tự thành số thực tương ứng",
+    "C": "Mở một tệp để ghi dữ liệu vào cuối nội dung hiện có",
+    "D": "Nhúng giá trị của biểu thức vào chuỗi bằng cặp {} với tiền tố f"
+   },
+   "correct_answer": "D",
+   "explanation": "Ví dụ f\"Xin chào {ten}\" thay {ten} bằng giá trị của biến."
+  },
+  {
+   "course": "Lập trình Python",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Biểu thức [x*x for x in range(4)] cho kết quả nào?",
+   "options": {
+    "A": "[0, 1, 4, 9]",
+    "B": "[1, 4, 9, 16]",
+    "C": "[0, 1, 2, 3]",
+    "D": "[0, 1, 4, 9, 16]"
+   },
+   "correct_answer": "A",
+   "explanation": "range(4) sinh 0, 1, 2, 3 nên bình phương lần lượt là 0, 1, 4, 9."
+  },
+  {
+   "course": "Lập trình Python",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Cấu trúc try...except dùng để làm gì?",
+   "options": {
+    "A": "Bắt và xử lý lỗi xảy ra khi chương trình đang chạy",
+    "B": "Lặp lại một khối lệnh nhiều lần cho đến khi điều kiện sai",
+    "C": "Khai báo hàm nhận tham số có giá trị mặc định cho trước",
+    "D": "Nhập các thư viện bên ngoài vào chương trình đang viết"
+   },
+   "correct_answer": "A",
+   "explanation": "Lỗi trong khối try được chuyển sang khối except tương ứng thay vì làm dừng chương trình."
+  },
+  {
+   "course": "Lập trình Python",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Câu lệnh import dùng để làm gì?",
+   "options": {
+    "A": "Xuất dữ liệu của chương trình ra một tệp văn bản bên ngoài",
+    "B": "Nạp module hoặc thư viện để sử dụng trong chương trình",
+    "C": "Khai báo một lớp mới kế thừa từ lớp đối tượng gốc",
+    "D": "Xóa một biến khỏi bộ nhớ khi không còn sử dụng nữa"
+   },
+   "correct_answer": "B",
+   "explanation": "Ví dụ import math cho phép dùng math.sqrt()."
+  },
+  {
+   "course": "Lập trình Python",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Phương thức __init__ trong một lớp Python có vai trò gì?",
+   "options": {
+    "A": "Xóa đối tượng khỏi bộ nhớ khi chương trình không còn dùng nữa",
+    "B": "Chuyển đối tượng thành chuỗi để hiển thị ra màn hình",
+    "C": "So sánh hai đối tượng với nhau để xác định thứ tự của chúng",
+    "D": "Khởi tạo các thuộc tính cho đối tượng ngay khi nó được tạo ra"
+   },
+   "correct_answer": "D",
+   "explanation": "__init__ là hàm khởi tạo (constructor) được gọi tự động khi tạo đối tượng."
+  },
+  {
+   "course": "Lập trình Python",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Kết quả của type(3.0) trong Python là gì?",
+   "options": {
+    "A": "<class 'int'>",
+    "B": "<class 'float'>",
+    "C": "<class 'str'>",
+    "D": "<class 'double'>"
+   },
+   "correct_answer": "B",
+   "explanation": "3.0 là số thực, kiểu float; Python không có kiểu double."
+  },
+  {
+   "course": "Lập trình Python",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Hàm range(1, 5) sinh ra dãy số nào?",
+   "options": {
+    "A": "1, 2, 3, 4, 5",
+    "B": "1, 2, 3, 4",
+    "C": "0, 1, 2, 3, 4",
+    "D": "2, 3, 4, 5"
+   },
+   "correct_answer": "B",
+   "explanation": "range(start, stop) lấy từ start đến stop − 1, nghĩa là không bao gồm giá trị stop."
+  },
+  {
+   "course": "Lập trình Python",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Đoạn mã sau in ra gì?\na = [1, 2, 3]\nb = a\nb.append(4)\nprint(a)",
+   "options": {
+    "A": "[1, 2, 3]",
+    "B": "[4]",
+    "C": "Báo lỗi vì không thể gán list",
+    "D": "[1, 2, 3, 4]"
+   },
+   "correct_answer": "D",
+   "explanation": "b = a chỉ gán tham chiếu nên a và b cùng trỏ đến một list, thay đổi qua b cũng thấy qua a."
+  },
+  {
+   "course": "Lập trình Python",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Đoạn mã sau in ra gì?\nprint(-7 // 2, -7 % 2)",
+   "options": {
+    "A": "-4 1",
+    "B": "-3 1",
+    "C": "-4 -1",
+    "D": "-3 -1"
+   },
+   "correct_answer": "A",
+   "explanation": "// làm tròn xuống nên -7 // 2 = -4, và -7 % 2 = -7 − (-4·2) = 1."
+  },
+  {
+   "course": "Lập trình Python",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Với s = \"EduAI\", biểu thức s[1:4] cho kết quả nào?",
+   "options": {
+    "A": "\"EduA\"",
+    "B": "\"duAI\"",
+    "C": "\"duA\"",
+    "D": "\"Edu\""
+   },
+   "correct_answer": "C",
+   "explanation": "Cắt chuỗi lấy các chỉ số 1, 2, 3 tức 'd', 'u', 'A'; chỉ số 4 không được bao gồm."
+  },
+  {
+   "course": "Lập trình Python",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Cách nào đúng để duyệt đồng thời cả khóa và giá trị của dictionary d?",
+   "options": {
+    "A": "for k, v in d:",
+    "B": "for k, v in d.keys():",
+    "C": "for k, v in d.items():",
+    "D": "for k, v in d.values():"
+   },
+   "correct_answer": "C",
+   "explanation": "d.items() trả về các cặp (khóa, giá trị); duyệt trực tiếp d chỉ cho các khóa."
+  },
+  {
+   "course": "Lập trình Python",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Biểu thức len(set([1, 2, 2, 3, 3, 3])) trả về giá trị nào?",
+   "options": {
+    "A": "3",
+    "B": "6",
+    "C": "2",
+    "D": "4"
+   },
+   "correct_answer": "A",
+   "explanation": "set loại bỏ phần tử trùng nên chỉ còn {1, 2, 3}, gồm 3 phần tử."
+  },
+  {
+   "course": "Lập trình Python",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Kết quả của sorted(['pear', 'fig', 'apple'], key=len) là gì?",
+   "options": {
+    "A": "['apple', 'fig', 'pear']",
+    "B": "['apple', 'pear', 'fig']",
+    "C": "['pear', 'fig', 'apple']",
+    "D": "['fig', 'pear', 'apple']"
+   },
+   "correct_answer": "D",
+   "explanation": "Sắp xếp theo độ dài tăng dần: fig (3), pear (4), apple (5)."
+  },
+  {
+   "course": "Lập trình Python",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Lợi ích chính của câu lệnh with khi mở tệp là gì?",
+   "options": {
+    "A": "Cho phép ghi tệp nhanh hơn gấp nhiều lần so với cách thông thường",
+    "B": "Tự động tạo bản sao lưu cho tệp trước khi chương trình ghi",
+    "C": "Cho phép nhiều chương trình cùng lúc ghi vào cùng một tệp",
+    "D": "Tự động đóng tệp khi thoát khối lệnh, kể cả khi có lỗi xảy ra"
+   },
+   "correct_answer": "D",
+   "explanation": "with sử dụng context manager để đảm bảo tài nguyên được giải phóng."
+  },
+  {
+   "course": "Lập trình Python",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Đoạn mã sau in ra gì?\ndef them(x, ds=[]):\n    ds.append(x)\n    return ds\nthem(1)\nprint(them(2))",
+   "options": {
+    "A": "[2]",
+    "B": "[1]",
+    "C": "[1, 2]",
+    "D": "[2, 1]"
+   },
+   "correct_answer": "C",
+   "explanation": "Giá trị mặc định ds=[] chỉ được tạo một lần khi định nghĩa hàm nên được dùng chung giữa các lần gọi; nên dùng ds=None."
+  },
+  {
+   "course": "Lập trình Python",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Đoạn mã sau in ra gì?\nfs = [lambda: i for i in range(3)]\nprint([f() for f in fs])",
+   "options": {
+    "A": "[0, 1, 2]",
+    "B": "[3, 3, 3]",
+    "C": "[2, 2, 2]",
+    "D": "Báo lỗi NameError"
+   },
+   "correct_answer": "C",
+   "explanation": "Closure bắt biến i chứ không bắt giá trị; khi gọi, i đã là 2 (late binding). Dùng lambda i=i: i để cố định."
+  },
+  {
+   "course": "Lập trình Python",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Đoạn mã sau in ra gì?\nx = [1, 2]\ny = [1, 2]\nprint(x == y, x is y)",
+   "options": {
+    "A": "True True",
+    "B": "True False",
+    "C": "False False",
+    "D": "False True"
+   },
+   "correct_answer": "B",
+   "explanation": "== so sánh giá trị (bằng nhau), còn is so sánh danh tính đối tượng; hai list tạo riêng là hai đối tượng khác nhau."
+  },
+  {
+   "course": "Lập trình Python",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Khác biệt chính giữa [x*x for x in range(10**7)] và (x*x for x in range(10**7)) là gì?",
+   "options": {
+    "A": "Biểu thức thứ hai tạo ra tuple đầy đủ nên nhanh hơn trong mọi trường hợp",
+    "B": "Cả hai đều tạo list đầy đủ trong bộ nhớ, chỉ khác nhau về cú pháp",
+    "C": "Biểu thức thứ nhất là generator, còn biểu thức thứ hai tạo ra list",
+    "D": "Biểu thức thứ hai là generator, sinh từng giá trị khi cần nên tiết kiệm bộ nhớ"
+   },
+   "correct_answer": "D",
+   "explanation": "Generator expression dùng lazy evaluation, không giữ cả 10 triệu phần tử trong bộ nhớ."
+  },
+  {
+   "course": "Lập trình Python",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "GIL (Global Interpreter Lock) của CPython ảnh hưởng thế nào đến chương trình đa luồng?",
+   "options": {
+    "A": "Cho phép mọi luồng chạy song song hoàn toàn trên nhiều nhân CPU",
+    "B": "Khiến đa luồng không thể sử dụng được với các tác vụ vào/ra (I/O)",
+    "C": "Giới hạn chương trình chỉ được tạo tối đa một tiến trình con",
+    "D": "Chỉ một luồng thực thi bytecode tại một thời điểm nên đa luồng không tăng tốc tác vụ tính toán nặng"
+   },
+   "correct_answer": "D",
+   "explanation": "Với tác vụ CPU-bound nên dùng multiprocessing; đa luồng vẫn hữu ích cho I/O-bound vì GIL được nhả khi chờ I/O."
+  },
+  {
+   "course": "Lập trình Python",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Đoạn mã sau in ra gì?\nimport copy\na = [[1], [2]]\nb = copy.copy(a)\nb[0].append(9)\nprint(a)",
+   "options": {
+    "A": "[[1], [2]]",
+    "B": "[[1, 9], [2, 9]]",
+    "C": "[[1, 9], [2]]",
+    "D": "[[9], [2]]"
+   },
+   "correct_answer": "C",
+   "explanation": "copy.copy là sao chép nông: list ngoài mới, nhưng các list con vẫn dùng chung nên sửa b[0] cũng ảnh hưởng a[0]."
+  },
+  {
+   "course": "Lập trình Python",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Đoạn mã sau in ra điều gì (theo thứ tự)?\ndef f():\n    try:\n        return 1\n    finally:\n        print(\"x\")\nprint(f())",
+   "options": {
+    "A": "In 1 rồi in x",
+    "B": "Chỉ in 1",
+    "C": "In x rồi in 1",
+    "D": "Chỉ in x"
+   },
+   "correct_answer": "C",
+   "explanation": "Khối finally luôn chạy trước khi hàm thực sự trả về, nên x được in trước khi print in giá trị 1."
+  },
+  {
+   "course": "Phân tích thiết kế hệ thống",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Vòng đời phát triển hệ thống (SDLC) là gì?",
+   "options": {
+    "A": "Khoảng thời gian tối đa một phần mềm được phép sử dụng sau khi bán",
+    "B": "Chuỗi các giai đoạn từ khảo sát, phân tích, thiết kế, cài đặt, kiểm thử đến bảo trì hệ thống",
+    "C": "Danh sách tất cả các lỗi phát sinh trong lúc vận hành hệ thống",
+    "D": "Tập hợp các công cụ lập trình được dùng chung trong một dự án"
+   },
+   "correct_answer": "B",
+   "explanation": "SDLC mô tả toàn bộ quá trình xây dựng và duy trì một hệ thống thông tin."
+  },
+  {
+   "course": "Phân tích thiết kế hệ thống",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Biểu đồ use case dùng để làm gì?",
+   "options": {
+    "A": "Mô tả cấu trúc các bảng và khóa trong cơ sở dữ liệu của hệ thống",
+    "B": "Mô tả thứ tự các thông điệp theo thời gian giữa các đối tượng",
+    "C": "Mô tả chức năng của hệ thống từ góc nhìn người dùng và tương tác giữa actor với hệ thống",
+    "D": "Mô tả cách triển khai phần cứng và máy chủ cho hệ thống"
+   },
+   "correct_answer": "C",
+   "explanation": "Use case diagram thể hiện ai (actor) làm được gì (use case) với hệ thống."
+  },
+  {
+   "course": "Phân tích thiết kế hệ thống",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Actor trong biểu đồ use case là gì?",
+   "options": {
+    "A": "Một lớp xử lý nghiệp vụ nằm bên trong hệ thống đang xét",
+    "B": "Một bảng dữ liệu dùng để lưu thông tin của người dùng",
+    "C": "Người hoặc hệ thống bên ngoài tương tác với hệ thống đang xét",
+    "D": "Một hàm kiểm tra tính hợp lệ của dữ liệu đầu vào"
+   },
+   "correct_answer": "C",
+   "explanation": "Actor nằm ngoài ranh giới hệ thống, ví dụ Sinh viên hoặc Admin."
+  },
+  {
+   "course": "Phân tích thiết kế hệ thống",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Yêu cầu nào sau đây là yêu cầu phi chức năng?",
+   "options": {
+    "A": "Sinh viên có thể đăng ký tài khoản bằng địa chỉ email",
+    "B": "Hệ thống phải phản hồi mỗi truy vấn tìm kiếm trong vòng 2 giây",
+    "C": "Admin có thể khóa tài khoản của một người dùng vi phạm",
+    "D": "Hệ thống cho phép tải tài liệu học tập lên máy chủ"
+   },
+   "correct_answer": "B",
+   "explanation": "Yêu cầu phi chức năng mô tả chất lượng (hiệu năng, bảo mật...) chứ không mô tả một chức năng cụ thể."
+  },
+  {
+   "course": "Phân tích thiết kế hệ thống",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Biểu đồ lớp (class diagram) thể hiện nội dung nào?",
+   "options": {
+    "A": "Luồng hoạt động tuần tự của một quy trình nghiệp vụ cụ thể",
+    "B": "Các lớp cùng thuộc tính, phương thức và quan hệ giữa các lớp",
+    "C": "Các trạng thái và sự chuyển trạng thái của một đối tượng",
+    "D": "Thứ tự gửi thông điệp giữa các đối tượng theo thời gian"
+   },
+   "correct_answer": "B",
+   "explanation": "Class diagram mô tả cấu trúc tĩnh của hệ thống hướng đối tượng."
+  },
+  {
+   "course": "Phân tích thiết kế hệ thống",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Biểu đồ tuần tự (sequence diagram) nhấn mạnh điều gì?",
+   "options": {
+    "A": "Cấu trúc tĩnh của các lớp và quan hệ kế thừa giữa chúng",
+    "B": "Sự phân bố các thành phần phần mềm trên các nút phần cứng",
+    "C": "Thứ tự thời gian của các thông điệp trao đổi giữa các đối tượng",
+    "D": "Danh sách các chức năng chính của hệ thống theo từng actor"
+   },
+   "correct_answer": "C",
+   "explanation": "Trục dọc của sequence diagram biểu diễn thời gian, các mũi tên là thông điệp theo thứ tự."
+  },
+  {
+   "course": "Phân tích thiết kế hệ thống",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Biểu đồ luồng dữ liệu (DFD) mô tả điều gì?",
+   "options": {
+    "A": "Cách dữ liệu di chuyển giữa các tiến trình, kho dữ liệu và tác nhân ngoài",
+    "B": "Quan hệ kế thừa giữa các lớp đối tượng trong hệ thống",
+    "C": "Lịch biểu thực hiện các công việc của một dự án phần mềm",
+    "D": "Cấu trúc thư mục chứa mã nguồn của toàn bộ hệ thống"
+   },
+   "correct_answer": "A",
+   "explanation": "DFD tập trung vào dòng dữ liệu và các phép biến đổi dữ liệu trong hệ thống."
+  },
+  {
+   "course": "Phân tích thiết kế hệ thống",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Đặc điểm của mô hình thác nước (waterfall) là gì?",
+   "options": {
+    "A": "Lặp lại các vòng ngắn và liên tục giao sản phẩm cho khách hàng",
+    "B": "Không có giai đoạn kiểm thử trước khi bàn giao cho khách hàng",
+    "C": "Cho phép bỏ qua phân tích, thiết kế để lập trình ngay từ đầu",
+    "D": "Các giai đoạn thực hiện tuần tự, hoàn thành giai đoạn này rồi mới sang giai đoạn sau"
+   },
+   "correct_answer": "D",
+   "explanation": "Waterfall đi theo một chiều: yêu cầu, thiết kế, cài đặt, kiểm thử, bảo trì."
+  },
+  {
+   "course": "Phân tích thiết kế hệ thống",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Trong Scrum, Sprint là gì?",
+   "options": {
+    "A": "Chu kỳ phát triển có thời hạn cố định, thường 1 đến 4 tuần, tạo ra phần sản phẩm dùng được",
+    "B": "Một cuộc họp dài để tổng kết toàn bộ dự án khi kết thúc",
+    "C": "Tài liệu đặc tả yêu cầu hoàn chỉnh được viết trước khi lập trình",
+    "D": "Vai trò chịu trách nhiệm quản lý ngân sách của cả dự án"
+   },
+   "correct_answer": "A",
+   "explanation": "Mỗi Sprint có mục tiêu, thời hạn cố định và cho ra một phần tăng trưởng sản phẩm."
+  },
+  {
+   "course": "Phân tích thiết kế hệ thống",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Kỹ thuật nào thường dùng để thu thập yêu cầu từ người dùng?",
+   "options": {
+    "A": "Biên dịch mã nguồn rồi chạy các bài kiểm thử đơn vị",
+    "B": "Tối ưu chỉ mục cơ sở dữ liệu cho các truy vấn chậm",
+    "C": "Phỏng vấn, khảo sát bằng bảng hỏi và quan sát quy trình nghiệp vụ",
+    "D": "Cấu hình máy chủ và thiết lập cân bằng tải cho hệ thống"
+   },
+   "correct_answer": "C",
+   "explanation": "Các kỹ thuật khảo sát giúp nhà phân tích hiểu nhu cầu thực của người dùng."
+  },
+  {
+   "course": "Phân tích thiết kế hệ thống",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Một thiết kế phần mềm tốt hướng tới mức độ gắn kết (cohesion) và phụ thuộc (coupling) như thế nào?",
+   "options": {
+    "A": "Cohesion thấp và coupling cao",
+    "B": "Cohesion cao và coupling cao",
+    "C": "Cohesion thấp và coupling thấp",
+    "D": "Cohesion cao và coupling thấp"
+   },
+   "correct_answer": "D",
+   "explanation": "Module gắn kết chặt bên trong và ít phụ thuộc bên ngoài thì dễ hiểu, dễ bảo trì và dễ thay đổi."
+  },
+  {
+   "course": "Phân tích thiết kế hệ thống",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Kiểm thử hộp đen (black-box testing) dựa trên cơ sở nào?",
+   "options": {
+    "A": "Cấu trúc các nhánh và vòng lặp của mã nguồn chương trình",
+    "B": "Đặc tả đầu vào và đầu ra mà không cần xem mã nguồn bên trong",
+    "C": "Số dòng lệnh đã được thực thi trong quá trình kiểm thử",
+    "D": "Kết quả phân tích bộ nhớ khi chương trình đang chạy"
+   },
+   "correct_answer": "B",
+   "explanation": "Hộp đen chỉ quan tâm hành vi quan sát được; kiểm thử dựa vào mã nguồn là hộp trắng."
+  },
+  {
+   "course": "Phân tích thiết kế hệ thống",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Quan hệ kế thừa (generalization) giữa hai lớp có nghĩa là gì?",
+   "options": {
+    "A": "Lớp này chỉ gọi tạm một phương thức của lớp khác khi cần",
+    "B": "Lớp con thừa hưởng thuộc tính và phương thức của lớp cha",
+    "C": "Hai lớp luôn có cùng số lượng thuộc tính và phương thức",
+    "D": "Lớp cha tự động bị xóa khi lớp con bị xóa khỏi hệ thống"
+   },
+   "correct_answer": "B",
+   "explanation": "Kế thừa biểu diễn quan hệ 'là một' (is-a), giúp tái sử dụng và mở rộng lớp."
+  },
+  {
+   "course": "Phân tích thiết kế hệ thống",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Nghiên cứu khả thi (feasibility study) xem xét các khía cạnh nào?",
+   "options": {
+    "A": "Số dòng mã và số lượng lỗi của phần mềm đang chạy",
+    "B": "Độ đẹp của giao diện và màu sắc thương hiệu của hệ thống",
+    "C": "Khả thi về kỹ thuật, kinh tế, vận hành và thời gian",
+    "D": "Tốc độ kết nối internet của từng lập trình viên trong nhóm"
+   },
+   "correct_answer": "C",
+   "explanation": "Nghiên cứu khả thi giúp quyết định có nên triển khai dự án hay không."
+  },
+  {
+   "course": "Phân tích thiết kế hệ thống",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Trong biểu đồ use case, quan hệ <<include>> khác <<extend>> ở điểm nào?",
+   "options": {
+    "A": "include là hành vi tùy chọn bổ sung theo điều kiện, còn extend là hành vi bắt buộc dùng lại",
+    "B": "include là hành vi bắt buộc được dùng lại, còn extend là hành vi tùy chọn bổ sung theo điều kiện",
+    "C": "include dùng để nối actor với actor, còn extend dùng để nối use case với dữ liệu",
+    "D": "Hai quan hệ giống hệt nhau, chỉ khác ký hiệu mũi tên trong biểu đồ"
+   },
+   "correct_answer": "B",
+   "explanation": "Ví dụ Đăng nhập được include bởi nhiều use case; Nhập mã giảm giá extend use case Thanh toán."
+  },
+  {
+   "course": "Phân tích thiết kế hệ thống",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Một Khoa có nhiều SinhVien, mỗi SinhVien thuộc đúng một Khoa. Bản số giữa Khoa và SinhVien là gì?",
+   "options": {
+    "A": "Một – một: mỗi Khoa chỉ có một SinhVien duy nhất",
+    "B": "Nhiều – nhiều: mỗi SinhVien thuộc nhiều Khoa cùng lúc",
+    "C": "Nhiều – một: mỗi Khoa chỉ thuộc về một SinhVien",
+    "D": "Một – nhiều: một Khoa có nhiều SinhVien"
+   },
+   "correct_answer": "D",
+   "explanation": "Phía Khoa là 1, phía SinhVien là 0..* nên đây là quan hệ một – nhiều."
+  },
+  {
+   "course": "Phân tích thiết kế hệ thống",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Trong UML, composition khác aggregation ở điểm nào?",
+   "options": {
+    "A": "Ở composition, bộ phận có thể thuộc nhiều đối tượng toàn thể cùng lúc",
+    "B": "Ở aggregation, bộ phận luôn bị hủy cùng lúc với đối tượng toàn thể",
+    "C": "Hai loại quan hệ này hoàn toàn giống nhau và dùng thay thế được",
+    "D": "Ở composition, bộ phận không tồn tại độc lập khi đối tượng toàn thể bị hủy"
+   },
+   "correct_answer": "D",
+   "explanation": "Composition là quan hệ chứa mạnh (vòng đời gắn liền), aggregation là quan hệ chứa yếu."
+  },
+  {
+   "course": "Phân tích thiết kế hệ thống",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Quy tắc cân bằng (balancing) giữa DFD cấp cha và DFD cấp con yêu cầu điều gì?",
+   "options": {
+    "A": "DFD con phải có nhiều kho dữ liệu hơn so với DFD cấp cha",
+    "B": "Các luồng dữ liệu vào ra của tiến trình cha phải khớp với luồng vào ra ở DFD con",
+    "C": "DFD con không được phép có tác nhân ngoài nào cả",
+    "D": "DFD cha phải chứa chi tiết của mọi tiến trình con bên trong"
+   },
+   "correct_answer": "B",
+   "explanation": "Phân rã tiến trình không được làm mất hay thêm luồng dữ liệu vào ra so với cấp trên."
+  },
+  {
+   "course": "Phân tích thiết kế hệ thống",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Mẫu thiết kế Singleton đảm bảo điều gì?",
+   "options": {
+    "A": "Một lớp chỉ có duy nhất một thể hiện và cung cấp điểm truy cập chung đến nó",
+    "B": "Một đối tượng thay đổi hành vi khi trạng thái bên trong của nó thay đổi",
+    "C": "Tạo được đối tượng mà không cần chỉ rõ lớp cụ thể của đối tượng đó",
+    "D": "Thông báo cho nhiều đối tượng khác khi một đối tượng có sự thay đổi"
+   },
+   "correct_answer": "A",
+   "explanation": "Singleton thường dùng cho cấu hình hệ thống hoặc kết nối cơ sở dữ liệu dùng chung."
+  },
+  {
+   "course": "Phân tích thiết kế hệ thống",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Trong mô hình MVC, thành phần Controller đảm nhiệm vai trò gì?",
+   "options": {
+    "A": "Nhận yêu cầu từ người dùng, điều phối Model và chọn View phù hợp để hiển thị",
+    "B": "Lưu trữ dữ liệu và các quy tắc nghiệp vụ của ứng dụng",
+    "C": "Hiển thị dữ liệu và giao diện cho người dùng nhìn thấy",
+    "D": "Quản lý kết nối mạng và cấp phát địa chỉ IP cho máy chủ"
+   },
+   "correct_answer": "A",
+   "explanation": "Model giữ dữ liệu và nghiệp vụ, View hiển thị, Controller là lớp điều phối giữa hai thành phần."
+  },
+  {
+   "course": "Phân tích thiết kế hệ thống",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Ô nhập tuổi hợp lệ trong khoảng 18 đến 60. Theo phân tích giá trị biên, bộ giá trị nào sát ranh giới nhất cần kiểm thử?",
+   "options": {
+    "A": "0, 30, 45, 100",
+    "B": "19, 20, 58, 59",
+    "C": "10, 18, 60, 70",
+    "D": "17, 18, 60, 61"
+   },
+   "correct_answer": "D",
+   "explanation": "Giá trị biên là các giá trị ngay trên và ngay dưới ranh giới: 17/18 ở biên dưới, 60/61 ở biên trên."
+  },
+  {
+   "course": "Phân tích thiết kế hệ thống",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Đồ thị luồng điều khiển của một hàm có 9 cạnh, 7 nút và 1 thành phần liên thông. Độ phức tạp cyclomatic V(G) bằng bao nhiêu?",
+   "options": {
+    "A": "3",
+    "B": "5",
+    "C": "4",
+    "D": "16"
+   },
+   "correct_answer": "C",
+   "explanation": "V(G) = E − N + 2P = 9 − 7 + 2 = 4, nghĩa là cần tối thiểu 4 ca kiểm thử độc lập."
+  },
+  {
+   "course": "Phân tích thiết kế hệ thống",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Khách hàng đòi thêm một chức năng mới khi Sprint đang chạy giữa chừng. Theo Scrum, cách xử lý phù hợp là gì?",
+   "options": {
+    "A": "Đưa vào Product Backlog để Product Owner sắp ưu tiên cho Sprint sau, trừ khi mục tiêu Sprint không còn giá trị",
+    "B": "Thêm ngay vào Sprint hiện tại rồi kéo dài Sprint cho đủ thời gian",
+    "C": "Từ chối mọi thay đổi cho đến khi kết thúc toàn bộ dự án",
+    "D": "Giao cho Scrum Master tự quyết định rồi lập trình ngay lập tức"
+   },
+   "correct_answer": "A",
+   "explanation": "Sprint có phạm vi và thời hạn ổn định; yêu cầu mới được quản lý qua Product Backlog do Product Owner ưu tiên."
+  },
+  {
+   "course": "Phân tích thiết kế hệ thống",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Dự án có các công việc: A (3 ngày); B (2 ngày, sau A); C (4 ngày, sau A); D (1 ngày, sau B và C). Thời gian tối thiểu để hoàn thành dự án là bao nhiêu?",
+   "options": {
+    "A": "6 ngày",
+    "B": "10 ngày",
+    "C": "7 ngày",
+    "D": "8 ngày"
+   },
+   "correct_answer": "D",
+   "explanation": "Đường găng là A → C → D = 3 + 4 + 1 = 8 ngày; đường A → B → D chỉ mất 6 ngày."
+  },
+  {
+   "course": "Phân tích thiết kế hệ thống",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Lớp TinhLuong dùng chuỗi if-else theo loại nhân viên, mỗi khi thêm loại mới phải sửa lớp này. Vi phạm nguyên lý nào và nên sửa thế nào?",
+   "options": {
+    "A": "Open/Closed; dùng đa hình với lớp trừu tượng cho từng loại nhân viên",
+    "B": "Single Responsibility; gộp thêm nhiều chức năng khác vào cùng một lớp",
+    "C": "Liskov Substitution; xóa quan hệ kế thừa ở mọi lớp trong hệ thống",
+    "D": "Interface Segregation; gộp mọi phương thức vào một interface thật lớn"
+   },
+   "correct_answer": "A",
+   "explanation": "Open/Closed: mở cho mở rộng, đóng cho sửa đổi; thêm loại mới bằng lớp con thay vì sửa mã cũ."
+  },
+  {
+   "course": "Phân tích thiết kế hệ thống",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Hệ thống đặt vé phải chịu lượng truy cập tăng đột biến gấp 20 lần ngày thường. Thuộc tính chất lượng chính và giải pháp phù hợp là gì?",
+   "options": {
+    "A": "Tính bảo mật; mã hóa mọi mật khẩu bằng hàm băm một chiều",
+    "B": "Tính dễ bảo trì; viết thêm tài liệu mô tả cho mã nguồn",
+    "C": "Tính khả chuyển; làm cho hệ thống chạy trên nhiều hệ điều hành",
+    "D": "Khả năng mở rộng (scalability); dùng cân bằng tải và mở rộng ngang nhiều máy chủ"
+   },
+   "correct_answer": "D",
+   "explanation": "Tải tăng đột biến đòi hỏi hệ thống co giãn theo lưu lượng, thường bằng load balancer và scale-out."
+  },
+  {
+   "course": "Phân tích thiết kế hệ thống",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Trong các kiểu ghép nối (coupling) giữa module, kiểu nào gây phụ thuộc chặt nhất và cần tránh nhất?",
+   "options": {
+    "A": "Data coupling: các module chỉ trao đổi dữ liệu đơn giản qua tham số",
+    "B": "Stamp coupling: truyền cả cấu trúc dữ liệu nhưng chỉ dùng một phần",
+    "C": "Content coupling: module này truy cập hoặc sửa trực tiếp dữ liệu, mã bên trong module khác",
+    "D": "Message coupling: các module giao tiếp chỉ bằng thông điệp qua giao diện"
+   },
+   "correct_answer": "C",
+   "explanation": "Content coupling phá vỡ tính đóng gói nên là kiểu phụ thuộc tệ nhất; data coupling là tốt nhất."
+  },
+  {
+   "course": "Phân tích thiết kế hệ thống",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Dự án phần mềm đang trễ hạn, quản lý quyết định thêm nhiều nhân sự vào cuối dự án. Theo định luật Brooks, điều gì thường xảy ra?",
+   "options": {
+    "A": "Dự án thường trễ hơn do chi phí đào tạo và giao tiếp tăng lên",
+    "B": "Dự án chắc chắn rút ngắn thời gian theo tỷ lệ thuận với số người thêm",
+    "C": "Không có ảnh hưởng gì vì công việc luôn chia đều được cho mọi người",
+    "D": "Dự án giảm lỗi rõ rệt vì có nhiều người hơn cùng kiểm tra mã"
+   },
+   "correct_answer": "A",
+   "explanation": "Brooks: 'thêm người vào dự án phần mềm đang trễ sẽ làm nó trễ hơn' vì chi phí học việc và kênh giao tiếp tăng."
+  }
+ ]
+}

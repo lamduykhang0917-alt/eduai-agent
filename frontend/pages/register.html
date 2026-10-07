@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Đăng ký — EduAI</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/auth.css">
+<link rel="stylesheet" href="../css/luxe.css">
+</head>
+<body class="auth">
+<div class="auth-shell">
+  <aside class="auth-visual">
+    <a class="auth-logo" href="../index.html"><span class="mark">E</span>EduAI</a>
+    <div>
+      <h2>Bắt đầu học cùng<br>trợ lý AI</h2>
+      <p class="lead">Trợ lý AI đồng hành cùng bạn trong học tập: hỏi đáp, tóm tắt tài liệu, ôn tập và theo dõi tiến độ.</p>
+      <div class="auth-points">
+        <div><span class="ic">💬</span><span><b>Hỏi đáp tức thì</b>AI trả lời dựa trên tài liệu của từng môn học</span></div>
+        <div><span class="ic">📚</span><span><b>Tài liệu theo môn</b>Đọc, tìm kiếm và hỏi AI ngay trên tài liệu</span></div>
+        <div><span class="ic">📝</span><span><b>Ôn tập &amp; kiểm tra</b>Tạo đề, chấm điểm và nhận gợi ý nên học tiếp</span></div>
+      </div>
+    </div>
+    <div class="auth-stats" id="authStats"></div>
+  </aside>
+  <main class="auth-form-side">
+    <div class="auth-box">
+      <a class="back" href="../index.html">← Về trang chủ</a>
+      <h1>Tạo tài khoản</h1>
+      <div class="sub">Miễn phí, chỉ mất chưa đến một phút.</div>
+      <div class="a-err" id="errorBox">⚠️ <span id="errorText"></span></div>
+      <div class="a-ok" id="successBox"></div>
+      <form id="registerForm" autocomplete="off">
+        <div class="a-field"><label for="fullName">Họ và tên</label>
+          <div class="a-input"><input type="text" id="fullName" placeholder="Nguyễn Văn An" required></div></div>
+        <div class="a-field"><label for="email">Email</label>
+          <div class="a-input"><input type="email" id="email" placeholder="ten@student.edu.vn" required></div></div>
+        <div class="a-field"><label for="password">Mật khẩu</label>
+          <div class="a-input"><input type="password" id="password" placeholder="Tối thiểu 8 ký tự, không có khoảng trắng" required autocomplete="new-password" autocapitalize="off" autocorrect="off" spellcheck="false" oninput="checkStrength(this.value);checkMatch()">
+            <button type="button" class="eye" onclick="togglePw('password',this)" aria-label="Hiện mật khẩu">👁️</button></div>
+          <div class="str"><i id="bar1"></i><i id="bar2"></i><i id="bar3"></i><i id="bar4"></i></div>
+          <div class="a-hint" id="strengthLabel">Nhập mật khẩu để xem độ bảo mật</div></div>
+        <div class="a-field"><label for="confirmPassword">Xác nhận mật khẩu</label>
+          <div class="a-input"><input type="password" id="confirmPassword" placeholder="Nhập lại mật khẩu" required autocomplete="new-password" autocapitalize="off" autocorrect="off" spellcheck="false" oninput="checkMatch()">
+            <button type="button" class="eye" onclick="togglePw('confirmPassword',this)" aria-label="Hiện mật khẩu">👁️</button></div>
+          <div class="a-hint" id="pwMatch"></div></div>
+        <button type="submit" class="a-btn" id="submitBtn">Tạo tài khoản</button>
+      </form>
+      <div class="a-switch">Đã có tài khoản?<a class="alt" href="login.html">Đăng nhập</a></div>
+    </div>
+  </main>
+</div>
+<script src="../js/api.js"></script>
+<script>
+(async () => {
+  try {
+    const base = API_BASE;
+    const r = await fetch(base + '/api/public/stats'); const d = await r.json();
+    document.getElementById('authStats').innerHTML =
+      `<div class="s"><b>Nhiều</b><span>Môn học</span></div><div class="s"><b>999+</b><span>Tài liệu</span></div><div class="s"><b>999+</b><span>Câu hỏi ôn tập</span></div>`;
+  } catch (e) {}
+})();
+function togglePw(id, btn){ const i=document.getElementById(id); const show=i.type==='password'; i.type=show?'text':'password'; btn.textContent=show?'🙈':'👁️'; }
+</script>
+<script>
+function checkStrength(v){
+  const bars=[1,2,3,4].map(n=>document.getElementById('bar'+n)), label=document.getElementById('strengthLabel');
+  bars.forEach(b=>b.className='');
+  if(!v){label.textContent='Nhập mật khẩu để xem độ bảo mật';return;}
+  if(/\s/.test(v)){label.textContent='✕ Mật khẩu không được chứa khoảng trắng';return;}
+  let s=0; if(v.length>=8)s++; if(/[A-Z]/.test(v))s++; if(/[0-9]/.test(v))s++; if(/[^A-Za-z0-9]/.test(v))s++;
+  s=Math.max(s,1); for(let i=0;i<s;i++) bars[i].className='on'+s;
+  label.textContent=['Yếu','Trung bình','Khá mạnh','Mạnh'][s-1];
+}
+function checkMatch(){
+  const a=document.getElementById('password').value,b=document.getElementById('confirmPassword').value,m=document.getElementById('pwMatch');
+  if(!b){m.textContent='';m.className='a-hint';return;}
+  m.textContent=a===b?'✓ Mật khẩu khớp':'✕ Mật khẩu chưa khớp'; m.className='a-hint '+(a===b?'ok':'err');
+}
+document.getElementById('registerForm').addEventListener('submit', async (e)=>{
+  e.preventDefault();
+  if(/\s/.test(document.getElementById('password').value)){ document.getElementById('errorText').textContent='Mật khẩu không được chứa khoảng trắng'; document.getElementById('errorBox').style.display='flex'; return; }
+  const eb=document.getElementById('errorBox'), sb=document.getElementById('successBox'), btn=document.getElementById('submitBtn');
+  eb.style.display='none'; sb.style.display='none'; btn.disabled=true; btn.textContent='Đang tạo tài khoản...';
+  try {
+    const data = await Api.register(document.getElementById('fullName').value, document.getElementById('email').value.trim(),
+      document.getElementById('password').value, document.getElementById('confirmPassword').value);
+    Api.setToken(data.access_token);
+    sb.textContent='🎉 Tạo tài khoản thành công! Đang chuyển hướng...'; sb.style.display='block'; btn.textContent='✓ Thành công'; btn.classList.add('ok');
+    setTimeout(()=>window.location.href='dashboard.html', 800);
+  } catch (err) {
+    document.getElementById('errorText').textContent=err.message; eb.style.display='flex'; btn.disabled=false; btn.textContent='Tạo tài khoản';
+  }
+});
+</script>
+</body>
+</html>

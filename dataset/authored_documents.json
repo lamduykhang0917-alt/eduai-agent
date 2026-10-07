@@ -1,0 +1,169 @@
+{
+ "documents": [
+  {
+   "course": "Lập trình Python",
+   "chapter": "Cú pháp cơ bản",
+   "title": "Python Bài 1 - Biến, kiểu dữ liệu và toán tử.txt",
+   "file_type": "txt",
+   "file_path": "dataset/authored/PYTHON/Python Bài 1 - Biến, kiểu dữ liệu và toán tử.txt",
+   "chunks": [
+    [
+     "doc:PYTHON/Python Bài 1 - Biến, kiểu dữ liệu và toán tử.txt:p1",
+     "Bài 1. Biến, kiểu dữ liệu và toán tử trong Python\n\nMục tiêu: hiểu cách khai báo biến, nắm các kiểu dữ liệu cơ bản và dùng được các toán tử.\n\nPython là ngôn ngữ thông dịch, kiểu động (dynamic typing): không cần khai báo kiểu khi tạo biến, kiểu được xác định theo giá trị gán vào. Code Python dùng thụt lề (indent) để xác định khối lệnh thay cho dấu ngoặc nhọn."
+    ],
+    [
+     "doc:PYTHON/Python Bài 1 - Biến, kiểu dữ liệu và toán tử.txt:p2",
+     "1. Biến và phép gán\n\nBiến là tên tham chiếu tới một giá trị trong bộ nhớ. Gán bằng dấu =.\n\n    ten = \"An\"\n    tuoi = 20\n    diem = 8.5\n    dang_hoc = True\n\nQuy tắc đặt tên: bắt đầu bằng chữ cái hoặc dấu gạch dưới, chỉ chứa chữ, số và gạch dưới, phân biệt chữ hoa chữ thường (tuoi khác Tuoi), không trùng từ khóa như if, for, class. Quy ước PEP 8: dùng snake_case, ví dụ so_luong_sinh_vien.\n\nGán nhiều biến cùng lúc: a, b = 1, 2. Hoán đổi hai biến: a, b = b, a."
+    ],
+    [
+     "doc:PYTHON/Python Bài 1 - Biến, kiểu dữ liệu và toán tử.txt:p3",
+     "2. Các kiểu dữ liệu cơ bản\n\n- int: số nguyên, không giới hạn độ lớn (ví dụ 42, -7, 2**100).\n- float: số thực (3.14, 1e-3). Lưu ý sai số làm tròn: 0.1 + 0.2 không đúng bằng 0.3.\n- str: chuỗi ký tự, đặt trong dấu nháy đơn hoặc kép.\n- bool: True hoặc False.\n- NoneType: giá trị None, nghĩa là \"không có giá trị\".\n\nKiểm tra kiểu bằng type(x) hoặc isinstance(x, int). Ép kiểu: int(\"12\"), float(\"3.5\"), str(100), bool(0) cho kết quả False."
+    ],
+    [
+     "doc:PYTHON/Python Bài 1 - Biến, kiểu dữ liệu và toán tử.txt:p4",
+     "3. Toán tử\n\nToán tử số học: + - * / (chia ra số thực), // (chia lấy phần nguyên), % (chia lấy dư), ** (lũy thừa). Ví dụ 7 // 2 = 3, 7 % 2 = 1, 2 ** 10 = 1024.\n\nToán tử so sánh: == != < > <= >= cho kết quả bool. Python cho phép so sánh dây chuyền: 0 < x < 10.\n\nToán tử logic: and, or, not. Toán tử and/or có tính chất đoản mạch: vế sau chỉ được tính khi cần.\n\nToán tử gán rút gọn: x += 1 tương đương x = x + 1; tương tự -=, *=, /=.\n\nToán tử thành viên: in, not in (kiểm tra phần tử có trong dãy hay không). Toán tử đồng nhất: is, is not (so sánh cùng một đối tượng)."
+    ],
+    [
+     "doc:PYTHON/Python Bài 1 - Biến, kiểu dữ liệu và toán tử.txt:p5",
+     "4. Nhập xuất và chuỗi\n\nXuất dữ liệu: print(\"Xin chào\", ten). Nhập dữ liệu: input(\"Nhập tuổi: \") luôn trả về chuỗi, nên cần ép kiểu: tuoi = int(input()).\n\nĐịnh dạng chuỗi bằng f-string (khuyên dùng):\n\n    print(f\"{ten} có điểm {diem:.1f}\")\n\nMột số phương thức chuỗi: upper(), lower(), strip() (bỏ khoảng trắng hai đầu), split(\",\") (tách chuỗi thành list), join() (ghép list thành chuỗi), replace(a, b), find(x), startswith(x).\n\nChuỗi là bất biến (immutable): không thể sửa từng ký tự tại chỗ, mọi phương thức đều trả về chuỗi mới. Truy cập ký tự bằng chỉ số s[0], s[-1]; cắt chuỗi bằng slicing s[1:4], s[::-1] (đảo ngược)."
+    ],
+    [
+     "doc:PYTHON/Python Bài 1 - Biến, kiểu dữ liệu và toán tử.txt:p6",
+     "5. Tóm tắt và bài tập gợi ý\n\nGhi nhớ: biến không cần khai báo kiểu; có 5 kiểu cơ bản int, float, str, bool, NoneType; / luôn cho số thực còn // cho phần nguyên; input() luôn trả về chuỗi; chuỗi là bất biến.\n\nBài tập gợi ý:\n1. Nhập hai số, in tổng, hiệu, tích, thương và phần dư.\n2. Nhập họ tên, in ra tên viết hoa và số ký tự (không tính khoảng trắng đầu cuối).\n3. Nhập bán kính, tính chu vi và diện tích hình tròn, làm tròn 2 chữ số thập phân."
+    ]
+   ]
+  },
+  {
+   "course": "Lập trình Python",
+   "chapter": "Cú pháp cơ bản",
+   "title": "Python Bài 2 - Cấu trúc điều khiển và hàm.txt",
+   "file_type": "txt",
+   "file_path": "dataset/authored/PYTHON/Python Bài 2 - Cấu trúc điều khiển và hàm.txt",
+   "chunks": [
+    [
+     "doc:PYTHON/Python Bài 2 - Cấu trúc điều khiển và hàm.txt:p1",
+     "Bài 2. Cấu trúc điều khiển và hàm\n\nMục tiêu: viết được chương trình rẽ nhánh, vòng lặp, tự định nghĩa hàm và xử lý lỗi cơ bản."
+    ],
+    [
+     "doc:PYTHON/Python Bài 2 - Cấu trúc điều khiển và hàm.txt:p2",
+     "1. Câu lệnh rẽ nhánh if\n\n    if diem >= 8:\n        xep_loai = \"Giỏi\"\n    elif diem >= 6.5:\n        xep_loai = \"Khá\"\n    else:\n        xep_loai = \"Trung bình\"\n\nSau dấu hai chấm là khối lệnh thụt lề (thường 4 khoảng trắng). Biểu thức điều kiện có thể dùng and, or, not. Biểu thức điều kiện một dòng: ket_qua = \"Đạt\" if diem >= 5 else \"Không đạt\".\n\nCác giá trị được coi là False: 0, 0.0, chuỗi rỗng \"\", list rỗng [], dict rỗng {}, None."
+    ],
+    [
+     "doc:PYTHON/Python Bài 2 - Cấu trúc điều khiển và hàm.txt:p3",
+     "2. Vòng lặp for và while\n\nfor duyệt qua từng phần tử của một dãy:\n\n    for i in range(5):        # 0, 1, 2, 3, 4\n        print(i)\n    for ten in [\"An\", \"Bình\"]:\n        print(ten)\n\nrange(a, b, bước) tạo dãy số từ a đến b-1. Dùng enumerate(ds) để lấy cả chỉ số và giá trị, zip(a, b) để duyệt song song hai dãy.\n\nwhile lặp khi điều kiện còn đúng:\n\n    n = 10\n    while n > 0:\n        n -= 3\n\nbreak thoát khỏi vòng lặp, continue bỏ qua phần còn lại của lần lặp hiện tại. Khối else của vòng lặp chạy khi vòng lặp kết thúc bình thường (không bị break)."
+    ],
+    [
+     "doc:PYTHON/Python Bài 2 - Cấu trúc điều khiển và hàm.txt:p4",
+     "3. Định nghĩa hàm\n\n    def tinh_dien_tich(dai, rong=1):\n        \"\"\"Trả về diện tích hình chữ nhật.\"\"\"\n        return dai * rong\n\n- def khai báo hàm, return trả về giá trị (không có return thì hàm trả về None).\n- Tham số có giá trị mặc định (rong=1) phải đứng sau tham số bắt buộc.\n- Gọi hàm theo vị trí tinh_dien_tich(3, 4) hoặc theo tên tinh_dien_tich(rong=4, dai=3).\n- *args nhận số lượng tham số vị trí tùy ý (dạng tuple), **kwargs nhận tham số theo tên (dạng dict).\n- Hàm có thể trả về nhiều giá trị: return tong, hieu (thực chất là một tuple)."
+    ],
+    [
+     "doc:PYTHON/Python Bài 2 - Cấu trúc điều khiển và hàm.txt:p5",
+     "4. Phạm vi biến và hàm lambda\n\nBiến tạo trong hàm là biến cục bộ, chỉ tồn tại trong hàm. Muốn sửa biến toàn cục từ trong hàm phải khai báo global ten_bien, nhưng nên hạn chế và ưu tiên truyền tham số/trả về giá trị.\n\nHàm lambda là hàm ẩn danh một biểu thức: binh_phuong = lambda x: x * x. Thường dùng làm khóa sắp xếp:\n\n    sinh_vien.sort(key=lambda sv: sv[\"diem\"], reverse=True)\n\nCác hàm dựng sẵn hay dùng: len, sum, min, max, sorted, abs, round, map, filter, any, all."
+    ],
+    [
+     "doc:PYTHON/Python Bài 2 - Cấu trúc điều khiển và hàm.txt:p6",
+     "5. Xử lý ngoại lệ và đọc ghi tệp\n\nBắt lỗi bằng try/except để chương trình không dừng đột ngột:\n\n    try:\n        so = int(input(\"Nhập số: \"))\n        print(10 / so)\n    except ValueError:\n        print(\"Bạn phải nhập số nguyên\")\n    except ZeroDivisionError:\n        print(\"Không chia được cho 0\")\n    finally:\n        print(\"Kết thúc\")\n\nKhối finally luôn chạy. Ném lỗi chủ động bằng raise ValueError(\"thông báo\").\n\nĐọc ghi tệp nên dùng with để tệp tự đóng:\n\n    with open(\"diem.txt\", \"w\", encoding=\"utf-8\") as f:\n        f.write(\"An 9.0\\n\")\n    with open(\"diem.txt\", encoding=\"utf-8\") as f:\n        for dong in f:\n            print(dong.strip())\n\nChế độ mở: \"r\" đọc, \"w\" ghi (xóa nội dung cũ), \"a\" ghi nối tiếp. Luôn chỉ định encoding=\"utf-8\" khi làm việc với tiếng Việt."
+    ]
+   ]
+  },
+  {
+   "course": "Lập trình Python",
+   "chapter": "Cú pháp cơ bản",
+   "title": "Python Bài 3 - List, tuple, dict và set.txt",
+   "file_type": "txt",
+   "file_path": "dataset/authored/PYTHON/Python Bài 3 - List, tuple, dict và set.txt",
+   "chunks": [
+    [
+     "doc:PYTHON/Python Bài 3 - List, tuple, dict và set.txt:p1",
+     "Bài 3. Các cấu trúc dữ liệu có sẵn: list, tuple, dict, set\n\nMục tiêu: chọn đúng cấu trúc dữ liệu và sử dụng thành thạo các thao tác thường gặp."
+    ],
+    [
+     "doc:PYTHON/Python Bài 3 - List, tuple, dict và set.txt:p2",
+     "1. List (danh sách)\n\nList là dãy có thứ tự, có thể thay đổi (mutable), chứa phần tử thuộc nhiều kiểu.\n\n    ds = [3, 1, 4]\n    ds.append(1)        # thêm cuối\n    ds.insert(0, 9)     # chèn tại vị trí 0\n    ds.remove(4)        # xóa giá trị đầu tiên bằng 4\n    x = ds.pop()        # lấy và xóa phần tử cuối\n    ds.sort()           # sắp xếp tại chỗ\n    sorted(ds)          # trả về list mới đã sắp xếp\n\nTruy cập theo chỉ số ds[0], ds[-1]; cắt lát ds[1:3]. Độ dài len(ds). Duyệt bằng for. Sao chép nông bằng ds.copy() hoặc ds[:]. Lưu ý: b = a không sao chép mà chỉ tạo thêm một tên trỏ tới cùng list."
+    ],
+    [
+     "doc:PYTHON/Python Bài 3 - List, tuple, dict và set.txt:p3",
+     "2. Tuple (bộ)\n\nTuple giống list nhưng bất biến (immutable): không thêm, xóa, sửa phần tử sau khi tạo.\n\n    toa_do = (10, 20)\n    x, y = toa_do         # giải nén (unpacking)\n\nDùng tuple cho dữ liệu cố định (tọa độ, ngày tháng), làm khóa của dict, và khi hàm trả về nhiều giá trị. Tuple một phần tử phải có dấu phẩy: (5,)."
+    ],
+    [
+     "doc:PYTHON/Python Bài 3 - List, tuple, dict và set.txt:p4",
+     "3. Dict (từ điển)\n\nDict lưu cặp khóa - giá trị, tra cứu theo khóa rất nhanh (cài đặt bằng bảng băm). Khóa phải là kiểu bất biến và không trùng nhau.\n\n    sv = {\"ten\": \"An\", \"diem\": 9.0}\n    sv[\"lop\"] = \"KHMT01\"          # thêm hoặc sửa\n    sv.get(\"tuoi\", 0)             # lấy an toàn, không có khóa trả về 0\n    for k, v in sv.items():\n        print(k, v)\n    del sv[\"diem\"]\n\nCác phương thức: keys(), values(), items(), pop(khóa), update(dict_khác). Truy cập khóa không tồn tại bằng sv[\"x\"] gây KeyError, nên dùng get() hoặc kiểm tra \"x\" in sv."
+    ],
+    [
+     "doc:PYTHON/Python Bài 3 - List, tuple, dict và set.txt:p5",
+     "4. Set (tập hợp)\n\nSet là tập các phần tử duy nhất, không có thứ tự, kiểm tra thành viên rất nhanh.\n\n    a = {1, 2, 3}\n    b = {3, 4}\n    a | b    # hợp: {1,2,3,4}\n    a & b    # giao: {3}\n    a - b    # hiệu: {1,2}\n    a ^ b    # hiệu đối xứng\n\nDùng set để loại phần tử trùng: list(set(ds)). Tạo set rỗng phải dùng set() vì {} là dict rỗng."
+    ],
+    [
+     "doc:PYTHON/Python Bài 3 - List, tuple, dict và set.txt:p6",
+     "5. List comprehension và chọn cấu trúc phù hợp\n\nList comprehension tạo list ngắn gọn:\n\n    binh_phuong = [x * x for x in range(10)]\n    chan = [x for x in range(20) if x % 2 == 0]\n    do_dai = {t: len(t) for t in [\"an\", \"binh\"]}   # dict comprehension\n\nChọn cấu trúc: cần thứ tự và hay thay đổi -> list; dữ liệu cố định -> tuple; tra cứu theo khóa -> dict; loại trùng hoặc phép toán tập hợp -> set.\n\nĐộ phức tạp trung bình: truy cập list theo chỉ số O(1), tìm phần tử trong list O(n), kiểm tra thành viên trong set hoặc dict O(1)."
+    ]
+   ]
+  },
+  {
+   "course": "Lập trình Python",
+   "chapter": "Lập trình hướng đối tượng",
+   "title": "Python Bài 4 - Lập trình hướng đối tượng trong Python.txt",
+   "file_type": "txt",
+   "file_path": "dataset/authored/PYTHON/Python Bài 4 - Lập trình hướng đối tượng trong Python.txt",
+   "chunks": [
+    [
+     "doc:PYTHON/Python Bài 4 - Lập trình hướng đối tượng trong Python.txt:p1",
+     "Bài 4. Lập trình hướng đối tượng (OOP) trong Python\n\nMục tiêu: định nghĩa lớp, tạo đối tượng, vận dụng kế thừa, đa hình, đóng gói."
+    ],
+    [
+     "doc:PYTHON/Python Bài 4 - Lập trình hướng đối tượng trong Python.txt:p2",
+     "1. Lớp và đối tượng\n\nLớp (class) là khuôn mẫu, đối tượng (object) là một thể hiện cụ thể của lớp.\n\n    class SinhVien:\n        so_luong = 0                      # thuộc tính của lớp\n\n        def __init__(self, ten, diem):    # hàm khởi tạo\n            self.ten = ten                # thuộc tính của đối tượng\n            self.diem = diem\n            SinhVien.so_luong += 1\n\n        def gioi_thieu(self):\n            return f\"{self.ten} - {self.diem}\"\n\n    an = SinhVien(\"An\", 9.0)\n    print(an.gioi_thieu())\n\nself là đối tượng đang gọi phương thức và phải là tham số đầu tiên của phương thức thường. __init__ chạy tự động khi tạo đối tượng."
+    ],
+    [
+     "doc:PYTHON/Python Bài 4 - Lập trình hướng đối tượng trong Python.txt:p3",
+     "2. Đóng gói (Encapsulation)\n\nĐóng gói là giấu dữ liệu bên trong lớp và chỉ cho truy cập qua phương thức. Python quy ước: tên bắt đầu bằng một gạch dưới (_diem) là \"nội bộ\", hai gạch dưới (__diem) bị đổi tên để khó truy cập từ ngoài.\n\n    class TaiKhoan:\n        def __init__(self, so_du):\n            self.__so_du = so_du\n\n        @property\n        def so_du(self):\n            return self.__so_du\n\n        def rut(self, tien):\n            if tien > self.__so_du:\n                raise ValueError(\"Không đủ số dư\")\n            self.__so_du -= tien\n\nDecorator @property cho phép truy cập như thuộc tính nhưng vẫn kiểm soát được việc đọc/ghi."
+    ],
+    [
+     "doc:PYTHON/Python Bài 4 - Lập trình hướng đối tượng trong Python.txt:p4",
+     "3. Kế thừa (Inheritance)\n\nLớp con kế thừa thuộc tính và phương thức của lớp cha, giúp tái sử dụng mã.\n\n    class Nguoi:\n        def __init__(self, ten):\n            self.ten = ten\n\n    class GiangVien(Nguoi):\n        def __init__(self, ten, khoa):\n            super().__init__(ten)     # gọi hàm khởi tạo của lớp cha\n            self.khoa = khoa\n\nCú pháp class Con(Cha). super() trả về đối tượng đại diện lớp cha. Python hỗ trợ đa kế thừa: class C(A, B). Thứ tự tìm phương thức tuân theo MRO (Method Resolution Order), xem bằng C.__mro__. Kiểm tra bằng isinstance(obj, Lop) và issubclass(Con, Cha)."
+    ],
+    [
+     "doc:PYTHON/Python Bài 4 - Lập trình hướng đối tượng trong Python.txt:p5",
+     "4. Đa hình (Polymorphism) và ghi đè phương thức\n\nĐa hình: cùng một lời gọi phương thức nhưng hành vi khác nhau tùy kiểu đối tượng. Lớp con ghi đè (override) phương thức của lớp cha.\n\n    class Hinh:\n        def dien_tich(self):\n            raise NotImplementedError\n\n    class HinhVuong(Hinh):\n        def __init__(self, a): self.a = a\n        def dien_tich(self): return self.a ** 2\n\n    class HinhTron(Hinh):\n        def __init__(self, r): self.r = r\n        def dien_tich(self): return 3.14159 * self.r ** 2\n\n    for h in [HinhVuong(2), HinhTron(1)]:\n        print(h.dien_tich())\n\nPython dùng \"duck typing\": chỉ cần đối tượng có phương thức cần gọi là dùng được, không bắt buộc cùng lớp cha."
+    ],
+    [
+     "doc:PYTHON/Python Bài 4 - Lập trình hướng đối tượng trong Python.txt:p6",
+     "5. Phương thức đặc biệt, phương thức lớp và tĩnh\n\nPhương thức đặc biệt (dunder) bắt đầu và kết thúc bằng hai gạch dưới:\n- __str__: chuỗi hiển thị khi print(obj).\n- __repr__: chuỗi biểu diễn dành cho lập trình viên.\n- __len__, __eq__, __lt__, __add__: định nghĩa len(), ==, <, + cho đối tượng.\n\n@classmethod nhận cls thay cho self, thường dùng làm hàm tạo thay thế. @staticmethod không nhận self hay cls, như một hàm thường đặt trong lớp.\n\nBốn tính chất của OOP: đóng gói, kế thừa, đa hình, trừu tượng. Trừu tượng hóa dùng module abc (ABC, abstractmethod) để buộc lớp con cài đặt các phương thức bắt buộc."
+    ]
+   ]
+  },
+  {
+   "course": "Lập trình Python",
+   "chapter": "Xử lý dữ liệu với Pandas",
+   "title": "Python Bài 5 - Xử lý dữ liệu với Pandas.txt",
+   "file_type": "txt",
+   "file_path": "dataset/authored/PYTHON/Python Bài 5 - Xử lý dữ liệu với Pandas.txt",
+   "chunks": [
+    [
+     "doc:PYTHON/Python Bài 5 - Xử lý dữ liệu với Pandas.txt:p1",
+     "Bài 5. Xử lý dữ liệu với Pandas\n\nMục tiêu: đọc dữ liệu bảng, làm sạch, lọc, thống kê và tổng hợp bằng thư viện Pandas.\n\nPandas là thư viện phân tích dữ liệu bảng của Python, xây dựng trên NumPy. Cài đặt: pip install pandas. Quy ước nhập: import pandas as pd."
+    ],
+    [
+     "doc:PYTHON/Python Bài 5 - Xử lý dữ liệu với Pandas.txt:p2",
+     "1. Series và DataFrame\n\nSeries là cột dữ liệu một chiều có nhãn chỉ số. DataFrame là bảng hai chiều gồm nhiều Series chung chỉ số.\n\n    import pandas as pd\n    df = pd.DataFrame({\n        \"ten\": [\"An\", \"Bình\", \"Chi\"],\n        \"diem\": [9.0, 7.5, 8.0],\n        \"lop\": [\"A\", \"B\", \"A\"],\n    })\n\nXem nhanh: df.head(), df.tail(), df.shape (số dòng, số cột), df.info() (kiểu dữ liệu, giá trị thiếu), df.describe() (thống kê mô tả)."
+    ],
+    [
+     "doc:PYTHON/Python Bài 5 - Xử lý dữ liệu với Pandas.txt:p3",
+     "2. Đọc và ghi dữ liệu\n\n    df = pd.read_csv(\"diem.csv\", encoding=\"utf-8\")\n    df = pd.read_excel(\"diem.xlsx\", sheet_name=\"Sheet1\")\n    df.to_csv(\"ket_qua.csv\", index=False, encoding=\"utf-8-sig\")\n\nindex=False để không ghi cột chỉ số. Dùng encoding=\"utf-8-sig\" khi xuất CSV tiếng Việt để Excel hiển thị đúng dấu."
+    ],
+    [
+     "doc:PYTHON/Python Bài 5 - Xử lý dữ liệu với Pandas.txt:p4",
+     "3. Chọn và lọc dữ liệu\n\n    df[\"diem\"]                    # chọn một cột (Series)\n    df[[\"ten\", \"diem\"]]           # chọn nhiều cột\n    df.loc[0, \"ten\"]              # theo nhãn\n    df.iloc[0, 1]                 # theo vị trí\n    df[df[\"diem\"] >= 8]           # lọc dòng theo điều kiện\n    df[(df[\"diem\"] >= 8) & (df[\"lop\"] == \"A\")]\n\nKhi kết hợp nhiều điều kiện phải dùng & (và), | (hoặc), ~ (phủ định) và đặt từng điều kiện trong ngoặc đơn, không dùng and/or. Thêm cột mới: df[\"xep_loai\"] = df[\"diem\"].apply(lambda d: \"Giỏi\" if d >= 8 else \"Khá\"). Sắp xếp: df.sort_values(\"diem\", ascending=False)."
+    ],
+    [
+     "doc:PYTHON/Python Bài 5 - Xử lý dữ liệu với Pandas.txt:p5",
+     "4. Làm sạch dữ liệu\n\n    df.isna().sum()                 # đếm giá trị thiếu theo cột\n    df.dropna()                     # bỏ dòng có giá trị thiếu\n    df[\"diem\"].fillna(df[\"diem\"].mean())   # điền bằng trung bình\n    df.drop_duplicates()            # bỏ dòng trùng\n    df[\"diem\"] = df[\"diem\"].astype(float)  # đổi kiểu dữ liệu\n    df.rename(columns={\"ten\": \"ho_ten\"})\n\nQuy trình điển hình: đọc dữ liệu, kiểm tra kiểu và giá trị thiếu, xử lý trùng lặp, chuẩn hóa kiểu dữ liệu, rồi mới phân tích."
+    ],
+    [
+     "doc:PYTHON/Python Bài 5 - Xử lý dữ liệu với Pandas.txt:p6",
+     "5. Nhóm và tổng hợp\n\ngroupby gom nhóm theo giá trị một hoặc nhiều cột rồi áp dụng hàm tổng hợp:\n\n    df.groupby(\"lop\")[\"diem\"].mean()\n    df.groupby(\"lop\").agg(diem_tb=(\"diem\", \"mean\"), so_sv=(\"ten\", \"count\"))\n\nGhép bảng: pd.merge(a, b, on=\"ma_sv\", how=\"left\") (how có thể là inner, left, right, outer). Nối bảng theo chiều dọc: pd.concat([a, b]). Bảng tổng hợp chéo: pd.pivot_table(df, values=\"diem\", index=\"lop\", aggfunc=\"mean\").\n\nVẽ biểu đồ nhanh: df[\"diem\"].plot(kind=\"hist\") (cần matplotlib)."
+    ]
+   ]
+  }
+ ]
+}

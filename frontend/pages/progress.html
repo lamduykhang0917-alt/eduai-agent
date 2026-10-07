@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tiến độ học tập — EduAI</title>
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/luxe.css">
+</head>
+<body>
+<div class="app-shell">
+  <nav class="topnav">
+  <div class="topnav-inner">
+    <a class="topnav-logo" href="dashboard.html"><span class="mark">E</span>EduAI</a>
+    <div class="topnav-links">
+    <a class="nav-item" href="dashboard.html">Dashboard</a>
+    <a class="nav-item" href="courses.html">Môn học</a>
+    <a class="nav-item" href="documents.html">Tài liệu</a>
+    <a class="nav-item" href="chatbot.html">Hỏi AI</a>
+    <a class="nav-item" href="quiz-list.html">Ôn tập & Kiểm tra</a>
+    <a class="nav-item active" href="progress.html">Tiến độ học tập</a>
+    <a class="nav-item" href="study.html">Kế hoạch & Ghi chú</a>
+    </div>
+  <div class="topnav-actions">
+    <a class="nav-item" href="#" onclick="logout(); return false;">Đăng xuất</a>
+  </div>
+  </div>
+  <div class="topnav-mobile">
+    <a class="nav-item" href="dashboard.html">Dashboard</a>
+    <a class="nav-item" href="courses.html">Môn học</a>
+    <a class="nav-item" href="documents.html">Tài liệu</a>
+    <a class="nav-item" href="chatbot.html">Hỏi AI</a>
+    <a class="nav-item" href="quiz-list.html">Ôn tập & Kiểm tra</a>
+    <a class="nav-item active" href="progress.html">Tiến độ học tập</a>
+    <a class="nav-item" href="study.html">Kế hoạch & Ghi chú</a>
+    <a class="nav-item" href="#" onclick="logout(); return false;">Đăng xuất</a>
+  </div>
+</nav>
+  <main class="main-content">
+    <section class="page-hero" style="background:linear-gradient(120deg,#064e3b 0%,#059669 60%,#2dd4bf 120%);">
+      <div class="copy"><h2>Tiến độ học tập</h2><p>Theo dõi điểm số, số bài đã làm và môn nào cần ôn thêm.</p></div>
+      <div class="hero-art">📈</div>
+    </section>
+
+    <div class="grid grid-3" id="statCards" style="margin-bottom:20px;"></div>
+
+    <div class="card">
+      <h3 style="margin-top:0;">Tiến độ theo môn học</h3>
+      <div id="progressBars" style="display:flex; flex-direction:column; gap:18px;"></div>
+    </div>
+
+    <div class="card" style="margin-top:20px;">
+      <h3 style="margin-top:0;">Lịch sử bài kiểm tra</h3>
+      <table style="width:100%; border-collapse:collapse; font-size:14px;">
+        <thead><tr style="text-align:left; color:var(--text-secondary); font-size:12px; text-transform:uppercase;">
+          <th style="padding:8px 0;">Môn học</th><th>Độ khó</th><th>Điểm</th><th>Ngày làm</th>
+        </tr></thead>
+        <tbody id="resultRows"></tbody>
+      </table>
+    </div>
+  </main>
+</div>
+<script src="../js/api.js"></script>
+<script>
+requireRole("STUDENT");
+async function load() {
+  const [progress, results] = await Promise.all([Api.progress(), Api.results()]);
+
+  document.getElementById("statCards").innerHTML = `
+    <div class="card stat-card"><div class="label">Bài kiểm tra hoàn thành</div><div class="value">${progress.total_quizzes_completed}</div></div>
+    <div class="card stat-card"><div class="label">Điểm trung bình</div><div class="value">${progress.average_score}/10</div></div>
+    <div class="card stat-card"><div class="label">Môn học đang theo dõi</div><div class="value">${progress.by_course.length}</div></div>
+  `;
+
+  document.getElementById("progressBars").innerHTML = progress.by_course.length
+    ? progress.by_course.map(p => `
+      <div>
+        <div style="display:flex; justify-content:space-between; font-size:14px; margin-bottom:6px;">
+          <span style="font-weight:600;">${p.course_name}</span><span>${Math.round(p.percent_complete)}%</span>
+        </div>
+        <div class="progress-track"><div class="progress-fill" style="width:${p.percent_complete}%;"></div></div>
+      </div>`).join("")
+    : `<div style="color:var(--text-muted);">Chưa có dữ liệu tiến độ.</div>`;
+
+  document.getElementById("resultRows").innerHTML = results.length
+    ? results.map(r => `
+      <tr style="border-top:1px solid var(--border-subtle);">
+        <td style="padding:10px 0;">${r.course_name || "—"}</td>
+        <td>${({level1:"Mức 1",level2:"Mức 2",level3:"Mức 3",basic:"Cơ bản",medium:"Trung bình",advanced:"Nâng cao",mixed:"Hỗn hợp"})[r.difficulty] || r.difficulty}</td>
+        <td style="font-weight:600;">${r.score}/10</td>
+        <td>${r.submitted_at ? r.submitted_at.split(" ")[0] : "—"}</td>
+      </tr>`).join("")
+    : `<tr><td colspan="4" style="padding:20px 0; color:var(--text-muted); text-align:center;">Chưa có bài kiểm tra nào.</td></tr>`;
+}
+load();
+</script>
+</body>
+</html>

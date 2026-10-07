@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cấu hình AI — EduAI Admin</title>
+<link rel="stylesheet" href="../css/style.css">
+<style>
+  .config-row { display:flex; justify-content:space-between; padding:12px 0; border-bottom:1px solid var(--border-subtle); font-size:14px; }
+  .config-row:last-child { border-bottom:none; }
+  .status-dot { width:8px; height:8px; border-radius:50%; background:var(--success); display:inline-block; margin-right:6px; }
+  .step-line { display:flex; align-items:center; gap:10px; font-size:13px; color:var(--text-muted); padding:6px 0; }
+  .step-line.done { color:var(--success); }
+  .step-line .dot { width:8px; height:8px; border-radius:50%; background:var(--border-subtle); flex-shrink:0; }
+  .step-line.done .dot { background:var(--success); }
+  .step-line.active .dot { background:var(--indigo-500); }
+  .ai-layout { display:grid; grid-template-columns:1.5fr 1fr; gap:20px; align-items:start; }
+  @media (max-width:1000px) { .ai-layout { grid-template-columns:1fr; } }
+  .ai-layout .card { padding:28px; }
+  .config-row { font-size:15px !important; padding:14px 0 !important; gap:20px; }
+  .config-row strong { text-align:right; }
+  .flow { padding-left:20px; font-size:14px; line-height:1.9; color:var(--text-secondary); }
+  .flow b { color:var(--text-primary); }
+  .empty-hint { text-align:center; padding:32px 16px; color:var(--text-muted); font-size:14px; }
+</style>
+<link rel="stylesheet" href="../css/luxe.css">
+</head>
+<body>
+<div class="app-shell">
+  <nav class="topnav">
+  <div class="topnav-inner">
+    <a class="topnav-logo" href="admin-dashboard.html"><span class="mark">E</span>EduAI Admin</a>
+    <div class="topnav-links">
+    <a class="nav-item" href="admin-dashboard.html">Dashboard</a>
+    <a class="nav-item" href="admin-users.html">Tài khoản</a>
+    <a class="nav-item" href="admin-courses.html">Môn học</a>
+    <a class="nav-item" href="admin-questions.html">Ngân hàng câu hỏi</a>
+    <a class="nav-item" href="admin-logs.html">Hoạt động hệ thống</a>
+    <a class="nav-item active" href="admin-ai-config.html">Cấu hình AI</a>
+    <a class="nav-item" href="admin-agent.html">Agent</a>
+    </div>
+  <div class="topnav-actions">
+    <a class="nav-item" href="#" onclick="logout(); return false;">Đăng xuất</a>
+  </div>
+  </div>
+  <div class="topnav-mobile">
+    <a class="nav-item" href="admin-dashboard.html">Dashboard</a>
+    <a class="nav-item" href="admin-users.html">Tài khoản</a>
+    <a class="nav-item" href="admin-courses.html">Môn học</a>
+    <a class="nav-item" href="admin-questions.html">Ngân hàng câu hỏi</a>
+    <a class="nav-item" href="admin-logs.html">Hoạt động hệ thống</a>
+    <a class="nav-item active" href="admin-ai-config.html">Cấu hình AI</a>
+    <a class="nav-item" href="admin-agent.html">Agent</a>
+    <a class="nav-item" href="#" onclick="logout(); return false;">Đăng xuất</a>
+  </div>
+</nav>
+  <main class="main-content">
+    <section class="page-hero" style="background:linear-gradient(120deg,#0f172a,#1d4ed8 65%,#0ea5e9 125%);">
+      <div class="copy"><h2>Cấu hình AI</h2><p>Trạng thái mô hình NLP và dataset</p>
+        <div class="hero-cta"><div>
+        <span class="badge badge-green" id="statusBadge" style="background:#fff;"><span class="status-dot"></span>AI Status: Online</span>
+      </div></div></div>
+      <div class="hero-art">🤖</div>
+    </section>
+
+    <div class="ai-layout">
+    <div class="card">
+      <div style="display:flex; justify-content:space-between; align-items:center;">
+        <div>
+          <h3 style="margin:0 0 4px;">Cấu hình hệ thống</h3>
+          <div style="font-size:13px; color:var(--text-secondary);">Truy xuất và xem thông tin cấu hình AI hiện tại của hệ thống</div>
+        </div>
+        <button class="btn btn-primary" onclick="runConfigFlow()" id="configBtn">⚙️ Cấu hình hệ thống</button>
+      </div>
+
+      <div id="stepBox" style="display:none; margin-top:18px; padding-top:14px; border-top:1px solid var(--border-subtle);">
+        <div class="step-line" id="step1"><span class="dot"></span> Hệ thống tiếp nhận yêu cầu</div>
+        <div class="step-line" id="step2"><span class="dot"></span> Hệ thống truy xuất thông tin cấu hình</div>
+        <div class="step-line" id="step3"><span class="dot"></span> Hệ thống hiển thị thông tin cấu hình hiện tại</div>
+      </div>
+
+      <div id="emptyHint" class="empty-hint">Nhấn "Cấu hình hệ thống" để xem thông tin cấu hình AI hiện tại.</div>
+      <div id="configRows" style="display:none; margin-top:10px;"></div>
+
+      <div style="display:flex; gap:10px; margin-top:18px;">
+        <button class="btn btn-secondary" onclick="testAi()">🧪 Kiểm tra AI</button>
+        <button class="btn btn-secondary" onclick="reloadModel()">🔄 Reload model / dataset</button>
+      </div>
+      <div id="testResult" style="margin-top:14px; font-size:13px; color:var(--text-secondary); display:none;"></div>
+    </div>
+
+    <div class="card">
+      <h3 style="margin-top:0;">Cách chatbot chọn nhà cung cấp AI</h3>
+      <ol class="flow">
+        <li><b>Claude</b> được thử đầu tiên (nếu có <code>ANTHROPIC_API_KEY</code>).</li>
+        <li>Lỗi hoặc quá tải thì chuyển sang <b>Gemini</b> (<code>GEMINI_API_KEY</code>).</li>
+        <li>Vẫn lỗi thì chuyển sang <b>Groq</b> (<code>GROQ_API_KEY</code>).</li>
+        <li>Không nhà cung cấp nào trả lời được thì dùng <b>tài liệu và kho kiến thức có sẵn</b> để trả lời tạm.</li>
+      </ol>
+      <p style="font-size:13px; color:var(--text-secondary); line-height:1.6; margin-bottom:0;">
+        Khóa API đặt trong biến môi trường của máy chủ (Render → Environment), không nhập trên trang này để tránh lộ khóa.
+      </p>
+    </div>
+    </div>
+  </main>
+</div>
+<script src="../js/api.js"></script>
+<script>
+requireRole("ADMIN");
+
+function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
+
+function setStep(id, state) {
+  const el = document.getElementById(id);
+  el.classList.remove("active", "done");
+  if (state) el.classList.add(state);
+}
+
+async function runConfigFlow() {
+  const btn = document.getElementById("configBtn");
+  const stepBox = document.getElementById("stepBox");
+  const emptyHint = document.getElementById("emptyHint");
+  const configRows = document.getElementById("configRows");
+
+  btn.disabled = true;
+  emptyHint.style.display = "none";
+  configRows.style.display = "none";
+  stepBox.style.display = "block";
+
+  // Bước 1: Hệ thống tiếp nhận yêu cầu
+  setStep("step1", "active"); setStep("step2", null); setStep("step3", null);
+  await sleep(350);
+  setStep("step1", "done");
+
+  // Bước 2: Hệ thống truy xuất thông tin cấu hình
+  setStep("step2", "active");
+  let cfg;
+  try {
+    cfg = await Api.request("/api/admin/ai-config");
+  } catch (e) {
+    setStep("step2", null);
+    emptyHint.textContent = "Không thể truy xuất cấu hình: " + e.message;
+    emptyHint.style.display = "block";
+    btn.disabled = false;
+    return;
+  }
+  await sleep(350);
+  setStep("step2", "done");
+
+  // Bước 3: Hệ thống hiển thị thông tin cấu hình hiện tại
+  setStep("step3", "active");
+  await sleep(250);
+  const warningHtml = (cfg.llm_provider !== "dataset" && !cfg.api_key_configured) ? `
+    <div style="background:#fffbeb; border:1px solid #fde68a; color:#92400e; border-radius:8px; padding:12px 14px; font-size:13px; margin-bottom:14px;">
+      ⚠️ Chưa có khóa API nào (ANTHROPIC_API_KEY, GEMINI_API_KEY hoặc GROQ_API_KEY).
+      Chatbot đang dùng tài liệu và kho kiến thức có sẵn để trả lời.
+    </div>` : "";
+  configRows.innerHTML = warningHtml + `
+    <div class="config-row"><span>Nhà cung cấp AI</span><strong>${cfg.model}</strong></div>
+    <div class="config-row"><span>API key đã cấu hình</span><strong>${cfg.api_key_configured ? "Có ✅" : "Chưa ❌"}</strong></div>
+    <div class="config-row"><span>Chế độ dự phòng khi lỗi/chưa có key</span><strong>${cfg.fallback_mode || "—"}</strong></div>
+    <div class="config-row"><span>Ngưỡng tin cậy (chỉ áp dụng chế độ dataset)</span><strong>${cfg.confidence_threshold}</strong></div>
+    <div class="config-row"><span>Dataset Intents</span><strong style="font-size:12px;">${cfg.dataset_files.intents.split("/").pop()}</strong></div>
+    <div class="config-row"><span>Dataset Knowledge</span><strong style="font-size:12px;">${cfg.dataset_files.knowledge.split("/").pop()}</strong></div>
+    <div class="config-row"><span>Dataset Quiz</span><strong style="font-size:12px;">${cfg.dataset_files.quiz.split("/").pop()}</strong></div>
+  `;
+  configRows.style.display = "block";
+  setStep("step3", "done");
+  btn.disabled = false;
+}
+
+async function testAi() {
+  const box = document.getElementById("testResult");
+  box.style.display = "block";
+  box.textContent = "Đang gửi câu hỏi kiểm tra tới AI...";
+  try {
+    const res = await Api.chat("Dijkstra là gì?");
+    box.textContent = `✅ AI phản hồi thành công (intent: ${res.intent}, confidence: ${res.confidence})`;
+  } catch (e) {
+    box.textContent = "❌ Lỗi khi kiểm tra AI: " + e.message;
+  }
+}
+
+runConfigFlow();
+
+async function reloadModel() {
+  const res = await Api.request("/api/admin/ai-config/reload", { method: "POST" });
+  const box = document.getElementById("testResult");
+  box.style.display = "block";
+  box.textContent = "✅ " + res.message;
+}
+</script>
+</body>
+</html>

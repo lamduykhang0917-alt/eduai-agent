@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Làm bài kiểm tra — EduAI</title>
+<link rel="stylesheet" href="../css/style.css">
+<style>
+  body { background: var(--bg-page); }
+  .quiz-wrap { max-width: 640px; margin: 40px auto; padding: 0 16px; }
+  .quiz-top { display:flex; justify-content:space-between; align-items:center; margin-bottom:16px; }
+  .option-row {
+    border:1px solid var(--border-subtle); border-radius: var(--radius-sm); padding:14px;
+    margin-bottom:10px; cursor:pointer; font-size:14px; display:flex; align-items:center; gap:10px;
+  }
+  .option-row:hover { border-color: var(--indigo-400, #60a5fa); }
+  .option-row.selected { border-color: var(--indigo-500); background:#eef2ff; }
+  .option-key {
+    width:26px; height:26px; border-radius:50%; border:1px solid var(--border-subtle);
+    display:flex; align-items:center; justify-content:center; font-size:12px; font-weight:700; flex-shrink:0;
+  }
+  .option-row.selected .option-key { background: var(--indigo-500); color:white; border-color:var(--indigo-500); }
+  .quiz-nav { display:flex; justify-content:space-between; margin-top:20px; }
+</style>
+<link rel="stylesheet" href="../css/luxe.css">
+</head>
+<body>
+<div class="quiz-wrap">
+  <div class="card">
+    <div class="quiz-top">
+      <div>
+        <h2 style="margin:0;" id="quizTitle">Bài kiểm tra</h2>
+        <div class="sub" style="color:var(--text-secondary); font-size:13px;" id="quizProgress"></div>
+      </div>
+      <span class="badge badge-blue" id="timerBadge">⏱ 00:00</span>
+    </div>
+    <div class="progress-track" style="margin-bottom:22px;"><div class="progress-fill" id="progressFill" style="width:0%;"></div></div>
+
+    <div id="questionContent"></div>
+
+    <div class="quiz-nav">
+      <button class="btn btn-secondary" onclick="prevQuestion()" id="prevBtn">← Câu trước</button>
+      <button class="btn btn-primary" onclick="nextQuestion()" id="nextBtn">Câu tiếp theo</button>
+    </div>
+  </div>
+</div>
+<script src="../js/api.js"></script>
+<script>
+requireRole("STUDENT");
+const quizData = JSON.parse(sessionStorage.getItem("eduai_current_quiz") || "null");
+if (!quizData) window.location.href = "quiz-list.html";
+
+let current = 0;
+const answers = {};
+let seconds = 0;
+let timerInterval = setInterval(() => {
+  seconds++;
+  const m = String(Math.floor(seconds / 60)).padStart(2, "0");
+  const s = String(seconds % 60).padStart(2, "0");
+  document.getElementById("timerBadge").textContent = `⏱ ${m}:${s}`;
+}, 1000);
+
+function render() {
+  const q = quizData.questions[current];
+  document.getElementById("quizProgress").textContent = `Câu ${current + 1} / ${quizData.questions.length}`;
+  document.getElementById("progressFill").style.width = `${((current + 1) / quizData.questions.length) * 100}%`;
+
+  document.getElementById("questionContent").innerHTML = `
+    <div style="font-size:15px; font-weight:600; margin-bottom:16px;">${q.content}</div>
+    ${Object.entries(q.options).map(([key, text]) => `
+      <div class="option-row ${answers[q.id] === key ? 'selected' : ''}" onclick="selectOption('${q.id}', '${key}')">
+        <span class="option-key">${key}</span><span>${text}</span>
+      </div>`).join("")}
+  `;
+
+  document.getElementById("prevBtn").disabled = current === 0;
+  document.getElementById("nextBtn").textContent = current === quizData.questions.length - 1 ? "Nộp bài" : "Câu tiếp theo →";
+}
+
+function selectOption(qid, key) {
+  answers[qid] = key;
+  render();
+}
+
+function prevQuestion() {
+  if (current > 0) { current--; render(); }
+}
+
+async function nextQuestion() {
+  if (current < quizData.questions.length - 1) {
+    current++;
+    render();
+  } else {
+    clearInterval(timerInterval);
+    const payloadAnswers = quizData.questions.map(q => ({ question_id: q.id, selected_option: answers[q.id] || null }));
+    const result = await Api.submitQuiz(quizData.quiz_id, payloadAnswers, seconds);
+    sessionStorage.setItem("eduai_last_result", JSON.stringify(result));
+    window.location.href = "quiz-result.html";
+  }
+}
+
+render();
+</script>
+</body>
+</html>

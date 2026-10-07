@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hoạt động hệ thống — EduAI Admin</title>
+<link rel="stylesheet" href="../css/style.css">
+<style>
+  table { width:100%; border-collapse:collapse; font-size:14px; }
+  th { text-align:left; color:var(--text-secondary); font-size:12px; text-transform:uppercase; padding:10px 12px; border-bottom:1px solid var(--border-subtle); }
+  td { padding:11px 12px; border-bottom:1px solid var(--border-subtle); }
+  .filters { display:flex; flex-wrap:wrap; gap:10px; align-items:center; margin-bottom:16px; }
+  .filters input, .filters select { max-width:220px; }
+  .modal-overlay { position:fixed; inset:0; background:rgba(15,23,42,.45); display:none; align-items:center; justify-content:center; z-index:60; padding:16px; }
+  .modal-box { background:white; border-radius:16px; padding:26px; width:100%; max-width:480px; box-shadow:var(--shadow-elevated); }
+  .range-options { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin:14px 0; }
+  .range-option { border:1.5px solid var(--border-subtle); border-radius:12px; padding:12px 14px; cursor:pointer; font-size:14px; font-weight:600; display:flex; gap:10px; align-items:center; }
+  .range-option input { width:auto; margin:0; }
+  .range-option:has(input:checked) { border-color:var(--indigo-600); background:var(--indigo-50); color:var(--indigo-700); }
+  .range-option.danger:has(input:checked) { border-color:#e11d48; background:#fff1f2; color:#be123c; }
+  .range-option small { display:block; font-weight:400; color:var(--text-secondary); font-size:12px; }
+  .date-pair { display:none; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:10px; }
+  .date-pair label { font-size:12px; font-weight:600; color:var(--text-secondary); display:block; margin-bottom:4px; }
+  .btn-danger { background:#e11d48; color:#fff; border:none; border-radius:10px; padding:10px 18px; font-weight:700; font-size:14px; }
+  .btn-danger:hover { background:#be123c; }
+  .btn-danger:disabled { opacity:.6; }
+</style>
+<link rel="stylesheet" href="../css/luxe.css">
+</head>
+<body>
+<div class="app-shell">
+  <nav class="topnav">
+  <div class="topnav-inner">
+    <a class="topnav-logo" href="admin-dashboard.html"><span class="mark">E</span>EduAI Admin</a>
+    <div class="topnav-links">
+    <a class="nav-item" href="admin-dashboard.html">Dashboard</a>
+    <a class="nav-item" href="admin-users.html">Tài khoản</a>
+    <a class="nav-item" href="admin-courses.html">Môn học</a>
+    <a class="nav-item" href="admin-questions.html">Ngân hàng câu hỏi</a>
+    <a class="nav-item active" href="admin-logs.html">Hoạt động hệ thống</a>
+    <a class="nav-item" href="admin-ai-config.html">Cấu hình AI</a>
+    <a class="nav-item" href="admin-agent.html">Agent</a>
+    </div>
+  <div class="topnav-actions">
+    <a class="nav-item" href="#" onclick="logout(); return false;">Đăng xuất</a>
+  </div>
+  </div>
+  <div class="topnav-mobile">
+    <a class="nav-item" href="admin-dashboard.html">Dashboard</a>
+    <a class="nav-item" href="admin-users.html">Tài khoản</a>
+    <a class="nav-item" href="admin-courses.html">Môn học</a>
+    <a class="nav-item" href="admin-questions.html">Ngân hàng câu hỏi</a>
+    <a class="nav-item active" href="admin-logs.html">Hoạt động hệ thống</a>
+    <a class="nav-item" href="admin-ai-config.html">Cấu hình AI</a>
+    <a class="nav-item" href="admin-agent.html">Agent</a>
+    <a class="nav-item" href="#" onclick="logout(); return false;">Đăng xuất</a>
+  </div>
+</nav>
+  <main class="main-content">
+    <section class="page-hero" style="background:linear-gradient(120deg,#7c2d12,#ea580c 65%,#f59e0b 125%);">
+      <div class="copy"><h2>Hoạt động hệ thống</h2><p>Nhật ký hoạt động của người dùng</p>
+        <div class="hero-cta"><button class="ghost" onclick="openDeleteModal()">🗑 Xóa hoạt động</button></div></div>
+      <div class="hero-art">🕒</div>
+    </section>
+    <div class="card">
+      <div class="filters">
+        <input id="searchInput" placeholder="Tìm theo tên, email hoặc nội dung..." oninput="debouncedLoad()" autocomplete="off">
+        <select id="actionFilter" onchange="load()" autocomplete="off">
+          <option value="">Tất cả hành động</option>
+          <option value="login">Đăng nhập</option>
+          <option value="logout">Đăng xuất</option>
+          <option value="ask_ai">Hỏi AI</option>
+          <option value="view_document">Xem tài liệu</option>
+          <option value="submit_quiz">Làm bài kiểm tra</option>
+          <option value="upload_document">Tải tài liệu lên</option>
+          <option value="update_profile">Cập nhật hồ sơ</option>
+        </select>
+        <label style="font-size:13px; color:var(--text-secondary);">Từ ngày</label>
+        <input type="date" id="fromDate" onchange="load()" style="max-width:160px;">
+        <label style="font-size:13px; color:var(--text-secondary);">đến ngày</label>
+        <input type="date" id="toDate" onchange="load()" style="max-width:160px;">
+        <span id="logCount" style="color:var(--text-secondary); font-size:13px;"></span>
+      </div>
+      <div style="overflow-x:auto;">
+        <table>
+          <thead><tr><th>Người dùng</th><th>Hành động</th><th>Chi tiết</th><th>Thời gian</th></tr></thead>
+          <tbody id="logRows"></tbody>
+        </table>
+      </div>
+      <div id="emptyMsg" style="display:none; text-align:center; padding:28px; color:var(--text-muted);">Không có hoạt động nào trong khoảng này.</div>
+    </div>
+  </main>
+</div>
+
+<div class="modal-overlay" id="delOverlay">
+  <div class="modal-box">
+    <h3 style="margin:0 0 4px;">Xóa nhật ký hoạt động</h3>
+    <div style="font-size:13px; color:var(--text-secondary);">Chọn khoảng thời gian cần xóa. Hành động này không thể hoàn tác.</div>
+    <div class="range-options">
+      <label class="range-option"><input type="radio" name="range" value="today" checked><span>Hôm nay<small>Từ 0 giờ hôm nay</small></span></label>
+      <label class="range-option"><input type="radio" name="range" value="week"><span>7 ngày qua<small>Hằng tuần</small></span></label>
+      <label class="range-option"><input type="radio" name="range" value="month"><span>30 ngày qua<small>Hằng tháng</small></span></label>
+      <label class="range-option"><input type="radio" name="range" value="custom"><span>Chọn ngày<small>Từ ngày... đến ngày...</small></span></label>
+      <label class="range-option danger" style="grid-column:1 / -1;"><input type="radio" name="range" value="all"><span>Xóa toàn bộ nhật ký</span></label>
+    </div>
+    <div class="date-pair" id="customDates">
+      <div><label>Từ ngày</label><input type="date" id="delFrom"></div>
+      <div><label>Đến hết ngày</label><input type="date" id="delTo"></div>
+    </div>
+    <div id="delError" style="display:none; background:#fef2f2; border:1px solid #fecaca; color:#dc2626; border-radius:8px; padding:10px 12px; font-size:13px; margin-bottom:12px;"></div>
+    <div style="display:flex; gap:8px; justify-content:flex-end;">
+      <button class="btn btn-secondary" onclick="closeDeleteModal()">Hủy</button>
+      <button class="btn-danger" id="delBtn" onclick="confirmDelete()">Xóa</button>
+    </div>
+  </div>
+</div>
+
+<script src="../js/api.js"></script>
+<script>
+requireRole("ADMIN");
+const ACTION_LABELS = { login: "Đăng nhập", logout: "Đăng xuất", ask_ai: "Hỏi AI", view_document: "Xem tài liệu",
+  submit_quiz: "Làm bài kiểm tra", upload_document: "Tải tài liệu lên", update_profile: "Cập nhật hồ sơ" };
+
+// Ngày chọn trong ô date là ngày theo giờ máy; server lưu giờ UTC nên đổi sang UTC trước khi gửi.
+function startOfDay(str) { const [y, m, d] = str.split("-").map(Number); return new Date(y, m - 1, d, 0, 0, 0); }
+
+async function load() {
+  const params = new URLSearchParams({ limit: "500" });
+  const action = document.getElementById("actionFilter").value;
+  const search = document.getElementById("searchInput").value.trim();
+  const from = document.getElementById("fromDate").value;
+  const to = document.getElementById("toDate").value;
+  if (action) params.set("action", action);
+  if (search) params.set("search", search);
+  if (from) params.set("date_from", toServerTime(startOfDay(from)));
+  if (to) { const end = startOfDay(to); end.setDate(end.getDate() + 1); params.set("date_to", toServerTime(end)); }
+  const logs = await Api.request(`/api/admin/logs?${params}`);
+  document.getElementById("logCount").textContent = `${logs.length} dòng`;
+  document.getElementById("emptyMsg").style.display = logs.length ? "none" : "block";
+  document.getElementById("logRows").innerHTML = logs.map(l => `
+    <tr>
+      <td>${esc(l.full_name || "Tài khoản đã xóa")}</td>
+      <td><span class="badge badge-blue">${esc(ACTION_LABELS[l.action] || l.action)}</span></td>
+      <td>${esc(l.detail || "")}</td>
+      <td style="white-space:nowrap;">${formatServerTime(l.created_at)}</td>
+    </tr>`).join("");
+}
+let timer; function debouncedLoad() { clearTimeout(timer); timer = setTimeout(load, 300); }
+
+function openDeleteModal() {
+  document.getElementById("delError").style.display = "none";
+  document.getElementById("delOverlay").style.display = "flex";
+  syncRange();
+}
+function closeDeleteModal() { document.getElementById("delOverlay").style.display = "none"; }
+function syncRange() {
+  const v = document.querySelector("input[name=range]:checked").value;
+  document.getElementById("customDates").style.display = v === "custom" ? "grid" : "none";
+}
+document.querySelectorAll("input[name=range]").forEach(r => r.addEventListener("change", syncRange));
+
+function rangeBody() {
+  const v = document.querySelector("input[name=range]:checked").value;
+  const now = new Date();
+  const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+  if (v === "all") return { all: true };
+  if (v === "today") return { date_from: toServerTime(today) };
+  if (v === "week" || v === "month") { const d = new Date(today); d.setDate(d.getDate() - (v === "week" ? 6 : 29)); return { date_from: toServerTime(d) }; }
+  const from = document.getElementById("delFrom").value, to = document.getElementById("delTo").value;
+  if (!from || !to) throw new Error("Hãy chọn đủ ngày bắt đầu và ngày kết thúc");
+  const end = startOfDay(to); end.setDate(end.getDate() + 1);
+  if (end <= startOfDay(from)) throw new Error("Ngày kết thúc phải sau hoặc cùng ngày bắt đầu");
+  return { date_from: toServerTime(startOfDay(from)), date_to: toServerTime(end) };
+}
+
+async function confirmDelete() {
+  const err = document.getElementById("delError"); err.style.display = "none";
+  const btn = document.getElementById("delBtn");
+  try {
+    const body = rangeBody();
+    btn.disabled = true;
+    const res = await Api.request("/api/admin/logs/delete", { method: "POST", body });
+    closeDeleteModal();
+    await load();
+    alert(res.message);
+  } catch (e) { err.textContent = e.message; err.style.display = "block"; }
+  finally { btn.disabled = false; }
+}
+load();
+</script>
+</body>
+</html>

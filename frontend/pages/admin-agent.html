@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quản lý Agent — EduAI Admin</title>
+<link rel="stylesheet" href="../css/style.css">
+<style>
+  .ag-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: start; margin-bottom: 20px; }
+  @media (max-width: 1000px) { .ag-grid { grid-template-columns: 1fr; } }
+  .tool-row { display: flex; gap: 12px; padding: 11px 0; border-bottom: 1px solid var(--border-subtle); font-size: 14px; }
+  .tool-row:last-child { border-bottom: none; }
+  .tool-row code { font-size: 12.5px; background: var(--bg-subtle); padding: 2px 7px; border-radius: 6px; }
+  .tool-row .d { color: var(--text-secondary); font-size: 13px; margin-top: 3px; line-height: 1.45; }
+  .scroll-x { overflow-x: auto; }
+  .scroll-x table { width: 100%; border-collapse: collapse; font-size: 13.5px; min-width: 640px; }
+  .scroll-x th { text-align: left; color: var(--text-secondary); font-size: 12px; padding: 8px 8px 8px 0; }
+  .scroll-x td { padding: 9px 8px 9px 0; border-top: 1px solid var(--border-subtle); vertical-align: top; }
+  .mini { color: var(--text-muted); font-size: 12px; word-break: break-all; }
+  textarea.prompt { width: 100%; box-sizing: border-box; min-height: 300px; font: 13px/1.55 ui-monospace, Menlo, Consolas, monospace;
+    padding: 12px; border: 1px solid #d1d5db; border-radius: 12px; resize: vertical; }
+  .row-actions { display: flex; gap: 8px; margin-top: 10px; flex-wrap: wrap; align-items: center; }
+  .stat-mini { display: flex; gap: 24px; flex-wrap: wrap; margin-bottom: 4px; }
+  .stat-mini b { font-size: 22px; display: block; }
+  .stat-mini span { font-size: 12.5px; color: var(--text-secondary); }
+</style>
+<link rel="stylesheet" href="../css/luxe.css">
+</head>
+<body>
+<div class="app-shell">
+  <nav class="topnav">
+  <div class="topnav-inner">
+    <a class="topnav-logo" href="admin-dashboard.html"><span class="mark">E</span>EduAI Admin</a>
+    <div class="topnav-links">
+    <a class="nav-item" href="admin-dashboard.html">Dashboard</a>
+    <a class="nav-item" href="admin-users.html">Tài khoản</a>
+    <a class="nav-item" href="admin-courses.html">Môn học</a>
+    <a class="nav-item" href="admin-questions.html">Ngân hàng câu hỏi</a>
+    <a class="nav-item" href="admin-logs.html">Hoạt động hệ thống</a>
+    <a class="nav-item" href="admin-ai-config.html">Cấu hình AI</a>
+    <a class="nav-item active" href="admin-agent.html">Agent</a>
+    </div>
+  <div class="topnav-actions">
+    <a class="nav-item" href="#" onclick="logout(); return false;">Đăng xuất</a>
+  </div>
+  </div>
+  <div class="topnav-mobile">
+    <a class="nav-item" href="admin-dashboard.html">Dashboard</a>
+    <a class="nav-item" href="admin-users.html">Tài khoản</a>
+    <a class="nav-item" href="admin-courses.html">Môn học</a>
+    <a class="nav-item" href="admin-questions.html">Ngân hàng câu hỏi</a>
+    <a class="nav-item" href="admin-logs.html">Hoạt động hệ thống</a>
+    <a class="nav-item" href="admin-ai-config.html">Cấu hình AI</a>
+    <a class="nav-item active" href="admin-agent.html">Agent</a>
+    <a class="nav-item" href="#" onclick="logout(); return false;">Đăng xuất</a>
+  </div>
+</nav>
+  <main class="main-content">
+    <section class="page-hero" style="background:linear-gradient(120deg,#1e1b4b 0%,#4338ca 60%,#2563eb 120%);">
+      <div class="copy"><h2>Quản lý AI Agent</h2><p>Theo dõi Agent đã gọi công cụ nào, cho ai, kết quả ra sao; chỉnh prompt hệ thống mà không cần sửa code.</p></div>
+      <div class="hero-art">⚡</div>
+    </section>
+
+    <div class="ag-grid">
+      <section class="card">
+        <h3 style="margin-top:0;">Trạng thái</h3>
+        <div class="stat-mini" id="stats"></div>
+        <h3>Công cụ của Agent</h3>
+        <div id="tools"></div>
+      </section>
+
+      <section class="card">
+        <h3 style="margin-top:0;">Prompt hệ thống của Agent</h3>
+        <p style="font-size:13.5px;color:var(--text-secondary);margin-top:0;line-height:1.55;">
+          Dùng các biến <code>{student}</code> <code>{today}</code> <code>{course}</code> <code>{courses}</code> — hệ thống tự điền khi chạy.
+          Lưu xong, lượt chat tiếp theo dùng ngay prompt mới (có lưu số phiên bản).</p>
+        <textarea class="prompt" id="prompt"></textarea>
+        <div class="row-actions">
+          <button class="btn btn-primary" onclick="savePrompt()">Lưu prompt</button>
+          <button class="btn btn-secondary" onclick="loadPrompt(true)">Khôi phục mặc định</button>
+          <span class="mini" id="promptInfo"></span>
+        </div>
+      </section>
+    </div>
+
+    <section class="card">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:10px;">
+        <h3 style="margin:0;">Nhật ký gọi công cụ gần đây</h3>
+        <select id="toolFilter" onchange="loadLogs()" style="max-width:220px;"><option value="">Tất cả công cụ</option></select>
+      </div>
+      <div class="scroll-x"><table>
+        <thead><tr><th>Thời gian</th><th>Sinh viên</th><th>Yêu cầu</th><th>Công cụ</th><th>Kết quả</th></tr></thead>
+        <tbody id="logRows"></tbody>
+      </table></div>
+    </section>
+  </main>
+</div>
+<script src="../js/api.js"></script>
+<script>
+requireRole("ADMIN");
+let defaultPrompt = "";
+
+async function loadConfig() {
+  const c = await Api.request("/api/admin/agent/config");
+  document.getElementById("stats").innerHTML = `
+    <div><b>${c.tools.length}</b><span>công cụ</span></div>
+    <div><b>${c.confirmation_required_tools.length}</b><span>cần xác nhận</span></div>
+    <div><b>${c.max_steps}</b><span>bước tối đa / lượt</span></div>
+    <div><b>${c.providers_ready.length ? c.providers_ready.map(esc).join(" → ") : "—"}</b><span>${c.providers_ready.length ? "nhà cung cấp AI (thứ tự thử)" : "chưa có API key — Agent chạy chế độ Chatbot"}</span></div>`;
+  document.getElementById("tools").innerHTML = c.tools.map(t => `
+    <div class="tool-row"><div><b>${esc(t.label)}</b> <code>${esc(t.name)}</code>
+      ${t.needs_confirmation ? '<span class="badge badge-amber">cần xác nhận</span>' : ""}
+      <div class="d">${esc(t.description)}</div></div></div>`).join("");
+  const sel = document.getElementById("toolFilter");
+  c.tools.forEach(t => { const o = document.createElement("option"); o.value = t.name; o.textContent = t.label; sel.appendChild(o); });
+}
+
+async function loadPrompt(reset = false) {
+  const def = await Api.request("/api/admin/agent/prompts/default");
+  defaultPrompt = def.content;
+  const saved = (await Api.request("/api/admin/agent/prompts")).find(p => p.name === "agent_system");
+  document.getElementById("prompt").value = (!reset && saved) ? saved.content : defaultPrompt;
+  document.getElementById("promptInfo").textContent = (!reset && saved) ? `Đang dùng prompt tùy chỉnh · phiên bản ${saved.version}` : "Đang dùng prompt mặc định";
+}
+
+async function savePrompt() {
+  const content = document.getElementById("prompt").value.trim();
+  if (content.length < 50) { alert("Prompt quá ngắn."); return; }
+  try { await Api.request("/api/admin/agent/prompts", { method: "POST", body: { name: "agent_system", content } }); await loadPrompt(); }
+  catch (e) { alert(e.message); }
+}
+
+async function loadLogs() {
+  const tool = document.getElementById("toolFilter").value;
+  const rows = await Api.request("/api/admin/agent/logs" + (tool ? `?tool_name=${encodeURIComponent(tool)}` : ""));
+  document.getElementById("logRows").innerHTML = rows.length ? rows.slice(0, 60).map(r => `
+    <tr><td class="mini">${esc((r.created_at || "").replace("T", " ").slice(0, 16))}</td>
+      <td>${esc(r.full_name || "—")}</td>
+      <td>${esc((r.request_text || "").slice(0, 70))}</td>
+      <td><code>${esc(r.tool_name)}</code></td>
+      <td>${r.success ? '<span class="badge badge-green">thành công</span>' : '<span class="badge badge-rose">lỗi</span>'}
+        <div class="mini">${esc((r.result || "").slice(0, 110))}</div></td></tr>`).join("")
+    : `<tr><td colspan="5" style="text-align:center;color:var(--text-muted);padding:24px;">Chưa có lượt gọi công cụ nào.</td></tr>`;
+}
+
+loadConfig(); loadPrompt(); loadLogs();
+</script>
+</body>
+</html>

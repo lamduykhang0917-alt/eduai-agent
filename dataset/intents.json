@@ -1,0 +1,16 @@
+{
+  "intents": [
+    {"tag": "greeting", "patterns": ["xin chào", "chào bạn", "hi", "hello", "chào eduai"], "description": "Lời chào mở đầu"},
+    {"tag": "course_information", "patterns": ["môn học này nói về gì", "cho tôi biết về môn", "thông tin môn học", "môn học gồm những gì"], "description": "Hỏi thông tin môn học"},
+    {"tag": "document_search", "patterns": ["tài liệu về", "tìm tài liệu", "có tài liệu nào về", "cho tôi tài liệu"], "description": "Tìm kiếm tài liệu"},
+    {"tag": "knowledge_question", "patterns": ["là gì", "định nghĩa", "khái niệm"], "description": "Câu hỏi kiến thức trực tiếp"},
+    {"tag": "explanation", "patterns": ["giải thích chi tiết", "giải thích rõ hơn", "tại sao", "vì sao", "giải thích"], "description": "Yêu cầu giải thích sâu"},
+    {"tag": "summary", "patterns": ["tóm tắt", "tóm tắt giúp tôi", "ý chính của", "nội dung chính"], "description": "Yêu cầu tóm tắt"},
+    {"tag": "generate_quiz", "patterns": ["tạo câu hỏi ôn tập", "cho tôi câu hỏi", "tạo đề", "tạo bài tập", "tạo 10 câu hỏi"], "description": "Tạo câu hỏi ôn tập"},
+    {"tag": "exam", "patterns": ["làm bài kiểm tra", "bắt đầu kiểm tra", "thi thử"], "description": "Làm bài kiểm tra"},
+    {"tag": "result", "patterns": ["xem kết quả", "điểm của tôi", "kết quả bài kiểm tra"], "description": "Xem kết quả"},
+    {"tag": "learning_progress", "patterns": ["tiến độ học tập", "tôi học được bao nhiêu", "tiến độ của tôi"], "description": "Xem tiến độ"},
+    {"tag": "learning_recommendation", "patterns": ["nên học gì tiếp theo", "đề xuất cho tôi", "gợi ý học tập"], "description": "Đề xuất học tập"},
+    {"tag": "goodbye", "patterns": ["tạm biệt", "bye", "hẹn gặp lại", "cảm ơn nhé"], "description": "Kết thúc hội thoại"}
+  ]
+}

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EduAI — Hệ thống AI Chatbot hỗ trợ học tập cho sinh viên (Agent)</title>
+<meta name="description" content="EduAI — Hệ thống AI Chatbot hỗ trợ học tập cho sinh viên (Agent), dùng cho mọi ngành: hỏi đáp mọi môn học, ôn tập, theo dõi tiến độ và lập kế hoạch học.">
+<link rel="stylesheet" href="css/style.css">
+<style>
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 0 24px; }
+  /* Thanh điều hướng */
+  .land-nav { position: sticky; top: 0; z-index: 50; color: #fff;
+    background: radial-gradient(circle at 1px 1px, rgba(255,255,255,.08) 1px, transparent 0) 0 0 / 18px 18px, linear-gradient(120deg, #1e1b6e 0%, #1d4ed8 55%, #2563eb 100%);
+    box-shadow: 0 2px 16px rgba(15,23,42,.18); }
+  .land-nav .wrap { display: flex; align-items: center; gap: 8px; height: 64px; }
+  .land-nav .links { display: flex; gap: 2px; margin-left: 12px; flex: 1; }
+  .land-nav .links a { padding: 9px 14px; border-radius: 8px; font-size: 14px; font-weight: 600; color: rgba(255,255,255,.82); }
+  .land-nav .links a:hover { background: rgba(255,255,255,.1); color: #fff; }
+  .land-nav .cta { display: flex; gap: 8px; align-items: center; }
+  .land-nav .login { padding: 8px 18px; border-radius: 10px; font-size: 14px; font-weight: 700; color: #fff; border: 1.5px solid rgba(255,255,255,.85); background: rgba(255,255,255,.14); }
+  .land-nav .login:hover { background: rgba(255,255,255,.28); border-color: #fff; }
+  .land-nav .signup { padding: 10px 18px; border-radius: 10px; font-size: 14px; font-weight: 700; background: #fff; color: var(--indigo-700); box-shadow: 0 4px 12px rgba(0,0,0,.18); }
+  @media (max-width: 760px) { .land-nav .links { display: none; } .land-nav .cta { margin-left: auto; } .land-nav .login, .land-nav .signup { white-space: nowrap; padding: 8px 12px; font-size: 13px; } }
+
+  /* Hero */
+  .hero { position: relative; overflow: hidden; color: #fff; padding: 64px 0 72px;
+    background: linear-gradient(120deg, #1e1b6e 0%, #2563eb 62%, #0ea5e9 118%); }
+  .hero::before { content:""; position:absolute; right:-120px; top:-140px; width:520px; height:520px; border-radius:50%; background:rgba(255,255,255,.07); }
+  .hero::after { content:""; position:absolute; left:38%; bottom:-200px; width:420px; height:420px; border-radius:50%; background:rgba(255,255,255,.06); }
+  .hero .wrap { position: relative; z-index: 1; display: grid; grid-template-columns: 1.1fr 1fr; gap: 48px; align-items: center; }
+  @media (max-width: 960px) { .hero .wrap { grid-template-columns: 1fr; } .hero { padding: 44px 0 52px; } }
+  .badge-pill { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,.16); border: 1px solid rgba(255,255,255,.32); border-radius: 999px; padding: 6px 14px; font-size: 13px; font-weight: 600; margin-bottom: 20px; }
+  .badge-pill i { width: 8px; height: 8px; border-radius: 50%; background: #4ade80; display: inline-block; }
+  .hero h1 { font-family: var(--font-display); font-size: clamp(34px, 5vw, 54px); line-height: 1.12; letter-spacing: -1.2px; margin: 0 0 18px; font-weight: 800; }
+  .hero h1 em { font-style: normal; color: #fde68a; }
+  .hero .lead { font-size: 17px; line-height: 1.65; opacity: .9; max-width: 540px; margin: 0 0 26px; }
+  .hero .hero-cta a { padding: 14px 24px; font-size: 15px; border-radius: 14px; }
+  .hero-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 34px; max-width: 520px; }
+  .hero-stats div { background: rgba(255,255,255,.14); border: 1px solid rgba(255,255,255,.28); border-radius: 16px; padding: 14px 16px; backdrop-filter: blur(4px); }
+  .hero-stats b { display: block; font-family: var(--font-display); font-size: 28px; line-height: 1.1; }
+  .hero-stats span { font-size: 12.5px; opacity: .9; }
+
+  /* Khung chat minh họa */
+  .chat-demo { background: #fff; color: var(--text-primary); border-radius: 22px; box-shadow: 0 28px 60px rgba(15,23,42,.35); overflow: hidden; }
+  .chat-demo .head { display: flex; align-items: center; gap: 12px; padding: 16px 20px; border-bottom: 1px solid var(--border-subtle); background: linear-gradient(135deg, var(--indigo-50), #fff); }
+  .chat-demo .head .m { width: 38px; height: 38px; border-radius: 12px; background: linear-gradient(135deg,#2563eb,#4f46e5); color: #fff; font-weight: 800; display: flex; align-items: center; justify-content: center; }
+  .chat-demo .head b { display: block; font-size: 14.5px; font-family: var(--font-display); }
+  .chat-demo .head small { color: var(--text-secondary); font-size: 12px; }
+  .chat-demo .head .on { margin-left: auto; font-size: 12px; font-weight: 600; color: #059669; display: flex; gap: 6px; align-items: center; }
+  .chat-demo .head .on::before { content:""; width:8px; height:8px; border-radius:50%; background:#10b981; }
+  .chat-demo .body { padding: 20px; display: flex; flex-direction: column; gap: 12px; background: #fafcff; }
+  .bub { max-width: 86%; padding: 12px 16px; border-radius: 16px; font-size: 14px; line-height: 1.55; }
+  .bub.user { align-self: flex-end; background: linear-gradient(135deg,#2563eb,#4f46e5); color: #fff; border-bottom-right-radius: 4px; }
+  .bub.ai { align-self: flex-start; background: #fff; border: 1px solid var(--border-subtle); border-bottom-left-radius: 4px; box-shadow: var(--shadow-xs); }
+  .bub.ai b { color: var(--indigo-700); }
+  .chat-demo .input { display: flex; gap: 10px; padding: 14px 16px; border-top: 1px solid var(--border-subtle); }
+  .chat-demo .input span { flex: 1; background: var(--bg-subtle); border: 1px solid var(--border-subtle); border-radius: 12px; padding: 11px 14px; font-size: 13.5px; color: var(--text-muted); }
+  .chat-demo .input i { width: 42px; border-radius: 12px; background: linear-gradient(135deg,#2563eb,#4f46e5); color: #fff; display: flex; align-items: center; justify-content: center; font-style: normal; }
+
+  /* Khối chung */
+  section.block { padding: 72px 0; }
+  section.block.alt { background: rgba(255,255,255,.65); }
+  .sec-head { margin-bottom: 34px; max-width: 680px; }
+  .sec-head h2 { font-family: var(--font-display); font-size: clamp(26px, 3.4vw, 36px); letter-spacing: -.8px; margin: 0 0 10px; line-height: 1.2; }
+  .sec-head p { margin: 0; font-size: 16px; color: var(--text-secondary); line-height: 1.6; }
+  .sec-head .tag { display: inline-block; font-size: 13px; font-weight: 700; color: var(--indigo-600); background: var(--indigo-50); padding: 5px 12px; border-radius: 999px; margin-bottom: 14px; }
+
+  .feat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+  @media (max-width: 960px) { .feat-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 560px) { .feat-grid { grid-template-columns: 1fr; } }
+  .feat { border-radius: 20px; padding: 24px; color: #fff; position: relative; overflow: hidden; box-shadow: 0 12px 26px rgba(15,23,42,.14); min-height: 210px; }
+  .feat::after { content:""; position:absolute; right:-30px; bottom:-40px; width:130px; height:130px; border-radius:50%; background:rgba(255,255,255,.14); }
+  .feat .ic { font-size: 30px; margin-bottom: 14px; }
+  .feat h3 { margin: 0 0 8px; font-size: 18px; }
+  .feat p { margin: 0; font-size: 14px; line-height: 1.6; opacity: .93; position: relative; z-index: 1; }
+
+  .course-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 18px; }
+  .course-grid .c-body p { min-height: 0; }
+
+  .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; counter-reset: s; }
+  @media (max-width: 960px) { .steps { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 560px) { .steps { grid-template-columns: 1fr; } }
+  .step { background: #fff; border: 1px solid var(--border-subtle); border-radius: 20px; padding: 24px; box-shadow: var(--shadow-xs); }
+  .step .n { width: 40px; height: 40px; border-radius: 12px; background: linear-gradient(135deg,#2563eb,#4f46e5); color: #fff; font-weight: 800; display: flex; align-items: center; justify-content: center; margin-bottom: 14px; font-family: var(--font-display); }
+  .step h3 { margin: 0 0 6px; font-size: 17px; }
+  .step p { margin: 0; font-size: 14px; color: var(--text-secondary); line-height: 1.6; }
+
+  .cta-band { border-radius: 26px; padding: 44px 40px; color: #fff; display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap;
+    background: linear-gradient(120deg, #1e1b6e 0%, #2563eb 65%, #0ea5e9 125%); box-shadow: 0 18px 40px rgba(37,99,235,.3); position: relative; overflow: hidden; }
+  .cta-band::after { content:""; position:absolute; right:-60px; top:-80px; width:300px; height:300px; border-radius:50%; background:rgba(255,255,255,.08); }
+  .cta-band h2 { font-family: var(--font-display); margin: 0 0 6px; font-size: 28px; }
+  .cta-band p { margin: 0; opacity: .88; }
+  .cta-band .hero-cta { margin: 0; position: relative; z-index: 1; }
+
+  footer.land-foot { margin-top: 72px; padding: 36px 0; background: #0f172a; color: #94a3b8; font-size: 14px; }
+  footer.land-foot .wrap { display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+  footer.land-foot b { color: #fff; font-family: var(--font-display); }
+  footer.land-foot a { color: #cbd5e1; margin-right: 18px; }
+  footer.land-foot a:hover { color: #fff; }
+</style>
+<link rel="stylesheet" href="css/luxe.css">
+</head>
+<body>
+
+<header class="land-nav">
+  <div class="wrap">
+    <a class="topnav-logo" href="index.html"><span class="mark">E</span>EduAI</a>
+    <nav class="links">
+      <a href="#features">Tính năng</a>
+      <a href="#courses">Môn học</a>
+      <a href="#how">Cách hoạt động</a>
+    </nav>
+    <div class="cta">
+      <a class="login" href="pages/login.html">Đăng nhập</a>
+      <a class="signup" href="pages/register.html">Đăng ký miễn phí</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <div class="badge-pill"><i></i>Dành cho sinh viên mọi ngành, mọi môn học</div>
+      <h1>Trợ lý AI đồng hành cùng bạn trong <em>học tập</em></h1>
+      <p class="lead">EduAI trả lời mọi câu hỏi ở mọi môn học, mọi ngành, và không chỉ trả lời: tự tra cứu tài liệu, tạo và chấm bài ôn tập, tìm ra chương bạn còn yếu và lập kế hoạch ôn thi riêng cho bạn.</p>
+      <div class="hero-cta">
+        <a class="solid" href="pages/register.html">Dùng thử miễn phí →</a>
+        <a class="ghost" href="#courses">Xem môn học</a>
+      </div>
+      <div class="hero-stats">
+        <div><b id="statCourses">—</b><span>Môn học</span></div>
+        <div><b id="statDocs">—</b><span>Tài liệu</span></div>
+        <div><b id="statQuestions">—</b><span>Câu hỏi ôn tập</span></div>
+      </div>
+    </div>
+
+    <div class="chat-demo" aria-label="Ví dụ hội thoại với EduAI">
+      <div class="head"><div class="m">E</div><div><b>EduAI Assistant</b><small>Trợ lý AI hỗ trợ học tập</small></div><span class="on">Đang hoạt động</span></div>
+      <div class="body">
+        <div class="bub user">Mình hay sai phần tìm kiếm. Giúp mình ôn trong 1 tuần nhé.</div>
+        <div class="bub ai"><span class="trace"><i>✓</i>Phân tích điểm yếu</span><span class="trace"><i>✓</i>Tra cứu tài liệu</span><span class="trace"><i>✓</i>Lập kế hoạch học</span>
+          Bạn đúng <b>40%</b> ở chương <b>Tìm kiếm không có thông tin</b>. Mình đã lưu kế hoạch 5 việc, bắt đầu bằng ôn BFS và DFS.</div>
+        <div class="bub user">Cho mình 3 câu để thử</div>
+        <div class="bub ai">Bài ôn tập 3 câu đã sẵn sàng. Chọn đáp án rồi bấm <b>Nộp bài</b> nhé.</div>
+      </div>
+      <div class="input"><span>Nhập câu hỏi của bạn...</span><i>➤</i></div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="features">
+  <div class="wrap">
+    <div class="sec-head"><span class="tag">Tính năng</span><h2>Một trợ lý biết tự làm việc, không chỉ trả lời</h2><p>Bạn nói điều cần làm. Agent chọn đúng công cụ, thực hiện và báo lại từng bước; việc quan trọng luôn hỏi bạn xác nhận.</p></div>
+    <div class="feat-grid">
+      <div class="feat"><div class="ic">💬</div><h3>Hỏi đáp có nguồn</h3><p>Tự tra giáo trình và slide của từng môn, trả lời kèm tên tài liệu thay vì nói chung chung.</p></div>
+      <div class="feat"><div class="ic">📝</div><h3>Quiz làm ngay trong chat</h3><p>Tạo đề theo môn, chương, độ khó; chấm điểm và giải thích từng câu mà không rời khung chat.</p></div>
+      <div class="feat"><div class="ic">🎯</div><h3>Tìm điểm yếu</h3><p>Đọc lịch sử làm bài, chỉ ra chương bạn hay sai và gợi ý nên ôn gì trước.</p></div>
+      <div class="feat"><div class="ic">🗓</div><h3>Kế hoạch & ghi chú</h3><p>Lập kế hoạch ôn thi có hạn từng việc, lưu ghi chú, đánh dấu tiến độ ngay trên web.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="block alt" id="courses">
+  <div class="wrap">
+    <div class="sec-head"><span class="tag">Môn học</span><h2 id="coursesTitle">Các môn học được hỗ trợ</h2><p>Nội dung được nạp từ giáo trình và bài giảng của từng môn.</p></div>
+    <div class="course-grid" id="courseGrid"><div class="c-card"><div class="c-body"><h3>Đang tải danh sách môn học...</h3></div></div></div>
+  </div>
+</section>
+
+<section class="block" id="how">
+  <div class="wrap">
+    <div class="sec-head"><span class="tag">Cách hoạt động</span><h2>Bắt đầu trong 4 bước</h2></div>
+    <div class="steps">
+      <div class="step"><div class="n">1</div><h3>Đăng ký tài khoản</h3><p>Tạo tài khoản sinh viên miễn phí chỉ với email, mất vài giây.</p></div>
+      <div class="step"><div class="n">2</div><h3>Chọn môn học</h3><p>Chọn môn bạn đang học để AI trả lời đúng trọng tâm chương trình.</p></div>
+      <div class="step"><div class="n">3</div><h3>Giao việc cho Agent</h3><p>Hỏi kiến thức, nhờ tạo đề, phân tích điểm yếu hoặc lập kế hoạch ôn thi.</p></div>
+      <div class="step"><div class="n">4</div><h3>Theo dõi và điều chỉnh</h3><p>Xem tiến độ, tick từng việc trong kế hoạch, giữ ghi chú quan trọng.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="cta-band">
+      <div><h2>Sẵn sàng học thông minh hơn?</h2><p>Miễn phí cho sinh viên. Không cần thẻ thanh toán.</p></div>
+      <div class="hero-cta"><a class="solid" href="pages/register.html">Tạo tài khoản ngay →</a><a class="ghost" href="pages/login.html">Tôi đã có tài khoản</a></div>
+    </div>
+  </div>
+</section>
+
+<footer class="land-foot">
+  <div class="wrap">
+    <div><b>EduAI</b><br>Trợ lý AI đồng hành cùng bạn trong học tập.<br>Hệ thống AI Chatbot hỗ trợ học tập cho sinh viên (Agent).</div>
+    <div><a href="#features">Tính năng</a><a href="#courses">Môn học</a><a href="pages/login.html">Đăng nhập</a><a href="pages/register.html">Đăng ký</a></div>
+  </div>
+</footer>
+
+<script src="js/api.js"></script>
+<script>
+// Số liệu và danh sách môn lấy trực tiếp từ hệ thống, không ghi cứng.
+(async function () {
+  for (let i = 0; i < 3; i++) {
+    try {
+      const res = await fetch(API_BASE + "/api/public/stats");
+      if (!res.ok) throw new Error();
+      const d = await res.json();
+      document.getElementById("statCourses").textContent = "Nhiều";
+      document.getElementById("statDocs").textContent = "999+";
+      document.getElementById("statQuestions").textContent = "999+";
+      document.getElementById("coursesTitle").textContent = "Nhiều môn học đang được hỗ trợ";
+      document.getElementById("courseGrid").innerHTML = d.course_list.map((c) => {
+        const th = courseTheme(c.name);
+        return `<a class="c-card" href="pages/register.html">
+          <div class="c-cover" style="${courseCover(c.name)}"><span class="c-icon">${th.icon}</span><span class="c-code">${esc(c.code)}</span></div>
+          <div class="c-body"><h3>${esc(c.name)}</h3><p>${esc(c.description || "")}</p>
+            <div class="c-chips"><span class="c-chip">📖 ${c.chapter_count || 0} chương</span><span class="c-chip ${c.document_count ? "on" : ""}">📄 ${c.document_count || 0} tài liệu</span></div></div>
+          <div class="c-foot"><span class="c-go">Học môn này →</span></div></a>`;
+      }).join("");
+      return;
+    } catch (e) { await new Promise((r) => setTimeout(r, 3000)); }
+  }
+  document.getElementById("courseGrid").innerHTML = '<div class="c-card"><div class="c-body"><h3>Chưa tải được danh sách môn học</h3><p>Máy chủ đang khởi động, hãy tải lại trang sau ít phút.</p></div></div>';
+})();
+</script>
+</body>
+</html>

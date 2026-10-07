@@ -1,0 +1,16 @@
+# Cấu hình Litestream: sao lưu liên tục file SQLite lên Backblaze B2 (giao diện S3).
+# Các giá trị ${...} được lấy từ biến môi trường trên Render (xem DEPLOY.md).
+dbs:
+  - path: ${DB_PATH}
+    replicas:
+      - type: s3
+        bucket: ${LITESTREAM_BUCKET}
+        path: eduai/eduai.db
+        endpoint: ${LITESTREAM_ENDPOINT}
+        region: ${LITESTREAM_REGION}
+        access-key-id: ${LITESTREAM_ACCESS_KEY_ID}
+        secret-access-key: ${LITESTREAM_SECRET_ACCESS_KEY}
+        force-path-style: true
+        sync-interval: 1s
+        snapshot-interval: 6h
+        retention: 48h

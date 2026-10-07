@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quản lý tài khoản — EduAI Admin</title>
+<link rel="stylesheet" href="../css/style.css">
+<style>
+  table { width:100%; border-collapse:collapse; font-size:14px; }
+  th { text-align:left; color:var(--text-secondary); font-size:12px; text-transform:uppercase; padding:10px 12px; border-bottom:1px solid var(--border-subtle); }
+  td { padding:12px; border-bottom:1px solid var(--border-subtle); }
+  .modal-overlay { position:fixed; inset:0; background:rgba(0,0,0,.4); display:none; align-items:center; justify-content:center; z-index:50; }
+  .modal-box { background:white; border-radius:14px; padding:24px; width:100%; max-width:420px; }
+  .field { margin-bottom:12px; }
+  .row-actions { display:flex; gap:6px; }
+  .error-box { background:#fef2f2; border:1px solid #fecaca; color:var(--danger); border-radius:8px; padding:10px 12px; font-size:13px; margin-bottom:12px; display:none; }
+</style>
+<link rel="stylesheet" href="../css/luxe.css">
+</head>
+<body>
+<div class="app-shell">
+  <nav class="topnav">
+  <div class="topnav-inner">
+    <a class="topnav-logo" href="admin-dashboard.html"><span class="mark">E</span>EduAI Admin</a>
+    <div class="topnav-links">
+    <a class="nav-item" href="admin-dashboard.html">Dashboard</a>
+    <a class="nav-item active" href="admin-users.html">Tài khoản</a>
+    <a class="nav-item" href="admin-courses.html">Môn học</a>
+    <a class="nav-item" href="admin-questions.html">Ngân hàng câu hỏi</a>
+    <a class="nav-item" href="admin-logs.html">Hoạt động hệ thống</a>
+    <a class="nav-item" href="admin-ai-config.html">Cấu hình AI</a>
+    <a class="nav-item" href="admin-agent.html">Agent</a>
+    </div>
+  <div class="topnav-actions">
+    <a class="nav-item" href="#" onclick="logout(); return false;">Đăng xuất</a>
+  </div>
+  </div>
+  <div class="topnav-mobile">
+    <a class="nav-item" href="admin-dashboard.html">Dashboard</a>
+    <a class="nav-item active" href="admin-users.html">Tài khoản</a>
+    <a class="nav-item" href="admin-courses.html">Môn học</a>
+    <a class="nav-item" href="admin-questions.html">Ngân hàng câu hỏi</a>
+    <a class="nav-item" href="admin-logs.html">Hoạt động hệ thống</a>
+    <a class="nav-item" href="admin-ai-config.html">Cấu hình AI</a>
+    <a class="nav-item" href="admin-agent.html">Agent</a>
+    <a class="nav-item" href="#" onclick="logout(); return false;">Đăng xuất</a>
+  </div>
+</nav>
+  <main class="main-content">
+    <section class="page-hero" style="background:linear-gradient(120deg,#1e1b6e,#4f46e5 65%,#7c3aed 125%);">
+      <div class="copy"><h2>Quản lý tài khoản</h2><p>Danh sách người dùng trong hệ thống</p>
+        <div class="hero-cta"><button class="solid" onclick="openAddModal()">+ Thêm tài khoản</button></div></div>
+      <div class="hero-art">👥</div>
+    </section>
+    <div class="card">
+      <input placeholder="Tìm kiếm theo tên hoặc email..." id="searchInput" oninput="load()" style="max-width:320px; margin-bottom:16px;">
+      <table>
+        <thead><tr><th>Họ tên</th><th>Email</th><th>Vai trò</th><th>Trạng thái</th><th>Ngày tạo</th><th></th></tr></thead>
+        <tbody id="userRows"></tbody>
+      </table>
+      <div id="emptyMsg" style="display:none; text-align:center; padding:24px; color:var(--text-muted);">Không tìm thấy tài khoản nào.</div>
+    </div>
+  </main>
+</div>
+
+<!-- Modal: Thêm / Sửa tài khoản -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal-box">
+    <h3 style="margin-top:0;" id="modalTitle">Thêm tài khoản</h3>
+    <div class="error-box" id="errorBox"></div>
+    <div class="field"><label>Họ tên</label><input id="fFullName" placeholder="Nguyễn Văn A"></div>
+    <div class="field"><label>Email</label><input id="fEmail" type="email" placeholder="ten@student.edu.vn"></div>
+    <div class="field" id="passwordField"><label>Mật khẩu</label><input id="fPassword" type="password" placeholder="Tối thiểu 8 ký tự"></div>
+    <div class="field">
+      <label>Vai trò</label>
+      <select id="fRole">
+        <option value="STUDENT">Sinh viên</option>
+        <option value="ADMIN">Admin</option>
+      </select>
+    </div>
+    <div style="display:flex; gap:8px; justify-content:flex-end; margin-top:16px;">
+      <button class="btn btn-secondary" onclick="closeModal()">Hủy</button>
+      <button class="btn btn-primary" onclick="saveUser()" id="saveBtn">Lưu</button>
+    </div>
+  </div>
+</div>
+
+<script src="../js/api.js"></script>
+<script>
+requireRole("ADMIN");
+let editingUserId = null;
+
+async function load() {
+  const search = document.getElementById("searchInput").value;
+  const qs = search ? `?search=${encodeURIComponent(search)}` : "";
+  const users = await Api.request(`/api/admin/users${qs}`);
+  const tbody = document.getElementById("userRows");
+  const emptyMsg = document.getElementById("emptyMsg");
+
+  if (users.length === 0) {
+    tbody.innerHTML = "";
+    emptyMsg.style.display = "block";
+    return;
+  }
+  emptyMsg.style.display = "none";
+  tbody.innerHTML = users.map(u => `
+    <tr>
+      <td>${u.full_name}</td>
+      <td>${u.email}</td>
+      <td><span class="badge ${u.role === 'ADMIN' ? 'badge-amber' : 'badge-blue'}">${u.role}</span></td>
+      <td><span class="badge ${u.status === 'active' ? 'badge-green' : 'badge-amber'}">${u.status === 'active' ? 'Hoạt động' : 'Đã khóa'}</span></td>
+      <td>${u.created_at ? u.created_at.split(" ")[0] : "—"}</td>
+      <td>
+        <div class="row-actions">
+          <button class="btn btn-secondary" onclick='openEditModal(${JSON.stringify(u)})'>Sửa</button>
+          <button class="btn btn-secondary" onclick="toggleStatus(${u.id}, '${u.status}')">${u.status === 'active' ? 'Khóa' : 'Mở khóa'}</button>
+          ${u.role === 'ADMIN' ? '' : `<button class="btn btn-secondary" style="color:#dc2626" onclick="deleteUser(${u.id}, '${u.email}')">Xóa</button>`}
+        </div>
+      </td>
+    </tr>`).join("");
+}
+
+function openAddModal() {
+  editingUserId = null;
+  document.getElementById("modalTitle").textContent = "Thêm tài khoản";
+  document.getElementById("fFullName").value = "";
+  document.getElementById("fEmail").value = "";
+  document.getElementById("fPassword").value = "";
+  document.getElementById("fRole").value = "STUDENT";
+  document.getElementById("passwordField").style.display = "block";
+  document.getElementById("errorBox").style.display = "none";
+  document.getElementById("modalOverlay").style.display = "flex";
+}
+
+function openEditModal(user) {
+  editingUserId = user.id;
+  document.getElementById("modalTitle").textContent = "Sửa thông tin tài khoản";
+  document.getElementById("fFullName").value = user.full_name;
+  document.getElementById("fEmail").value = user.email;
+  document.getElementById("fPassword").value = "";
+  document.getElementById("fRole").value = user.role;
+  document.getElementById("passwordField").style.display = "none";
+  document.getElementById("errorBox").style.display = "none";
+  document.getElementById("modalOverlay").style.display = "flex";
+}
+
+function closeModal() {
+  document.getElementById("modalOverlay").style.display = "none";
+}
+
+async function saveUser() {
+  const errorBox = document.getElementById("errorBox");
+  errorBox.style.display = "none";
+  const full_name = document.getElementById("fFullName").value.trim();
+  const email = document.getElementById("fEmail").value.trim();
+  const role = document.getElementById("fRole").value;
+
+  if (!full_name || !email) {
+    errorBox.textContent = "Vui lòng nhập đầy đủ họ tên và email";
+    errorBox.style.display = "block";
+    return;
+  }
+
+  const saveBtn = document.getElementById("saveBtn");
+  saveBtn.disabled = true;
+  try {
+    if (editingUserId) {
+      await Api.request(`/api/admin/users/${editingUserId}`, {
+        method: "PUT", body: { full_name, email, role },
+      });
+    } else {
+      const password = document.getElementById("fPassword").value;
+      if (password.length < 8) {
+        errorBox.textContent = "Mật khẩu phải có ít nhất 8 ký tự";
+        errorBox.style.display = "block";
+        saveBtn.disabled = false;
+        return;
+      }
+      await Api.request("/api/admin/users", {
+        method: "POST", body: { full_name, email, password, role },
+      });
+    }
+    closeModal();
+    load();
+  } catch (err) {
+    errorBox.textContent = err.message;
+    errorBox.style.display = "block";
+  } finally {
+    saveBtn.disabled = false;
+  }
+}
+
+async function toggleStatus(id, currentStatus) {
+  const newStatus = currentStatus === "active" ? "locked" : "active";
+  await Api.request(`/api/admin/users/${id}/status`, { method: "PATCH", body: { status: newStatus } });
+  load();
+}
+async function deleteUser(id, email) {
+  if (!confirm(`Xóa vĩnh viễn tài khoản ${email}?\nToàn bộ lịch sử chat, bài làm và tiến độ của tài khoản này cũng bị xóa.`)) return;
+  try {
+    await Api.request(`/api/admin/users/${id}`, { method: "DELETE" });
+  } catch (e) {
+    alert(e.message || "Không xóa được tài khoản");
+  }
+  load();
+}
+load();
+</script>
+</body>
+</html>

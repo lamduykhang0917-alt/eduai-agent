@@ -1,0 +1,634 @@
+{
+  "knowledge_base": [
+    {
+      "id": "kb001",
+      "course": "Trí tuệ nhân tạo",
+      "chapter": "Tìm kiếm trong không gian trạng thái",
+      "topic": "Thuật toán Dijkstra",
+      "keywords": [
+        "dijkstra",
+        "đường đi ngắn nhất",
+        "shortest path",
+        "đồ thị có trọng số"
+      ],
+      "question": "Thuật toán Dijkstra là gì?",
+      "answer_basic": "Thuật toán Dijkstra dùng để tìm đường đi ngắn nhất từ một đỉnh nguồn đến tất cả các đỉnh còn lại trong đồ thị có trọng số không âm.",
+      "answer_detailed": "Thuật toán Dijkstra hoạt động theo nguyên lý tham lam (greedy): tại mỗi bước, thuật toán chọn đỉnh chưa xét có khoảng cách tạm thời nhỏ nhất tính từ đỉnh nguồn, sau đó cập nhật (relax) khoảng cách tới các đỉnh kề. Quá trình lặp lại cho đến khi tất cả các đỉnh đều được xét. Độ phức tạp thời gian là O(V^2) với cài đặt mảng thông thường, hoặc O((V+E)logV) khi dùng hàng đợi ưu tiên (priority queue).",
+      "example": "Ví dụ: tìm đường đi ngắn nhất từ thành phố A đến thành phố E trong mạng lưới giao thông có 5 thành phố và các tuyến đường có chi phí khác nhau.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "kb002",
+      "course": "Trí tuệ nhân tạo",
+      "chapter": "Tìm kiếm trong không gian trạng thái",
+      "topic": "Thuật toán BFS",
+      "keywords": [
+        "bfs",
+        "breadth first search",
+        "tìm kiếm theo chiều rộng"
+      ],
+      "question": "Thuật toán BFS là gì?",
+      "answer_basic": "BFS (Breadth-First Search) là thuật toán duyệt đồ thị theo chiều rộng, thăm tất cả các đỉnh ở cùng một mức trước khi chuyển sang mức tiếp theo.",
+      "answer_detailed": "BFS sử dụng cấu trúc hàng đợi (queue) để lưu các đỉnh cần thăm. Bắt đầu từ đỉnh gốc, thuật toán thăm lần lượt tất cả các đỉnh kề, sau đó mới thăm các đỉnh kề của các đỉnh đó. BFS đảm bảo tìm được đường đi ngắn nhất (theo số cạnh) trong đồ thị không trọng số. Độ phức tạp là O(V+E).",
+      "example": "Ví dụ: BFS thường dùng để tìm đường đi ngắn nhất trong mê cung, hoặc lan truyền thông tin trong mạng xã hội theo từng cấp bạn bè.",
+      "difficulty": "basic"
+    },
+    {
+      "id": "kb003",
+      "course": "Trí tuệ nhân tạo",
+      "chapter": "Tìm kiếm trong không gian trạng thái",
+      "topic": "Thuật toán DFS",
+      "keywords": [
+        "dfs",
+        "depth first search",
+        "tìm kiếm theo chiều sâu"
+      ],
+      "question": "Thuật toán DFS là gì?",
+      "answer_basic": "DFS (Depth-First Search) là thuật toán duyệt đồ thị theo chiều sâu, đi sâu nhất có thể theo một nhánh trước khi quay lui.",
+      "answer_detailed": "DFS sử dụng cấu trúc ngăn xếp (stack), có thể cài đặt bằng đệ quy hoặc vòng lặp tường minh. Từ đỉnh hiện tại, thuật toán đi tới một đỉnh kề chưa thăm, tiếp tục đi sâu cho đến khi không còn đỉnh kề chưa thăm thì quay lui (backtrack). DFS phù hợp để kiểm tra tính liên thông, phát hiện chu trình, hoặc giải các bài toán duyệt cây/đồ thị. Độ phức tạp là O(V+E).",
+      "example": "Ví dụ: DFS thường dùng để giải mê cung, sắp xếp tô-pô (topological sort), hoặc phát hiện chu trình trong đồ thị.",
+      "difficulty": "basic"
+    },
+    {
+      "id": "kb004",
+      "course": "Trí tuệ nhân tạo",
+      "chapter": "Học máy cơ bản",
+      "topic": "Machine Learning",
+      "keywords": [
+        "machine learning",
+        "học máy",
+        "ml"
+      ],
+      "question": "Machine Learning là gì?",
+      "answer_basic": "Machine Learning (học máy) là một nhánh của AI, cho phép máy tính học từ dữ liệu để đưa ra dự đoán hoặc quyết định mà không cần lập trình tường minh từng quy tắc.",
+      "answer_detailed": "Học máy chia thành 3 nhóm chính: học có giám sát (supervised learning - học từ dữ liệu có nhãn), học không giám sát (unsupervised learning - tìm cấu trúc ẩn trong dữ liệu không nhãn), và học tăng cường (reinforcement learning - học qua tương tác với môi trường bằng phần thưởng/hình phạt). Quy trình chung gồm: thu thập dữ liệu, tiền xử lý, chọn mô hình, huấn luyện, đánh giá và triển khai.",
+      "example": "Ví dụ: hệ thống gợi ý phim trên Netflix, nhận diện khuôn mặt, hoặc lọc email rác đều là ứng dụng của Machine Learning.",
+      "difficulty": "basic"
+    },
+    {
+      "id": "kb005",
+      "course": "Cơ sở dữ liệu",
+      "chapter": "Chuẩn hóa dữ liệu",
+      "topic": "Dạng chuẩn 3 (3NF)",
+      "keywords": [
+        "3nf",
+        "dạng chuẩn 3",
+        "chuẩn hóa"
+      ],
+      "question": "Dạng chuẩn 3 (3NF) trong cơ sở dữ liệu là gì?",
+      "answer_basic": "Một quan hệ đạt dạng chuẩn 3 (3NF) khi nó đã đạt 2NF và không có thuộc tính không khóa nào phụ thuộc bắc cầu vào khóa chính.",
+      "answer_detailed": "3NF yêu cầu: (1) quan hệ đã ở dạng chuẩn 2 (2NF); (2) mọi thuộc tính không khóa phải phụ thuộc trực tiếp vào khóa chính, không thông qua một thuộc tính không khóa khác (không có phụ thuộc bắc cầu). Mục tiêu của 3NF là loại bỏ dị thường cập nhật (update anomaly) và giảm dư thừa dữ liệu.",
+      "example": "Ví dụ: bảng Đơn hàng chứa (MaDonHang, MaKhachHang, TenKhachHang) vi phạm 3NF vì TenKhachHang phụ thuộc bắc cầu qua MaKhachHang, cần tách thành hai bảng riêng.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "kb006",
+      "course": "Cấu trúc dữ liệu và giải thuật",
+      "chapter": "Cây",
+      "topic": "Cây nhị phân tìm kiếm (BST)",
+      "keywords": [
+        "bst",
+        "binary search tree",
+        "cây nhị phân tìm kiếm"
+      ],
+      "question": "Cây nhị phân tìm kiếm (BST) là gì?",
+      "answer_basic": "Cây nhị phân tìm kiếm (BST) là cây nhị phân mà tại mỗi nút, giá trị các nút bên trái nhỏ hơn nút gốc và giá trị các nút bên phải lớn hơn nút gốc.",
+      "answer_detailed": "Tính chất này áp dụng đệ quy cho mọi cây con. Nhờ đó, các phép toán tìm kiếm, thêm, xóa trong BST cân bằng có độ phức tạp trung bình O(log n). Tuy nhiên, trong trường hợp xấu nhất (cây lệch hẳn về một phía), độ phức tạp có thể suy biến thành O(n), do đó thực tế thường dùng các biến thể tự cân bằng như AVL Tree hoặc Red-Black Tree.",
+      "example": "Ví dụ: duyệt cây theo thứ tự trung tự (in-order traversal) trên một BST sẽ cho ra dãy giá trị đã được sắp xếp tăng dần.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "kb007",
+      "course": "Lập trình Python",
+      "chapter": "Lập trình hướng đối tượng",
+      "topic": "Kế thừa (Inheritance)",
+      "keywords": [
+        "kế thừa",
+        "inheritance",
+        "class python"
+      ],
+      "question": "Kế thừa trong Python là gì?",
+      "answer_basic": "Kế thừa (inheritance) cho phép một lớp (class con) sử dụng lại thuộc tính và phương thức của một lớp khác (class cha).",
+      "answer_detailed": "Trong Python, cú pháp kế thừa là class Con(Cha):. Class con có thể ghi đè (override) phương thức của class cha, hoặc gọi phương thức của class cha thông qua hàm super(). Python hỗ trợ đa kế thừa (multiple inheritance), cho phép một class kế thừa từ nhiều class cha cùng lúc.",
+      "example": "Ví dụ: class SinhVien(NguoiDung) kế thừa các thuộc tính họ_tên, email từ class NguoiDung và bổ sung thêm thuộc tính mã_số_sinh_viên.",
+      "difficulty": "basic"
+    },
+    {
+      "id": "kb101",
+      "course": "Cơ sở dữ liệu",
+      "chapter": "Tổng quan về cơ sở dữ liệu",
+      "topic": "Hệ quản trị cơ sở dữ liệu",
+      "keywords": [
+        "hệ quản trị cơ sở dữ liệu",
+        "dbms",
+        "hqtcsdl",
+        "cơ sở dữ liệu là gì"
+      ],
+      "question": "Cơ sở dữ liệu và hệ quản trị cơ sở dữ liệu là gì?",
+      "answer_basic": "Cơ sở dữ liệu (CSDL) là tập hợp dữ liệu có tổ chức, được lưu trữ và quản lý để phục vụ nhu cầu khai thác của nhiều người dùng. Hệ quản trị cơ sở dữ liệu (DBMS) là phần mềm cho phép tạo lập, cập nhật và truy vấn cơ sở dữ liệu.",
+      "answer_detailed": "CSDL giúp tổ chức dữ liệu một cách có cấu trúc, giảm dư thừa và tăng tính nhất quán so với việc lưu trữ rời rạc bằng file. DBMS cung cấp các chức năng: định nghĩa cấu trúc dữ liệu, thao tác dữ liệu (thêm, sửa, xóa, truy vấn), kiểm soát truy cập và bảo mật, đảm bảo tính toàn vẹn dữ liệu. Con người tương tác với CSDL qua nhiều vai trò: người quản trị CSDL (DBA), lập trình viên ứng dụng, và người dùng cuối.",
+      "example": "Ví dụ: phần mềm quản lý bán hàng dùng CSDL để lưu thông tin khách hàng, sản phẩm, hóa đơn; SQL Server, MySQL, PostgreSQL là các hệ quản trị CSDL phổ biến.",
+      "difficulty": "basic"
+    },
+    {
+      "id": "kb102",
+      "course": "Cơ sở dữ liệu",
+      "chapter": "Các mô hình dữ liệu quan hệ",
+      "topic": "Mô hình dữ liệu quan hệ",
+      "keywords": [
+        "mô hình quan hệ",
+        "quan hệ",
+        "bảng",
+        "khóa chính",
+        "khóa ngoại",
+        "relation"
+      ],
+      "question": "Mô hình dữ liệu quan hệ là gì?",
+      "answer_basic": "Mô hình dữ liệu quan hệ tổ chức dữ liệu thành các bảng (quan hệ), mỗi bảng gồm các dòng (bộ) và cột (thuộc tính), có khóa chính để định danh duy nhất mỗi dòng.",
+      "answer_detailed": "Trong mô hình quan hệ, mỗi bảng biểu diễn một loại thực thể hoặc mối kết hợp. Khóa chính (primary key) là thuộc tính hoặc tập thuộc tính xác định duy nhất một dòng dữ liệu. Khóa ngoại (foreign key) là thuộc tính trong một bảng tham chiếu đến khóa chính của bảng khác, thể hiện mối quan hệ giữa các bảng. Các ràng buộc toàn vẹn đảm bảo dữ liệu luôn hợp lệ khi thêm, sửa, xóa.",
+      "example": "Ví dụ: bảng SinhVien(MaSV, HoTen, MaLop) có khóa ngoại MaLop tham chiếu đến bảng Lop(MaLop, TenLop).",
+      "difficulty": "basic"
+    },
+    {
+      "id": "kb103",
+      "course": "Cơ sở dữ liệu",
+      "chapter": "Đại số quan hệ",
+      "topic": "Đại số quan hệ",
+      "keywords": [
+        "đại số quan hệ",
+        "relational algebra",
+        "phép chọn",
+        "phép chiếu",
+        "phép kết"
+      ],
+      "question": "Đại số quan hệ là gì?",
+      "answer_basic": "Đại số quan hệ là tập hợp các phép toán hình thức dùng để truy vấn và thao tác dữ liệu trên các quan hệ, làm nền tảng lý thuyết cho ngôn ngữ truy vấn SQL.",
+      "answer_detailed": "Các phép toán cơ bản trong đại số quan hệ gồm: phép chọn (selection) lọc các dòng thỏa điều kiện, phép chiếu (projection) chọn ra một số cột, phép kết (join) kết hợp dữ liệu từ nhiều bảng theo điều kiện, phép hợp/giao/trừ tập hợp giữa các quan hệ tương thích. Mỗi câu truy vấn SQL có thể được biểu diễn tương đương bằng một biểu thức đại số quan hệ.",
+      "example": "Ví dụ: phép chọn σ(Tuoi>18)(SinhVien) trả về các sinh viên có tuổi lớn hơn 18.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "kb104",
+      "course": "Cơ sở dữ liệu",
+      "chapter": "Ngôn ngữ truy vấn SQL",
+      "topic": "Ngôn ngữ truy vấn SQL",
+      "keywords": [
+        "sql",
+        "select",
+        "truy vấn",
+        "ngôn ngữ truy vấn"
+      ],
+      "question": "Ngôn ngữ truy vấn SQL là gì?",
+      "answer_basic": "SQL (Structured Query Language) là ngôn ngữ chuẩn dùng để định nghĩa, thao tác và truy vấn dữ liệu trong hệ quản trị cơ sở dữ liệu quan hệ.",
+      "answer_detailed": "SQL gồm nhiều nhóm lệnh: DDL (Data Definition Language) như CREATE, ALTER, DROP để định nghĩa cấu trúc; DML (Data Manipulation Language) như SELECT, INSERT, UPDATE, DELETE để thao tác dữ liệu; DCL (Data Control Language) như GRANT, REVOKE để phân quyền. Câu lệnh SELECT là lệnh truy vấn phổ biến nhất, hỗ trợ các mệnh đề WHERE, GROUP BY, HAVING, ORDER BY và JOIN để kết hợp nhiều bảng.",
+      "example": "Ví dụ: SELECT HoTen, Diem FROM SinhVien WHERE Diem >= 5 ORDER BY Diem DESC;",
+      "difficulty": "basic"
+    },
+    {
+      "id": "kb105",
+      "course": "Cơ sở dữ liệu",
+      "chapter": "Ràng buộc toàn vẹn",
+      "topic": "Ràng buộc toàn vẹn dữ liệu",
+      "keywords": [
+        "ràng buộc toàn vẹn",
+        "integrity constraint",
+        "toàn vẹn dữ liệu"
+      ],
+      "question": "Ràng buộc toàn vẹn trong cơ sở dữ liệu là gì?",
+      "answer_basic": "Ràng buộc toàn vẹn là các quy tắc đảm bảo dữ liệu trong CSDL luôn chính xác, nhất quán và hợp lệ tại mọi thời điểm.",
+      "answer_detailed": "Có nhiều loại ràng buộc: ràng buộc miền giá trị (một thuộc tính chỉ nhận giá trị trong một tập cho phép), ràng buộc khóa (không trùng lặp khóa chính), ràng buộc tham chiếu (khóa ngoại phải tồn tại trong bảng được tham chiếu), và ràng buộc do người dùng định nghĩa (business rule). Vi phạm ràng buộc toàn vẹn sẽ khiến thao tác cập nhật dữ liệu bị từ chối.",
+      "example": "Ví dụ: ràng buộc CHECK(Tuoi >= 18) đảm bảo cột Tuoi không thể lưu giá trị nhỏ hơn 18.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "kb111",
+      "course": "Hệ quản trị cơ sở dữ liệu",
+      "chapter": "Tổng quan về hệ quản trị CSDL",
+      "topic": "Kiến trúc hệ quản trị CSDL",
+      "keywords": [
+        "hệ quản trị csdl",
+        "sql server",
+        "kiến trúc dbms"
+      ],
+      "question": "Kiến trúc của một hệ quản trị cơ sở dữ liệu gồm những gì?",
+      "answer_basic": "Hệ quản trị CSDL gồm các thành phần chính: bộ xử lý truy vấn, bộ quản lý lưu trữ, bộ quản lý giao dịch và bộ quản lý bộ nhớ đệm, phối hợp để lưu trữ và truy xuất dữ liệu hiệu quả.",
+      "answer_detailed": "Bộ xử lý truy vấn tiếp nhận và tối ưu hóa câu truy vấn trước khi thực thi. Bộ quản lý lưu trữ chịu trách nhiệm đọc/ghi dữ liệu vật lý trên đĩa. Bộ quản lý giao dịch đảm bảo các thuộc tính ACID (Atomicity, Consistency, Isolation, Durability). Các hệ quản trị phổ biến như SQL Server, Oracle, MySQL đều tuân theo kiến trúc tổng quát này dù có khác biệt về cài đặt.",
+      "example": "Ví dụ: khi thực thi một câu SELECT phức tạp, SQL Server sẽ sinh ra một execution plan để tối ưu thứ tự truy xuất bảng.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "kb112",
+      "course": "Hệ quản trị cơ sở dữ liệu",
+      "chapter": "Xây dựng - Quản lý - Khai thác CSDL",
+      "topic": "Quản lý và khai thác cơ sở dữ liệu",
+      "keywords": [
+        "quản lý csdl",
+        "khai thác csdl",
+        "xây dựng csdl"
+      ],
+      "question": "Quy trình xây dựng và khai thác một cơ sở dữ liệu gồm những bước nào?",
+      "answer_basic": "Quy trình gồm: phân tích yêu cầu, thiết kế lược đồ CSDL, tạo lập cấu trúc bảng, nạp dữ liệu, và khai thác thông qua các câu truy vấn, báo cáo phục vụ nghiệp vụ.",
+      "answer_detailed": "Ở bước thiết kế, người thiết kế xác định các thực thể, thuộc tính và mối quan hệ giữa chúng. Sau khi tạo cấu trúc bảng bằng DDL, dữ liệu được nạp vào và các ứng dụng có thể khai thác CSDL thông qua truy vấn, thủ tục lưu trữ hoặc giao diện người dùng. Quản trị viên CSDL (DBA) chịu trách nhiệm sao lưu, phục hồi và giám sát hiệu năng hệ thống trong suốt vòng đời khai thác.",
+      "example": "Ví dụ: một hệ thống quản lý sinh viên trải qua các bước thiết kế lược đồ, tạo bảng, nhập dữ liệu điểm và xuất báo cáo bảng điểm cuối kỳ.",
+      "difficulty": "basic"
+    },
+    {
+      "id": "kb113",
+      "course": "Hệ quản trị cơ sở dữ liệu",
+      "chapter": "Truy vấn nâng cao",
+      "topic": "Truy vấn nâng cao trong SQL",
+      "keywords": [
+        "truy vấn nâng cao",
+        "subquery",
+        "truy vấn con",
+        "hàm tổng hợp"
+      ],
+      "question": "Truy vấn nâng cao trong SQL gồm những kỹ thuật nào?",
+      "answer_basic": "Truy vấn nâng cao gồm các kỹ thuật như truy vấn con (subquery), hàm tổng hợp (SUM, COUNT, AVG), gộp nhóm (GROUP BY/HAVING), và các phép kết nhiều bảng phức tạp.",
+      "answer_detailed": "Truy vấn con cho phép lồng một câu SELECT bên trong câu SELECT khác, dùng trong mệnh đề WHERE, FROM hoặc SELECT. Hàm tổng hợp tính toán trên tập giá trị như tổng, trung bình, đếm số dòng. Mệnh đề GROUP BY nhóm các dòng có cùng giá trị thuộc tính, kết hợp HAVING để lọc theo điều kiện trên nhóm. Các kỹ thuật này giúp giải quyết những yêu cầu truy vấn phức tạp mà một câu SELECT đơn giản không thể đáp ứng.",
+      "example": "Ví dụ: SELECT MaLop, COUNT(*) FROM SinhVien GROUP BY MaLop HAVING COUNT(*) > 30; liệt kê các lớp có hơn 30 sinh viên.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "kb114",
+      "course": "Hệ quản trị cơ sở dữ liệu",
+      "chapter": "Ràng buộc dữ liệu",
+      "topic": "Ràng buộc dữ liệu trong SQL Server",
+      "keywords": [
+        "ràng buộc dữ liệu",
+        "primary key",
+        "foreign key",
+        "check constraint"
+      ],
+      "question": "Các loại ràng buộc dữ liệu phổ biến trong SQL Server là gì?",
+      "answer_basic": "Các ràng buộc phổ biến gồm PRIMARY KEY, FOREIGN KEY, UNIQUE, CHECK và NOT NULL, dùng để đảm bảo tính hợp lệ và nhất quán của dữ liệu khi lưu trữ.",
+      "answer_detailed": "PRIMARY KEY đảm bảo giá trị duy nhất và không rỗng để định danh dòng dữ liệu. FOREIGN KEY liên kết dữ liệu giữa hai bảng và ngăn chặn dữ liệu tham chiếu không hợp lệ. UNIQUE đảm bảo không có giá trị trùng lặp trên một cột không phải khóa chính. CHECK giới hạn giá trị hợp lệ theo một biểu thức logic. NOT NULL bắt buộc cột phải có giá trị.",
+      "example": "Ví dụ: ALTER TABLE SinhVien ADD CONSTRAINT CK_Tuoi CHECK (Tuoi >= 18);",
+      "difficulty": "medium"
+    },
+    {
+      "id": "kb115",
+      "course": "Hệ quản trị cơ sở dữ liệu",
+      "chapter": "Bảo mật và An toàn dữ liệu",
+      "topic": "View và Trigger",
+      "keywords": [
+        "view",
+        "trigger",
+        "khung nhìn",
+        "bảo mật dữ liệu"
+      ],
+      "question": "View và Trigger trong hệ quản trị CSDL dùng để làm gì?",
+      "answer_basic": "View (khung nhìn) là bảng ảo được định nghĩa từ một câu truy vấn, giúp đơn giản hóa truy cập và tăng bảo mật. Trigger là đoạn mã tự động thực thi khi có sự kiện thêm/sửa/xóa dữ liệu xảy ra trên bảng.",
+      "answer_detailed": "View không lưu trữ dữ liệu vật lý mà chỉ lưu định nghĩa truy vấn, cho phép ẩn bớt các cột nhạy cảm hoặc đơn giản hóa các truy vấn phức tạp cho người dùng. Trigger được gắn với các sự kiện INSERT, UPDATE, DELETE trên một bảng, thường dùng để kiểm tra ràng buộc phức tạp, ghi log thay đổi, hoặc tự động cập nhật dữ liệu liên quan, góp phần đảm bảo an toàn và toàn vẹn dữ liệu.",
+      "example": "Ví dụ: một Trigger AFTER DELETE trên bảng DonHang có thể tự động ghi lại lịch sử đơn hàng đã xóa vào bảng LichSu.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "kb116",
+      "course": "Hệ quản trị cơ sở dữ liệu",
+      "chapter": "Transaction",
+      "topic": "Giao dịch và điều khiển đồng thời",
+      "keywords": [
+        "transaction",
+        "giao dịch",
+        "acid",
+        "điều khiển đồng thời",
+        "concurrency"
+      ],
+      "question": "Transaction (giao dịch) trong cơ sở dữ liệu là gì?",
+      "answer_basic": "Transaction là một chuỗi các thao tác trên CSDL được thực hiện như một đơn vị không thể chia nhỏ: hoặc tất cả đều thành công, hoặc tất cả đều được hủy bỏ (rollback).",
+      "answer_detailed": "Một transaction phải đảm bảo 4 thuộc tính ACID: Atomicity (tính nguyên tử - tất cả hoặc không có thao tác nào được thực hiện), Consistency (tính nhất quán - dữ liệu luôn hợp lệ trước và sau giao dịch), Isolation (tính cô lập - các giao dịch chạy đồng thời không ảnh hưởng lẫn nhau), Durability (tính bền vững - kết quả giao dịch đã commit sẽ tồn tại vĩnh viễn). Điều khiển đồng thời (concurrency control) giải quyết các vấn đề như đọc dữ liệu chưa commit, mất mát cập nhật khi nhiều giao dịch truy cập cùng dữ liệu.",
+      "example": "Ví dụ: giao dịch chuyển tiền giữa hai tài khoản ngân hàng phải trừ tiền tài khoản A và cộng tiền tài khoản B như một thao tác nguyên tử; nếu một trong hai bước thất bại, toàn bộ giao dịch phải được rollback.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "kb121",
+      "course": "Cấu trúc dữ liệu và giải thuật",
+      "chapter": "Giới thiệu",
+      "topic": "Độ phức tạp thuật toán",
+      "keywords": [
+        "độ phức tạp",
+        "big o",
+        "complexity",
+        "giải thuật"
+      ],
+      "question": "Độ phức tạp thuật toán là gì?",
+      "answer_basic": "Độ phức tạp thuật toán đo lường tài nguyên (thời gian hoặc bộ nhớ) mà một thuật toán cần sử dụng theo kích thước đầu vào, thường được biểu diễn bằng ký hiệu Big O.",
+      "answer_detailed": "Độ phức tạp thời gian mô tả số phép toán cơ bản mà thuật toán thực hiện khi kích thước dữ liệu đầu vào tăng lên, giúp so sánh hiệu quả giữa các thuật toán mà không phụ thuộc vào phần cứng cụ thể. Các mức độ phức tạp phổ biến từ tốt đến xấu: O(1), O(log n), O(n), O(n log n), O(n^2), O(2^n). Việc phân tích độ phức tạp giúp lựa chọn thuật toán phù hợp khi làm việc với dữ liệu lớn.",
+      "example": "Ví dụ: thuật toán tìm kiếm tuần tự có độ phức tạp O(n), trong khi tìm kiếm nhị phân trên mảng đã sắp xếp chỉ có độ phức tạp O(log n).",
+      "difficulty": "basic"
+    },
+    {
+      "id": "kb122",
+      "course": "Cấu trúc dữ liệu và giải thuật",
+      "chapter": "Sắp xếp",
+      "topic": "Các giải thuật sắp xếp",
+      "keywords": [
+        "sắp xếp",
+        "sorting",
+        "bubble sort",
+        "quick sort",
+        "merge sort"
+      ],
+      "question": "Các giải thuật sắp xếp phổ biến là gì?",
+      "answer_basic": "Sắp xếp là quá trình bố trí lại một dãy phần tử theo một trật tự xác định (tăng dần hoặc giảm dần), giúp việc tìm kiếm và biểu diễn dữ liệu hiệu quả hơn.",
+      "answer_detailed": "Các giải thuật sắp xếp cơ bản gồm: Sắp xếp nổi bọt (Bubble Sort) và sắp xếp chọn (Selection Sort) có độ phức tạp O(n^2), phù hợp với dữ liệu nhỏ; Sắp xếp nhanh (Quick Sort) và sắp xếp trộn (Merge Sort) có độ phức tạp trung bình O(n log n), hiệu quả hơn với dữ liệu lớn. Việc lựa chọn giải thuật sắp xếp phụ thuộc vào kích thước dữ liệu, yêu cầu về bộ nhớ và tính ổn định (stable) của thuật toán.",
+      "example": "Ví dụ: Quick Sort chọn một phần tử chốt (pivot) rồi phân hoạch dãy thành hai phần nhỏ hơn và lớn hơn pivot, sau đó đệ quy sắp xếp từng phần.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "kb123",
+      "course": "Cấu trúc dữ liệu và giải thuật",
+      "chapter": "Cây",
+      "topic": "Cấu trúc dữ liệu cây",
+      "keywords": [
+        "cây",
+        "tree",
+        "cấu trúc dữ liệu cây",
+        "duyệt cây"
+      ],
+      "question": "Cấu trúc dữ liệu cây (Tree) là gì?",
+      "answer_basic": "Cây là một cấu trúc dữ liệu phi tuyến gồm các nút (node) liên kết với nhau bằng các cạnh (edge), trong đó một nút cha có thể có nhiều nút con.",
+      "answer_detailed": "Cây có một nút gốc (root) không có nút cha, và các nút lá (leaf) không có nút con. Các phép duyệt cây phổ biến gồm: duyệt trước (pre-order), duyệt giữa (in-order), duyệt sau (post-order) theo chiều sâu, và duyệt theo mức (level-order) theo chiều rộng. Cây nhị phân tìm kiếm (Binary Search Tree) là một dạng cây đặc biệt được dùng phổ biến để tổ chức dữ liệu có thể tìm kiếm nhanh.",
+      "example": "Ví dụ: cây thư mục trên máy tính là một cấu trúc cây, trong đó mỗi thư mục con là một nút con của thư mục cha.",
+      "difficulty": "basic"
+    },
+    {
+      "id": "kb124",
+      "course": "Cấu trúc dữ liệu và giải thuật",
+      "chapter": "Đồ thị",
+      "topic": "Đồ thị (Graph)",
+      "keywords": [
+        "đồ thị",
+        "graph",
+        "đỉnh",
+        "cạnh",
+        "vertices",
+        "edges"
+      ],
+      "question": "Đồ thị (Graph) trong cấu trúc dữ liệu là gì?",
+      "answer_basic": "Đồ thị là một cấu trúc dữ liệu biểu diễn tập các đối tượng (đỉnh) và các mối liên kết giữa chúng (cạnh), dùng để mô hình hóa các mối quan hệ phức tạp.",
+      "answer_detailed": "Một đồ thị G = (V, E) gồm tập đỉnh V và tập cạnh E, trong đó mỗi cạnh nối hai đỉnh với nhau. Đồ thị có thể là vô hướng (cạnh không có chiều) hoặc có hướng (cạnh có chiều xác định), có trọng số hoặc không có trọng số. Đồ thị thường được biểu diễn bằng ma trận kề (adjacency matrix) hoặc danh sách kề (adjacency list). Các thuật toán duyệt đồ thị phổ biến gồm BFS (duyệt theo chiều rộng) và DFS (duyệt theo chiều sâu).",
+      "example": "Ví dụ: mạng lưới bạn bè trên mạng xã hội có thể biểu diễn bằng đồ thị, trong đó mỗi người là một đỉnh và mỗi mối quan hệ bạn bè là một cạnh.",
+      "difficulty": "basic"
+    },
+    {
+      "id": "kb125",
+      "course": "Cấu trúc dữ liệu và giải thuật",
+      "chapter": "Bảng băm",
+      "topic": "Bảng băm (Hashing)",
+      "keywords": [
+        "bảng băm",
+        "hashing",
+        "hash table",
+        "hàm băm"
+      ],
+      "question": "Bảng băm (Hash Table) là gì?",
+      "answer_basic": "Bảng băm là cấu trúc dữ liệu lưu trữ các cặp khóa-giá trị, sử dụng hàm băm để ánh xạ khóa đến một vị trí trong bảng, cho phép tìm kiếm, thêm và xóa dữ liệu với thời gian trung bình O(1).",
+      "answer_detailed": "Hàm băm chuyển đổi một khóa thành một chỉ số trong bảng. Khi hai khóa khác nhau được ánh xạ đến cùng một vị trí, xảy ra hiện tượng đụng độ (collision), được xử lý bằng các phương pháp như phương pháp kết nối (chaining - lưu danh sách liên kết tại mỗi vị trí) hoặc phương pháp địa chỉ mở (open addressing - tìm vị trí trống kế tiếp theo một quy tắc xác định).",
+      "example": "Ví dụ: từ điển trong Python (dict) được cài đặt dựa trên bảng băm, cho phép truy xuất giá trị theo khóa gần như tức thời.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "kb131",
+      "course": "Lập trình hướng đối tượng",
+      "chapter": "Giới thiệu lập trình hướng đối tượng",
+      "topic": "Khái niệm Lớp và Đối tượng",
+      "keywords": [
+        "lớp",
+        "đối tượng",
+        "class",
+        "object",
+        "oop"
+      ],
+      "question": "Lớp và đối tượng trong lập trình hướng đối tượng là gì?",
+      "answer_basic": "Lớp (class) là khuôn mẫu định nghĩa thuộc tính và phương thức chung cho một nhóm đối tượng. Đối tượng (object) là một thực thể cụ thể được tạo ra từ lớp đó.",
+      "answer_detailed": "Lớp đóng vai trò như một bản thiết kế (blueprint), mô tả những dữ liệu (thuộc tính) và hành vi (phương thức) mà các đối tượng thuộc lớp đó sẽ có. Khi một đối tượng được tạo ra từ lớp, quá trình này gọi là khởi tạo (instantiation), và đối tượng đó gọi là một thể hiện (instance) của lớp. Nhiều đối tượng có thể được tạo ra từ cùng một lớp, mỗi đối tượng có giá trị thuộc tính riêng.",
+      "example": "Ví dụ: lớp SinhVien định nghĩa thuộc tính hoTen, mssv và phương thức hocBai(); đối tượng sv1 = SinhVien(\"Nguyễn Văn An\", \"2212345\") là một đối tượng cụ thể của lớp đó.",
+      "difficulty": "basic"
+    },
+    {
+      "id": "kb132",
+      "course": "Lập trình hướng đối tượng",
+      "chapter": "4 tính chất của OOP",
+      "topic": "Bốn tính chất của lập trình hướng đối tượng",
+      "keywords": [
+        "tính chất oop",
+        "encapsulation",
+        "inheritance",
+        "polymorphism",
+        "abstraction",
+        "đóng gói",
+        "kế thừa",
+        "đa hình",
+        "trừu tượng"
+      ],
+      "question": "Bốn tính chất cơ bản của lập trình hướng đối tượng là gì?",
+      "answer_basic": "Bốn tính chất cơ bản của OOP gồm: Tính đóng gói (Encapsulation), Tính kế thừa (Inheritance), Tính đa hình (Polymorphism) và Tính trừu tượng (Abstraction).",
+      "answer_detailed": "Tính đóng gói che giấu dữ liệu nội bộ của đối tượng, chỉ cho phép truy cập thông qua các phương thức công khai. Tính kế thừa cho phép một lớp con kế thừa thuộc tính và phương thức từ lớp cha, tái sử dụng và mở rộng code. Tính đa hình cho phép cùng một phương thức có hành vi khác nhau tùy theo đối tượng gọi nó (ví dụ ghi đè phương thức ở lớp con). Tính trừu tượng tập trung vào những đặc điểm cốt lõi, ẩn đi các chi tiết cài đặt phức tạp không cần thiết đối với người dùng lớp.",
+      "example": "Ví dụ: lớp DongVat có phương thức keu(); lớp Cho và Meo kế thừa từ DongVat và ghi đè phương thức keu() theo cách riêng — đây là ví dụ về cả tính kế thừa và tính đa hình.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "kb133",
+      "course": "Lập trình hướng đối tượng",
+      "chapter": "Phương thức",
+      "topic": "Phương thức trong lập trình hướng đối tượng",
+      "keywords": [
+        "phương thức",
+        "method",
+        "hàm thành viên",
+        "constructor"
+      ],
+      "question": "Phương thức trong lập trình hướng đối tượng là gì?",
+      "answer_basic": "Phương thức là hàm được định nghĩa bên trong một lớp, mô tả hành vi mà đối tượng của lớp đó có thể thực hiện, thường thao tác trên dữ liệu thuộc tính của chính đối tượng.",
+      "answer_detailed": "Có nhiều loại phương thức: constructor (hàm khởi tạo) được gọi tự động khi tạo đối tượng để thiết lập giá trị ban đầu; phương thức instance thao tác trên dữ liệu của một đối tượng cụ thể; phương thức tĩnh (static method) không phụ thuộc vào một đối tượng cụ thể mà thuộc về lớp. Việc tổ chức hành vi thành các phương thức giúp code rõ ràng, dễ tái sử dụng và bảo trì hơn.",
+      "example": "Ví dụ trong Python: def __init__(self, ten): self.ten = ten là một constructor gán giá trị ten khi đối tượng được tạo ra.",
+      "difficulty": "basic"
+    },
+    {
+      "id": "kb141",
+      "course": "Lập trình .NET",
+      "chapter": "Giới thiệu .NET Framework",
+      "topic": ".NET Framework",
+      "keywords": [
+        ".net",
+        ".net framework",
+        "dotnet"
+      ],
+      "question": ".NET Framework là gì?",
+      "answer_basic": ".NET Framework là một nền tảng phát triển phần mềm do Microsoft xây dựng, cung cấp thư viện, quy tắc và môi trường thực thi để xây dựng ứng dụng trên Windows.",
+      "answer_detailed": ".NET Framework không phải là một ngôn ngữ lập trình mà là một khung phần mềm (framework) hỗ trợ nhiều ngôn ngữ như C#, VB.NET. Nó cung cấp Common Language Runtime (CLR) để quản lý việc thực thi mã, thư viện lớp cơ sở (Base Class Library) chứa nhiều thành phần dùng sẵn, giúp lập trình viên xây dựng nhanh các ứng dụng như Windows Forms, ứng dụng web, dịch vụ, ứng dụng kết nối cơ sở dữ liệu qua ADO.NET.",
+      "example": "Ví dụ: một lập trình viên C# sử dụng .NET Framework để xây dựng ứng dụng quản lý bán hàng chạy trên Windows với giao diện Windows Forms.",
+      "difficulty": "basic"
+    },
+    {
+      "id": "kb142",
+      "course": "Lập trình .NET",
+      "chapter": "Windows Forms",
+      "topic": "Xây dựng ứng dụng Windows Forms",
+      "keywords": [
+        "windows forms",
+        "winform",
+        "giao diện windows"
+      ],
+      "question": "Windows Forms là gì?",
+      "answer_basic": "Windows Forms là công nghệ xây dựng giao diện người dùng (GUI) truyền thống trên nền tảng .NET, dựa trên Windows API (GDI/GDI+), cho phép tạo ứng dụng desktop chạy trên Windows.",
+      "answer_detailed": "Khi phát triển ứng dụng Windows Forms, lập trình viên thiết kế giao diện bằng cách kéo-thả các đối tượng điều khiển (control) như Button, TextBox, Label lên một Form, sau đó viết mã xử lý sự kiện tương ứng (ví dụ sự kiện Click của Button). Ứng dụng Windows Forms cũng cần được cấu hình các thiết lập liên quan đến triển khai khi đóng gói phân phối.",
+      "example": "Ví dụ: một Form đăng nhập gồm hai TextBox nhập tên đăng nhập/mật khẩu và một Button để xử lý sự kiện đăng nhập khi người dùng nhấn vào.",
+      "difficulty": "basic"
+    },
+    {
+      "id": "kb143",
+      "course": "Lập trình .NET",
+      "chapter": "ADO.NET",
+      "topic": "Tổng quan ADO.NET",
+      "keywords": [
+        "ado.net",
+        "kết nối cơ sở dữ liệu",
+        "connection",
+        "dataset"
+      ],
+      "question": "ADO.NET là gì?",
+      "answer_basic": "ADO.NET là tập hợp các lớp trong .NET Framework cho phép ứng dụng kết nối, truy xuất và thao tác dữ liệu với các hệ quản trị cơ sở dữ liệu như SQL Server.",
+      "answer_detailed": "ADO.NET cung cấp hai mô hình truy xuất dữ liệu: Connected (giữ kết nối mở trong suốt quá trình thao tác, dùng các đối tượng như SqlConnection, SqlCommand, SqlDataReader) và Disconnected (dùng DataSet/DataAdapter để nạp dữ liệu vào bộ nhớ rồi ngắt kết nối, phù hợp khi cần thao tác dữ liệu offline). ADO.NET cũng hỗ trợ gọi Stored Procedure và truy vấn có tham số để tăng hiệu năng và bảo mật.",
+      "example": "Ví dụ: dùng SqlConnection để mở kết nối đến SQL Server, sau đó dùng SqlCommand thực thi câu lệnh SELECT và SqlDataReader để đọc từng dòng kết quả.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "kb144",
+      "course": "Lập trình .NET",
+      "chapter": "Kết nối đến Data Source",
+      "topic": "Kết nối đến nguồn dữ liệu (Data Source)",
+      "keywords": [
+        "connection string",
+        "kết nối dữ liệu",
+        "data source"
+      ],
+      "question": "Làm thế nào để ứng dụng .NET kết nối đến nguồn dữ liệu?",
+      "answer_basic": "Ứng dụng .NET kết nối đến nguồn dữ liệu thông qua một chuỗi kết nối (connection string) chứa thông tin về máy chủ, tên cơ sở dữ liệu và thông tin xác thực, sử dụng đối tượng Connection tương ứng.",
+      "answer_detailed": "Chuỗi kết nối (connection string) khai báo các tham số như Server, Database, User ID, Password hoặc chế độ xác thực Windows. Sau khi tạo đối tượng SqlConnection với chuỗi kết nối, ứng dụng gọi phương thức Open() để thiết lập kết nối trước khi thực thi các câu lệnh truy vấn, và nên gọi Close() hoặc dùng khối using để giải phóng kết nối sau khi sử dụng xong.",
+      "example": "Ví dụ: string connStr = \"Server=localhost;Database=QuanLySV;Trusted_Connection=True;\";",
+      "difficulty": "medium"
+    },
+    {
+      "id": "kb145",
+      "course": "Lập trình .NET",
+      "chapter": "Lấy dữ liệu theo cách Connected",
+      "topic": "Truy xuất dữ liệu theo mô hình Connected",
+      "keywords": [
+        "connected model",
+        "sqldatareader",
+        "sqlcommand"
+      ],
+      "question": "Mô hình Connected trong ADO.NET hoạt động như thế nào?",
+      "answer_basic": "Mô hình Connected duy trì kết nối đến cơ sở dữ liệu trong suốt quá trình đọc dữ liệu, sử dụng đối tượng SqlDataReader để đọc từng dòng dữ liệu theo kiểu chỉ tiến (forward-only).",
+      "answer_detailed": "Với mô hình Connected, lập trình viên tạo SqlCommand chứa câu lệnh SQL, gọi ExecuteReader() để nhận về một SqlDataReader, sau đó dùng vòng lặp while(reader.Read()) để duyệt qua từng dòng kết quả. Mô hình này có hiệu năng tốt cho việc đọc dữ liệu tuần tự nhưng yêu cầu kết nối phải luôn mở trong suốt quá trình đọc, khác với mô hình Disconnected dùng DataSet.",
+      "example": "Ví dụ: while (reader.Read()) { Console.WriteLine(reader[\"HoTen\"]); } duyệt qua từng dòng kết quả truy vấn.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "kb146",
+      "course": "Lập trình .NET",
+      "chapter": "Truy vấn có tham số và Stored Procedure",
+      "topic": "Truy vấn có tham số và gọi Stored Procedure",
+      "keywords": [
+        "stored procedure",
+        "truy vấn có tham số",
+        "sql injection"
+      ],
+      "question": "Tại sao nên dùng truy vấn có tham số và Stored Procedure trong ADO.NET?",
+      "answer_basic": "Truy vấn có tham số và Stored Procedure giúp tăng hiệu năng, dễ bảo trì và đặc biệt giúp ngăn chặn tấn công SQL Injection so với việc nối chuỗi câu lệnh SQL trực tiếp.",
+      "answer_detailed": "Thay vì nối trực tiếp giá trị người dùng nhập vào câu lệnh SQL (dễ bị tấn công SQL Injection), truy vấn có tham số sử dụng các placeholder (như @TenThamSo) và truyền giá trị qua đối tượng SqlParameter. Stored Procedure là một khối lệnh SQL được biên dịch sẵn và lưu trong CSDL, có thể gọi từ ứng dụng .NET với các tham số đầu vào/đầu ra, giúp giảm tải xử lý ở tầng ứng dụng và tái sử dụng logic nghiệp vụ.",
+      "example": "Ví dụ: cmd.CommandText = \"SELECT * FROM SinhVien WHERE MaSV = @MaSV\"; cmd.Parameters.AddWithValue(\"@MaSV\", maSV);",
+      "difficulty": "medium"
+    },
+    {
+      "id": "kb151",
+      "course": "Toán rời rạc",
+      "chapter": "Đại số mệnh đề",
+      "topic": "Đại số mệnh đề",
+      "keywords": [
+        "mệnh đề",
+        "logic mệnh đề",
+        "phép toán mệnh đề",
+        "suy luận toán học"
+      ],
+      "question": "Mệnh đề trong đại số mệnh đề là gì?",
+      "answer_basic": "Mệnh đề là một câu khẳng định có giá trị chân lý xác định, hoặc đúng hoặc sai, không thể vừa đúng vừa sai.",
+      "answer_detailed": "Từ các mệnh đề đơn giản, ta có thể xây dựng các mệnh đề phức hợp bằng các phép toán logic: phủ định (NOT), hội (AND), tuyển (OR), kéo theo (IMPLIES) và tương đương (IFF). Phép tính vị từ mở rộng logic mệnh đề bằng cách cho phép biểu diễn các mệnh đề chứa biến và lượng từ (với mọi ∀, tồn tại ∃). Suy luận toán học sử dụng các quy tắc logic để chứng minh một mệnh đề là đúng dựa trên các mệnh đề đã biết là đúng.",
+      "example": "Ví dụ: mệnh đề \"2 + 2 = 4\" là đúng; mệnh đề phức hợp \"trời mưa VÀ đường ướt\" là hội của hai mệnh đề đơn.",
+      "difficulty": "basic"
+    },
+    {
+      "id": "kb152",
+      "course": "Toán rời rạc",
+      "chapter": "Đại số Boole",
+      "topic": "Đại số Boole",
+      "keywords": [
+        "đại số boole",
+        "hàm boole",
+        "cổng logic",
+        "boolean algebra"
+      ],
+      "question": "Đại số Boole là gì?",
+      "answer_basic": "Đại số Boole là một hệ thống đại số làm việc với các giá trị chân lý (đúng/sai hay 1/0) và các phép toán logic, là nền tảng lý thuyết cho thiết kế mạch số và lập trình.",
+      "answer_detailed": "Hàm Boole là hàm nhận đầu vào là các biến nhị phân và trả về giá trị 0 hoặc 1, có thể biểu diễn bằng biểu thức Boole sử dụng các phép AND, OR, NOT. Các cổng logic (logic gate) như AND, OR, NOT, NAND, NOR, XOR là hiện thực vật lý của các phép toán Boole trong mạch điện tử. Tối thiểu hóa hàm Boole (bằng bảng Karnaugh hoặc đại số) giúp đơn giản hóa biểu thức logic, từ đó giảm số lượng cổng logic cần thiết khi thiết kế mạch.",
+      "example": "Ví dụ: hàm Boole F = A.B + A'.C có thể được tối thiểu hóa để giảm số cổng logic cần dùng khi hiện thực mạch.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "kb153",
+      "course": "Toán rời rạc",
+      "chapter": "Bài toán đếm",
+      "topic": "Bài toán đếm và tổ hợp",
+      "keywords": [
+        "bài toán đếm",
+        "tổ hợp",
+        "hoán vị",
+        "nguyên lý dirichlet",
+        "hệ thức truy hồi"
+      ],
+      "question": "Bài toán đếm trong toán rời rạc gồm những nội dung gì?",
+      "answer_basic": "Bài toán đếm nghiên cứu các phương pháp đếm số lượng đối tượng thỏa một điều kiện cho trước, gồm các nguyên lý đếm cơ bản, hoán vị, tổ hợp, nguyên lý Dirichlet và hệ thức truy hồi.",
+      "answer_detailed": "Nguyên lý đếm cơ bản gồm quy tắc cộng (nếu có m cách thực hiện việc A hoặc n cách thực hiện việc B, không trùng nhau, thì có m+n cách) và quy tắc nhân (nếu việc A có m cách và việc B có n cách, độc lập nhau, thì có m×n cách thực hiện cả hai). Hoán vị đếm số cách sắp xếp có thứ tự, tổ hợp đếm số cách chọn không xét thứ tự. Nguyên lý Dirichlet (nguyên lý chuồng bồ câu) khẳng định nếu nhét n+1 vật vào n hộp thì có ít nhất một hộp chứa từ 2 vật trở lên. Hệ thức truy hồi biểu diễn một số hạng của dãy số qua các số hạng trước đó.",
+      "example": "Ví dụ: số cách chọn 3 sinh viên từ một lớp 40 người (không xét thứ tự) là một bài toán tổ hợp, tính bằng công thức C(40,3).",
+      "difficulty": "medium"
+    },
+    {
+      "id": "kb154",
+      "course": "Toán rời rạc",
+      "chapter": "Lý thuyết chia",
+      "topic": "Lý thuyết chia hết",
+      "keywords": [
+        "ước chung lớn nhất",
+        "bội chung nhỏ nhất",
+        "phép chia",
+        "ucln",
+        "bcnn"
+      ],
+      "question": "Ước chung lớn nhất và bội chung nhỏ nhất là gì?",
+      "answer_basic": "Ước chung lớn nhất (ƯCLN) của hai số nguyên là số nguyên lớn nhất chia hết cả hai số đó. Bội chung nhỏ nhất (BCNN) là số nguyên dương nhỏ nhất chia hết cho cả hai số.",
+      "answer_detailed": "Thuật toán Euclid là phương pháp hiệu quả để tính ƯCLN của hai số bằng cách lặp lại phép chia lấy dư cho đến khi số dư bằng 0. BCNN có thể tính từ ƯCLN theo công thức BCNN(a,b) = (a×b) / ƯCLN(a,b). Lý thuyết chia cũng nghiên cứu cách biểu diễn số nguyên trong các hệ cơ số khác nhau (nhị phân, bát phân, thập lục phân), là kiến thức nền tảng cho nhiều thuật toán trong khoa học máy tính.",
+      "example": "Ví dụ: ƯCLN(18, 24) = 6, và BCNN(18, 24) = (18×24)/6 = 72.",
+      "difficulty": "basic"
+    },
+    {
+      "id": "kb155",
+      "course": "Toán rời rạc",
+      "chapter": "Lý thuyết đồng dư",
+      "topic": "Lý thuyết đồng dư",
+      "keywords": [
+        "đồng dư",
+        "modulo",
+        "phương trình đồng dư",
+        "quan hệ đồng dư"
+      ],
+      "question": "Quan hệ đồng dư (modulo) trong toán rời rạc là gì?",
+      "answer_basic": "Hai số nguyên a và b được gọi là đồng dư với nhau theo modulo n nếu chúng có cùng số dư khi chia cho n, ký hiệu a ≡ b (mod n).",
+      "answer_detailed": "Quan hệ đồng dư có nhiều tính chất đại số hữu ích, cho phép giải các phương trình đồng dư tuyến tính và hệ phương trình đồng dư bậc nhất một ẩn (ứng dụng định lý phần dư Trung Hoa - CRT). Lý thuyết đồng dư có nhiều ứng dụng thực tế quan trọng, đặc biệt trong mật mã học (ví dụ thuật toán RSA dựa trên các phép toán modulo với số nguyên tố lớn) và khoa học máy tính (như hàm băm, kiểm tra tính chẵn lẻ).",
+      "example": "Ví dụ: 17 ≡ 5 (mod 6) vì cả 17 và 5 khi chia cho 6 đều có số dư là 5.",
+      "difficulty": "medium"
+    }
+  ]
+}

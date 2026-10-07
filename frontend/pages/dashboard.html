@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard — EduAI</title>
+<link rel="stylesheet" href="../css/style.css">
+<style>
+  .welcome-banner {
+    background: var(--gradient-ai);
+    border-radius: var(--radius-lg);
+    padding: 24px 28px;
+    color: white;
+    margin-bottom: 24px;
+    position: relative;
+    overflow: hidden;
+    animation: fadeInUp 0.4s ease both;
+  }
+  .welcome-banner::before {
+    content: '';
+    position: absolute;
+    right: -30px; top: -30px;
+    width: 180px; height: 180px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.07);
+    pointer-events: none;
+  }
+  .welcome-banner::after {
+    content: '';
+    position: absolute;
+    right: 80px; bottom: -50px;
+    width: 130px; height: 130px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.05);
+    pointer-events: none;
+  }
+  .welcome-banner h2 {
+    margin: 0 0 4px;
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: -0.4px;
+    z-index: 1;
+    position: relative;
+  }
+  .welcome-banner p {
+    margin: 0;
+    font-size: 13px;
+    opacity: 0.8;
+    z-index: 1;
+    position: relative;
+  }
+  .welcome-banner .banner-actions {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    gap: 10px;
+    margin-top: 16px;
+  }
+  .btn-white {
+    background: white;
+    color: var(--indigo-600);
+    border: none;
+    padding: 9px 18px;
+    border-radius: var(--radius-sm);
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.15s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  .btn-white:hover { transform: translateY(-1px); box-shadow: 0 4px 14px rgba(0,0,0,0.15); }
+  .btn-white-ghost {
+    background: rgba(255,255,255,0.15);
+    color: white;
+    border: 1px solid rgba(255,255,255,0.3);
+    padding: 9px 18px;
+    border-radius: var(--radius-sm);
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.15s;
+    backdrop-filter: blur(4px);
+  }
+  .btn-white-ghost:hover { background: rgba(255,255,255,0.25); }
+
+  /* Section title */
+  .section-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0 0 16px;
+    letter-spacing: -0.3px;
+  }
+
+  /* Stat cards */
+  .stat-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+    margin-bottom: 24px;
+  }
+
+  /* Progress item */
+  .progress-item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .progress-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+  }
+  .progress-header .name { font-weight: 600; color: var(--text-primary); }
+  .progress-header .pct {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--indigo-600);
+    background: var(--indigo-50);
+    padding: 2px 8px;
+    border-radius: 999px;
+  }
+
+  /* Recommendation card */
+  .rec-item {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    padding: 12px;
+    background: linear-gradient(135deg, var(--indigo-50), var(--blue-50));
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border-subtle);
+    font-size: 13px;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    margin-bottom: 8px;
+  }
+  .rec-icon {
+    font-size: 16px;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  /* Activity items */
+  .activity-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border-subtle);
+    font-size: 14px;
+    color: var(--text-secondary);
+    animation: slideIn 0.3s ease both;
+  }
+  .activity-item:last-child { border-bottom: none; }
+  .activity-dot {
+    width: 34px; height: 34px;
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 15px;
+    flex-shrink: 0;
+  }
+  .activity-text span { display: block; font-weight: 600; color: var(--text-primary); font-size: 13px; }
+  .activity-text small { font-size: 12px; color: var(--text-muted); }
+
+  @media (max-width: 1024px) { .stat-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 600px) { .stat-grid { grid-template-columns: 1fr; } }
+</style>
+<link rel="stylesheet" href="../css/luxe.css">
+</head>
+<body>
+<div class="app-shell">
+  <nav class="topnav">
+  <div class="topnav-inner">
+    <a class="topnav-logo" href="dashboard.html"><span class="mark">E</span>EduAI</a>
+    <div class="topnav-links">
+    <a class="nav-item active" href="dashboard.html">Dashboard</a>
+    <a class="nav-item" href="courses.html">Môn học</a>
+    <a class="nav-item" href="documents.html">Tài liệu</a>
+    <a class="nav-item" href="chatbot.html">Hỏi AI</a>
+    <a class="nav-item" href="quiz-list.html">Ôn tập &amp; Kiểm tra</a>
+    <a class="nav-item" href="progress.html">Tiến độ học tập</a>
+    <a class="nav-item" href="study.html">Kế hoạch & Ghi chú</a>
+    </div>
+  <div class="topnav-actions">
+    <a class="nav-item" href="#" onclick="logout(); return false;">Đăng xuất</a>
+  </div>
+  </div>
+  <div class="topnav-mobile">
+    <a class="nav-item active" href="dashboard.html">Dashboard</a>
+    <a class="nav-item" href="courses.html">Môn học</a>
+    <a class="nav-item" href="documents.html">Tài liệu</a>
+    <a class="nav-item" href="chatbot.html">Hỏi AI</a>
+    <a class="nav-item" href="quiz-list.html">Ôn tập &amp; Kiểm tra</a>
+    <a class="nav-item" href="progress.html">Tiến độ học tập</a>
+    <a class="nav-item" href="study.html">Kế hoạch & Ghi chú</a>
+    <a class="nav-item" href="#" onclick="logout(); return false;">Đăng xuất</a>
+  </div>
+</nav>
+
+  <main class="main-content">
+    <section class="page-hero">
+      <div class="copy">
+        <h2 id="bannerGreeting">Hôm nay bạn muốn học gì?</h2>
+        <p id="bannerSub">Hỏi AI, đọc tài liệu hoặc làm vài câu ôn tập. Mỗi ngày một chút là đủ.</p>
+        <div class="hero-cta">
+          <a class="solid" href="chatbot.html">💬 Hỏi AI ngay</a>
+          <a class="ghost" href="quiz-list.html">📝 Làm bài ôn tập</a>
+        </div>
+      </div>
+      <div class="hero-art">🎓</div>
+    </section>
+
+    <div class="grid grid-4" id="statCards" style="margin-bottom:24px;"></div>
+
+
+    <h3 class="section-title" style="font-size:19px;">Tiếp tục học</h3>
+    <div class="grid grid-3" id="continueGrid" style="margin-bottom:26px;"></div>
+
+    <div class="grid" style="grid-template-columns: 1.3fr 1fr; gap: 20px; align-items: start; margin-bottom: 20px;" id="lowerGrid">
+      <div class="card">
+        <h3 class="section-title">📈 Tiến độ theo môn</h3>
+        <div id="progressList" style="display:flex; flex-direction:column; gap:16px;"></div>
+      </div>
+      <div class="card">
+        <h3 class="section-title">💡 Đề xuất học tập</h3>
+        <div id="recommendationBox"></div>
+        <a href="chatbot.html" class="btn btn-primary" style="width:100%; justify-content:center; margin-top:8px;">Hỏi AI ngay →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3 class="section-title">🕐 Hoạt động gần đây</h3>
+      <div id="activityList"></div>
+    </div>
+  </main>
+</div>
+
+<script src="../js/api.js"></script>
+<script>
+requireRole("STUDENT");
+
+async function load() {
+  try {
+    const me = await Api.me();
+    const name = me.full_name.split(" ").pop();
+    document.getElementById("bannerGreeting").textContent = `${greetingByTime()}, ${name}! Hôm nay học gì nào?`;
+
+    const [progress, courses, recs] = await Promise.all([Api.progress(), Api.courses(), Api.recommendations()]);
+    const byCourse = Object.fromEntries(progress.by_course.map(p => [p.course_name, p.percent_complete]));
+
+    const stats = [
+      { cap: "Môn học", num: "Nhiều", ic: "📚", from: "#2563eb", to: "#4f46e5" },
+      { cap: "Bài kiểm tra đã làm", num: progress.total_quizzes_completed, ic: "📝", from: "#059669", to: "#0d9488" },
+      { cap: "Điểm trung bình", num: `${progress.average_score}/10`, ic: "⭐", from: "#f59e0b", to: "#ea580c" },
+      { cap: "Tài liệu có thể đọc", num: "999+", ic: "📄", from: "#9333ea", to: "#db2777" },
+    ];
+    document.getElementById("statCards").innerHTML = stats.map(s => `
+      <div class="stat-tile" style="background:linear-gradient(135deg, ${s.from}, ${s.to});">
+        <div class="ic">${s.ic}</div><div class="num">${s.num}</div><div class="cap">${s.cap}</div>
+      </div>`).join("");
+
+    // Gợi ý "Tiếp tục học": môn đang học dở trước, nếu chưa có thì các môn có nhiều tài liệu nhất.
+    const ranked = [...courses].sort((a, b) => (b.progress - a.progress) || (b.document_count - a.document_count));
+    const picks = ranked.filter(c => c.document_count > 0).slice(0, 3);
+    document.getElementById("continueGrid").innerHTML = picks.map(c => {
+      const th = courseTheme(c.name);
+      return `<a class="c-card" href="course-detail.html?id=${c.id}">
+        <div class="c-cover" style="${courseCover(c.name)}"><span class="c-icon">${th.icon}</span><span class="c-code">${esc(c.code)}</span></div>
+        <div class="c-body"><h3>${esc(c.name)}</h3>
+          <div class="c-chips"><span class="c-chip">📖 ${c.chapter_count} chương</span><span class="c-chip on">📄 ${c.document_count} tài liệu</span></div></div>
+        <div class="c-foot"><span class="c-go">Vào học →</span>${progressRing(c.progress, 46, th.from)}</div></a>`;
+    }).join("") || '<div class="card" style="grid-column:1/-1; color:var(--text-muted);">Chưa có môn học nào.</div>';
+
+    const progressList = document.getElementById("progressList");
+    const rows = progress.by_course.filter(p => p.percent_complete > 0);
+    progressList.innerHTML = rows.length ? rows.map(p => `
+        <div class="progress-item">
+          <div class="progress-header"><span class="name">${esc(p.course_name)}</span><span class="pct">${Math.round(p.percent_complete)}%</span></div>
+          <div class="progress-track"><div class="progress-fill" style="width:${p.percent_complete}%;"></div></div>
+        </div>`).join("")
+      : `<div style="color:var(--text-muted);font-size:14px;text-align:center;padding:20px;">Chưa có tiến độ. Làm một bài ôn tập để bắt đầu.<br><a href="quiz-list.html" style="color:var(--indigo-600); font-weight:600;">Làm bài ôn tập →</a></div>`;
+
+    const recBox = document.getElementById("recommendationBox");
+    recBox.innerHTML = recs.length
+      ? recs.map(r => `<div class="rec-item"><span class="rec-icon">💡</span><span>${esc(r.content)}</span></div>`).join('')
+      : `<div style="font-size:14px;color:var(--text-muted);">Chưa có đề xuất. Hãy học thêm để nhận gợi ý!</div>`;
+
+    const activity = await Api.recentActivity();
+    const activityList = document.getElementById("activityList");
+    const ACTION_META = {
+      ask_ai: { icon: "💬", bg: "#eef2ff", label: d => `Đã hỏi AI: "${esc(d)}"` },
+      submit_quiz: { icon: "✅", bg: "#f0fdf4", label: () => "Đã hoàn thành một bài kiểm tra" },
+      view_document: { icon: "📄", bg: "#fffbeb", label: d => `Đã xem tài liệu: ${esc(d)}` },
+      update_profile: { icon: "🧑", bg: "#f5f3ff", label: () => "Đã cập nhật hồ sơ cá nhân" },
+    };
+    activityList.innerHTML = activity.length ? activity.map((a, i) => {
+        const meta = ACTION_META[a.action] || { icon: "🔔", bg: "#f3f4f6", label: () => esc(a.action) };
+        return `
+      <div class="activity-item" style="animation-delay:${i * 0.08}s">
+        <div class="activity-dot" style="background:${meta.bg};">${meta.icon}</div>
+        <div class="activity-text"><span>${meta.label(a.detail)}</span><small>${formatServerTime(a.created_at)}</small></div>
+      </div>`;
+      }).join('')
+      : `<div style="color:var(--text-muted);font-size:14px;text-align:center;padding:20px;">Chưa có hoạt động nào. Hãy bắt đầu học tập!</div>`;
+  } catch (err) { console.error(err); }
+}
+load();
+</script>
+</body>
+</html>

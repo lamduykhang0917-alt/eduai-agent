@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kế hoạch & Ghi chú — EduAI</title>
+<link rel="stylesheet" href="../css/style.css">
+<style>
+  .study-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 20px; align-items: start; }
+  @media (max-width: 900px) { .study-grid { grid-template-columns: 1fr; } }
+  .sec-head { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-bottom: 14px; flex-wrap: wrap; }
+  .sec-head h3 { margin: 0; }
+  .plan-goal { color: var(--text-secondary); font-size: 14px; margin: 2px 0 14px; }
+  .task { display: flex; gap: 12px; align-items: flex-start; padding: 11px 0; border-top: 1px solid var(--border-subtle); }
+  .task input { margin-top: 3px; width: 17px; height: 17px; accent-color: var(--indigo-600); cursor: pointer; flex: none; }
+  .task .t-title { font-size: 14.5px; line-height: 1.4; }
+  .task.done .t-title { text-decoration: line-through; color: var(--text-muted); }
+  .task .t-meta { font-size: 12.5px; color: var(--text-secondary); margin-top: 3px; display: flex; gap: 10px; flex-wrap: wrap; }
+  .task .late { color: #dc2626; font-weight: 600; }
+  .empty { text-align: center; padding: 26px 10px; color: var(--text-secondary); font-size: 14px; line-height: 1.6; }
+  .note { border: 1px solid var(--border-subtle); border-radius: 14px; padding: 13px 15px; margin-bottom: 10px; background: #fff; }
+  .note h4 { margin: 0 0 4px; font-size: 15px; }
+  .note .n-meta { font-size: 12px; color: var(--text-muted); margin-bottom: 8px; }
+  .note .n-body { font-size: 13.5px; line-height: 1.6; color: var(--text-secondary); white-space: pre-wrap; }
+  .note .n-actions { margin-top: 8px; text-align: right; }
+  .note .n-del { border: none; background: none; color: #e11d48; font-size: 12.5px; cursor: pointer; font-weight: 600; }
+  .note-form { display: none; border: 1px dashed var(--indigo-400); border-radius: 14px; padding: 14px; margin-bottom: 14px; background: var(--indigo-50); }
+  .note-form.open { display: block; }
+  .note-form input, .note-form textarea, .note-form select { width: 100%; box-sizing: border-box; margin-bottom: 8px; padding: 9px 11px;
+    border: 1px solid #d1d5db; border-radius: 9px; font: inherit; font-size: 14px; background: #fff; }
+  .note-form textarea { min-height: 90px; resize: vertical; }
+  .search-in { width: 100%; box-sizing: border-box; padding: 9px 12px; border: 1px solid #d1d5db; border-radius: 10px; font: inherit; font-size: 14px; margin-bottom: 12px; }
+</style>
+<link rel="stylesheet" href="../css/luxe.css">
+</head>
+<body>
+<div class="app-shell">
+  <nav class="topnav">
+  <div class="topnav-inner">
+    <a class="topnav-logo" href="dashboard.html"><span class="mark">E</span>EduAI</a>
+    <div class="topnav-links">
+    <a class="nav-item" href="dashboard.html">Dashboard</a>
+    <a class="nav-item" href="courses.html">Môn học</a>
+    <a class="nav-item" href="documents.html">Tài liệu</a>
+    <a class="nav-item" href="chatbot.html">Hỏi AI</a>
+    <a class="nav-item" href="quiz-list.html">Ôn tập & Kiểm tra</a>
+    <a class="nav-item" href="progress.html">Tiến độ học tập</a>
+    <a class="nav-item active" href="study.html">Kế hoạch & Ghi chú</a>
+    </div>
+  <div class="topnav-actions">
+    <a class="nav-item" href="#" onclick="logout(); return false;">Đăng xuất</a>
+  </div>
+  </div>
+  <div class="topnav-mobile">
+    <a class="nav-item" href="dashboard.html">Dashboard</a>
+    <a class="nav-item" href="courses.html">Môn học</a>
+    <a class="nav-item" href="documents.html">Tài liệu</a>
+    <a class="nav-item" href="chatbot.html">Hỏi AI</a>
+    <a class="nav-item" href="quiz-list.html">Ôn tập & Kiểm tra</a>
+    <a class="nav-item" href="progress.html">Tiến độ học tập</a>
+    <a class="nav-item active" href="study.html">Kế hoạch & Ghi chú</a>
+    <a class="nav-item" href="#" onclick="logout(); return false;">Đăng xuất</a>
+  </div>
+</nav>
+  <main class="main-content">
+    <section class="page-hero" style="background:linear-gradient(120deg,#1e3a8a 0%,#4338ca 60%,#6366f1 120%);">
+      <div class="copy"><h2>Kế hoạch & Ghi chú</h2><p>Những gì bạn nhờ EduAI Agent lập và lưu sẽ nằm ở đây. Bạn cũng có thể tự chỉnh.</p></div>
+      <div class="hero-art">🗂</div>
+    </section>
+
+    <div class="study-grid">
+      <section class="card">
+        <div class="sec-head"><h3 id="planTitle">Kế hoạch học tập</h3>
+          <a class="btn btn-secondary" href="chatbot.html?q=Lập kế hoạch ôn thi 2 tuần cho mình">⚡ Nhờ Agent lập kế hoạch</a></div>
+        <div id="planBox"></div>
+      </section>
+
+      <section class="card">
+        <div class="sec-head"><h3>Ghi chú</h3>
+          <button class="btn btn-primary" onclick="toggleForm()">＋ Thêm ghi chú</button></div>
+        <form class="note-form" id="noteForm" onsubmit="addNote(event)">
+          <input id="nTitle" placeholder="Tiêu đề" maxlength="150" required>
+          <select id="nCourse"><option value="">Không gắn môn học</option></select>
+          <textarea id="nContent" placeholder="Nội dung ghi chú..." maxlength="6000" required></textarea>
+          <button class="btn btn-primary" type="submit">Lưu ghi chú</button>
+          <button class="btn btn-ghost" type="button" onclick="toggleForm()">Hủy</button>
+        </form>
+        <input class="search-in" id="noteSearch" placeholder="🔍 Tìm trong ghi chú..." oninput="renderNotes()">
+        <div id="noteBox"></div>
+      </section>
+    </div>
+  </main>
+</div>
+<script src="../js/api.js"></script>
+<script src="../js/markdown.js"></script>
+<script>
+requireRole("STUDENT");
+let notes = [];
+
+async function loadPlan() {
+  const box = document.getElementById("planBox");
+  try {
+    const p = await Api.studyPlan();
+    if (!p.found) {
+      document.getElementById("planTitle").textContent = "Kế hoạch học tập";
+      box.innerHTML = `<div class="empty">Bạn chưa có kế hoạch học tập.<br>Hãy nhờ Agent: “Lập kế hoạch ôn thi môn Cơ sở dữ liệu trong 2 tuần”.</div>`;
+      return;
+    }
+    document.getElementById("planTitle").textContent = p.plan.title;
+    const pct = p.total ? Math.round(p.done / p.total * 100) : 0;
+    const today = new Date().toISOString().slice(0, 10);
+    box.innerHTML = `
+      ${p.plan.goal ? `<div class="plan-goal">🎯 ${esc(p.plan.goal)}</div>` : ""}
+      <div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:6px;"><span>Hoàn thành ${p.done}/${p.total} việc</span><b>${pct}%</b></div>
+      <div class="progress-track" style="margin-bottom:8px;"><div class="progress-fill" style="width:${pct}%;"></div></div>
+      ${p.tasks.map(t => `
+        <label class="task ${t.done ? "done" : ""}">
+          <input type="checkbox" ${t.done ? "checked" : ""} onchange="toggleTask(${t.task_id}, this.checked)">
+          <div><div class="t-title">${esc(t.title)}</div>
+            <div class="t-meta">${t.course ? `<span>📚 ${esc(t.course)}</span>` : ""}
+              ${t.due_date ? `<span class="${!t.done && t.due_date < today ? "late" : ""}">⏰ ${t.due_date.split("-").reverse().join("/")}${!t.done && t.due_date < today ? " (quá hạn)" : ""}</span>` : ""}</div></div>
+        </label>`).join("")}`;
+  } catch (e) { box.innerHTML = `<div class="empty">Không tải được kế hoạch: ${esc(e.message)}</div>`; }
+}
+
+async function toggleTask(id, done) {
+  try { await Api.setTaskDone(id, done); } catch (e) { alert(e.message); }
+  loadPlan();
+}
+
+async function loadNotes() {
+  try { notes = await Api.notes(); } catch (e) { notes = []; }
+  renderNotes();
+}
+
+function renderNotes() {
+  const q = document.getElementById("noteSearch").value.toLowerCase();
+  const list = notes.filter(n => (n.title + " " + n.content).toLowerCase().includes(q));
+  document.getElementById("noteBox").innerHTML = list.length ? list.map(n => `
+    <article class="note">
+      <h4>${esc(n.title)}</h4>
+      <div class="n-meta">${n.course ? esc(n.course) + " · " : ""}${(n.created_at || "").split(" ")[0].split("-").reverse().join("/")}</div>
+      <div class="n-body">${renderMarkdown(n.content)}</div>
+      <div class="n-actions"><button class="n-del" onclick="delNote(${n.id}, ${JSON.stringify(n.title).replace(/"/g, "&quot;")})">Xóa</button></div>
+    </article>`).join("")
+    : `<div class="empty">${q ? "Không có ghi chú nào khớp." : "Chưa có ghi chú. Hãy bấm “Thêm ghi chú”, hoặc bảo Agent: “Lưu ghi chú tóm tắt BFS và DFS”."}</div>`;
+}
+
+function toggleForm() { document.getElementById("noteForm").classList.toggle("open"); }
+
+async function addNote(e) {
+  e.preventDefault();
+  try {
+    await Api.addNote(nTitle.value.trim(), nContent.value.trim(), nCourse.value || null);
+    nTitle.value = nContent.value = ""; nCourse.value = "";
+    toggleForm();
+    loadNotes();
+  } catch (err) { alert(err.message); }
+}
+
+function delNote(id, title) {
+  showConfirmModal({ title: "Xóa ghi chú", message: `Xóa ghi chú “${esc(title)}”? Không thể khôi phục.`,
+    confirmText: "Xóa", onConfirm: async () => {
+      try { await Api.deleteNote(id); loadNotes(); } catch (err) { alert(err.message); }
+    } });
+}
+
+(async () => {
+  try {
+    (await Api.courses()).forEach(c => { const o = document.createElement("option"); o.value = c.name; o.textContent = c.name; nCourse.appendChild(o); });
+  } catch (e) { /* vẫn dùng được khi không tải được danh sách môn */ }
+  loadPlan(); loadNotes();
+})();
+</script>
+</body>
+</html>

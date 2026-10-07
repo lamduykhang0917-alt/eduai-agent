@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chi tiết môn học — EduAI Admin</title>
+<link rel="stylesheet" href="../css/style.css">
+<style>
+  table { width:100%; border-collapse:collapse; font-size:14px; }
+  th { text-align:left; color:var(--text-secondary); font-size:12px; text-transform:uppercase; padding:10px 12px; border-bottom:1px solid var(--border-subtle); }
+  td { padding:11px 12px; border-bottom:1px solid var(--border-subtle); }
+  .layout { display:grid; grid-template-columns:1.7fr 1fr; gap:20px; align-items:start; }
+  @media (max-width:1000px) { .layout { grid-template-columns:1fr; } }
+  .dropzone { border:2px dashed var(--border-default); border-radius:14px; padding:26px 16px; text-align:center; color:var(--text-secondary); font-size:14px; cursor:pointer; transition:all .15s; background:var(--bg-subtle); }
+  .dropzone.over { border-color:var(--indigo-600); background:var(--indigo-50); color:var(--indigo-700); }
+  .dropzone b { color:var(--indigo-600); }
+  .file-list { margin-top:10px; display:flex; flex-direction:column; gap:6px; }
+  .file-item { display:flex; align-items:center; gap:8px; font-size:13px; padding:7px 10px; border:1px solid var(--border-subtle); border-radius:8px; background:#fff; }
+  .file-item .name { flex:1; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+  .file-item .st { font-size:12px; color:var(--text-muted); } .file-item .st.ok { color:var(--success); } .file-item .st.err { color:var(--danger); }
+  .chapter-item { display:flex; align-items:center; gap:10px; padding:10px 12px; border:1px solid var(--border-subtle); border-radius:10px; margin-bottom:8px; font-size:14px; }
+  .chapter-item .name { flex:1; font-weight:600; }
+  .chapter-item small { color:var(--text-muted); }
+  .icon-btn { border:none; background:none; color:var(--text-muted); font-size:16px; padding:4px 6px; border-radius:6px; }
+  .icon-btn:hover { background:#fef2f2; color:#be123c; }
+  .stats { display:flex; gap:10px; flex-wrap:wrap; margin-top:10px; }
+  .stat-chip { padding:6px 14px; border-radius:999px; background:rgba(255,255,255,.18); border:1px solid rgba(255,255,255,.35); font-size:13px; color:#fff; }
+  .stat-chip b { color:#fff; }
+</style>
+<link rel="stylesheet" href="../css/luxe.css">
+</head>
+<body>
+<div class="app-shell">
+  <nav class="topnav">
+  <div class="topnav-inner">
+    <a class="topnav-logo" href="admin-dashboard.html"><span class="mark">E</span>EduAI Admin</a>
+    <div class="topnav-links">
+    <a class="nav-item" href="admin-dashboard.html">Dashboard</a>
+    <a class="nav-item" href="admin-users.html">Tài khoản</a>
+    <a class="nav-item active" href="admin-courses.html">Môn học</a>
+    <a class="nav-item" href="admin-questions.html">Ngân hàng câu hỏi</a>
+    <a class="nav-item" href="admin-logs.html">Hoạt động hệ thống</a>
+    <a class="nav-item" href="admin-ai-config.html">Cấu hình AI</a>
+    <a class="nav-item" href="admin-agent.html">Agent</a>
+    </div>
+  <div class="topnav-actions">
+    <a class="nav-item" href="#" onclick="logout(); return false;">Đăng xuất</a>
+  </div>
+  </div>
+  <div class="topnav-mobile">
+    <a class="nav-item" href="admin-dashboard.html">Dashboard</a>
+    <a class="nav-item" href="admin-users.html">Tài khoản</a>
+    <a class="nav-item active" href="admin-courses.html">Môn học</a>
+    <a class="nav-item" href="admin-questions.html">Ngân hàng câu hỏi</a>
+    <a class="nav-item" href="admin-logs.html">Hoạt động hệ thống</a>
+    <a class="nav-item" href="admin-ai-config.html">Cấu hình AI</a>
+    <a class="nav-item" href="admin-agent.html">Agent</a>
+    <a class="nav-item" href="#" onclick="logout(); return false;">Đăng xuất</a>
+  </div>
+</nav>
+  <main class="main-content">
+    <a href="admin-courses.html" style="font-size:13px; color:var(--text-secondary); display:inline-block; margin-bottom:10px;">← Quay lại Môn học</a>
+    <section class="page-hero" id="courseHero">
+      <div class="copy">
+        <h2 id="courseTitle">Đang tải...</h2>
+        <p id="courseDesc"></p>
+        <div class="stats" id="courseStats" style="margin-top:14px;"></div>
+      </div>
+      <div class="hero-art" id="courseIcon">📘</div>
+    </section>
+
+    <div class="layout">
+      <div class="card">
+        <h3 style="margin:0 0 14px;">Tài liệu của môn</h3>
+        <div class="dropzone" id="dropzone" onclick="document.getElementById('fileInput').click()">
+          Kéo thả tệp <b>PDF, DOCX, TXT</b> vào đây để tải lên<br>
+          <span style="font-size:12px;">hoặc bấm để chọn tệp (tối đa 15 MB mỗi tệp)</span>
+        </div>
+        <input type="file" id="fileInput" multiple accept=".pdf,.docx,.txt" style="display:none">
+        <div style="display:flex; gap:10px; align-items:center; margin:12px 0 4px;">
+          <label style="font-size:13px; color:var(--text-secondary); white-space:nowrap;">Gắn vào chương</label>
+          <select id="uploadChapter" style="max-width:320px;"><option value="">(Không gắn chương)</option></select>
+        </div>
+        <div class="file-list" id="fileList"></div>
+        <div style="overflow-x:auto; margin-top:14px;">
+          <table>
+            <thead><tr><th>Tên tài liệu</th><th>Chương</th><th>Loại</th><th>Đoạn nội dung</th><th></th></tr></thead>
+            <tbody id="docRows"></tbody>
+          </table>
+        </div>
+        <div id="docEmpty" style="display:none; text-align:center; padding:26px; color:var(--text-muted);">Môn học này chưa có tài liệu. Hãy kéo thả tệp vào ô phía trên.</div>
+      </div>
+
+      <div class="card">
+        <h3 style="margin:0 0 14px;">Các chương</h3>
+        <div id="chapterList"></div>
+        <div style="display:flex; gap:8px; margin-top:12px;">
+          <input id="newChapter" placeholder="Tên chương mới..." autocomplete="off" onkeydown="if(event.key==='Enter') addChapter()">
+          <button class="btn btn-primary" onclick="addChapter()" style="white-space:nowrap;">+ Thêm</button>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+<script src="../js/api.js"></script>
+<script>
+requireRole("ADMIN");
+const courseId = new URLSearchParams(location.search).get("id");
+let course = null;
+
+async function load() {
+  try { course = await Api.request(`/api/admin/courses/${courseId}`); }
+  catch (e) { document.getElementById("courseTitle").textContent = "Không tìm thấy môn học"; return; }
+  document.title = `${course.name} — EduAI Admin`;
+  document.getElementById("courseTitle").textContent = `${course.code} · ${course.name}`;
+  document.getElementById("courseDesc").textContent = course.description || "";
+  document.getElementById("courseHero").style.cssText = courseCover(course.name);
+  document.getElementById("courseIcon").textContent = courseTheme(course.name).icon;
+  const chunks = course.documents.reduce((n, d) => n + d.chunk_count, 0);
+  document.getElementById("courseStats").innerHTML =
+    `<span class="stat-chip"><b>${course.chapters.length}</b> chương</span><span class="stat-chip"><b>${course.documents.length}</b> tài liệu</span><span class="stat-chip"><b>${chunks}</b> đoạn nội dung chatbot tra cứu được</span>`;
+
+  const byId = Object.fromEntries(course.chapters.map(c => [c.id, c]));
+  document.getElementById("docEmpty").style.display = course.documents.length ? "none" : "block";
+  document.getElementById("docRows").innerHTML = course.documents.map(d => `
+    <tr>
+      <td><a href="document-view.html?id=${d.id}" style="color:var(--indigo-600); font-weight:600;">${esc(d.title)}</a></td>
+      <td>${d.chapter_id && byId[d.chapter_id] ? esc(byId[d.chapter_id].name) : "—"}</td>
+      <td><span class="badge badge-blue">${esc((d.file_type || "").toUpperCase())}</span></td>
+      <td>${d.chunk_count}</td>
+      <td style="white-space:nowrap;">
+        <a class="btn btn-secondary" href="document-view.html?id=${d.id}">Xem</a>
+        <button class="btn btn-secondary" style="color:#be123c;" onclick="deleteDoc(${d.id}, '${esc(d.title).replace(/'/g, "\\'")}')">Xóa</button>
+      </td>
+    </tr>`).join("");
+
+  const sel = document.getElementById("uploadChapter"), keep = sel.value;
+  sel.innerHTML = '<option value="">(Không gắn chương)</option>' + course.chapters.map(c => `<option value="${c.id}">${esc(c.name)}</option>`).join("");
+  sel.value = keep;
+
+  document.getElementById("chapterList").innerHTML = course.chapters.length ? course.chapters.map(c => {
+    const n = course.documents.filter(d => d.chapter_id === c.id).length;
+    return `<div class="chapter-item"><span class="name">${esc(c.name)}</span><small>${n} tài liệu</small>
+      <button class="icon-btn" title="Xóa chương" onclick="deleteChapter(${c.id}, '${esc(c.name).replace(/'/g, "\\'")}')">🗑</button></div>`;
+  }).join("") : '<div style="color:var(--text-muted); font-size:14px;">Chưa có chương nào.</div>';
+}
+
+async function addChapter() {
+  const input = document.getElementById("newChapter"), name = input.value.trim();
+  if (!name) return;
+  await Api.request("/api/admin/chapters", { method: "POST", body: { course_id: Number(courseId), name, order_index: course.chapters.length } });
+  input.value = ""; load();
+}
+function deleteChapter(id, name) {
+  showConfirmModal({ title: "Xóa chương", message: `Xóa chương "${name}"? Tài liệu trong chương vẫn được giữ lại, chỉ bị bỏ gắn chương.`,
+    confirmText: "Xóa", onConfirm: async () => { await Api.request(`/api/admin/chapters/${id}`, { method: "DELETE" }); load(); } });
+}
+function deleteDoc(id, title) {
+  showConfirmModal({ title: "Xóa tài liệu", message: `Xóa "${title}"? Chatbot sẽ không còn tra cứu nội dung tài liệu này.`,
+    confirmText: "Xóa", onConfirm: async () => { await Api.request(`/api/admin/documents/${id}`, { method: "DELETE" }); load(); } });
+}
+
+// ---- Kéo thả tải lên ----
+let queue = [];
+function renderQueue() {
+  document.getElementById("fileList").innerHTML = queue.map(x => `
+    <div class="file-item"><span>📄</span><span class="name">${esc(x.name)}</span><span class="st ${x.cls || ""}">${esc(x.state)}</span></div>`).join("");
+}
+async function handleFiles(list) {
+  const chapter = document.getElementById("uploadChapter").value;
+  queue = [];
+  for (const f of list) {
+    const ext = f.name.split(".").pop().toLowerCase();
+    const item = { name: f.name, state: "Đang tải lên...", cls: "" };
+    queue.push(item);
+    if (!["pdf", "docx", "txt"].includes(ext)) { item.state = "Chỉ nhận PDF, DOCX, TXT"; item.cls = "err"; continue; }
+    if (f.size > 15 * 1024 * 1024) { item.state = "Quá lớn (tối đa 15 MB)"; item.cls = "err"; continue; }
+    renderQueue();
+    const form = new FormData(); form.append("file", f); if (chapter) form.append("chapter_id", chapter);
+    try {
+      const res = await fetch(`${API_BASE}/api/admin/courses/${courseId}/documents`, { method: "POST", headers: { Authorization: `Bearer ${Api.token()}` }, body: form });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) throw new Error((data.detail || "Lỗi tải lên").replace(f.name + ": ", ""));
+      item.state = `Xong (${data.chunk_count} đoạn)`; item.cls = "ok";
+    } catch (e) { item.state = e.message; item.cls = "err"; }
+    renderQueue();
+  }
+  renderQueue(); load();
+}
+const dz = document.getElementById("dropzone");
+["dragenter", "dragover"].forEach(ev => dz.addEventListener(ev, e => { e.preventDefault(); dz.classList.add("over"); }));
+["dragleave", "drop"].forEach(ev => dz.addEventListener(ev, e => { e.preventDefault(); dz.classList.remove("over"); }));
+dz.addEventListener("drop", e => handleFiles([...e.dataTransfer.files]));
+document.getElementById("fileInput").addEventListener("change", e => { handleFiles([...e.target.files]); e.target.value = ""; });
+load();
+</script>
+</body>
+</html>

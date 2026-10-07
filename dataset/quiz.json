@@ -1,0 +1,379 @@
+{
+  "questions": [
+    {
+      "id": "q001",
+      "course": "Trí tuệ nhân tạo",
+      "chapter": "Tìm kiếm trong không gian trạng thái",
+      "difficulty": "basic",
+      "content": "Thuật toán BFS sử dụng cấu trúc dữ liệu nào để lưu trữ các đỉnh cần thăm?",
+      "options": {
+        "A": "Ngăn xếp (Stack)",
+        "B": "Hàng đợi (Queue)",
+        "C": "Danh sách liên kết",
+        "D": "Cây nhị phân"
+      },
+      "correct_answer": "B",
+      "explanation": "BFS dùng hàng đợi (Queue) theo nguyên tắc FIFO để đảm bảo duyệt đúng theo từng mức."
+    },
+    {
+      "id": "q002",
+      "course": "Trí tuệ nhân tạo",
+      "chapter": "Tìm kiếm trong không gian trạng thái",
+      "difficulty": "medium",
+      "content": "Thuật toán Dijkstra không hoạt động chính xác khi đồ thị có:",
+      "options": {
+        "A": "Trọng số âm",
+        "B": "Trọng số bằng nhau",
+        "C": "Nhiều đỉnh",
+        "D": "Đồ thị vô hướng"
+      },
+      "correct_answer": "A",
+      "explanation": "Dijkstra giả định tất cả trọng số không âm; khi có cạnh trọng số âm, thuật toán có thể cho kết quả sai."
+    },
+    {
+      "id": "q003",
+      "course": "Trí tuệ nhân tạo",
+      "chapter": "Học máy cơ bản",
+      "difficulty": "basic",
+      "content": "Học có giám sát (Supervised Learning) yêu cầu dữ liệu huấn luyện phải có đặc điểm gì?",
+      "options": {
+        "A": "Không cần nhãn",
+        "B": "Có nhãn (label)",
+        "C": "Chỉ có dữ liệu số",
+        "D": "Không cần dữ liệu"
+      },
+      "correct_answer": "B",
+      "explanation": "Supervised Learning học từ các cặp (đầu vào, nhãn đúng) để dự đoán nhãn cho dữ liệu mới."
+    },
+    {
+      "id": "q004",
+      "course": "Cơ sở dữ liệu",
+      "chapter": "Chuẩn hóa dữ liệu",
+      "difficulty": "medium",
+      "content": "Một quan hệ đạt 3NF thì không được có hiện tượng nào sau đây?",
+      "options": {
+        "A": "Phụ thuộc hàm đầy đủ",
+        "B": "Phụ thuộc bắc cầu vào khóa chính",
+        "C": "Khóa chính duy nhất",
+        "D": "Kiểu dữ liệu nguyên tử"
+      },
+      "correct_answer": "B",
+      "explanation": "3NF yêu cầu loại bỏ phụ thuộc bắc cầu của thuộc tính không khóa vào khóa chính."
+    },
+    {
+      "id": "q005",
+      "course": "Cấu trúc dữ liệu và giải thuật",
+      "chapter": "Cây nhị phân",
+      "difficulty": "basic",
+      "content": "Duyệt cây nhị phân tìm kiếm (BST) theo thứ tự trung tự (in-order) cho kết quả gì?",
+      "options": {
+        "A": "Dãy ngẫu nhiên",
+        "B": "Dãy giảm dần",
+        "C": "Dãy tăng dần",
+        "D": "Không xác định"
+      },
+      "correct_answer": "C",
+      "explanation": "Duyệt in-order (trái - gốc - phải) trên BST luôn cho ra dãy giá trị tăng dần."
+    },
+    {
+      "id": "q006",
+      "course": "Lập trình Python",
+      "chapter": "Lập trình hướng đối tượng",
+      "difficulty": "basic",
+      "content": "Từ khóa nào dùng để gọi phương thức của lớp cha trong Python?",
+      "options": {
+        "A": "base()",
+        "B": "parent()",
+        "C": "super()",
+        "D": "extends()"
+      },
+      "correct_answer": "C",
+      "explanation": "super() cho phép class con gọi phương thức/constructor của class cha."
+    },
+    {
+      "id": "q101",
+      "course": "Cơ sở dữ liệu",
+      "chapter": "Ngôn ngữ truy vấn SQL",
+      "difficulty": "basic",
+      "content": "Lệnh nào trong SQL dùng để truy vấn dữ liệu?",
+      "options": {
+        "A": "SELECT",
+        "B": "INSERT",
+        "C": "UPDATE",
+        "D": "DELETE"
+      },
+      "correct_answer": "A",
+      "explanation": "SELECT là lệnh SQL dùng để truy vấn và lấy dữ liệu từ một hoặc nhiều bảng."
+    },
+    {
+      "id": "q102",
+      "course": "Cơ sở dữ liệu",
+      "chapter": "Các mô hình dữ liệu quan hệ",
+      "difficulty": "basic",
+      "content": "Khóa ngoại (foreign key) dùng để làm gì?",
+      "options": {
+        "A": "Định danh duy nhất một dòng",
+        "B": "Liên kết dữ liệu giữa hai bảng",
+        "C": "Tăng tốc độ truy vấn",
+        "D": "Mã hóa dữ liệu"
+      },
+      "correct_answer": "B",
+      "explanation": "Khóa ngoại tham chiếu đến khóa chính của bảng khác, thể hiện mối quan hệ giữa các bảng."
+    },
+    {
+      "id": "q103",
+      "course": "Cơ sở dữ liệu",
+      "chapter": "Ràng buộc toàn vẹn",
+      "difficulty": "medium",
+      "content": "Ràng buộc CHECK trong SQL dùng để làm gì?",
+      "options": {
+        "A": "Xóa dữ liệu trùng",
+        "B": "Giới hạn giá trị hợp lệ của một cột",
+        "C": "Tạo khóa chính",
+        "D": "Sao lưu dữ liệu"
+      },
+      "correct_answer": "B",
+      "explanation": "CHECK giới hạn giá trị hợp lệ của một cột theo một biểu thức logic cho trước."
+    },
+    {
+      "id": "q111",
+      "course": "Hệ quản trị cơ sở dữ liệu",
+      "chapter": "Transaction",
+      "difficulty": "medium",
+      "content": "ACID trong transaction là viết tắt của những thuộc tính nào?",
+      "options": {
+        "A": "Atomicity, Consistency, Isolation, Durability",
+        "B": "Access, Control, Index, Data",
+        "C": "Atomic, Class, Index, Database",
+        "D": "Aggregation, Composition, Inheritance, Diagram"
+      },
+      "correct_answer": "A",
+      "explanation": "ACID gồm Atomicity (nguyên tử), Consistency (nhất quán), Isolation (cô lập), Durability (bền vững)."
+    },
+    {
+      "id": "q112",
+      "course": "Hệ quản trị cơ sở dữ liệu",
+      "chapter": "Bảo mật và An toàn dữ liệu",
+      "difficulty": "basic",
+      "content": "View trong cơ sở dữ liệu là gì?",
+      "options": {
+        "A": "Một bảng vật lý lưu trữ dữ liệu",
+        "B": "Một bảng ảo được định nghĩa từ câu truy vấn",
+        "C": "Một chỉ mục tăng tốc truy vấn",
+        "D": "Một loại ràng buộc dữ liệu"
+      },
+      "correct_answer": "B",
+      "explanation": "View là bảng ảo, chỉ lưu định nghĩa truy vấn chứ không lưu trữ dữ liệu vật lý riêng."
+    },
+    {
+      "id": "q113",
+      "course": "Hệ quản trị cơ sở dữ liệu",
+      "chapter": "Truy vấn nâng cao",
+      "difficulty": "medium",
+      "content": "Mệnh đề nào dùng để lọc dữ liệu sau khi đã nhóm bằng GROUP BY?",
+      "options": {
+        "A": "WHERE",
+        "B": "ORDER BY",
+        "C": "HAVING",
+        "D": "JOIN"
+      },
+      "correct_answer": "C",
+      "explanation": "HAVING dùng để lọc điều kiện trên các nhóm sau khi đã GROUP BY, còn WHERE lọc trước khi nhóm."
+    },
+    {
+      "id": "q121",
+      "course": "Cấu trúc dữ liệu và giải thuật",
+      "chapter": "Sắp xếp",
+      "difficulty": "basic",
+      "content": "Giải thuật sắp xếp nào có độ phức tạp trung bình O(n log n)?",
+      "options": {
+        "A": "Bubble Sort",
+        "B": "Selection Sort",
+        "C": "Quick Sort",
+        "D": "Insertion Sort"
+      },
+      "correct_answer": "C",
+      "explanation": "Quick Sort có độ phức tạp trung bình O(n log n), hiệu quả hơn các thuật toán sắp xếp O(n^2)."
+    },
+    {
+      "id": "q122",
+      "course": "Cấu trúc dữ liệu và giải thuật",
+      "chapter": "Đồ thị",
+      "difficulty": "basic",
+      "content": "Đồ thị G = (V, E) với V và E lần lượt là gì?",
+      "options": {
+        "A": "V là cạnh, E là đỉnh",
+        "B": "V là đỉnh, E là cạnh",
+        "C": "V là trọng số, E là đỉnh",
+        "D": "V và E đều là cạnh"
+      },
+      "correct_answer": "B",
+      "explanation": "V (Vertices) là tập đỉnh, E (Edges) là tập cạnh nối các đỉnh với nhau."
+    },
+    {
+      "id": "q123",
+      "course": "Cấu trúc dữ liệu và giải thuật",
+      "chapter": "Bảng băm",
+      "difficulty": "medium",
+      "content": "Khi hai khóa khác nhau được ánh xạ đến cùng một vị trí trong bảng băm, hiện tượng này gọi là gì?",
+      "options": {
+        "A": "Overflow",
+        "B": "Deadlock",
+        "C": "Collision",
+        "D": "Recursion"
+      },
+      "correct_answer": "C",
+      "explanation": "Collision (đụng độ) xảy ra khi hai khóa khác nhau có cùng giá trị băm, được xử lý bằng chaining hoặc open addressing."
+    },
+    {
+      "id": "q131",
+      "course": "Lập trình hướng đối tượng",
+      "chapter": "4 tính chất của OOP",
+      "difficulty": "basic",
+      "content": "Tính chất nào của OOP cho phép một lớp con kế thừa thuộc tính và phương thức từ lớp cha?",
+      "options": {
+        "A": "Encapsulation",
+        "B": "Inheritance",
+        "C": "Polymorphism",
+        "D": "Abstraction"
+      },
+      "correct_answer": "B",
+      "explanation": "Inheritance (kế thừa) cho phép lớp con tái sử dụng thuộc tính và phương thức của lớp cha."
+    },
+    {
+      "id": "q132",
+      "course": "Lập trình hướng đối tượng",
+      "chapter": "Giới thiệu lập trình hướng đối tượng",
+      "difficulty": "basic",
+      "content": "Một đối tượng cụ thể được tạo ra từ một lớp còn được gọi là gì?",
+      "options": {
+        "A": "Instance",
+        "B": "Interface",
+        "C": "Constructor",
+        "D": "Module"
+      },
+      "correct_answer": "A",
+      "explanation": "Instance (thể hiện) là một đối tượng cụ thể được khởi tạo từ một lớp."
+    },
+    {
+      "id": "q133",
+      "course": "Lập trình hướng đối tượng",
+      "chapter": "Phương thức",
+      "difficulty": "medium",
+      "content": "Phương thức nào được gọi tự động khi một đối tượng được khởi tạo?",
+      "options": {
+        "A": "Destructor",
+        "B": "Static method",
+        "C": "Constructor",
+        "D": "Getter"
+      },
+      "correct_answer": "C",
+      "explanation": "Constructor (hàm khởi tạo) được gọi tự động khi đối tượng được tạo ra để thiết lập giá trị ban đầu."
+    },
+    {
+      "id": "q141",
+      "course": "Lập trình .NET",
+      "chapter": "ADO.NET",
+      "difficulty": "medium",
+      "content": "Đối tượng nào trong ADO.NET dùng để đọc dữ liệu theo mô hình Connected?",
+      "options": {
+        "A": "DataSet",
+        "B": "SqlDataReader",
+        "C": "DataAdapter",
+        "D": "DataTable"
+      },
+      "correct_answer": "B",
+      "explanation": "SqlDataReader đọc dữ liệu theo kiểu chỉ tiến (forward-only) trong khi kết nối đang mở, thuộc mô hình Connected."
+    },
+    {
+      "id": "q142",
+      "course": "Lập trình .NET",
+      "chapter": "Truy vấn có tham số và Stored Procedure",
+      "difficulty": "medium",
+      "content": "Sử dụng truy vấn có tham số giúp ngăn chặn loại tấn công nào?",
+      "options": {
+        "A": "DDoS",
+        "B": "SQL Injection",
+        "C": "Phishing",
+        "D": "Man-in-the-middle"
+      },
+      "correct_answer": "B",
+      "explanation": "Truy vấn có tham số tránh việc nối chuỗi trực tiếp giá trị người dùng nhập vào câu lệnh SQL, giúp ngăn chặn SQL Injection."
+    },
+    {
+      "id": "q143",
+      "course": "Lập trình .NET",
+      "chapter": "Windows Forms",
+      "difficulty": "basic",
+      "content": "Windows Forms là công nghệ xây dựng loại ứng dụng nào?",
+      "options": {
+        "A": "Ứng dụng web",
+        "B": "Ứng dụng desktop trên Windows",
+        "C": "Ứng dụng di động",
+        "D": "Ứng dụng dòng lệnh"
+      },
+      "correct_answer": "B",
+      "explanation": "Windows Forms là công nghệ xây dựng giao diện đồ họa (GUI) cho ứng dụng desktop chạy trên Windows."
+    },
+    {
+      "id": "q151",
+      "course": "Toán rời rạc",
+      "chapter": "Bài toán đếm",
+      "difficulty": "medium",
+      "content": "Nguyên lý Dirichlet (chuồng bồ câu) phát biểu điều gì?",
+      "options": {
+        "A": "Nhét n+1 vật vào n hộp thì có ít nhất một hộp chứa từ 2 vật trở lên",
+        "B": "Mọi số nguyên tố lớn hơn 2 đều là số lẻ",
+        "C": "Tổng của hai số chẵn luôn là số chẵn",
+        "D": "Một đồ thị luôn có chu trình"
+      },
+      "correct_answer": "A",
+      "explanation": "Nguyên lý Dirichlet khẳng định nếu số vật nhiều hơn số hộp thì phải có ít nhất một hộp chứa từ 2 vật trở lên."
+    },
+    {
+      "id": "q152",
+      "course": "Toán rời rạc",
+      "chapter": "Lý thuyết chia",
+      "difficulty": "basic",
+      "content": "Ước chung lớn nhất (ƯCLN) của 18 và 24 là bao nhiêu?",
+      "options": {
+        "A": "3",
+        "B": "6",
+        "C": "9",
+        "D": "12"
+      },
+      "correct_answer": "B",
+      "explanation": "ƯCLN(18, 24) = 6 vì 6 là số lớn nhất chia hết cả 18 và 24."
+    },
+    {
+      "id": "q153",
+      "course": "Toán rời rạc",
+      "chapter": "Lý thuyết đồng dư",
+      "difficulty": "medium",
+      "content": "17 ≡ 5 (mod n) đúng với giá trị n nào sau đây?",
+      "options": {
+        "A": "4",
+        "B": "5",
+        "C": "6",
+        "D": "8"
+      },
+      "correct_answer": "C",
+      "explanation": "17 chia 6 dư 5, và 5 chia 6 dư 5, nên 17 ≡ 5 (mod 6)."
+    },
+    {
+      "id": "q154",
+      "course": "Toán rời rạc",
+      "chapter": "Đại số Boole",
+      "difficulty": "basic",
+      "content": "Cổng logic nào cho kết quả đúng (1) khi cả hai đầu vào đều đúng (1)?",
+      "options": {
+        "A": "OR",
+        "B": "NOT",
+        "C": "AND",
+        "D": "XOR"
+      },
+      "correct_answer": "C",
+      "explanation": "Cổng AND chỉ cho kết quả 1 khi tất cả các đầu vào đều là 1."
+    }
+  ]
+}

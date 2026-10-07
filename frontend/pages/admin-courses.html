@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quản lý môn học — EduAI Admin</title>
+<link rel="stylesheet" href="../css/style.css">
+<style>
+  table { width:100%; border-collapse:collapse; font-size:14px; }
+  th { text-align:left; color:var(--text-secondary); font-size:12px; text-transform:uppercase; padding:10px 12px; border-bottom:1px solid var(--border-subtle); }
+  td { padding:12px; border-bottom:1px solid var(--border-subtle); }
+  .modal-overlay { position:fixed; inset:0; background:rgba(0,0,0,.4); display:none; align-items:center; justify-content:center; z-index:50; }
+  .modal-box { background:white; border-radius:14px; padding:24px; width:100%; max-width:520px; max-height:92vh; overflow-y:auto; }
+  .field { margin-bottom:12px; }
+  .row-actions { display:flex; gap:6px; }
+  .error-box { background:#fef2f2; border:1px solid #fecaca; color:var(--danger); border-radius:8px; padding:10px 12px; font-size:13px; margin-bottom:12px; display:none; }
+  tr.course-row { cursor:pointer; transition:background .15s; }
+  tr.course-row:hover { background:var(--indigo-50); }
+  .cico { display:inline-flex; width:34px; height:34px; border-radius:10px; align-items:center; justify-content:center; margin-right:10px; vertical-align:middle; font-size:18px; }
+  .count-pill { display:inline-block; padding:2px 10px; border-radius:999px; background:var(--bg-subtle); border:1px solid var(--border-subtle); font-size:12px; font-weight:600; color:var(--text-secondary); margin-right:4px; white-space:nowrap; }
+  .dropzone { border:2px dashed var(--border-default); border-radius:14px; padding:22px 16px; text-align:center; color:var(--text-secondary); font-size:14px; cursor:pointer; transition:all .15s; background:var(--bg-subtle); }
+  .dropzone.over { border-color:var(--indigo-600); background:var(--indigo-50); color:var(--indigo-700); }
+  .dropzone b { color:var(--indigo-600); }
+  .file-list { margin-top:10px; display:flex; flex-direction:column; gap:6px; max-height:170px; overflow-y:auto; }
+  .file-item { display:flex; align-items:center; gap:8px; font-size:13px; padding:7px 10px; border:1px solid var(--border-subtle); border-radius:8px; background:#fff; }
+  .file-item .name { flex:1; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+  .file-item .st { font-size:12px; color:var(--text-muted); }
+  .file-item .st.ok { color:var(--success); } .file-item .st.err { color:var(--danger); }
+  .file-item button { border:none; background:none; color:var(--text-muted); font-size:16px; padding:0 4px; }
+</style>
+<link rel="stylesheet" href="../css/luxe.css">
+</head>
+<body>
+<div class="app-shell">
+  <nav class="topnav">
+  <div class="topnav-inner">
+    <a class="topnav-logo" href="admin-dashboard.html"><span class="mark">E</span>EduAI Admin</a>
+    <div class="topnav-links">
+    <a class="nav-item" href="admin-dashboard.html">Dashboard</a>
+    <a class="nav-item" href="admin-users.html">Tài khoản</a>
+    <a class="nav-item active" href="admin-courses.html">Môn học</a>
+    <a class="nav-item" href="admin-questions.html">Ngân hàng câu hỏi</a>
+    <a class="nav-item" href="admin-logs.html">Hoạt động hệ thống</a>
+    <a class="nav-item" href="admin-ai-config.html">Cấu hình AI</a>
+    <a class="nav-item" href="admin-agent.html">Agent</a>
+    </div>
+  <div class="topnav-actions">
+    <a class="nav-item" href="#" onclick="logout(); return false;">Đăng xuất</a>
+  </div>
+  </div>
+  <div class="topnav-mobile">
+    <a class="nav-item" href="admin-dashboard.html">Dashboard</a>
+    <a class="nav-item" href="admin-users.html">Tài khoản</a>
+    <a class="nav-item active" href="admin-courses.html">Môn học</a>
+    <a class="nav-item" href="admin-questions.html">Ngân hàng câu hỏi</a>
+    <a class="nav-item" href="admin-logs.html">Hoạt động hệ thống</a>
+    <a class="nav-item" href="admin-ai-config.html">Cấu hình AI</a>
+    <a class="nav-item" href="admin-agent.html">Agent</a>
+    <a class="nav-item" href="#" onclick="logout(); return false;">Đăng xuất</a>
+  </div>
+</nav>
+  <main class="main-content">
+    <section class="page-hero" style="background:linear-gradient(120deg,#064e3b,#059669 65%,#2dd4bf 125%);">
+      <div class="copy"><h2>Quản lý môn học</h2><p>Thêm, sửa, xóa môn học trong hệ thống</p>
+        <div class="hero-cta"><button class="solid" onclick="openAddModal()">+ Thêm môn học</button></div></div>
+      <div class="hero-art">📚</div>
+    </section>
+    <div class="card">
+      <input placeholder="Tìm kiếm theo mã môn hoặc tên môn..." id="searchInput" oninput="load()" autocomplete="off" style="max-width:360px; margin-bottom:6px;">
+      <div style="font-size:13px; color:var(--text-secondary); margin-bottom:14px;">Bấm vào một môn để xem và tải tài liệu của môn đó.</div>
+      <table>
+        <thead><tr><th>Mã môn</th><th>Tên môn</th><th>Nội dung</th><th>Trạng thái</th><th></th></tr></thead>
+        <tbody id="courseRows"></tbody>
+      </table>
+      <div id="emptyMsg" style="display:none; text-align:center; padding:24px; color:var(--text-muted);">Không tìm thấy môn học nào.</div>
+    </div>
+  </main>
+</div>
+
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal-box">
+    <h3 style="margin-top:0;" id="modalTitle">Thêm môn học</h3>
+    <div class="error-box" id="errorBox"></div>
+    <div class="field"><label>Mã môn</label><input id="mCode" placeholder="AI102"></div>
+    <div class="field"><label>Tên môn</label><input id="mName" placeholder="Xử lý ngôn ngữ tự nhiên"></div>
+    <div class="field"><label>Mô tả</label><input id="mDesc" placeholder="Mô tả ngắn về môn học"></div>
+    <div class="field" id="uploadField">
+      <label>Tài liệu của môn (không bắt buộc)</label>
+      <div class="dropzone" id="dropzone" onclick="document.getElementById('fileInput').click()">
+        Kéo thả tệp <b>PDF, DOCX, TXT</b> vào đây<br><span style="font-size:12px;">hoặc bấm để chọn tệp (tối đa 15 MB mỗi tệp)</span>
+      </div>
+      <input type="file" id="fileInput" multiple accept=".pdf,.docx,.txt" style="display:none">
+      <div class="file-list" id="fileList"></div>
+    </div>
+    <div style="display:flex; gap:8px; justify-content:flex-end; margin-top:16px;">
+      <button class="btn btn-secondary" onclick="closeModal()">Hủy</button>
+      <button class="btn btn-primary" onclick="saveCourse()" id="saveBtn">Lưu</button>
+    </div>
+  </div>
+</div>
+
+<script src="../js/api.js"></script>
+<script>
+requireRole("ADMIN");
+let editingCourseId = null;
+
+async function load() {
+  const search = document.getElementById("searchInput").value;
+  const qs = search ? `?search=${encodeURIComponent(search)}` : "";
+  const courses = await Api.request(`/api/admin/courses${qs}`);
+  const tbody = document.getElementById("courseRows");
+  const emptyMsg = document.getElementById("emptyMsg");
+
+  if (courses.length === 0) {
+    tbody.innerHTML = "";
+    emptyMsg.style.display = "block";
+    return;
+  }
+  emptyMsg.style.display = "none";
+  tbody.innerHTML = courses.map(c => `
+    <tr class="course-row" onclick="location.href='admin-course-detail.html?id=${c.id}'">
+      <td><b>${esc(c.code)}</b></td><td><span class="cico" style="${courseCover(c.name)}">${courseTheme(c.name).icon}</span>${esc(c.name)}</td>
+      <td><span class="count-pill">${c.chapter_count} chương</span><span class="count-pill">${c.document_count} tài liệu</span><span class="count-pill">${c.question_count} câu hỏi</span></td>
+      <td><span class="badge ${c.status === 'active' ? 'badge-green' : 'badge-amber'}">${c.status === 'active' ? 'Đang mở' : esc(c.status)}</span></td>
+      <td onclick="event.stopPropagation()">
+        <div class="row-actions">
+          <button class="btn btn-secondary" onclick='openEditModal(${JSON.stringify(c).replace(/'/g, "&apos;")})'>Sửa</button>
+          <button class="btn btn-secondary" style="color:#be123c;" onclick="deleteCourse(${c.id})">Xóa</button>
+        </div>
+      </td>
+    </tr>`).join("");
+}
+
+// ---- Kéo thả tệp khi thêm môn học ----
+let pendingFiles = [];
+const ALLOWED_EXT = ["pdf", "docx", "txt"];
+function addFiles(list) {
+  for (const f of list) {
+    const ext = f.name.split(".").pop().toLowerCase();
+    if (!ALLOWED_EXT.includes(ext)) { alert(`"${f.name}" không được hỗ trợ. Chỉ nhận PDF, DOCX, TXT.`); continue; }
+    if (f.size > 15 * 1024 * 1024) { alert(`"${f.name}" quá lớn (tối đa 15 MB).`); continue; }
+    if (!pendingFiles.some(x => x.file.name === f.name)) pendingFiles.push({ file: f, state: "" });
+  }
+  renderFiles();
+}
+function renderFiles() {
+  document.getElementById("fileList").innerHTML = pendingFiles.map((x, i) => `
+    <div class="file-item"><span>📄</span><span class="name">${esc(x.file.name)}</span>
+      <span class="st ${x.cls || ""}">${esc(x.state || (x.file.size / 1024 < 1024 ? Math.round(x.file.size / 1024) + " KB" : (x.file.size / 1048576).toFixed(1) + " MB"))}</span>
+      ${x.cls ? "" : `<button onclick="pendingFiles.splice(${i},1); renderFiles();" title="Bỏ tệp">×</button>`}</div>`).join("");
+}
+const dz = document.getElementById("dropzone");
+["dragenter", "dragover"].forEach(ev => dz.addEventListener(ev, e => { e.preventDefault(); dz.classList.add("over"); }));
+["dragleave", "drop"].forEach(ev => dz.addEventListener(ev, e => { e.preventDefault(); dz.classList.remove("over"); }));
+dz.addEventListener("drop", e => addFiles(e.dataTransfer.files));
+document.getElementById("fileInput").addEventListener("change", e => { addFiles(e.target.files); e.target.value = ""; });
+
+async function uploadPending(courseId) {
+  let failed = 0;
+  for (const x of pendingFiles) {
+    x.state = "Đang tải lên..."; x.cls = ""; renderFiles();
+    const form = new FormData(); form.append("file", x.file);
+    try {
+      const res = await fetch(`${API_BASE}/api/admin/courses/${courseId}/documents`, {
+        method: "POST", headers: { Authorization: `Bearer ${Api.token()}` }, body: form });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) throw new Error(data.detail || "Lỗi tải lên");
+      x.state = `Xong (${data.chunk_count} đoạn)`; x.cls = "ok";
+    } catch (e) { x.state = e.message.replace(x.file.name + ": ", ""); x.cls = "err"; failed++; }
+    renderFiles();
+  }
+  return failed;
+}
+
+function openAddModal() {
+  editingCourseId = null;
+  document.getElementById("modalTitle").textContent = "Thêm môn học";
+  document.getElementById("mCode").value = "";
+  document.getElementById("mName").value = "";
+  document.getElementById("mDesc").value = "";
+  document.getElementById("errorBox").style.display = "none";
+  pendingFiles = []; renderFiles();
+  document.getElementById("uploadField").style.display = "block";
+  document.getElementById("modalOverlay").style.display = "flex";
+}
+
+function openEditModal(course) {
+  editingCourseId = course.id;
+  document.getElementById("modalTitle").textContent = "Sửa môn học";
+  document.getElementById("mCode").value = course.code;
+  document.getElementById("mName").value = course.name;
+  document.getElementById("mDesc").value = course.description || "";
+  document.getElementById("errorBox").style.display = "none";
+  pendingFiles = []; renderFiles();
+  document.getElementById("uploadField").style.display = "none";
+  document.getElementById("modalOverlay").style.display = "flex";
+}
+
+function closeModal() { document.getElementById("modalOverlay").style.display = "none"; }
+
+async function saveCourse() {
+  const errorBox = document.getElementById("errorBox");
+  errorBox.style.display = "none";
+  const code = document.getElementById("mCode").value.trim();
+  const name = document.getElementById("mName").value.trim();
+  const description = document.getElementById("mDesc").value.trim();
+  if (!code || !name) {
+    errorBox.textContent = "Vui lòng nhập mã môn và tên môn";
+    errorBox.style.display = "block";
+    return;
+  }
+  const saveBtn = document.getElementById("saveBtn");
+  saveBtn.disabled = true;
+  try {
+    if (editingCourseId) {
+      await Api.request(`/api/admin/courses/${editingCourseId}`, { method: "PUT", body: { code, name, description } });
+    } else {
+      const created = await Api.request("/api/admin/courses", { method: "POST", body: { code, name, description } });
+      if (pendingFiles.length) {
+        const failed = await uploadPending(created.id);
+        if (failed) { load(); errorBox.textContent = `Đã tạo môn học. ${failed} tệp chưa tải lên được, bạn có thể thêm lại trong trang chi tiết môn.`; errorBox.style.display = "block"; return; }
+        await new Promise(r => setTimeout(r, 700));
+      }
+    }
+    closeModal();
+    load();
+  } catch (err) {
+    errorBox.textContent = err.message;
+    errorBox.style.display = "block";
+  } finally {
+    saveBtn.disabled = false;
+  }
+}
+
+async function deleteCourse(id) {
+  showConfirmModal({
+    title: "Xóa môn học",
+    message: "Bạn có chắc muốn xóa môn học này? Hành động này không thể hoàn tác.",
+    confirmText: "Xóa",
+    cancelText: "Hủy",
+    onConfirm: async () => {
+      await Api.request(`/api/admin/courses/${id}`, { method: "DELETE" });
+      load();
+    },
+  });
+}
+load();
+</script>
+</body>
+</html>

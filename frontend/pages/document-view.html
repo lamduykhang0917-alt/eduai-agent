@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Xem tài liệu — EduAI</title>
+<link rel="stylesheet" href="../css/style.css">
+<style>
+  .doc-head { display:flex; flex-wrap:wrap; gap:8px; align-items:center; margin-top:6px; font-size:13px; color:var(--text-secondary); }
+  .viewer { display:grid; grid-template-columns: 220px 1fr; gap:20px; align-items:start; }
+  .page-nav { position:sticky; top:84px; max-height: calc(100vh - 120px); overflow:auto; }
+  .page-nav a { display:block; padding:6px 10px; border-radius:8px; font-size:13px; color:var(--text-secondary); text-decoration:none; }
+  .page-nav a:hover, .page-nav a.on { background:var(--indigo-50); color:var(--indigo-600); }
+  .page-block { padding:16px 0; border-bottom:1px solid var(--border-subtle); scroll-margin-top:90px; }
+  .page-block:last-child { border-bottom:none; }
+  .page-tag { font-size:12px; font-weight:600; color:var(--indigo-600); margin-bottom:6px; }
+  .page-text { white-space:pre-wrap; line-height:1.7; font-size:14.5px; color:var(--text-primary); word-break:break-word; }
+  mark { background:#fde68a; padding:0 2px; border-radius:3px; }
+  .viewer-tools { display:flex; flex-wrap:wrap; gap:10px; align-items:center; margin-bottom:6px; }
+  @media (max-width: 900px) { .viewer { grid-template-columns: 1fr; } .page-nav { display:none; } }
+</style>
+<link rel="stylesheet" href="../css/luxe.css">
+</head>
+<body>
+<div class="app-shell">
+  <nav class="topnav">
+  <div class="topnav-inner">
+    <a class="topnav-logo" href="dashboard.html"><span class="mark">E</span>EduAI</a>
+    <div class="topnav-links">
+    <a class="nav-item" href="dashboard.html">Dashboard</a>
+    <a class="nav-item" href="courses.html">Môn học</a>
+    <a class="nav-item active" href="documents.html">Tài liệu</a>
+    <a class="nav-item" href="chatbot.html">Hỏi AI</a>
+    <a class="nav-item" href="quiz-list.html">Ôn tập & Kiểm tra</a>
+    <a class="nav-item" href="progress.html">Tiến độ học tập</a>
+    <a class="nav-item" href="study.html">Kế hoạch & Ghi chú</a>
+    </div>
+  <div class="topnav-actions">
+    <a class="nav-item" href="#" onclick="logout(); return false;">Đăng xuất</a>
+  </div>
+  </div>
+  <div class="topnav-mobile">
+    <a class="nav-item" href="dashboard.html">Dashboard</a>
+    <a class="nav-item" href="courses.html">Môn học</a>
+    <a class="nav-item active" href="documents.html">Tài liệu</a>
+    <a class="nav-item" href="chatbot.html">Hỏi AI</a>
+    <a class="nav-item" href="quiz-list.html">Ôn tập & Kiểm tra</a>
+    <a class="nav-item" href="progress.html">Tiến độ học tập</a>
+    <a class="nav-item" href="study.html">Kế hoạch & Ghi chú</a>
+    <a class="nav-item" href="#" onclick="logout(); return false;">Đăng xuất</a>
+  </div>
+</nav>
+  <main class="main-content">
+    <div class="topbar">
+      <div>
+        <a href="#" id="backLink" style="font-size:13px; color:var(--text-secondary);">← Quay lại</a>
+        <h1 id="docTitle" style="word-break:break-word;">Đang tải...</h1>
+        <div class="doc-head" id="docMeta"></div>
+      </div>
+      <button class="btn btn-primary" id="askBtn">💬 Hỏi AI về tài liệu này</button>
+    </div>
+
+    <div class="card">
+      <div class="viewer-tools">
+        <input id="findInput" placeholder="🔍 Tìm trong tài liệu..." oninput="renderPages()" style="flex:1; max-width:340px;">
+        <span id="findInfo" style="font-size:13px; color:var(--text-muted);"></span>
+      </div>
+      <div class="viewer">
+        <div class="page-nav" id="pageNav"></div>
+        <div id="pages"></div>
+      </div>
+    </div>
+  </main>
+</div>
+<script src="../js/api.js"></script>
+<script>
+requireAuth();
+const id = new URLSearchParams(window.location.search).get("id");
+let data = null;
+
+function esc(t) { return String(t ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c])); }
+function escRe(t) { return t.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); }
+
+async function load() {
+  try {
+    data = await Api.documentContent(id);
+  } catch (e) {
+    document.getElementById("docTitle").textContent = "Không mở được tài liệu";
+    document.getElementById("pages").innerHTML = `<div style="color:var(--text-muted);">${esc(e.message)}</div>`;
+    return;
+  }
+  const d = data.document;
+  document.getElementById("docTitle").textContent = d.title;
+  document.getElementById("docMeta").innerHTML =
+    `<span class="badge badge-purple">${esc(d.course_name)}</span>` +
+    (d.chapter_name ? `<span class="badge badge-blue">${esc(d.chapter_name)}</span>` : "") +
+    `<span class="badge badge-blue">${esc((d.file_type || "").toUpperCase())}</span>` +
+    `<span>${data.pages.length} phần nội dung</span>`;
+  document.getElementById("backLink").href = `course-detail.html?id=${d.course_id}`;
+  document.getElementById("backLink").textContent = "← Quay lại môn " + d.course_name;
+  document.getElementById("askBtn").onclick = () => {
+    window.location.href = `chatbot.html?course=${encodeURIComponent(d.course_name)}&q=${encodeURIComponent("Tóm tắt tài liệu: " + d.title)}`;
+  };
+  renderPages();
+}
+
+function renderPages() {
+  const term = document.getElementById("findInput").value.trim();
+  const re = term ? new RegExp(escRe(term), "gi") : null;
+  const reTest = term ? new RegExp(escRe(term), "i") : null;
+  const pages = data.pages;
+  if (!pages.length) {
+    document.getElementById("pages").innerHTML = `<div class="empty-state"><div class="empty-icon">📭</div>
+      <p>Tài liệu này chưa có nội dung văn bản để xem trên web.</p></div>`;
+    document.getElementById("pageNav").innerHTML = "";
+    return;
+  }
+  let hits = 0;
+  const blocks = pages.map((p, i) => {
+    if (reTest && !reTest.test(p.text)) return "";
+    let text = esc(p.text);
+    if (re) text = text.replace(re, m => { hits++; return `<mark>${m}</mark>`; });
+    return `<div class="page-block" id="p${i}"><div class="page-tag">${p.page ? "Trang / slide " + p.page : "Phần " + (i + 1)}</div><div class="page-text">${text}</div></div>`;
+  }).join("");
+  document.getElementById("pages").innerHTML = blocks || `<div style="color:var(--text-muted); padding:12px 0;">Không tìm thấy "${esc(term)}" trong tài liệu.</div>`;
+  document.getElementById("findInfo").textContent = re ? `${hits} kết quả` : "";
+  document.getElementById("pageNav").innerHTML = pages.map((p, i) =>
+    `<a href="#p${i}">${p.page ? "Trang " + p.page : "Phần " + (i + 1)}</a>`).join("");
+}
+load();
+</script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: eduai-agent-backend
+    runtime: python
+    plan: free
+    rootDir: backend
+    buildCommand: "pip install -r requirements.txt && bash install_litestream.sh"
+    startCommand: "bash start.sh"
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.3

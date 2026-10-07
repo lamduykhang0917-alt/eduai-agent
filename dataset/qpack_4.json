@@ -1,0 +1,1964 @@
+{
+ "questions": [
+  {
+   "course": "Nhập môn Khoa học máy tính",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Thuật toán là gì?",
+   "options": {
+    "A": "Một chương trình được viết hoàn chỉnh bằng ngôn ngữ bậc cao",
+    "B": "Dãy hữu hạn các bước xác định, rõ ràng để giải quyết một bài toán",
+    "C": "Một tập dữ liệu đã được sắp xếp theo một thứ tự nhất định",
+    "D": "Một thiết bị phần cứng chuyên dùng để thực hiện tính toán"
+   },
+   "correct_answer": "B",
+   "explanation": "Thuật toán là dãy hữu hạn các bước được xác định rõ ràng nhằm giải một bài toán cụ thể."
+  },
+  {
+   "course": "Nhập môn Khoa học máy tính",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Một byte gồm bao nhiêu bit?",
+   "options": {
+    "A": "4 bit",
+    "B": "8 bit",
+    "C": "10 bit",
+    "D": "16 bit"
+   },
+   "correct_answer": "B",
+   "explanation": "1 byte = 8 bit, là đơn vị lưu trữ cơ bản của máy tính."
+  },
+  {
+   "course": "Nhập môn Khoa học máy tính",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Hệ nhị phân sử dụng những chữ số nào?",
+   "options": {
+    "A": "Từ 0 đến 7",
+    "B": "Từ 0 đến 9",
+    "C": "Chỉ gồm 0 và 1",
+    "D": "Chỉ gồm 1 và 2"
+   },
+   "correct_answer": "C",
+   "explanation": "Hệ nhị phân (cơ số 2) chỉ dùng hai chữ số là 0 và 1."
+  },
+  {
+   "course": "Nhập môn Khoa học máy tính",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "CPU là viết tắt của cụm từ nào?",
+   "options": {
+    "A": "Central Processing Unit",
+    "B": "Central Program Unit",
+    "C": "Computer Processing Utility",
+    "D": "Control Processing Unit"
+   },
+   "correct_answer": "A",
+   "explanation": "CPU là Central Processing Unit - bộ xử lý trung tâm thực thi lệnh."
+  },
+  {
+   "course": "Nhập môn Khoa học máy tính",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Chức năng chính của hệ điều hành là gì?",
+   "options": {
+    "A": "Chuyển đổi mã nguồn của chương trình thành văn bản trình bày",
+    "B": "Thiết kế giao diện đồ họa cho từng trang web của người dùng",
+    "C": "Chỉ lưu trữ dữ liệu của người dùng trên đám mây trực tuyến",
+    "D": "Quản lý tài nguyên phần cứng và cung cấp môi trường để chạy chương trình"
+   },
+   "correct_answer": "D",
+   "explanation": "Hệ điều hành quản lý CPU, bộ nhớ, thiết bị và tạo môi trường cho ứng dụng chạy."
+  },
+  {
+   "course": "Nhập môn Khoa học máy tính",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Đặc điểm nào đúng với bộ nhớ RAM?",
+   "options": {
+    "A": "Lưu trữ dữ liệu vĩnh viễn kể cả khi mất điện hoàn toàn",
+    "B": "Chỉ cho phép đọc dữ liệu và không bao giờ ghi được",
+    "C": "Truy cập ngẫu nhiên, nhanh và mất dữ liệu khi tắt nguồn",
+    "D": "Có tốc độ truy cập chậm hơn nhiều so với ổ đĩa cứng"
+   },
+   "correct_answer": "C",
+   "explanation": "RAM là bộ nhớ tạm thời, truy cập nhanh, dữ liệu mất khi ngắt nguồn điện."
+  },
+  {
+   "course": "Nhập môn Khoa học máy tính",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Trình biên dịch (compiler) có nhiệm vụ gì?",
+   "options": {
+    "A": "Thực thi trực tiếp từng dòng lệnh và không tạo ra tệp mới",
+    "B": "Quản lý bộ nhớ và các tiến trình đang chạy trong hệ thống",
+    "C": "Dịch toàn bộ mã nguồn sang mã máy trước khi chương trình được chạy",
+    "D": "Kiểm tra và diệt các phần mềm độc hại trên máy tính"
+   },
+   "correct_answer": "C",
+   "explanation": "Compiler dịch toàn bộ mã nguồn thành mã máy (hoặc mã đích) rồi mới thực thi."
+  },
+  {
+   "course": "Nhập môn Khoa học máy tính",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Cấu trúc dữ liệu ngăn xếp (stack) hoạt động theo nguyên tắc nào?",
+   "options": {
+    "A": "FIFO - vào trước ra trước",
+    "B": "Ngẫu nhiên - lấy phần tử bất kỳ",
+    "C": "Theo thứ tự tăng dần của giá trị",
+    "D": "LIFO - vào sau ra trước"
+   },
+   "correct_answer": "D",
+   "explanation": "Stack lấy ra phần tử được thêm vào sau cùng nên là LIFO."
+  },
+  {
+   "course": "Nhập môn Khoa học máy tính",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Cấu trúc dữ liệu hàng đợi (queue) hoạt động theo nguyên tắc nào?",
+   "options": {
+    "A": "LIFO - vào sau ra trước",
+    "B": "Ưu tiên phần tử có giá trị lớn nhất",
+    "C": "Chỉ cho phép thao tác ở giữa hàng đợi",
+    "D": "FIFO - vào trước ra trước"
+   },
+   "correct_answer": "D",
+   "explanation": "Queue phục vụ phần tử đến trước nên là FIFO."
+  },
+  {
+   "course": "Nhập môn Khoa học máy tính",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Cơ sở dữ liệu là gì?",
+   "options": {
+    "A": "Tập hợp dữ liệu có tổ chức, được lưu trữ để truy xuất và quản lý hiệu quả",
+    "B": "Một phần mềm dùng riêng cho việc soạn thảo văn bản",
+    "C": "Một loại cáp dùng để kết nối các máy tính trong mạng",
+    "D": "Một ngôn ngữ lập trình dùng cho trí tuệ nhân tạo"
+   },
+   "correct_answer": "A",
+   "explanation": "Cơ sở dữ liệu là tập dữ liệu có cấu trúc, lưu trữ và truy vấn thuận tiện."
+  },
+  {
+   "course": "Nhập môn Khoa học máy tính",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Địa chỉ IP dùng để làm gì?",
+   "options": {
+    "A": "Mã hóa nội dung của các email gửi đi",
+    "B": "Định danh một thiết bị trong mạng máy tính",
+    "C": "Đo tốc độ xử lý của bộ vi xử lý",
+    "D": "Lưu trữ mật khẩu của người dùng mạng"
+   },
+   "correct_answer": "B",
+   "explanation": "Địa chỉ IP xác định duy nhất thiết bị để các gói tin được định tuyến đúng."
+  },
+  {
+   "course": "Nhập môn Khoa học máy tính",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Biến trong lập trình là gì?",
+   "options": {
+    "A": "Một lệnh dùng để kết thúc chương trình",
+    "B": "Vùng nhớ có tên dùng để lưu trữ một giá trị",
+    "C": "Một thiết bị nhập dữ liệu từ bàn phím",
+    "D": "Một thông báo lỗi do trình biên dịch sinh ra"
+   },
+   "correct_answer": "B",
+   "explanation": "Biến là vùng nhớ được đặt tên, giá trị trong đó có thể thay đổi khi chạy."
+  },
+  {
+   "course": "Nhập môn Khoa học máy tính",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Phần mềm mã nguồn mở (open source) có đặc điểm gì?",
+   "options": {
+    "A": "Chỉ được sử dụng miễn phí trong vòng 30 ngày đầu tiên",
+    "B": "Mã nguồn bị mã hóa và chỉ nhà phát triển mới xem được",
+    "C": "Không thể cài đặt trên các máy tính có hệ điều hành khác",
+    "D": "Mã nguồn được công khai, cho phép xem, sửa đổi và phân phối theo giấy phép"
+   },
+   "correct_answer": "D",
+   "explanation": "Mã nguồn mở công khai mã nguồn và cho phép sử dụng, sửa, phân phối theo giấy phép."
+  },
+  {
+   "course": "Nhập môn Khoa học máy tính",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Bit là gì?",
+   "options": {
+    "A": "Tập hợp gồm 8 byte liên tiếp nhau",
+    "B": "Đơn vị thông tin nhỏ nhất, nhận giá trị 0 hoặc 1",
+    "C": "Đơn vị đo tốc độ xung nhịp của CPU",
+    "D": "Một ký tự trong bảng chữ cái tiếng Anh"
+   },
+   "correct_answer": "B",
+   "explanation": "Bit (binary digit) là đơn vị thông tin nhỏ nhất, chỉ có hai giá trị 0 hoặc 1."
+  },
+  {
+   "course": "Nhập môn Khoa học máy tính",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Số nhị phân 1011 có giá trị bằng bao nhiêu trong hệ thập phân?",
+   "options": {
+    "A": "11",
+    "B": "13",
+    "C": "9",
+    "D": "10"
+   },
+   "correct_answer": "A",
+   "explanation": "1011₂ = 1·8 + 0·4 + 1·2 + 1·1 = 11."
+  },
+  {
+   "course": "Nhập môn Khoa học máy tính",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Tìm kiếm nhị phân (binary search) có điều kiện và độ phức tạp thời gian như thế nào?",
+   "options": {
+    "A": "Mảng bất kỳ không cần sắp xếp; độ phức tạp O(n)",
+    "B": "Mảng đã được sắp xếp; độ phức tạp O(n log n)",
+    "C": "Mảng đã được sắp xếp; độ phức tạp O(log n)",
+    "D": "Mảng bất kỳ không cần sắp xếp; độ phức tạp O(1)"
+   },
+   "correct_answer": "C",
+   "explanation": "Binary search chia đôi miền tìm kiếm mỗi bước, cần mảng đã sắp xếp, độ phức tạp O(log n)."
+  },
+  {
+   "course": "Nhập môn Khoa học máy tính",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Đẩy lần lượt các phần tử 1, 2, 3 vào một cấu trúc dữ liệu rồi lấy ra một phần tử đầu tiên. Kết quả đúng là gì?",
+   "options": {
+    "A": "Stack lấy được 3, queue lấy được 1",
+    "B": "Stack lấy được 1, queue lấy được 3",
+    "C": "Cả stack và queue đều lấy được 1",
+    "D": "Cả stack và queue đều lấy được 3"
+   },
+   "correct_answer": "A",
+   "explanation": "Stack LIFO nên lấy 3; queue FIFO nên lấy 1."
+  },
+  {
+   "course": "Nhập môn Khoa học máy tính",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Độ phức tạp thời gian trong trường hợp xấu nhất của thuật toán sắp xếp nổi bọt (bubble sort) là gì?",
+   "options": {
+    "A": "O(n)",
+    "B": "O(n log n)",
+    "C": "O(log n)",
+    "D": "O(n²)"
+   },
+   "correct_answer": "D",
+   "explanation": "Bubble sort dùng hai vòng lặp lồng nhau so sánh các cặp kề nhau nên O(n²)."
+  },
+  {
+   "course": "Nhập môn Khoa học máy tính",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Số thập phân 45 khi chuyển sang hệ nhị phân là số nào?",
+   "options": {
+    "A": "101011",
+    "B": "110101",
+    "C": "101101",
+    "D": "100111"
+   },
+   "correct_answer": "C",
+   "explanation": "45 = 32 + 8 + 4 + 1 nên là 101101₂."
+  },
+  {
+   "course": "Nhập môn Khoa học máy tính",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Số thập lục phân 0x2F có giá trị bằng bao nhiêu trong hệ thập phân?",
+   "options": {
+    "A": "37",
+    "B": "57",
+    "C": "31",
+    "D": "47"
+   },
+   "correct_answer": "D",
+   "explanation": "0x2F = 2·16 + 15 = 47."
+  },
+  {
+   "course": "Nhập môn Khoa học máy tính",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Thuật toán duyệt đồ thị theo chiều rộng (BFS) sử dụng cấu trúc dữ liệu nào để lưu các đỉnh chờ xét?",
+   "options": {
+    "A": "Ngăn xếp (stack)",
+    "B": "Cây nhị phân tìm kiếm",
+    "C": "Bảng băm (hash table)",
+    "D": "Hàng đợi (queue)"
+   },
+   "correct_answer": "D",
+   "explanation": "BFS thăm các đỉnh theo từng lớp nên dùng queue (FIFO)."
+  },
+  {
+   "course": "Nhập môn Khoa học máy tính",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Cần tối thiểu bao nhiêu bit để biểu diễn 100 giá trị phân biệt?",
+   "options": {
+    "A": "6 bit",
+    "B": "7 bit",
+    "C": "8 bit",
+    "D": "10 bit"
+   },
+   "correct_answer": "B",
+   "explanation": "2⁶ = 64 < 100 ≤ 128 = 2⁷ nên cần ít nhất 7 bit."
+  },
+  {
+   "course": "Nhập môn Khoa học máy tính",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Số nguyên có dấu 8 bit biểu diễn bằng bù hai có phạm vi giá trị nào?",
+   "options": {
+    "A": "Từ -127 đến 127",
+    "B": "Từ -128 đến 128",
+    "C": "Từ -128 đến 127",
+    "D": "Từ 0 đến 255"
+   },
+   "correct_answer": "C",
+   "explanation": "Bù hai n bit biểu diễn từ -2^(n-1) đến 2^(n-1)-1, với n=8 là -128 đến 127."
+  },
+  {
+   "course": "Nhập môn Khoa học máy tính",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Biểu diễn số -5 bằng 8 bit theo mã bù hai là dãy nào?",
+   "options": {
+    "A": "11111010",
+    "B": "11111011",
+    "C": "10000101",
+    "D": "11111100"
+   },
+   "correct_answer": "B",
+   "explanation": "5 = 00000101; đảo bit được 11111010; cộng 1 được 11111011."
+  },
+  {
+   "course": "Nhập môn Khoa học máy tính",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Tìm kiếm nhị phân trên mảng đã sắp xếp gồm 1000 phần tử cần tối đa khoảng bao nhiêu lần so sánh phần tử?",
+   "options": {
+    "A": "10 lần",
+    "B": "7 lần",
+    "C": "100 lần",
+    "D": "500 lần"
+   },
+   "correct_answer": "A",
+   "explanation": "Số bước tối đa là ⌊log₂1000⌋ + 1 = 9 + 1 = 10."
+  },
+  {
+   "course": "Nhập môn Khoa học máy tính",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Đồ thị vô hướng đơn (không khuyên, không cạnh song song) có 6 đỉnh thì có tối đa bao nhiêu cạnh?",
+   "options": {
+    "A": "15",
+    "B": "12",
+    "C": "30",
+    "D": "36"
+   },
+   "correct_answer": "A",
+   "explanation": "Số cạnh tối đa là n(n-1)/2 = 6·5/2 = 15."
+  },
+  {
+   "course": "Nhập môn Khoa học máy tính",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Cây nhị phân đầy đủ có gốc ở mức 0 và các lá ở mức 3 thì có tổng cộng bao nhiêu nút?",
+   "options": {
+    "A": "15",
+    "B": "7",
+    "C": "8",
+    "D": "16"
+   },
+   "correct_answer": "A",
+   "explanation": "Tổng số nút là 1 + 2 + 4 + 8 = 2⁴ - 1 = 15."
+  },
+  {
+   "course": "Nhập môn Khoa học máy tính",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Một thuật toán có độ phức tạp O(n²) chạy mất 1 giây với n = 1000. Ước lượng thời gian chạy với n = 3000 là bao nhiêu?",
+   "options": {
+    "A": "Khoảng 3 giây",
+    "B": "Khoảng 6 giây",
+    "C": "Khoảng 9 giây",
+    "D": "Khoảng 27 giây"
+   },
+   "correct_answer": "C",
+   "explanation": "n tăng 3 lần thì n² tăng 9 lần nên thời gian khoảng 9 giây."
+  },
+  {
+   "course": "Tương tác người máy",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Tương tác người máy (HCI) là lĩnh vực nghiên cứu về điều gì?",
+   "options": {
+    "A": "Chế tạo các linh kiện phần cứng như bộ vi xử lý và bo mạch",
+    "B": "Thiết kế, đánh giá và nghiên cứu sự tương tác giữa người dùng và hệ thống máy tính",
+    "C": "Viết trình biên dịch cho các ngôn ngữ lập trình bậc cao",
+    "D": "Quản trị cơ sở dữ liệu và mạng máy tính của tổ chức"
+   },
+   "correct_answer": "B",
+   "explanation": "HCI tập trung vào thiết kế và đánh giá cách con người tương tác với hệ thống máy tính."
+  },
+  {
+   "course": "Tương tác người máy",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Tính khả dụng (usability) của một hệ thống thể hiện điều gì?",
+   "options": {
+    "A": "Mức độ người dùng sử dụng hệ thống dễ dàng, hiệu quả và hài lòng",
+    "B": "Số lượng tính năng mà hệ thống cung cấp cho người dùng",
+    "C": "Tốc độ xử lý tối đa của phần cứng chạy hệ thống",
+    "D": "Mức giá bán của phần mềm trên thị trường hiện nay"
+   },
+   "correct_answer": "A",
+   "explanation": "Usability đo mức độ dễ dùng, hiệu quả và sự hài lòng khi đạt mục tiêu."
+  },
+  {
+   "course": "Tương tác người máy",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "GUI là viết tắt của cụm từ nào?",
+   "options": {
+    "A": "General User Interaction - tương tác người dùng chung",
+    "B": "Graphic Utility Integration - tích hợp tiện ích đồ họa",
+    "C": "Global Usability Index - chỉ số khả dụng toàn cầu",
+    "D": "Graphical User Interface - giao diện người dùng đồ họa"
+   },
+   "correct_answer": "D",
+   "explanation": "GUI là giao diện đồ họa với cửa sổ, biểu tượng, menu và con trỏ."
+  },
+  {
+   "course": "Tương tác người máy",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Trải nghiệm người dùng (UX) bao gồm điều gì?",
+   "options": {
+    "A": "Chỉ phần màu sắc và phông chữ của giao diện",
+    "B": "Toàn bộ cảm nhận và phản ứng của người dùng khi sử dụng sản phẩm",
+    "C": "Chỉ mã nguồn bên trong của ứng dụng",
+    "D": "Chỉ tốc độ tải trang của máy chủ"
+   },
+   "correct_answer": "B",
+   "explanation": "UX bao quát toàn bộ cảm nhận, cảm xúc và hành vi của người dùng khi dùng sản phẩm."
+  },
+  {
+   "course": "Tương tác người máy",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Affordance của một đối tượng giao diện là gì?",
+   "options": {
+    "A": "Mức độ bảo mật của đối tượng đối với dữ liệu cá nhân",
+    "B": "Gợi ý trực quan về cách đối tượng đó có thể được sử dụng",
+    "C": "Dung lượng bộ nhớ mà đối tượng chiếm trong hệ thống",
+    "D": "Số lần đối tượng được người dùng nhấn chuột vào"
+   },
+   "correct_answer": "B",
+   "explanation": "Affordance là đặc điểm gợi ý cách sử dụng, ví dụ nút nổi gợi ý có thể nhấn."
+  },
+  {
+   "course": "Tương tác người máy",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Phản hồi (feedback) trong thiết kế tương tác có vai trò gì?",
+   "options": {
+    "A": "Cho người dùng biết hệ thống đã nhận và xử lý hành động của họ như thế nào",
+    "B": "Tự động xóa các dữ liệu cũ không còn sử dụng nữa",
+    "C": "Ngăn người dùng thực hiện bất kỳ thao tác nào tiếp theo",
+    "D": "Chỉ dùng để quảng cáo sản phẩm khác cho người dùng"
+   },
+   "correct_answer": "A",
+   "explanation": "Feedback cho người dùng biết kết quả hành động, ví dụ thông báo hoặc đổi màu nút."
+  },
+  {
+   "course": "Tương tác người máy",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Persona trong thiết kế lấy người dùng làm trung tâm là gì?",
+   "options": {
+    "A": "Tên của một nhà thiết kế nổi tiếng trong ngành",
+    "B": "Nhân vật hư cấu đại diện cho một nhóm người dùng mục tiêu",
+    "C": "Một công cụ vẽ sơ đồ luồng dữ liệu của hệ thống",
+    "D": "Biểu mẫu đăng ký tài khoản của người dùng mới"
+   },
+   "correct_answer": "B",
+   "explanation": "Persona mô tả nhân vật đại diện (mục tiêu, thói quen, khó khăn) của nhóm người dùng."
+  },
+  {
+   "course": "Tương tác người máy",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Nguyên mẫu (prototype) trong thiết kế giao diện là gì?",
+   "options": {
+    "A": "Phiên bản sản phẩm đã phát hành chính thức cho thị trường",
+    "B": "Tài liệu hướng dẫn sử dụng dành cho người dùng cuối",
+    "C": "Bản sao lưu toàn bộ cơ sở dữ liệu của hệ thống",
+    "D": "Phiên bản mô phỏng sản phẩm để thử nghiệm ý tưởng trước khi phát triển hoàn chỉnh"
+   },
+   "correct_answer": "D",
+   "explanation": "Prototype là bản thử nghiệm mô phỏng sản phẩm để kiểm chứng thiết kế sớm."
+  },
+  {
+   "course": "Tương tác người máy",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Wireframe là gì?",
+   "options": {
+    "A": "Bản vẽ sơ đồ mạng dây dẫn của hệ thống máy tính",
+    "B": "Bản thiết kế hoàn chỉnh với đầy đủ hình ảnh và hiệu ứng",
+    "C": "Bản phác thảo bố cục các thành phần của giao diện, thường chưa có màu sắc chi tiết",
+    "D": "Mã nguồn HTML đã được tối ưu hóa để chạy nhanh hơn"
+   },
+   "correct_answer": "C",
+   "explanation": "Wireframe là khung sườn bố cục giao diện, tập trung vào cấu trúc chứ không phải thẩm mỹ."
+  },
+  {
+   "course": "Tương tác người máy",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Thiết kế đáp ứng (responsive design) có nghĩa là gì?",
+   "options": {
+    "A": "Hệ thống trả lời mọi yêu cầu của người dùng trong chưa đầy một giây",
+    "B": "Giao diện tự điều chỉnh bố cục phù hợp với kích thước màn hình khác nhau",
+    "C": "Giao diện chỉ hiển thị đúng trên một loại thiết bị cố định",
+    "D": "Giao diện tự động đổi ngôn ngữ theo vị trí địa lý của người dùng"
+   },
+   "correct_answer": "B",
+   "explanation": "Responsive design làm giao diện thích ứng với desktop, tablet và điện thoại."
+  },
+  {
+   "course": "Tương tác người máy",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Khả năng tiếp cận (accessibility) trong thiết kế giao diện nhằm mục đích gì?",
+   "options": {
+    "A": "Tăng tốc độ tải trang cho tất cả người dùng",
+    "B": "Giảm chi phí lưu trữ dữ liệu trên máy chủ",
+    "C": "Giúp cả người khuyết tật cũng có thể sử dụng sản phẩm",
+    "D": "Hạn chế số người dùng có thể truy cập hệ thống"
+   },
+   "correct_answer": "C",
+   "explanation": "Accessibility đảm bảo người khuyết tật (thị giác, thính giác, vận động) vẫn dùng được sản phẩm."
+  },
+  {
+   "course": "Tương tác người máy",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Tính nhất quán (consistency) trong thiết kế giao diện nghĩa là gì?",
+   "options": {
+    "A": "Mỗi màn hình dùng một phong cách hoàn toàn khác nhau",
+    "B": "Giao diện không bao giờ được thay đổi sau khi phát hành",
+    "C": "Chỉ dùng duy nhất một màu cho toàn bộ giao diện",
+    "D": "Các thành phần và hành vi tương tự được thiết kế giống nhau trong toàn hệ thống"
+   },
+   "correct_answer": "D",
+   "explanation": "Nhất quán giúp người dùng dễ học và dự đoán cách thao tác trên toàn hệ thống."
+  },
+  {
+   "course": "Tương tác người máy",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Mô hình tinh thần (mental model) của người dùng là gì?",
+   "options": {
+    "A": "Mô hình toán học dùng để huấn luyện mạng nơ-ron",
+    "B": "Sơ đồ kiến trúc phần cứng do kỹ sư thiết kế",
+    "C": "Cách người dùng hình dung và hiểu về hoạt động của hệ thống",
+    "D": "Mẫu hợp đồng thỏa thuận giữa nhà phát triển và khách hàng"
+   },
+   "correct_answer": "C",
+   "explanation": "Mental model là sự hiểu biết/niềm tin của người dùng về cách hệ thống vận hành."
+  },
+  {
+   "course": "Tương tác người máy",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Kiểm thử khả dụng (usability testing) thường được thực hiện như thế nào?",
+   "options": {
+    "A": "Quan sát người dùng thật thực hiện các nhiệm vụ điển hình trên sản phẩm",
+    "B": "Chạy tự động các bài kiểm tra đơn vị trên mã nguồn",
+    "C": "Đo nhiệt độ của thiết bị khi chạy ứng dụng",
+    "D": "Hỏi ý kiến duy nhất của đội ngũ lập trình viên"
+   },
+   "correct_answer": "A",
+   "explanation": "Usability testing quan sát người dùng đại diện làm nhiệm vụ để phát hiện vấn đề."
+  },
+  {
+   "course": "Tương tác người máy",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Trong 10 nguyên tắc của Nielsen, thanh tiến trình khi tải tệp minh họa cho nguyên tắc nào?",
+   "options": {
+    "A": "Ngăn ngừa lỗi (error prevention)",
+    "B": "Tính linh hoạt và hiệu quả sử dụng",
+    "C": "Hiển thị trạng thái hệ thống (visibility of system status)",
+    "D": "Thiết kế tối giản và thẩm mỹ"
+   },
+   "correct_answer": "C",
+   "explanation": "Thanh tiến trình cho người dùng biết hệ thống đang làm gì và còn bao lâu."
+  },
+  {
+   "course": "Tương tác người máy",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Tình huống nào dưới đây minh họa nguyên tắc ngăn ngừa lỗi (error prevention)?",
+   "options": {
+    "A": "Hiển thị thông báo lỗi bằng tiếng Việt dễ hiểu sau khi lỗi xảy ra",
+    "B": "Hiển thị hộp thoại xác nhận trước khi xóa vĩnh viễn một tệp",
+    "C": "Cung cấp trang trợ giúp chi tiết ở cuối trang web",
+    "D": "Dùng cùng một biểu tượng cho các chức năng giống nhau"
+   },
+   "correct_answer": "B",
+   "explanation": "Xác nhận trước thao tác nguy hiểm giúp ngăn lỗi xảy ra ngay từ đầu."
+  },
+  {
+   "course": "Tương tác người máy",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "So với nguyên mẫu độ trung thực cao (high-fidelity), nguyên mẫu giấy (low-fidelity) có ưu điểm nào?",
+   "options": {
+    "A": "Cho cảm giác tương tác gần giống sản phẩm thật nhất",
+    "B": "Có thể đo chính xác thời gian phản hồi của hệ thống",
+    "C": "Có thể phát hành trực tiếp cho người dùng cuối",
+    "D": "Nhanh, rẻ và dễ chỉnh sửa trong giai đoạn đầu của thiết kế"
+   },
+   "correct_answer": "D",
+   "explanation": "Nguyên mẫu độ trung thực thấp tiết kiệm chi phí, dễ thay đổi để thử nhiều ý tưởng."
+  },
+  {
+   "course": "Tương tác người máy",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Theo định luật Fitts, thời gian di chuyển con trỏ đến một mục tiêu phụ thuộc thế nào?",
+   "options": {
+    "A": "Tăng khi khoảng cách tới mục tiêu tăng và giảm khi mục tiêu lớn hơn",
+    "B": "Giảm khi khoảng cách tăng và tăng khi mục tiêu lớn hơn",
+    "C": "Chỉ phụ thuộc vào màu sắc của mục tiêu",
+    "D": "Không phụ thuộc vào kích thước mục tiêu"
+   },
+   "correct_answer": "A",
+   "explanation": "Fitts: T = a + b·log₂(D/W + 1), tăng theo D và giảm theo W."
+  },
+  {
+   "course": "Tương tác người máy",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Theo định luật Hick, thời gian ra quyết định của người dùng thay đổi thế nào khi số lựa chọn tăng?",
+   "options": {
+    "A": "Giảm tuyến tính theo số lựa chọn",
+    "B": "Không đổi dù số lựa chọn tăng bao nhiêu",
+    "C": "Tăng theo bình phương của số lựa chọn",
+    "D": "Tăng theo hàm logarit của số lựa chọn"
+   },
+   "correct_answer": "D",
+   "explanation": "Hick-Hyman: T = b·log₂(n+1), thời gian tăng chậm dạng logarit theo số lựa chọn."
+  },
+  {
+   "course": "Tương tác người máy",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Phương pháp phân loại thẻ (card sorting) chủ yếu được dùng để làm gì?",
+   "options": {
+    "A": "Xây dựng cấu trúc thông tin và hệ thống điều hướng phù hợp với người dùng",
+    "B": "Đo tốc độ gõ phím của người dùng",
+    "C": "Kiểm tra độ tương phản màu sắc của giao diện",
+    "D": "Kiểm tra lỗi cú pháp trong mã nguồn HTML"
+   },
+   "correct_answer": "A",
+   "explanation": "Card sorting cho người dùng nhóm và đặt tên các mục, giúp tổ chức cấu trúc thông tin."
+  },
+  {
+   "course": "Tương tác người máy",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Theo WCAG 2.x, tỷ lệ tương phản tối thiểu giữa văn bản thường và nền ở mức AA là bao nhiêu?",
+   "options": {
+    "A": "3 : 1",
+    "B": "7 : 1",
+    "C": "4,5 : 1",
+    "D": "2 : 1"
+   },
+   "correct_answer": "C",
+   "explanation": "WCAG yêu cầu 4,5:1 cho văn bản thường ở mức AA (7:1 là mức AAA, 3:1 cho chữ lớn)."
+  },
+  {
+   "course": "Tương tác người máy",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Theo công thức Shannon của định luật Fitts, chỉ số khó ID = log₂(D/W + 1). Với D = 14 và W = 2, ID bằng bao nhiêu bit?",
+   "options": {
+    "A": "7 bit",
+    "B": "3 bit",
+    "C": "2 bit",
+    "D": "4 bit"
+   },
+   "correct_answer": "B",
+   "explanation": "D/W + 1 = 8 nên ID = log₂8 = 3 bit."
+  },
+  {
+   "course": "Tương tác người máy",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Theo Hick-Hyman T = b·log₂(n+1) với b không đổi, tỷ lệ thời gian lựa chọn của menu 15 mục so với menu 7 mục (các mục có xác suất như nhau) xấp xỉ bao nhiêu?",
+   "options": {
+    "A": "Khoảng 2,14 lần",
+    "B": "Khoảng 2,00 lần",
+    "C": "Khoảng 1,33 lần",
+    "D": "Khoảng 1,00 lần"
+   },
+   "correct_answer": "C",
+   "explanation": "log₂16 / log₂8 = 4/3 ≈ 1,33, không tăng tỷ lệ thuận theo số mục."
+  },
+  {
+   "course": "Tương tác người máy",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Vì sao thanh menu đặt sát mép trên cùng của màn hình lại dễ chọn theo định luật Fitts?",
+   "options": {
+    "A": "Mép màn hình làm con trỏ di chuyển nhanh gấp đôi bình thường",
+    "B": "Màu của thanh menu nổi bật hơn các thành phần khác",
+    "C": "Con trỏ bị chặn bởi mép màn hình nên kích thước hiệu dụng theo chiều dọc gần như vô hạn",
+    "D": "Hệ điều hành tự động phóng to thanh menu khi gần mép"
+   },
+   "correct_answer": "C",
+   "explanation": "Người dùng có thể đẩy con trỏ tới mép mà không cần canh chính xác, nên W hiệu dụng rất lớn."
+  },
+  {
+   "course": "Tương tác người máy",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Bảng hỏi SUS có 10 câu; sau khi quy đổi, mỗi câu đóng góp từ 0 đến 4 điểm. Nếu tổng đóng góp là 30 thì điểm SUS là bao nhiêu?",
+   "options": {
+    "A": "75",
+    "B": "30",
+    "C": "60",
+    "D": "7,5"
+   },
+   "correct_answer": "A",
+   "explanation": "Điểm SUS = tổng đóng góp × 2,5 = 30 × 2,5 = 75."
+  },
+  {
+   "course": "Tương tác người máy",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Theo Nielsen, mỗi người dùng phát hiện trung bình khoảng 31% vấn đề khả dụng. Với 5 người dùng độc lập, tỷ lệ vấn đề được phát hiện xấp xỉ bao nhiêu?",
+   "options": {
+    "A": "Khoảng 84-85%",
+    "B": "Khoảng 31%",
+    "C": "Khoảng 62%",
+    "D": "Khoảng 99%"
+   },
+   "correct_answer": "A",
+   "explanation": "Tỷ lệ = 1 - (1 - 0,31)⁵ = 1 - 0,69⁵ ≈ 0,84."
+  },
+  {
+   "course": "Tương tác người máy",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Người dùng muốn in hai mặt nhưng không tìm ra tùy chọn nào trong hộp thoại in có thể thực hiện việc đó. Theo Norman, đây là hố ngăn cách nào?",
+   "options": {
+    "A": "Hố đánh giá (gulf of evaluation)",
+    "B": "Hố nhận thức (gulf of perception)",
+    "C": "Hố dữ liệu (gulf of data)",
+    "D": "Hố thực thi (gulf of execution)"
+   },
+   "correct_answer": "D",
+   "explanation": "Không biết thao tác nào để đạt mục tiêu là khoảng cách giữa ý định và các hành động hệ thống cho phép - hố thực thi."
+  },
+  {
+   "course": "Tương tác người máy",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Cần thiết kế ô nhập mã xác thực gồm 12 chữ số liên tiếp. Cách nào phù hợp nhất với giới hạn trí nhớ ngắn hạn của người dùng?",
+   "options": {
+    "A": "Hiển thị 12 chữ số liền nhau với cỡ chữ rất nhỏ",
+    "B": "Yêu cầu người dùng ghi nhớ toàn bộ mã trước khi nhập",
+    "C": "Ẩn toàn bộ chữ số bằng dấu sao ngay khi nhập",
+    "D": "Chia mã thành các nhóm 3-4 chữ số được tách bằng dấu cách hoặc gạch ngang"
+   },
+   "correct_answer": "D",
+   "explanation": "Chia nhóm (chunking) giảm tải trí nhớ ngắn hạn, giúp đọc và nhập chính xác hơn."
+  },
+  {
+   "course": "Xử lý ảnh",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Điểm ảnh (pixel) là gì?",
+   "options": {
+    "A": "Đơn vị đo kích thước vật lý của máy ảnh",
+    "B": "Tên một định dạng tệp ảnh nén phổ biến",
+    "C": "Bộ lọc dùng để làm mờ ảnh số",
+    "D": "Phần tử nhỏ nhất của ảnh số, mang thông tin về độ sáng hoặc màu"
+   },
+   "correct_answer": "D",
+   "explanation": "Pixel là phần tử nhỏ nhất của ảnh số, mỗi pixel lưu một giá trị xám hoặc màu."
+  },
+  {
+   "course": "Xử lý ảnh",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Ảnh xám 8 bit có bao nhiêu mức xám?",
+   "options": {
+    "A": "128 mức, từ 0 đến 127",
+    "B": "256 mức, từ 0 đến 255",
+    "C": "8 mức, từ 0 đến 7",
+    "D": "512 mức, từ 0 đến 511"
+   },
+   "correct_answer": "B",
+   "explanation": "8 bit biểu diễn 2⁸ = 256 giá trị."
+  },
+  {
+   "course": "Xử lý ảnh",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Ảnh nhị phân là ảnh có đặc điểm nào?",
+   "options": {
+    "A": "Mỗi điểm ảnh gồm ba kênh Đỏ, Lục, Lam",
+    "B": "Mỗi điểm ảnh có 256 mức xám khác nhau",
+    "C": "Ảnh được lưu dưới dạng hai tệp tách biệt",
+    "D": "Mỗi điểm ảnh chỉ nhận một trong hai giá trị (đen hoặc trắng)"
+   },
+   "correct_answer": "D",
+   "explanation": "Ảnh nhị phân chỉ có hai giá trị, thường là 0 và 1 (hoặc 0 và 255)."
+  },
+  {
+   "course": "Xử lý ảnh",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Không gian màu RGB biểu diễn màu từ những kênh nào?",
+   "options": {
+    "A": "Đỏ (Red), Lục (Green) và Lam (Blue)",
+    "B": "Xanh lơ, Đỏ tươi và Vàng",
+    "C": "Sắc độ, Độ bão hòa và Độ sáng",
+    "D": "Đen, Trắng và Xám"
+   },
+   "correct_answer": "A",
+   "explanation": "RGB là mô hình cộng màu gồm ba kênh Red, Green, Blue."
+  },
+  {
+   "course": "Xử lý ảnh",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Độ phân giải của ảnh số được hiểu là gì?",
+   "options": {
+    "A": "Số màu tối đa mà màn hình có thể hiển thị",
+    "B": "Dung lượng tệp ảnh sau khi nén",
+    "C": "Số điểm ảnh theo chiều rộng và chiều cao của ảnh",
+    "D": "Khoảng cách từ ống kính đến vật thể"
+   },
+   "correct_answer": "C",
+   "explanation": "Độ phân giải thường được nêu dạng rộng × cao (số pixel)."
+  },
+  {
+   "course": "Xử lý ảnh",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Histogram của ảnh xám cho biết điều gì?",
+   "options": {
+    "A": "Vị trí của các cạnh trong ảnh",
+    "B": "Số lượng (tần suất) điểm ảnh ứng với từng mức xám",
+    "C": "Danh sách các màu sắc theo thứ tự tên",
+    "D": "Kích thước thực tế của đối tượng trong ảnh"
+   },
+   "correct_answer": "B",
+   "explanation": "Histogram thống kê tần suất xuất hiện của mỗi mức xám."
+  },
+  {
+   "course": "Xử lý ảnh",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Bộ lọc trung vị (median filter) đặc biệt hiệu quả để khử loại nhiễu nào?",
+   "options": {
+    "A": "Nhiễu do ảnh bị thiếu sáng toàn cục",
+    "B": "Nhiễu muối tiêu (salt-and-pepper)",
+    "C": "Nhiễu do nén ảnh làm mất màu",
+    "D": "Nhiễu làm lệch màu về phía xanh lam"
+   },
+   "correct_answer": "B",
+   "explanation": "Median lấy giá trị giữa của cửa sổ nên loại bỏ các điểm cực trị riêng lẻ do nhiễu muối tiêu."
+  },
+  {
+   "course": "Xử lý ảnh",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Phân ngưỡng (thresholding) ảnh xám tạo ra loại ảnh nào?",
+   "options": {
+    "A": "Ảnh màu RGB",
+    "B": "Ảnh âm bản",
+    "C": "Ảnh có độ phân giải cao hơn",
+    "D": "Ảnh nhị phân"
+   },
+   "correct_answer": "D",
+   "explanation": "Pixel lớn hơn ngưỡng gán một giá trị, còn lại gán giá trị kia nên được ảnh nhị phân."
+  },
+  {
+   "course": "Xử lý ảnh",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Phát hiện biên (edge detection) nhằm tìm ra điều gì?",
+   "options": {
+    "A": "Các vùng có độ sáng đồng đều trong ảnh",
+    "B": "Số lượng màu khác nhau của ảnh",
+    "C": "Vị trí của máy ảnh khi chụp ảnh",
+    "D": "Các vị trí có cường độ sáng thay đổi đột ngột"
+   },
+   "correct_answer": "D",
+   "explanation": "Biên là nơi giá trị độ sáng thay đổi mạnh, thường tìm bằng đạo hàm/gradient."
+  },
+  {
+   "course": "Xử lý ảnh",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Toán tử Sobel dùng để làm gì?",
+   "options": {
+    "A": "Tăng kích thước ảnh gấp đôi",
+    "B": "Chuyển ảnh màu thành ảnh âm bản",
+    "C": "Xấp xỉ gradient của ảnh để phát hiện biên",
+    "D": "Nén ảnh theo chuẩn JPEG"
+   },
+   "correct_answer": "C",
+   "explanation": "Sobel dùng hai kernel 3×3 để tính gradient theo phương ngang và dọc."
+  },
+  {
+   "course": "Xử lý ảnh",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Bộ lọc Gauss thường được dùng với mục đích nào?",
+   "options": {
+    "A": "Làm sắc nét các cạnh trong ảnh",
+    "B": "Phân đoạn ảnh thành các vùng khác nhau",
+    "C": "Làm trơn (làm mờ) ảnh và giảm nhiễu",
+    "D": "Chuyển ảnh sang không gian màu khác"
+   },
+   "correct_answer": "C",
+   "explanation": "Gauss là bộ lọc thông thấp, làm mờ ảnh và giảm nhiễu."
+  },
+  {
+   "course": "Xử lý ảnh",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Phép co (erosion) trên ảnh nhị phân có tác dụng gì?",
+   "options": {
+    "A": "Thu nhỏ vùng đối tượng và loại bỏ các điểm nhiễu nhỏ",
+    "B": "Mở rộng vùng đối tượng và lấp các lỗ trống",
+    "C": "Đảo ngược giá trị trắng và đen của ảnh",
+    "D": "Tăng độ phân giải của ảnh"
+   },
+   "correct_answer": "A",
+   "explanation": "Erosion làm mòn biên đối tượng nên vùng bị thu nhỏ và nhiễu nhỏ biến mất."
+  },
+  {
+   "course": "Xử lý ảnh",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Phép giãn (dilation) trên ảnh nhị phân có tác dụng gì?",
+   "options": {
+    "A": "Thu nhỏ vùng đối tượng và loại bỏ nhiễu nhỏ",
+    "B": "Mở rộng vùng đối tượng và lấp các khe hở nhỏ",
+    "C": "Làm mờ ảnh bằng cách lấy trung bình",
+    "D": "Tính gradient của ảnh theo hai hướng"
+   },
+   "correct_answer": "B",
+   "explanation": "Dilation làm phồng biên đối tượng nên vùng mở rộng và các khe nhỏ được lấp đầy."
+  },
+  {
+   "course": "Xử lý ảnh",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Phân đoạn ảnh (image segmentation) là gì?",
+   "options": {
+    "A": "Cắt ảnh thành nhiều tệp để gửi qua mạng",
+    "B": "Chia ảnh thành các vùng có đặc tính tương đồng nhau",
+    "C": "Ghép nhiều ảnh nhỏ thành một ảnh toàn cảnh",
+    "D": "Nén ảnh bằng cách giảm số mức xám"
+   },
+   "correct_answer": "B",
+   "explanation": "Phân đoạn chia ảnh thành các vùng (đối tượng, nền) theo tính chất như màu, độ sáng, kết cấu."
+  },
+  {
+   "course": "Xử lý ảnh",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Ảnh xám 8 bit kích thước 640 × 480 lưu không nén chiếm dung lượng bao nhiêu?",
+   "options": {
+    "A": "300 KB",
+    "B": "900 KB",
+    "C": "37,5 KB",
+    "D": "2400 KB"
+   },
+   "correct_answer": "A",
+   "explanation": "640 × 480 = 307200 byte (1 byte/pixel) = 300 KB."
+  },
+  {
+   "course": "Xử lý ảnh",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Áp dụng bộ lọc trung bình 3×3 (mỗi hệ số 1/9) lên vùng ảnh gồm các giá trị 10 10 10 / 10 100 10 / 10 10 10. Giá trị tại tâm sau lọc là bao nhiêu?",
+   "options": {
+    "A": "100",
+    "B": "10",
+    "C": "20",
+    "D": "30"
+   },
+   "correct_answer": "C",
+   "explanation": "Tổng = 8·10 + 100 = 180; 180 / 9 = 20."
+  },
+  {
+   "course": "Xử lý ảnh",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Lọc trung vị 3×3 được áp dụng cho cửa sổ gồm các giá trị 12, 200, 15, 14, 13, 16, 15, 14, 255. Kết quả là bao nhiêu?",
+   "options": {
+    "A": "14",
+    "B": "62",
+    "C": "15",
+    "D": "255"
+   },
+   "correct_answer": "C",
+   "explanation": "Sắp xếp: 12, 13, 14, 14, 15, 15, 16, 200, 255; giá trị thứ 5 là 15."
+  },
+  {
+   "course": "Xử lý ảnh",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Cân bằng histogram (histogram equalization) có mục đích chính là gì?",
+   "options": {
+    "A": "Giảm kích thước tệp ảnh khi lưu trữ",
+    "B": "Xóa nền khỏi đối tượng trong ảnh",
+    "C": "Chuyển ảnh màu sang ảnh nhị phân",
+    "D": "Tăng độ tương phản bằng cách phân bố lại các mức xám cho đều hơn"
+   },
+   "correct_answer": "D",
+   "explanation": "Cân bằng histogram dùng hàm phân phối tích lũy để dàn đều mức xám, tăng tương phản."
+  },
+  {
+   "course": "Xử lý ảnh",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Điểm khác nhau chính giữa toán tử Sobel và Laplacian trong phát hiện biên là gì?",
+   "options": {
+    "A": "Sobel dùng đạo hàm bậc nhất, còn Laplacian dùng đạo hàm bậc hai",
+    "B": "Sobel dùng đạo hàm bậc hai, còn Laplacian dùng đạo hàm bậc nhất",
+    "C": "Sobel chỉ dùng cho ảnh màu, còn Laplacian chỉ dùng cho ảnh xám",
+    "D": "Cả hai đều không dựa trên đạo hàm của ảnh"
+   },
+   "correct_answer": "A",
+   "explanation": "Sobel xấp xỉ gradient (bậc nhất); Laplacian là đạo hàm bậc hai, không cho hướng biên."
+  },
+  {
+   "course": "Xử lý ảnh",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Chuyển điểm ảnh RGB = (100, 200, 50) sang mức xám theo công thức Y = 0,299R + 0,587G + 0,114B, kết quả gần nhất là bao nhiêu?",
+   "options": {
+    "A": "117",
+    "B": "125",
+    "C": "153",
+    "D": "100"
+   },
+   "correct_answer": "C",
+   "explanation": "Y = 29,9 + 117,4 + 5,7 = 153."
+  },
+  {
+   "course": "Xử lý ảnh",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Với ảnh xám 8 bit, giá trị điểm ảnh sau khi lấy âm bản của điểm ảnh có giá trị 80 là bao nhiêu?",
+   "options": {
+    "A": "175",
+    "B": "176",
+    "C": "160",
+    "D": "255"
+   },
+   "correct_answer": "A",
+   "explanation": "Âm bản: s = 255 - r = 255 - 80 = 175."
+  },
+  {
+   "course": "Xử lý ảnh",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Giãn độ tương phản tuyến tính ánh xạ khoảng [40, 140] sang [0, 200] theo s = (r - 40)/100 × 200. Điểm ảnh r = 90 có giá trị mới là bao nhiêu?",
+   "options": {
+    "A": "90",
+    "B": "100",
+    "C": "50",
+    "D": "200"
+   },
+   "correct_answer": "B",
+   "explanation": "s = (90 - 40)/100 × 200 = 0,5 × 200 = 100."
+  },
+  {
+   "course": "Xử lý ảnh",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Ảnh 100×100 được tích chập với kernel 5×5, bước nhảy 1, không đệm (kiểu valid). Kích thước ảnh kết quả là bao nhiêu?",
+   "options": {
+    "A": "95 × 95",
+    "B": "96 × 96",
+    "C": "100 × 100",
+    "D": "98 × 98"
+   },
+   "correct_answer": "B",
+   "explanation": "Kích thước = 100 - 5 + 1 = 96 mỗi chiều."
+  },
+  {
+   "course": "Xử lý ảnh",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Vùng 3×3 có mọi hàng đều là (10, 10, 50). Với Gx = [-1 0 1; -2 0 2; -1 0 1] và Gy = [-1 -2 -1; 0 0 0; 1 2 1], độ lớn gradient √(Gx² + Gy²) tại tâm là bao nhiêu?",
+   "options": {
+    "A": "160",
+    "B": "40",
+    "C": "320",
+    "D": "100"
+   },
+   "correct_answer": "A",
+   "explanation": "Gx = (50-10)·(1+2+1) = 160; Gy = 0 vì các hàng giống nhau; độ lớn = 160."
+  },
+  {
+   "course": "Xử lý ảnh",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Theo định lý lấy mẫu Nyquist, nếu tần số lấy mẫu nhỏ hơn hai lần tần số cao nhất của tín hiệu ảnh thì xảy ra hiện tượng gì?",
+   "options": {
+    "A": "Hiện tượng chồng phổ (aliasing) làm méo hoặc xuất hiện hoa văn giả",
+    "B": "Ảnh trở nên sáng hơn toàn bộ",
+    "C": "Số mức xám của ảnh tự động tăng lên",
+    "D": "Ảnh được nén không mất mát thông tin"
+   },
+   "correct_answer": "A",
+   "explanation": "Lấy mẫu dưới ngưỡng Nyquist gây aliasing: các tần số cao bị biến thành tần số thấp giả."
+  },
+  {
+   "course": "Xử lý ảnh",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Ảnh 4×4 (16 điểm ảnh) có L = 4 mức xám (0-3) với số điểm ảnh lần lượt là 4, 8, 4, 0 cho các mức 0, 1, 2, 3. Sau cân bằng histogram s = làm tròn((L-1)·CDF), mức xám 1 được ánh xạ thành bao nhiêu?",
+   "options": {
+    "A": "1",
+    "B": "3",
+    "C": "0",
+    "D": "2"
+   },
+   "correct_answer": "D",
+   "explanation": "CDF(1) = (4+8)/16 = 0,75; s = 3 × 0,75 = 2,25 làm tròn thành 2."
+  },
+  {
+   "course": "Xử lý ảnh",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Trong biến đổi Hough tìm đường thẳng dùng ρ = x·cosθ + y·sinθ, mỗi điểm ảnh biên (x, y) được ánh xạ thành gì trong không gian tham số (ρ, θ)?",
+   "options": {
+    "A": "Một điểm duy nhất",
+    "B": "Một đường thẳng đứng",
+    "C": "Một hình tròn",
+    "D": "Một đường cong hình sin"
+   },
+   "correct_answer": "D",
+   "explanation": "Mọi đường thẳng đi qua điểm (x, y) cho một đường cong hình sin trong (ρ, θ); giao điểm các đường cong cho tham số đường thẳng."
+  },
+  {
+   "course": "Xử lý ảnh",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Phương pháp Otsu chọn ngưỡng phân đoạn theo tiêu chí nào?",
+   "options": {
+    "A": "Chọn giá trị trung bình cộng của toàn bộ ảnh",
+    "B": "Chọn mức xám có tần suất thấp nhất",
+    "C": "Cực đại phương sai giữa hai lớp (between-class variance)",
+    "D": "Chọn mức xám đứng giữa 0 và 255"
+   },
+   "correct_answer": "C",
+   "explanation": "Otsu duyệt các ngưỡng và chọn ngưỡng làm cực đại phương sai giữa các lớp (tương đương cực tiểu phương sai trong lớp)."
+  },
+  {
+   "course": "Xử lý ngôn ngữ tự nhiên",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Xử lý ngôn ngữ tự nhiên (NLP) là lĩnh vực nghiên cứu về điều gì?",
+   "options": {
+    "A": "Thiết kế các mạch điện tử cho bộ vi xử lý",
+    "B": "Giúp máy tính hiểu, phân tích và sinh ngôn ngữ của con người",
+    "C": "Nén và truyền dữ liệu âm thanh qua mạng",
+    "D": "Quản lý cơ sở dữ liệu quan hệ trong doanh nghiệp"
+   },
+   "correct_answer": "B",
+   "explanation": "NLP cho phép máy tính xử lý, hiểu và sinh ngôn ngữ tự nhiên."
+  },
+  {
+   "course": "Xử lý ngôn ngữ tự nhiên",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Tách từ (tokenization) là gì?",
+   "options": {
+    "A": "Dịch văn bản sang một ngôn ngữ khác",
+    "B": "Xóa toàn bộ dấu câu và số khỏi văn bản",
+    "C": "Chia văn bản thành các đơn vị nhỏ hơn gọi là token như từ hoặc câu",
+    "D": "Gộp nhiều văn bản thành một tệp duy nhất"
+   },
+   "correct_answer": "C",
+   "explanation": "Tokenization là bước tách văn bản thành các token để xử lý tiếp."
+  },
+  {
+   "course": "Xử lý ngôn ngữ tự nhiên",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Từ dừng (stop words) là những từ nào?",
+   "options": {
+    "A": "Những từ hiếm chỉ xuất hiện một lần trong ngữ liệu",
+    "B": "Những từ rất phổ biến, mang ít thông tin phân biệt như \"và\", \"là\", \"của\"",
+    "C": "Những từ viết sai chính tả trong văn bản",
+    "D": "Những từ mang nghĩa quan trọng nhất của câu"
+   },
+   "correct_answer": "B",
+   "explanation": "Stop words xuất hiện nhiều nhưng ít giá trị phân biệt nên thường bị loại bỏ."
+  },
+  {
+   "course": "Xử lý ngôn ngữ tự nhiên",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Stemming là kỹ thuật gì?",
+   "options": {
+    "A": "Dịch từ sang ngôn ngữ khác bằng từ điển",
+    "B": "Gán nhãn từ loại cho từng từ trong câu",
+    "C": "Tìm các từ đồng nghĩa với từ cho trước",
+    "D": "Cắt bỏ phần đuôi của từ để đưa về dạng gốc một cách đơn giản theo luật"
+   },
+   "correct_answer": "D",
+   "explanation": "Stemming dùng quy tắc cắt hậu tố, kết quả có thể không phải từ có nghĩa."
+  },
+  {
+   "course": "Xử lý ngôn ngữ tự nhiên",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Lemmatization khác stemming ở điểm nào?",
+   "options": {
+    "A": "Đưa từ về dạng từ điển (lemma) có nghĩa dựa trên từ vựng và ngữ pháp",
+    "B": "Chỉ xóa các ký tự đặc biệt khỏi từ",
+    "C": "Chỉ chuyển toàn bộ chữ thành chữ hoa",
+    "D": "Luôn cho kết quả ngắn hơn stemming"
+   },
+   "correct_answer": "A",
+   "explanation": "Lemmatization trả về lemma hợp lệ nhờ từ điển và phân tích hình thái."
+  },
+  {
+   "course": "Xử lý ngôn ngữ tự nhiên",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Gán nhãn từ loại (POS tagging) là gì?",
+   "options": {
+    "A": "Đếm số lần xuất hiện của mỗi từ trong văn bản",
+    "B": "Xác định cảm xúc tích cực hay tiêu cực của câu",
+    "C": "Nhận dạng tên người và địa danh trong văn bản",
+    "D": "Xác định từ loại (danh từ, động từ, tính từ...) cho mỗi từ trong câu"
+   },
+   "correct_answer": "D",
+   "explanation": "POS tagging gán nhãn ngữ pháp như N, V, A cho từng từ."
+  },
+  {
+   "course": "Xử lý ngôn ngữ tự nhiên",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Nhận dạng thực thể có tên (NER) là bài toán gì?",
+   "options": {
+    "A": "Tìm và phân loại các thực thể như tên người, tổ chức, địa điểm trong văn bản",
+    "B": "Dịch tự động các tên riêng sang tiếng Anh",
+    "C": "Tóm tắt văn bản thành vài câu ngắn gọn",
+    "D": "Sửa lỗi chính tả cho các tên riêng"
+   },
+   "correct_answer": "A",
+   "explanation": "NER trích xuất thực thể và gán loại như PER, ORG, LOC."
+  },
+  {
+   "course": "Xử lý ngôn ngữ tự nhiên",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Mô hình túi từ (Bag of Words) biểu diễn văn bản như thế nào?",
+   "options": {
+    "A": "Bằng chuỗi các từ giữ nguyên thứ tự xuất hiện",
+    "B": "Bằng cây cú pháp đầy đủ của từng câu",
+    "C": "Bằng vector tần suất xuất hiện của các từ, bỏ qua thứ tự từ",
+    "D": "Bằng một con số duy nhất là độ dài văn bản"
+   },
+   "correct_answer": "C",
+   "explanation": "BoW chỉ đếm từ nên mất thông tin về thứ tự và ngữ cảnh."
+  },
+  {
+   "course": "Xử lý ngôn ngữ tự nhiên",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "TF-IDF dùng để đo điều gì?",
+   "options": {
+    "A": "Độ dài trung bình của các câu trong văn bản",
+    "B": "Mức độ quan trọng của một từ đối với một văn bản trong tập văn bản",
+    "C": "Tốc độ huấn luyện của mô hình ngôn ngữ",
+    "D": "Số lượng thực thể có tên trong văn bản"
+   },
+   "correct_answer": "B",
+   "explanation": "TF-IDF kết hợp tần suất từ trong văn bản (TF) với độ hiếm trong tập (IDF)."
+  },
+  {
+   "course": "Xử lý ngôn ngữ tự nhiên",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Nhúng từ (word embedding) là gì?",
+   "options": {
+    "A": "Chèn thêm từ mới vào giữa câu để câu dài hơn",
+    "B": "Lưu từ vào cơ sở dữ liệu quan hệ theo bảng",
+    "C": "Biểu diễn mỗi từ thành một vector số thực dày đặc phản ánh quan hệ ngữ nghĩa",
+    "D": "Mã hóa từ thành chuỗi ký tự ngẫu nhiên để bảo mật"
+   },
+   "correct_answer": "C",
+   "explanation": "Embedding ánh xạ từ vào không gian vector, các từ gần nghĩa có vector gần nhau."
+  },
+  {
+   "course": "Xử lý ngôn ngữ tự nhiên",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Phân tích cảm xúc (sentiment analysis) có mục tiêu gì?",
+   "options": {
+    "A": "Xác định thái độ hoặc cảm xúc như tích cực, tiêu cực, trung tính trong văn bản",
+    "B": "Đếm số từ có trong một văn bản",
+    "C": "Chuyển giọng nói thành văn bản",
+    "D": "Tách văn bản thành các câu độc lập"
+   },
+   "correct_answer": "A",
+   "explanation": "Sentiment analysis phân loại quan điểm/cảm xúc được thể hiện trong văn bản."
+  },
+  {
+   "course": "Xử lý ngôn ngữ tự nhiên",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "PhoBERT là gì?",
+   "options": {
+    "A": "Một bộ tách từ tiếng Việt dựa trên luật thủ công",
+    "B": "Một cơ sở dữ liệu từ điển Việt - Anh trực tuyến",
+    "C": "Một thư viện vẽ biểu đồ cho dữ liệu tiếng Việt",
+    "D": "Mô hình ngôn ngữ tiền huấn luyện cho tiếng Việt dựa trên kiến trúc BERT/RoBERTa"
+   },
+   "correct_answer": "D",
+   "explanation": "PhoBERT là mô hình tiền huấn luyện đơn ngữ cho tiếng Việt, dùng kiến trúc RoBERTa."
+  },
+  {
+   "course": "Xử lý ngôn ngữ tự nhiên",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Ngữ liệu (corpus) trong NLP là gì?",
+   "options": {
+    "A": "Một thuật toán phân loại văn bản",
+    "B": "Một kiểu dữ liệu số thực trong lập trình",
+    "C": "Một loại lỗi thường gặp khi tách từ",
+    "D": "Tập hợp văn bản lớn dùng để huấn luyện hoặc đánh giá mô hình ngôn ngữ"
+   },
+   "correct_answer": "D",
+   "explanation": "Corpus là kho văn bản (có thể gán nhãn) dùng cho nghiên cứu và huấn luyện NLP."
+  },
+  {
+   "course": "Xử lý ngôn ngữ tự nhiên",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "N-gram là gì?",
+   "options": {
+    "A": "Chuỗi gồm n token liên tiếp trong văn bản",
+    "B": "Tập gồm n từ ngẫu nhiên được chọn từ văn bản",
+    "C": "Số lần từ n xuất hiện trong văn bản",
+    "D": "Bộ n câu đầu tiên của một văn bản"
+   },
+   "correct_answer": "A",
+   "explanation": "N-gram là chuỗi n phần tử liên tiếp (bigram n=2, trigram n=3)."
+  },
+  {
+   "course": "Xử lý ngôn ngữ tự nhiên",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Vì sao tiếng Việt cần bước tách từ (word segmentation) trước khi xử lý?",
+   "options": {
+    "A": "Vì tiếng Việt không có dấu cách giữa các tiếng trong câu",
+    "B": "Ranh giới giữa các tiếng (âm tiết) không trùng với ranh giới từ, ví dụ \"sinh viên\" là một từ gồm hai tiếng",
+    "C": "Vì mỗi tiếng trong tiếng Việt luôn là một từ độc lập",
+    "D": "Vì tiếng Việt không có từ ghép hay từ láy"
+   },
+   "correct_answer": "B",
+   "explanation": "Dấu cách trong tiếng Việt ngăn cách các tiếng chứ không phải các từ nên cần tách từ."
+  },
+  {
+   "course": "Xử lý ngôn ngữ tự nhiên",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Một từ xuất hiện 3 lần trong văn bản dài 100 từ; tập có 1000 văn bản, trong đó 10 văn bản chứa từ này. Với TF = số lần/độ dài và IDF = log₁₀(N/df), giá trị TF-IDF là bao nhiêu?",
+   "options": {
+    "A": "0,6",
+    "B": "0,006",
+    "C": "0,3",
+    "D": "0,06"
+   },
+   "correct_answer": "D",
+   "explanation": "TF = 3/100 = 0,03; IDF = log₁₀(1000/10) = 2; TF-IDF = 0,03 × 2 = 0,06."
+  },
+  {
+   "course": "Xử lý ngôn ngữ tự nhiên",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Một câu có 5 token. Số bigram (2-gram) có thể tạo từ câu này là bao nhiêu?",
+   "options": {
+    "A": "5",
+    "B": "10",
+    "C": "4",
+    "D": "3"
+   },
+   "correct_answer": "C",
+   "explanation": "Câu n token có n - 1 bigram, tức 5 - 1 = 4."
+  },
+  {
+   "course": "Xử lý ngôn ngữ tự nhiên",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Độ tương đồng cosine giữa hai vector (1, 0) và (1, 1) xấp xỉ bao nhiêu?",
+   "options": {
+    "A": "0,5",
+    "B": "0,707",
+    "C": "1",
+    "D": "0"
+   },
+   "correct_answer": "B",
+   "explanation": "cos = (1·1 + 0·1) / (1 · √2) = 1/√2 ≈ 0,707."
+  },
+  {
+   "course": "Xử lý ngôn ngữ tự nhiên",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Điểm khác nhau giữa CBOW và Skip-gram trong Word2Vec là gì?",
+   "options": {
+    "A": "CBOW dự đoán từ trung tâm từ các từ ngữ cảnh, còn Skip-gram dự đoán các từ ngữ cảnh từ từ trung tâm",
+    "B": "CBOW dự đoán các từ ngữ cảnh từ từ trung tâm, còn Skip-gram làm ngược lại",
+    "C": "CBOW chỉ dùng cho tiếng Anh, còn Skip-gram dùng cho mọi ngôn ngữ",
+    "D": "CBOW dùng nhãn từ loại, còn Skip-gram dùng nhãn cảm xúc"
+   },
+   "correct_answer": "A",
+   "explanation": "CBOW: ngữ cảnh → từ trung tâm; Skip-gram: từ trung tâm → ngữ cảnh."
+  },
+  {
+   "course": "Xử lý ngôn ngữ tự nhiên",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Ưu điểm chính của Transformer so với RNN khi xử lý chuỗi là gì?",
+   "options": {
+    "A": "Cơ chế self-attention cho phép xử lý song song các vị trí và nắm bắt phụ thuộc xa tốt hơn",
+    "B": "Không cần dữ liệu huấn luyện để hoạt động",
+    "C": "Luôn có số tham số ít hơn mọi mô hình RNN",
+    "D": "Xử lý từng từ tuần tự nên cho kết quả ổn định hơn"
+   },
+   "correct_answer": "A",
+   "explanation": "Transformer dùng attention, không phụ thuộc tuần tự nên huấn luyện song song và bắt phụ thuộc xa hiệu quả."
+  },
+  {
+   "course": "Xử lý ngôn ngữ tự nhiên",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Mô hình NER dự đoán 10 thực thể, trong đó 8 thực thể đúng; văn bản thực tế có 16 thực thể. Precision và Recall lần lượt là bao nhiêu?",
+   "options": {
+    "A": "0,5 và 0,8",
+    "B": "0,8 và 1,6",
+    "C": "0,8 và 0,5",
+    "D": "0,5 và 0,625"
+   },
+   "correct_answer": "C",
+   "explanation": "Precision = 8/10 = 0,8; Recall = 8/16 = 0,5."
+  },
+  {
+   "course": "Xử lý ngôn ngữ tự nhiên",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Mô hình bigram dùng làm mịn Laplace (add-1) với kích thước từ vựng V = 1000. Biết \"máy\" xuất hiện 10 lần và cặp \"máy tính\" xuất hiện 4 lần. Xác suất P(tính | máy) bằng bao nhiêu?",
+   "options": {
+    "A": "4/1010",
+    "B": "5/1000",
+    "C": "5/1010",
+    "D": "4/10"
+   },
+   "correct_answer": "C",
+   "explanation": "P = (count(máy tính) + 1) / (count(máy) + V) = (4 + 1)/(10 + 1000) = 5/1010."
+  },
+  {
+   "course": "Xử lý ngôn ngữ tự nhiên",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Mô hình ngôn ngữ gán xác suất đều cho 50 từ trong từ vựng tại mọi vị trí. Perplexity của mô hình này là bao nhiêu?",
+   "options": {
+    "A": "50",
+    "B": "1",
+    "C": "25",
+    "D": "2500"
+   },
+   "correct_answer": "A",
+   "explanation": "Perplexity = 1/P = 1/(1/50) = 50, tức độ phân nhánh trung bình của mô hình."
+  },
+  {
+   "course": "Xử lý ngôn ngữ tự nhiên",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Self-attention chuẩn trên chuỗi dài n token có độ phức tạp thời gian và bộ nhớ theo n như thế nào?",
+   "options": {
+    "A": "O(n)",
+    "B": "O(log n)",
+    "C": "O(n³)",
+    "D": "O(n²)"
+   },
+   "correct_answer": "D",
+   "explanation": "Ma trận attention có kích thước n × n nên chi phí là O(n²)."
+  },
+  {
+   "course": "Xử lý ngôn ngữ tự nhiên",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Trong scaled dot-product attention, vì sao tích vô hướng QKᵀ được chia cho √d_k?",
+   "options": {
+    "A": "Để tăng số chiều của vector khóa lên d_k lần",
+    "B": "Để bảo đảm tổng các vector truy vấn bằng 0",
+    "C": "Để giảm số lượng token cần xử lý trong chuỗi",
+    "D": "Để tránh các giá trị quá lớn đẩy softmax vào vùng bão hòa có gradient rất nhỏ"
+   },
+   "correct_answer": "D",
+   "explanation": "Với d_k lớn, tích vô hướng có phương sai lớn; chia √d_k giữ giá trị ổn định để softmax không bão hòa."
+  },
+  {
+   "course": "Xử lý ngôn ngữ tự nhiên",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Cho logits (2, 1, 0). Xác suất của phần tử thứ nhất sau softmax xấp xỉ bao nhiêu?",
+   "options": {
+    "A": "0,500",
+    "B": "0,665",
+    "C": "0,333",
+    "D": "0,800"
+   },
+   "correct_answer": "B",
+   "explanation": "e²/(e² + e¹ + e⁰) = 7,389/11,107 ≈ 0,665."
+  },
+  {
+   "course": "Xử lý ngôn ngữ tự nhiên",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Một bộ phân loại có Precision = 0,6 và Recall = 0,3. Điểm F1 bằng bao nhiêu?",
+   "options": {
+    "A": "0,45",
+    "B": "0,4",
+    "C": "0,18",
+    "D": "0,9"
+   },
+   "correct_answer": "B",
+   "explanation": "F1 = 2·0,6·0,3 / (0,6 + 0,3) = 0,36/0,9 = 0,4 (trung bình điều hòa, không phải trung bình cộng)."
+  },
+  {
+   "course": "Xử lý ngôn ngữ tự nhiên",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Mô hình gặp từ hiếm chưa có trong từ vựng (OOV). Kỹ thuật nào của PhoBERT/BPE giúp xử lý được từ này mà không gán token \"không biết\"?",
+   "options": {
+    "A": "Bỏ qua từ đó hoàn toàn khỏi câu",
+    "B": "Thay từ đó bằng từ dừng gần nhất",
+    "C": "Chia từ thành các đơn vị con (subword) đã có trong từ vựng",
+    "D": "Dịch từ đó sang tiếng Anh trước khi xử lý"
+   },
+   "correct_answer": "C",
+   "explanation": "BPE chia từ lạ thành các subword quen thuộc nên vẫn biểu diễn được mà ít mất thông tin."
+  },
+  {
+   "course": "Lập trình C",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Trong chương trình C, hàm nào là điểm bắt đầu thực thi?",
+   "options": {
+    "A": "Hàm start()",
+    "B": "Hàm printf()",
+    "C": "Hàm main()",
+    "D": "Hàm begin()"
+   },
+   "correct_answer": "C",
+   "explanation": "Chương trình C bắt đầu chạy từ hàm main()."
+  },
+  {
+   "course": "Lập trình C",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Trên hầu hết hệ thống hiện nay, kiểu int trong C thường có kích thước bao nhiêu byte?",
+   "options": {
+    "A": "1 byte",
+    "B": "4 byte",
+    "C": "2 byte",
+    "D": "16 byte"
+   },
+   "correct_answer": "B",
+   "explanation": "Trên các nền tảng phổ biến hiện nay, int thường chiếm 4 byte (32 bit)."
+  },
+  {
+   "course": "Lập trình C",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Định dạng nào dùng trong printf để in một số nguyên kiểu int?",
+   "options": {
+    "A": "%d",
+    "B": "%f",
+    "C": "%c",
+    "D": "%s"
+   },
+   "correct_answer": "A",
+   "explanation": "%d in số nguyên có dấu; %f cho số thực, %c cho ký tự, %s cho chuỗi."
+  },
+  {
+   "course": "Lập trình C",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Toán tử nào dùng để so sánh bằng giữa hai giá trị trong C?",
+   "options": {
+    "A": "=",
+    "B": "=:",
+    "C": "!=",
+    "D": "=="
+   },
+   "correct_answer": "D",
+   "explanation": "== so sánh bằng, còn = là phép gán."
+  },
+  {
+   "course": "Lập trình C",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Chuỗi ký tự trong C được kết thúc bằng ký tự nào?",
+   "options": {
+    "A": "Ký tự xuống dòng ('\\n')",
+    "B": "Ký tự null ('\\0')",
+    "C": "Ký tự khoảng trắng (' ')",
+    "D": "Ký tự tab ('\\t')"
+   },
+   "correct_answer": "B",
+   "explanation": "Chuỗi C là mảng char kết thúc bằng ký tự null '\\0'."
+  },
+  {
+   "course": "Lập trình C",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Khai báo int a[10]; thì các chỉ số hợp lệ của mảng a là gì?",
+   "options": {
+    "A": "Từ 1 đến 10",
+    "B": "Từ 0 đến 10",
+    "C": "Từ 0 đến 9",
+    "D": "Từ 1 đến 9"
+   },
+   "correct_answer": "C",
+   "explanation": "Mảng C đánh chỉ số từ 0 nên 10 phần tử có chỉ số 0..9."
+  },
+  {
+   "course": "Lập trình C",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Toán tử & đặt trước một biến (ví dụ &x) có ý nghĩa gì?",
+   "options": {
+    "A": "Lấy giá trị đặt tại địa chỉ x",
+    "B": "Lấy địa chỉ bộ nhớ của biến x",
+    "C": "Thực hiện phép AND logic với x",
+    "D": "Lấy giá trị tuyệt đối của x"
+   },
+   "correct_answer": "B",
+   "explanation": "Toán tử & một ngôi trả về địa chỉ của biến."
+  },
+  {
+   "course": "Lập trình C",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Cho con trỏ p, biểu thức *p có ý nghĩa gì?",
+   "options": {
+    "A": "Địa chỉ của chính biến con trỏ p",
+    "B": "Kích thước của vùng nhớ mà p chiếm",
+    "C": "Tích của p với một số nào đó",
+    "D": "Giá trị được lưu tại địa chỉ mà p trỏ tới"
+   },
+   "correct_answer": "D",
+   "explanation": "Toán tử * (giải tham chiếu) truy cập giá trị tại địa chỉ con trỏ trỏ đến."
+  },
+  {
+   "course": "Lập trình C",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Để dùng printf và scanf, cần khai báo thư viện nào ở đầu chương trình?",
+   "options": {
+    "A": "#include <stdio.h>",
+    "B": "#include <math.h>",
+    "C": "#include <string.h>",
+    "D": "#include <stdlib.h>"
+   },
+   "correct_answer": "A",
+   "explanation": "printf và scanf được khai báo trong stdio.h."
+  },
+  {
+   "course": "Lập trình C",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Vòng lặp while khác do-while ở điểm nào?",
+   "options": {
+    "A": "while kiểm tra điều kiện trước khi thực hiện thân vòng lặp",
+    "B": "while luôn thực hiện thân vòng lặp ít nhất một lần",
+    "C": "while chỉ dùng được với biến kiểu char",
+    "D": "while không thể dùng lệnh break"
+   },
+   "correct_answer": "A",
+   "explanation": "while kiểm tra điều kiện trước nên có thể không chạy lần nào; do-while chạy ít nhất một lần."
+  },
+  {
+   "course": "Lập trình C",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Lệnh break trong vòng lặp có tác dụng gì?",
+   "options": {
+    "A": "Thoát ngay khỏi vòng lặp chứa nó",
+    "B": "Bỏ qua phần còn lại của lần lặp hiện tại",
+    "C": "Kết thúc toàn bộ chương trình",
+    "D": "Quay lại đầu hàm main()"
+   },
+   "correct_answer": "A",
+   "explanation": "break thoát khỏi vòng lặp (hoặc switch) gần nhất; continue mới là bỏ qua lần lặp hiện tại."
+  },
+  {
+   "course": "Lập trình C",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Trong C, kết quả của phép chia 7 / 2 với hai toán hạng kiểu int là bao nhiêu?",
+   "options": {
+    "A": "3.5",
+    "B": "3",
+    "C": "4",
+    "D": "2"
+   },
+   "correct_answer": "B",
+   "explanation": "Chia hai số nguyên trong C cho kết quả nguyên, phần thập phân bị cắt bỏ nên 7/2 = 3."
+  },
+  {
+   "course": "Lập trình C",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Hàm có kiểu trả về void có đặc điểm gì?",
+   "options": {
+    "A": "Luôn trả về giá trị 0",
+    "B": "Trả về địa chỉ của hàm",
+    "C": "Không trả về giá trị nào cho nơi gọi",
+    "D": "Chỉ nhận đối số kiểu int"
+   },
+   "correct_answer": "C",
+   "explanation": "void nghĩa là hàm không trả về giá trị."
+  },
+  {
+   "course": "Lập trình C",
+   "chapter": "",
+   "difficulty": "basic",
+   "content": "Kiểu cấu trúc struct trong C dùng để làm gì?",
+   "options": {
+    "A": "Gom nhiều biến có thể khác kiểu thành một kiểu dữ liệu do người dùng định nghĩa",
+    "B": "Lưu nhiều phần tử cùng kiểu trong vùng nhớ liên tiếp",
+    "C": "Định nghĩa một hằng số cho toàn chương trình",
+    "D": "Khai báo một hàm có thể gọi đệ quy"
+   },
+   "correct_answer": "A",
+   "explanation": "struct gộp các thành viên (có thể khác kiểu) thành một kiểu mới; mảng mới là cùng kiểu."
+  },
+  {
+   "course": "Lập trình C",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Đoạn mã sau in ra gì?\n\nint a = 5;\nint *p = &a;\n*p = 10;\nprintf(\"%d\", a);",
+   "options": {
+    "A": "5",
+    "B": "Địa chỉ của a",
+    "C": "Lỗi biên dịch",
+    "D": "10"
+   },
+   "correct_answer": "D",
+   "explanation": "p trỏ tới a nên *p = 10 làm a thành 10."
+  },
+  {
+   "course": "Lập trình C",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Đoạn mã sau in ra gì?\n\nint i = 3;\nint j = i++;\nprintf(\"%d %d\", i, j);",
+   "options": {
+    "A": "3 3",
+    "B": "4 4",
+    "C": "3 4",
+    "D": "4 3"
+   },
+   "correct_answer": "D",
+   "explanation": "j nhận giá trị cũ của i (3), sau đó i tăng lên 4."
+  },
+  {
+   "course": "Lập trình C",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Đoạn mã sau in ra gì?\n\nfor (int i = 0; i < 5; i++) {\n    if (i == 2) continue;\n    printf(\"%d\", i);\n}",
+   "options": {
+    "A": "01234",
+    "B": "01",
+    "C": "0123",
+    "D": "0134"
+   },
+   "correct_answer": "D",
+   "explanation": "continue bỏ qua lần lặp i = 2 nên chỉ in 0, 1, 3, 4."
+  },
+  {
+   "course": "Lập trình C",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Đoạn mã sau in ra gì?\n\nchar s[] = \"Hello\";\nprintf(\"%zu\", sizeof(s));",
+   "options": {
+    "A": "5",
+    "B": "4",
+    "C": "7",
+    "D": "6"
+   },
+   "correct_answer": "D",
+   "explanation": "Mảng s gồm 5 ký tự và ký tự kết thúc '\\0' nên sizeof(s) = 6."
+  },
+  {
+   "course": "Lập trình C",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Đoạn mã sau in ra gì?\n\nint a[5] = {1, 2, 3, 4, 5};\nint *p = a;\nprintf(\"%d\", *(p + 3));",
+   "options": {
+    "A": "3",
+    "B": "5",
+    "C": "4",
+    "D": "2"
+   },
+   "correct_answer": "C",
+   "explanation": "p + 3 trỏ tới a[3] có giá trị 4."
+  },
+  {
+   "course": "Lập trình C",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Đoạn mã sau in ra gì?\n\nvoid f(int x) { x = x * 2; }\n\nint main() {\n    int a = 4;\n    f(a);\n    printf(\"%d\", a);\n    return 0;\n}",
+   "options": {
+    "A": "8",
+    "B": "4",
+    "C": "0",
+    "D": "Lỗi biên dịch"
+   },
+   "correct_answer": "B",
+   "explanation": "C truyền tham số theo giá trị nên f chỉ thay đổi bản sao x, a vẫn là 4."
+  },
+  {
+   "course": "Lập trình C",
+   "chapter": "",
+   "difficulty": "medium",
+   "content": "Điểm khác nhau chính giữa malloc và calloc trong C là gì?",
+   "options": {
+    "A": "malloc khởi tạo vùng nhớ bằng 0, còn calloc không khởi tạo",
+    "B": "calloc cấp phát trên stack, còn malloc cấp phát trên heap",
+    "C": "calloc khởi tạo vùng nhớ cấp phát bằng 0, còn malloc không khởi tạo giá trị",
+    "D": "malloc không cần giải phóng bằng free, còn calloc thì cần"
+   },
+   "correct_answer": "C",
+   "explanation": "calloc(n, size) cấp phát và đặt toàn bộ byte về 0; malloc để nội dung không xác định."
+  },
+  {
+   "course": "Lập trình C",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Đoạn mã sau in ra gì?\n\nint a[] = {10, 20, 30, 40};\nint *p = a + 1;\nint x = *p++;\nprintf(\"%d %d\", x, *p);",
+   "options": {
+    "A": "20 20",
+    "B": "30 30",
+    "C": "20 30",
+    "D": "10 20"
+   },
+   "correct_answer": "C",
+   "explanation": "*p++ lấy giá trị 20 rồi mới tăng p sang a[2], nên *p = 30."
+  },
+  {
+   "course": "Lập trình C",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Giả sử hệ thống 64 bit, int 4 byte, con trỏ 8 byte. Đoạn mã sau in ra gì?\n\nvoid f(int arr[10]) {\n    printf(\"%zu\", sizeof(arr) / sizeof(arr[0]));\n}",
+   "options": {
+    "A": "2",
+    "B": "10",
+    "C": "1",
+    "D": "8"
+   },
+   "correct_answer": "A",
+   "explanation": "Tham số mảng bị chuyển thành con trỏ nên sizeof(arr) = 8; 8/4 = 2."
+  },
+  {
+   "course": "Lập trình C",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Đoạn mã sau in ra gì?\n\nunsigned char c = 250;\nc += 10;\nprintf(\"%d\", c);",
+   "options": {
+    "A": "260",
+    "B": "4",
+    "C": "10",
+    "D": "255"
+   },
+   "correct_answer": "B",
+   "explanation": "unsigned char lưu giá trị theo modulo 256: 260 mod 256 = 4."
+  },
+  {
+   "course": "Lập trình C",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Đoạn mã sau gán giá trị nào cho r?\n\nint r = 5 / 2 * 2.0;",
+   "options": {
+    "A": "5",
+    "B": "2",
+    "C": "10",
+    "D": "4"
+   },
+   "correct_answer": "D",
+   "explanation": "5/2 là phép chia nguyên = 2; 2 * 2.0 = 4.0; gán cho int được 4."
+  },
+  {
+   "course": "Lập trình C",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Cho macro #define SQ(x) x * x. Biểu thức SQ(2 + 1) có giá trị bao nhiêu?",
+   "options": {
+    "A": "5",
+    "B": "9",
+    "C": "6",
+    "D": "7"
+   },
+   "correct_answer": "A",
+   "explanation": "Macro thay thế nguyên văn: 2 + 1 * 2 + 1 = 2 + 2 + 1 = 5."
+  },
+  {
+   "course": "Lập trình C",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Hàm sau được gọi 3 lần liên tiếp trong main. Kết quả in ra là gì?\n\nvoid f() {\n    static int c = 0;\n    c++;\n    printf(\"%d \", c);\n}",
+   "options": {
+    "A": "1 1 1",
+    "B": "1 2 3",
+    "C": "0 1 2",
+    "D": "3 3 3"
+   },
+   "correct_answer": "B",
+   "explanation": "Biến static chỉ khởi tạo một lần và giữ giá trị giữa các lần gọi nên c tăng dần 1, 2, 3."
+  },
+  {
+   "course": "Lập trình C",
+   "chapter": "",
+   "difficulty": "advanced",
+   "content": "Đoạn mã sau gây ra vấn đề gì?\n\nint *p = malloc(sizeof(int));\nfree(p);\n*p = 5;",
+   "options": {
+    "A": "Lỗi biên dịch vì free làm p thành hằng",
+    "B": "Rò rỉ bộ nhớ vì quên gọi free",
+    "C": "Hành vi không xác định do truy cập vùng nhớ đã giải phóng (use after free)",
+    "D": "Luôn in ra 5 và chạy bình thường"
+   },
+   "correct_answer": "C",
+   "explanation": "Sau free(p) con trỏ p thành dangling pointer, ghi vào *p là hành vi không xác định."
+  }
+ ]
+}
