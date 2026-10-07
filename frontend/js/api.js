@@ -2,7 +2,7 @@
    EduAI — API client dùng chung cho toàn bộ frontend
    ============================================================ */
 
-const API_BASE = window.EDUAI_API_BASE || "const API_BASE = window.EDUAI_API_BASE || "https://eduai-agent-backend-xxxx.onrender.com";";
+const API_BASE = window.EDUAI_API_BASE || "const API_BASE = window.EDUAI_API_BASE || "https://eduai-agent-backend-xxxx.onrender.com";
 
 const Api = {
   // "Ghi nhớ đăng nhập" bật: lưu lâu dài (localStorage). Tắt: chỉ giữ đến khi đóng trình duyệt (sessionStorage).
